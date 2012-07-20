@@ -10,7 +10,26 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Config extends Zend_Config_Ini
+class Llv_Config
+    extends Zend_Config_Ini
 {
+    /** @var Llv_Config */
+    protected static $_instance;
 
+    /**
+     * Retourne une instance de la classe
+     *
+     * @static
+     * @return Llv_Config
+     */
+    public static function getInstance()
+    {
+        if (is_null(self::$_instance)) {
+            self::$_instance = new self(
+                APPLICATION_PATH . '/configs/application.ini',
+                APPLICATION_ENV
+            );
+        }
+        return self::$_instance;
+    }
 }

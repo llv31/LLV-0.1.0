@@ -664,9 +664,12 @@ abstract class Zend_Application_Bootstrap_BootstrapAbstract
 
         $classResources = $this->getClassResources();
         if (array_key_exists($resourceName, $classResources)) {
+
             $this->_started[$resourceName] = true;
+
             $method = $classResources[$resourceName];
             $return = $this->$method();
+
             unset($this->_started[$resourceName]);
             $this->_markRun($resourceName);
 
