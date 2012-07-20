@@ -27,6 +27,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         }
 
         $sitesConf = Llv_Config::getInstance()->sites->toArray();
+        Zend_Debug::dump($currentHost);die;
     }
 
     /**

@@ -1,26 +1,13 @@
 <?php
 /**
  * PHP class     : Db.php
- *
  * PHP Version 5
  *
- * @category Default
- * @package  Default
- * @author   : Galilée <contact@galilee.fr>
- * @date     : 20/07/12
- * @license  : None
- * @link     : None
- */
-
-/**
- * DESCRIPTION
- *
- * @category Default
- * @package  Default
- * @author   : Galilée <contact@galilee.fr>
- * @date     : 20/07/12
- * @license  : None
- * @link     : None
+ * @category    : default
+ * @package     : default
+ * @license     : Not for free use
+ * @date        : 20/07/12
+ * @author      : aroy <contact@aroy.fr>
  */
 
 class Llv_Db

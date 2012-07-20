@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP class     : Mysql.php
+ * PHP File Locale.php
  * PHP Version 5
  *
  * @category    : default
@@ -10,8 +10,7 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Db_Pdo_Mysql
-    extends Zend_Db_Adapter_Pdo_Mysql
+class Llv_Locale extends Zend_Locale
 {
 
 }
