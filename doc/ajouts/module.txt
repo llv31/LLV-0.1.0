@@ -1,0 +1,2 @@
+- Llv_Entity_Referential_Dal_Modules.php
+• Ajouter une entrée dans la méthode getAll() tant que ce n'est pas géré en base

@@ -11,8 +11,6 @@
  */
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
-    const HOST_FRONT = 'front';
-
     /**
      * Cette méthode permet d'initaliser en session la configuration de l'application
      * - Langue (fr_FR, es_ES, etc.)
@@ -20,14 +18,37 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      */
     protected function _initApplicationConfiguration()
     {
+        $sitesConf = Llv_Config::getInstance()->sites->toArray();
         if (array_key_exists('HTTP_HOST', $_SERVER)) {
             $currentHost = $_SERVER['HTTP_HOST'];
         } else {
-            $currentHost = self::HOST_FRONT;
+            $currentHost = $sitesConf[0]['host'];
         }
-
-        $sitesConf = Llv_Config::getInstance()->sites->toArray();
-        Zend_Debug::dump($currentHost);die;
+        /** En dev, on doit préciser le port de l'host donc il faut patcher */
+        if (APPLICATION_ENV == 'dev') {
+            $currentHost = explode(':', $currentHost);
+            $currentHost = $currentHost[0];
+        }
+        foreach ($sitesConf as $site) {
+            if ($site['host'] == $currentHost) {
+                Llv_Context_Application::getInstance()
+                    ->setLocale(new Llv_Locale($site['locale']));
+                Llv_Context_Application::getInstance()
+                    ->setCurrentSite($site['idSite']);
+            }
+        }
+        $currentModule = Llv_Context_Application::getInstance()->getActiveModule();
+        $loader = new Zend_Loader_Autoloader_Resource(
+            array(
+                 'basePath' => APPLICATION_ENV . '/module/' . $currentModule,
+                 'namespace'=> Zend_Filter::filterStatic(
+                     strtr($currentModule, '-', '_'),
+                     'Word_UnderscoreToCamelCase'
+                 )
+            )
+        );
+        $loader->addResourceType('form', 'forms', 'Form');
+        $loader->addResourceType('element', 'elements', 'Element');
     }
 
     /**

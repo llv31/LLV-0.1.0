@@ -1,0 +1,19 @@
+<?php
+/**
+ * PHP Class Abstract.php
+ * PHP Version 5
+ *
+ * @category    : default
+ * @package     : default
+ * @license     : Not for free use
+ * @date        : 21/07/12
+ * @author      : aroy <contact@aroy.fr>
+ */
+
+abstract class Llv_Services_Message_Abstract
+{
+    /** @var bool */
+    public $success = false;
+    /** @var array */
+    public $errorList = array();
+}

@@ -1,0 +1,5 @@
+- Llv_Locale.php
+• Ajout d'une condition dans le switch
+
+- Llv_Constant_Locale.php
+• Ajout des constantes de la langue

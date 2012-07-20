@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP File Llv_Context_Application.php
+ * PHP Class Llv_Context_Application.php
  * PHP Version 5
  *
  * @category    : default
@@ -10,20 +10,22 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Context_Application
+class Llv_Context_Application extends Llv_Context_Abstract
 {
     /** @var Llv_Context_Application */
     protected static $_instance;
     /** @var Llv_Locale */
     private $_locale;
     /** @var int */
-    private $_idModule;
+    private $_idSite;
+    /** @var int */
+    private $_module;
 
     /**
      * Retourne une instance de la classe
      *
      * @static
-     * @return Llv_Db
+     * @return Llv_Context_Application
      */
     public static function getInstance()
     {
@@ -34,19 +36,26 @@ class Llv_Context_Application
     }
 
     /**
-     * @param int $idModule
+     * @param $idSite
+     *
+     * @throws Exception
      */
-    public function setIdModule($idModule)
+    public function setCurrentSite($idSite)
     {
-        $this->_idModule = $idModule;
+        $this->_idSite = $idSite;
+        $module = Llv_Context_Referential::getInstance()->getModuleByIdSite($idSite);
+        if (is_null($module)) {
+            throw new Exception(_('ERROR_EXCEPTION_SITE_UNKNOWN'));
+        }
+        $this->setActiveModule($module);
     }
 
     /**
      * @return int
      */
-    public function getIdModule()
+    public function getCurrentSite()
     {
-        return $this->_idModule;
+        return $this->_idSite;
     }
 
     /**
