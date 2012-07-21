@@ -1,0 +1,149 @@
+/* •••••••••••••••••••••••••••••••••• */
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #c3c5b0;
+    height: 100%;
+    color: #4B4C43;
+    font-family: 'Helvetica Neue', 'Arial', 'sans-serif';
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #4B4C43;
+    font-weight: bold;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#container {
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 100%;
+    border: 1px solid #5C5D52;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: 0 0 12px #555;
+    background-color: #7A7B6D;
+    overflow: hidden;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#container #header {
+    background-image: url(../img/header.png);
+}
+
+#container #header h1 a {
+    display: block;
+    height: 180px;
+    width: 1000px;
+    text-indent: -1000em;
+    overflow: hidden;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#container #menu {
+    float: left;
+    height: 27px;
+    line-height: 26px;
+    width: 100%;
+    background-color: #A5A794;
+    border: 1px solid #5C5D52;
+    border-left: none;
+    border-right: none;
+}
+
+#container #menu ul.main_menu {
+    float: left;
+}
+
+#container #menu ul.main_menu li {
+    display: inline-block;
+}
+
+#container #menu ul.main_menu li a {
+    display: inline-block;
+    font-size: .8em;
+    padding: 0 8px;
+    margin-right: -3px;
+    border-right: 1px dotted #7A7B6D;
+    color: #4B4C43;
+}
+
+#container #menu ul.main_menu li.current a {
+    background-image: url(../img/menu_current.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+#container #menu ul.main_menu li.current a,
+#container #menu ul.main_menu li a:hover {
+    background-color: #c0c2ab;
+    color: #30302B;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#container #menu ul.languages {
+    float: right;
+}
+
+#container #menu ul.languages li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#container #menu ul.languages li a {
+    display: inline-block;
+    text-indent: -1000em;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    height: 11px;
+    width: 16px;
+    opacity: .3;
+}
+
+#container #menu ul.languages li.current a {
+    opacity: 1;
+}
+
+#container #menu ul.languages li a:hover {
+    opacity: 1;
+    box-shadow: 0 0 5px #FFF;
+}
+
+#container #menu ul.languages li.fr_FR a {
+    background-image: url(../img/flags/fr_FR.png);
+}
+
+#container #menu ul.languages li.es_ES a {
+    background-image: url(../img/flags/es_ES.png);
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#container #wrapper {
+    background-color: #D1D3BB;
+    margin: 10px 0 0;
+    padding: 20px 2%;
+    float: left;
+    width: 96%;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#container #footer {
+    float: left;
+    height: 25px;
+    padding: 1%;
+    width: 98%;
+    color: #D1D3BB;
+    text-align: center;
+}
+
+/* •••••••••••••••••••••••••••••••••• */

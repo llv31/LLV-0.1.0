@@ -10,4 +10,29 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-require_once dirname(__FILE__) . '../../public/index.php';
+require_once dirname(__FILE__) . '/../initializer.php';
+
+$converter = new Llv_Translate_Converter();
+
+/** On ajoute les CSV à la liste des fichiers à convertir */
+$converter->addAdapter(
+    new Llv_Translate_Adapter_Csv(
+        APPLICATION_PATH . '/../data/locales/'
+    )
+);
+
+/** On créé les fichiers PO en fonction des fichiers sources */
+$poFiles = $converter->writePos(
+    APPLICATION_PATH . '/../data/locales'
+);
+
+/** On créé les fichiers MO */
+foreach ($poFiles as $file) {
+    system(
+        sprintf(
+            'msgfmt -o %s %s',
+            str_replace('.po', '.mo', $file),
+            $file
+        )
+    );
+}

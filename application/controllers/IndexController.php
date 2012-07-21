@@ -10,14 +10,6 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class IndexController extends Zend_Controller_Action
+class IndexControllera extends Zend_Controller_Action
 {
-    public function init()
-    {
-    }
-
-    public function indexAction()
-    {
-        Zend_Debug::dump($this);
-    }
 }
