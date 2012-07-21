@@ -52,6 +52,48 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     }
 
     /**
+     * Chargement de nouveaux espaces de noms
+     *
+     * @return Zend_Loader_Autoloader_Resource
+     */
+    protected function _initAutoload()
+    {
+        $autoloader = new Zend_Loader_Autoloader_Resource(
+            array(
+                 'namespace'     => '',
+                 'basePath'      => APPLICATION_PATH,
+                 'ressourceTypes'=> array(
+                     'form'   => array(
+                         'path'     => 'forms',
+                         'namespace'=> 'App_Form'
+                     ),
+                     'element'=> array(
+                         'path'     => 'forms/elements',
+                         'namespace'=> 'App_Form_Element'
+                     ),
+                     'model'  => array(
+                         'path'     => 'models',
+                         'namespace'=> 'App_Model'
+                     )
+                 )
+            )
+        );
+        return $autoloader;
+    }
+
+    /**
+     * Initialise l'i18n du projet
+     */
+    protected function _initTranslator()
+    {
+        if (function_exists('bindtextdomain')) {
+            bindtextdomain('application', APPLICATION_PATH . '/../data/locales/');
+            bind_textdomain_codeset('application', Llv_Config::getInstance()->project->charset);
+            textdomain('application');
+        }
+    }
+
+    /**
      * @return mixed
      */
     public function run()
@@ -61,7 +103,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $front->addModuleDirectory(APPLICATION_PATH . '/modules/');
 
         Zend_Db_Table::setDefaultAdapter(Llv_Db::getInstance());
-
+        Zend_Debug::dump($_SERVER);die;
         return parent::run();
     }
 }

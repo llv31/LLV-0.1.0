@@ -34,7 +34,8 @@ $application = new Zend_Application(
 
 require_once 'Zend/Loader/Autoloader.php';
 Zend_Loader_Autoloader::getInstance()
-    ->registerNamespace('Llv_');
+    ->registerNamespace('Llv_')
+    ->registerNamespace('Enum_');
 
 
 //Zend_Debug::dump(Llv_Config::getInstance()->toArray());die;
