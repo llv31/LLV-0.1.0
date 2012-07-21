@@ -18,6 +18,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      */
     protected function _initApplicationConfiguration()
     {
+        Zend_Layout::startMvc();
         $sitesConf = Llv_Config::getInstance()->sites->toArray();
         if (array_key_exists('HTTP_HOST', $_SERVER)) {
             $currentHost = $_SERVER['HTTP_HOST'];
@@ -40,7 +41,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $currentModule = Llv_Context_Application::getInstance()->getActiveModule();
         $loader = new Zend_Loader_Autoloader_Resource(
             array(
-                 'basePath' => APPLICATION_ENV . '/module/' . $currentModule,
+                 'basePath' => APPLICATION_PATH . '/module/' . $currentModule,
                  'namespace'=> Zend_Filter::filterStatic(
                      strtr($currentModule, '-', '_'),
                      'Word_UnderscoreToCamelCase'
@@ -82,6 +83,34 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     }
 
     /**
+     * Initialise les routes (url rewriting)
+     */
+    public function _initRoutes()
+    {
+        $router = new Llv_Router();
+        $router->setIdLangue(Llv_Context_Application::getInstance()->getLocale()->getIdLangue());
+        $router->setModule(Llv_Context_Application::getInstance()->getActiveModule());
+
+        $routerInstance = Zend_Controller_Front::getInstance();
+        $routerInstance->setRouter($router);
+        $routerInstance->getRouter()->addDefaultRoutes();
+    }
+
+    /**
+     * Initialisation des plugins
+     * - Modules
+     * - Layouts
+     * - Vues et helpers
+     */
+    public function _initPlugins()
+    {
+        $front = Zend_Controller_Front::getInstance();
+        $front->registerPlugin(new App_Plugin_ApplicationScriptFallback())
+//            ->registerPlugin(new App_Plugin_ModuleActivation())
+            ->registerPlugin(new App_Plugin_ModuleLayout());
+    }
+
+    /**
      * Initialise l'i18n du projet
      */
     protected function _initTranslator()
@@ -103,7 +132,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $front->addModuleDirectory(APPLICATION_PATH . '/modules/');
 
         Zend_Db_Table::setDefaultAdapter(Llv_Db::getInstance());
-        Zend_Debug::dump($_SERVER);die;
+
         return parent::run();
     }
 }

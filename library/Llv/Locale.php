@@ -34,7 +34,7 @@ class Llv_Locale extends Zend_Locale
      *
      * @return int
      */
-    public function convertShortToIdLangue()
+    public function getIdLangue()
     {
         switch ($this->getLanguage()) {
             default :

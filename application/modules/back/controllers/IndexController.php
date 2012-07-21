@@ -1,15 +1,26 @@
 <?php
+/**
+ * PHP Class IndexController.php
+ * PHP Version 5
+ *
+ * @category    : default
+ * @package     : default
+ * @license     : Not for free use
+ * @date        : 21/07/12
+ * @author      : aroy <contact@aroy.fr>
+ */
 
-class IndexController extends Zend_Controller_Action
+require_once APPLICATION_PATH . '/controllers/IndexController.php';
+class Back_IndexController extends IndexController
 {
 
     public function init()
     {
-        /* Initialize action controller here */
     }
 
     public function indexAction()
     {
+        Zend_Debug::dump($this);
     }
 
 

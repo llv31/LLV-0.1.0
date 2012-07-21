@@ -38,6 +38,5 @@ Zend_Loader_Autoloader::getInstance()
     ->registerNamespace('Enum_');
 
 
-//Zend_Debug::dump(Llv_Config::getInstance()->toArray());die;
 $application->bootstrap()
     ->run();
