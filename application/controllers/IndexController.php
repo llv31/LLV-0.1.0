@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Controller IndexController.php
+ * PHP Class IndexController.php
  * PHP Version 5
  *
  * @category    : default
@@ -12,15 +12,12 @@
 
 class IndexController extends Zend_Controller_Action
 {
-
     public function init()
     {
     }
 
     public function indexAction()
     {
+        Zend_Debug::dump($this);
     }
-
-
 }
-

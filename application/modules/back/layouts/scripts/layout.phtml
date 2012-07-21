@@ -1,2 +1,10 @@
-<?php $this->headLink()->setStylesheet('css/global.css'); ?>
+<?php
+
+$doctype = new Zend_View_Helper_Doctype();
+$doctype->setDoctype('HTML5');
+
+$this->headTitle('LLV');
+
+$this->headLink()->setStylesheet('css/global.css');
+?>
 Layout

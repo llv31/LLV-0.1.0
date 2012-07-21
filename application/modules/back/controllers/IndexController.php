@@ -11,9 +11,8 @@
  */
 
 require_once APPLICATION_PATH . '/controllers/IndexController.php';
-class Back_IndexController extends IndexController
+class IndexController
 {
-
     public function init()
     {
     }
@@ -23,6 +22,8 @@ class Back_IndexController extends IndexController
         Zend_Debug::dump($this);
     }
 
-
+    public function testAction()
+    {
+        Zend_Debug::dump($this);
+    }
 }
-
