@@ -19,7 +19,7 @@ class Llv_Db
      * Retourne une instance de la classe
      *
      * @static
-     * @return Llv_Db
+     * @return Zend_Db_Adapter_Abstract
      */
     public static function getInstance()
     {

@@ -23,9 +23,6 @@ class Llv_Services_Referential
         return self::$_entity;
     }
 
-    /**
-     * @param null $entity
-     */
     public function __construct($entity = null)
     {
         if (is_null($entity)) {
@@ -47,9 +44,9 @@ class Llv_Services_Referential
     public function getAllModules(Llv_Services_Message_Header $header)
     {
         $message = new Llv_Services_Referential_Message_Modules();
-        $filter = new Llv_Entity_Referential_Filter_Modules();
+        $entityFilter = new Llv_Entity_Referential_Filter_Modules();
         try {
-            $message->modules = $this->getEntity()->getModules($filter);
+            $message->modules = $this->getEntity()->getModules($entityFilter);
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

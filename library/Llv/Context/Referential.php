@@ -10,9 +10,10 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Context_Referential extends Llv_Context_Abstract
+class Llv_Context_Referential
+    extends Llv_Context_Abstract
 {
-    /** @var Llv_Context_Application */
+    /** @var Llv_Context_Referential */
     protected static $_instance;
     /** @var Llv_Services_Referential */
     private $_service;
