@@ -4,16 +4,35 @@ html {
 }
 
 body {
+    background-image: url(../img/body_bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
     background-color: #c3c5b0;
     height: 100%;
     color: #4B4C43;
     font-family: 'Helvetica Neue', 'Arial', 'sans-serif';
     font-size: 12px;
+    cursor: default;
 }
+
+/* •••••••••••••••••••••••••••••••••• */
 
 a {
     text-decoration: none;
     color: #4B4C43;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
@@ -68,11 +87,11 @@ a {
 
 #container #menu ul.main_menu li a {
     display: inline-block;
-    font-size: .8em;
+    font-size: .9em;
     padding: 0 8px;
     margin-right: -3px;
     border-right: 1px dotted #7A7B6D;
-    color: #4B4C43;
+    color: #e6e8cf;
 }
 
 #container #menu ul.main_menu li.current a {
@@ -83,6 +102,7 @@ a {
 
 #container #menu ul.main_menu li.current a,
 #container #menu ul.main_menu li a:hover {
+    text-decoration: none;
     background-color: #c0c2ab;
     color: #30302B;
 }

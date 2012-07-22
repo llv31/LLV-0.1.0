@@ -15,6 +15,9 @@ msgstr "Le site que vous essayez d'atteindre n'existe pas."
 msgid "ERROR_EXCEPTION_INVALIDARGUMENT"
 msgstr "ERREUR TECHNIQUE : L'entity n'est pas correcte"
 
+msgid "ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME"
+msgstr "La propriété demandée n'existe pas"
+
 msgid "GLOBAL_MENU_HOME"
 msgstr "Accueil"
 
@@ -32,4 +35,37 @@ msgstr "Activités"
 
 msgid "GLOBAL_MENU_CONTACT"
 msgstr "Reservations"
+
+msgid "HOME_TITRE"
+msgstr "Qui sommes-nous ?"
+
+msgid "HOME_PARAGRAPHE1"
+msgstr "Charentais d'origine, nous sommes devenus pyrénéens d'adoption depuis peu, après avoir été vignerons au service du vignoble cognaçais durant trente ans. Tombés sous le charme et la quiétude qui se dégage de <a href=\"http://www.luchon.com/fr/index.php\">Bagnères de Luchon</a> et de ses alentours, nous avons décidé d'y venir vivre et de créer Luchon Location Vacances sarl."
+
+msgid "HOME_PARAGRAPHE2"
+msgstr "Que vous soyez seul, en couple, en famille ou entre amis, notre seule ambition : que vos vacances soient un vrai moment de repos, de relaxation, d'évasion et de plaisir. Pour y parvenir, notre choix s'est porté sur deux maisons et sur deux options possibles."
+
+msgid "HOME_PARAGRAPHE3"
+msgstr "<strong>'Au-Delà du Temps'</strong>, notre maison consacrée à nos 4 chambres d'hôtes de charme est située à Saint Mamet, petit village de 900 habitants jouxtant Bagnères de Luchon."
+
+msgid "HOME_PARAGRAPHE4"
+msgstr "<strong>'Etch Soulet'</strong>, charmant chalet de montagne (1275m), situé à Portet de Luchon, village d'une trentaine d'âmes au pied du col de Peyresourde, est composé de deux grands appartements. Le premier pouvant accueillir 8 personnes et le second 13 personnes. Ces gîtes de standing et de charme peuvent être réunis grâce à un escalier commun offrant une possibilité de 21 couchages."
+
+msgid "HOME_PARAGRAPHE5"
+msgstr "Après cette présentation rapide, nous vous laissons découvrir les possibilités qui s'offrent à vous pour vivre des vacances inoubliables dans ce petit coin de paradis"
+
+msgid "HOME_SIGNATURE"
+msgstr "Frédérique et François ROY"
+
+msgid "HOME_NEWS_TITRE"
+msgstr "Dernières nouvelles"
+
+msgid "HOME_NEWS_TITRE_NEWS_TITRE"
+msgstr "Whatis Lorem Ipsum ?"
+
+msgid "HOME_NEWS_TITRE_NEWS_CONTENU"
+msgstr "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+
+msgid "HOME_NEWS_TITRE_NEWS_MORE"
+msgstr "Autres actualités"
 

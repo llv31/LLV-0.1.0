@@ -27,12 +27,4 @@ $poFiles = $converter->writePos(
 );
 
 /** On créé les fichiers MO */
-foreach ($poFiles as $file) {
-    system(
-        sprintf(
-            'msgfmt -o %s %s',
-            str_replace('.po', '.mo', $file),
-            $file
-        )
-    );
-}
+echo "PO File successfuly generated" . PHP_EOL;

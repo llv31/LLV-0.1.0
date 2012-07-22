@@ -1,0 +1,61 @@
+/* •••••••••••••••••••••••••••••••••• */
+
+#wrapper .presentation {
+    width: 60%;
+    float: left;
+    margin-right: 3%;
+}
+
+#wrapper .presentation h2 {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+#wrapper .presentation p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+#wrapper .presentation p.signature {
+    text-align: right;
+    font-style: italic;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#wrapper .news {
+    float: left;
+    box-shadow: 0 0 5px #555;
+    width: 35%;
+    padding: 1%;
+}
+
+#wrapper .news h3 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #555;
+    padding-bottom: 5px;
+}
+
+#wrapper .news h4 {
+    margin-bottom: 7px;
+}
+
+#wrapper .news p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+#wrapper .news p.more {
+    text-align: right;
+}
+
+#wrapper .news p img {
+    display: block;
+    width: 150px;
+    float: right;
+    margin: 0 0 10px 10px;
+    border: 1px solid #555;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
