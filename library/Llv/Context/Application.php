@@ -89,8 +89,8 @@ class Llv_Context_Application extends Llv_Context_Abstract
     public function setLocale(Llv_Locale $locale)
     {
         $this->_locale = $locale;
-        setlocale(LC_ALL, $this->_locale->toString() . Llv_Config::getInstance()->project->charset);
-        putenv('LC_ALL=' . $this->_locale->toString() . Llv_Config::getInstance()->project->charset);
+        putenv('LC_ALL=' . $this->_locale->toString());
+        setlocale(LC_ALL, $this->_locale->toString());
     }
 
     /**

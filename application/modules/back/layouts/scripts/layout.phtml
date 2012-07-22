@@ -14,10 +14,10 @@ $this->headTitle('Luchon Location Vacances');
 $this->headMeta()->setCharset(Llv_Config::getInstance()->project->charset);
 
 /** Feuilles de style */
-$this->headLink()->appendStylesheet($this->baseUrl() . '/design/default/default/css/reset.css');
-$this->headLink()->appendStylesheet($this->baseUrl() . '/design/default/default/css/global.css');
-$this->headLink()->appendStylesheet($this->baseUrl() . '/design/default/' . $locale . '/css/global.css');
-$this->headLink()->appendStylesheet($this->baseUrl() . '/design/' . $module . '/' . $locale . '/css/global.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . '/design/default/default/_common/css/reset.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . '/design/default/default/_common/css/global.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . '/design/default/' . $locale . '/_common/css/global.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . '/design/' . $module . '/' . $locale . '/_common/css/global.css');
 
 ?>
 <?php echo $this->doctype(); ?>

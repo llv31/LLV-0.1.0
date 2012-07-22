@@ -8,13 +8,13 @@ $items['home'] = array(
 /** Liste des chambres d'hôtes */
 $items['chambres'] = array(
     'controller' => 'products',
-    'action'     => 'chambres-list',
+    'action'     => 'guesthouse-room-list',
     'label'      => _('GLOBAL_MENU_CHAMBRES')
 );
 /** Liste des logements du gite */
 $items['gite'] = array(
     'controller' => 'products',
-    'action'     => 'gite-list',
+    'action'     => 'chalet-room-list',
     'label'      => _('GLOBAL_MENU_GITE')
 );
 /** Liste des actualités */
@@ -27,10 +27,4 @@ $items['activities'] = array(
     'controller' => 'activities',
     'label'      => _('GLOBAL_MENU_ACTIVITIES')
 );
-/** Page de contact */
-$items['contact'] = array(
-    'controller' => 'contact',
-    'label'      => _('GLOBAL_MENU_CONTACT')
-);
 echo $this->displayMainMenu($items);
-echo $this->availableLanguages();
