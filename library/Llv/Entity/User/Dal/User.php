@@ -22,7 +22,7 @@ class Llv_Entity_User_Dal_User extends Zend_Db_Table_Abstract
      *
      * @param $id
      *
-     * @return Zend_Db_Table_Row_Abstract
+     * @return array
      */
     public static function getOne($id)
     {

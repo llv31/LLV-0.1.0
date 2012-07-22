@@ -21,8 +21,7 @@ class IndexController
 
     public function indexAction()
     {
-//        Zend_Debug::dump(Llv_Context_User::getInstance()->getUserByCreditential('webmaster', 'abcdef'));
-        Llv_Context_User::getInstance()
-            ->getUserByCreditential('webmaster', 'abcdef');
+//        Llv_Context_User::getInstance()
+//            ->getUserByCreditential('webmaster', 'abcdef');
     }
 }

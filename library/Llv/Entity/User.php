@@ -15,17 +15,20 @@ class Llv_Entity_User
 {
 
     /**
-     *
      * @param Llv_Entity_User_Filter_User $filter
      *
-     * @return mixed
+     * @return Llv_Dto_User|null
      */
     public function getUser(Llv_Entity_User_Filter_User $filter)
     {
         if (isset($filter->id)) {
-            return Llv_Entity_User_Dal_User::getOne($filter->id);
+            return Llv_Entity_User_Helper_User::convertFromDalToDto(
+                Llv_Entity_User_Dal_User::getOne($filter->id)
+            );
         } elseif (isset($filter->login) && isset($filter->password)) {
-            return Llv_Entity_User_Dal_User::getOneByCreditentials($filter->login, $filter->password);
+            return Llv_Entity_User_Helper_User::convertFromDalToDto(
+                Llv_Entity_User_Dal_User::getOneByCreditentials($filter->login, $filter->password)
+            );
         }
         return null;
     }

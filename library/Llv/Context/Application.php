@@ -18,8 +18,6 @@ class Llv_Context_Application extends Llv_Context_Abstract
     private $_locale;
     /** @var int */
     private $_idSite;
-    /** @var int */
-    private $_module;
 
     /**
      * Retourne une instance de la classe

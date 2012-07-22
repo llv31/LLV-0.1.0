@@ -10,8 +10,7 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Services_User_Message_User extends Llv_Services_Message_Abstract
+class Llv_Constant_User
 {
-    /** @var Llv_Dto_User */
-    public $user;
+    const SESSION_NAMESPACE = 'llv_user';
 }

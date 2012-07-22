@@ -3,7 +3,7 @@
 #wrapper .presentation {
     width: 60%;
     float: left;
-    margin-right: 3%;
+    margin-right: 2%;
 }
 
 #wrapper .presentation h2 {
@@ -26,6 +26,7 @@
 #wrapper .news {
     float: left;
     box-shadow: 0 0 5px #555;
+    border: 1px solid #888;
     width: 35%;
     padding: 1%;
 }

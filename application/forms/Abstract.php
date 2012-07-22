@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Class User.php
+ * PHP Class Abstract .php
  * PHP Version 5
  *
  * @category    : default
@@ -10,8 +10,8 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Services_User_Message_User extends Llv_Services_Message_Abstract
+class App_Form_Abstract
+    extends Zend_Form
 {
-    /** @var Llv_Dto_User */
-    public $user;
+
 }

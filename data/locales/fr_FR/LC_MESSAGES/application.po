@@ -61,11 +61,23 @@ msgid "HOME_NEWS_TITRE"
 msgstr "Dernières nouvelles"
 
 msgid "HOME_NEWS_TITRE_NEWS_TITRE"
-msgstr "Whatis Lorem Ipsum ?"
+msgstr "What's Lorem Ipsum ?"
 
 msgid "HOME_NEWS_TITRE_NEWS_CONTENU"
 msgstr "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
 
 msgid "HOME_NEWS_TITRE_NEWS_MORE"
 msgstr "Autres actualités"
+
+msgid "HOME_LOGIN_TITLE"
+msgstr "Connexion à l'interface d'administration"
+
+msgid "HOME_LOGIN_FORM_LOGIN_LABEL"
+msgstr "Identifiant"
+
+msgid "HOME_LOGIN_FORM_PASSWORD_LABEL"
+msgstr "Mot de passe"
+
+msgid "HOME_LOGIN_FORM_SUBMIT_LABEL"
+msgstr "Se connecter"
 

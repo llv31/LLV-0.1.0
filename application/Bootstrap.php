@@ -49,7 +49,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
             )
         );
         $loader->addResourceType('form', 'forms', 'Form');
-        $loader->addResourceType('element', 'elements', 'Element');
     }
 
     /**

@@ -10,8 +10,12 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Services_User_Message_User extends Llv_Services_Message_Abstract
+class Llv_Dto_User
 {
-    /** @var Llv_Dto_User */
-    public $user;
+    /** @var int */
+    public $id;
+    /** @var string */
+    public $login;
+    /** @var string */
+    public $password;
 }
