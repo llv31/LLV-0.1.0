@@ -40,6 +40,8 @@ class Llv_Context_Cms
         $this->_service = new Llv_Services_Cms();
     }
 
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
     /**
      * @param Llv_Services_Cms_Request_Page $request
      *
@@ -65,6 +67,8 @@ class Llv_Context_Cms
         return $message->success;
     }
 
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
     /**
      * @param Llv_Services_Cms_Request_Carrousel $request
      *
@@ -74,6 +78,20 @@ class Llv_Context_Cms
     {
         $message = $this->_service->carrouselAddRow($this->getHeaderMessage(), $request);
         return $message->success;
+    }
+
+    /**
+     * @param Llv_Services_Cms_Filter_Carrousel $filter
+     *
+     * @return array|Llv_Dto_Cms_Carrousel[]
+     */
+    public function carrouselGetList(Llv_Services_Cms_Filter_Carrousel $filter)
+    {
+        $message = $this->_service->carrouselGetList($this->getHeaderMessage(), $filter);
+        if ($message->success) {
+            return $message->carrousels;
+        }
+        return array();
     }
 
 }

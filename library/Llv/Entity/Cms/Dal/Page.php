@@ -82,7 +82,7 @@ class Llv_Entity_Cms_Dal_Page
      *
      * @return bool
      */
-    public static function updateRow(Llv_Entity_Cms_Request_Page $request)
+    public static function pageUpdateRow(Llv_Entity_Cms_Request_Page $request)
     {
         try {
             /** Maj de la page */
@@ -119,6 +119,8 @@ class Llv_Entity_Cms_Dal_Page
         }
     }
 
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
     /**
      * @static
      *
@@ -130,13 +132,13 @@ class Llv_Entity_Cms_Dal_Page
     {
         try {
             $params = array(
-                'filename'          => $request->filename,
-                'original_filename' => $request->originalFilename,
-                'mime_type'         => $request->mimeType,
-                'size'              => $request->size,
-                'online'            => true,
+                'filename'             => $request->filename,
+                'original_filename'    => $request->originalFilename,
+                'mime_type'            => $request->mimeType,
+                'size'                 => $request->size,
+                'online'               => true,
                 'position'             => self::carrouselGetLastOrder() + 1,
-                'date_delete'       => null
+                'date_delete'          => null
             );
             if ($request->dateAdd instanceof DateTime) {
                 $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
@@ -171,5 +173,21 @@ class Llv_Entity_Cms_Dal_Page
             error_log($e);
             return null;
         }
+    }
+
+    /**
+     * @param Llv_Entity_Cms_Filter_Carrousel $filter
+     *
+     * @return array
+     */
+    public static function carrouselGetList(Llv_Entity_Cms_Filter_Carrousel $filter)
+    {
+        $sql = Llv_Db::getInstance()->select()
+            ->from(Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel)
+            ->order('position DESC');
+        if (isset($filter->online)) {
+            $sql->where('online = ?', $filter->online);
+        }
+        return Llv_Db::getInstance()->fetchAll($sql);
     }
 }

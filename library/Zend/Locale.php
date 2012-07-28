@@ -12,20 +12,20 @@
  * obtain it through the world-wide-web, please send an email
  * to license@zend.com so we can send you a copy immediately.
  *
- * @category  Zend
- * @package   Zend_Locale
+ * @category   Zend
+ * @package    Zend_Locale
  * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   http://framework.zend.com/license/new-bsd     New BSD License
- * @version   $Id: Locale.php 24594 2012-01-05 21:27:01Z matthew $
+ * @license    http://framework.zend.com/license/new-bsd     New BSD License
+ * @version    $Id: Locale.php 24594 2012-01-05 21:27:01Z matthew $
  */
 
 /**
  * Base class for localization
  *
- * @category  Zend
- * @package   Zend_Locale
+ * @category   Zend
+ * @package    Zend_Locale
  * @copyright  Copyright (c) 2005-2012 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   http://framework.zend.com/license/new-bsd     New BSD License
+ * @license    http://framework.zend.com/license/new-bsd     New BSD License
  */
 class Zend_Locale
 {
@@ -178,9 +178,9 @@ class Zend_Locale
     /**
      * Autosearch constants
      */
-    const BROWSER     = 'browser';
+    const BROWSER = 'browser';
     const ENVIRONMENT = 'environment';
-    const ZFDEFAULT   = 'default';
+    const ZFDEFAULT = 'default';
 
     /**
      * Defines if old behaviour should be supported
@@ -243,6 +243,7 @@ class Zend_Locale
      *  4. Framework Standard
      *
      * @param  string|Zend_Locale $locale (Optional) Locale for parsing input
+     *
      * @throws Zend_Locale_Exception When autodetection has been failed
      */
     public function __construct($locale = null)
@@ -267,7 +268,7 @@ class Zend_Locale
      */
     public function toString()
     {
-        return (string) $this->_locale;
+        return (string)$this->_locale;
     }
 
     /**
@@ -314,6 +315,7 @@ class Zend_Locale
      *
      * @param  string|Zend_Locale $locale  Locale to set
      * @param  float              $quality The quality to set from 0 to 1
+     *
      * @throws Zend_Locale_Exception When a autolocale was given
      * @throws Zend_Locale_Exception When a unknown locale was given
      * @return void
@@ -321,7 +323,8 @@ class Zend_Locale
     public static function setDefault($locale, $quality = 1)
     {
         if (($locale === 'auto') or ($locale === 'root') or ($locale === 'default') or
-            ($locale === 'environment') or ($locale === 'browser')) {
+            ($locale === 'environment') or ($locale === 'browser')
+        ) {
             require_once 'Zend/Locale/Exception.php';
             throw new Zend_Locale_Exception('Only full qualified locales can be used as default!');
         }
@@ -336,15 +339,15 @@ class Zend_Locale
         }
 
         $locale = self::_prepareLocale($locale);
-        if (isset(self::$_localeData[(string) $locale]) === true) {
-            self::$_default = array((string) $locale => $quality);
+        if (isset(self::$_localeData[(string)$locale]) === true) {
+            self::$_default = array((string)$locale => $quality);
         } else {
-            $elocale = explode('_', (string) $locale);
+            $elocale = explode('_', (string)$locale);
             if (isset(self::$_localeData[$elocale[0]]) === true) {
                 self::$_default = array($elocale[0] => $quality);
             } else {
                 require_once 'Zend/Locale/Exception.php';
-                throw new Zend_Locale_Exception("Unknown locale '" . (string) $locale . "' can not be set as default!");
+                throw new Zend_Locale_Exception("Unknown locale '" . (string)$locale . "' can not be set as default!");
             }
         }
 
@@ -368,8 +371,8 @@ class Zend_Locale
 
         require_once 'Zend/Locale/Data/Translation.php';
 
-        $language      = setlocale(LC_ALL, 0);
-        $languages     = explode(';', $language);
+        $language = setlocale(LC_ALL, 0);
+        $languages = explode(';', $language);
         $languagearray = array();
 
         foreach ($languages as $locale) {
@@ -388,7 +391,7 @@ class Zend_Locale
                 $language = str_ireplace(
                     array_keys(Zend_Locale_Data_Translation::$languageTranslation),
                     array_values(Zend_Locale_Data_Translation::$languageTranslation),
-                    (string) $language
+                    (string)$language
                 );
 
                 $language = str_ireplace(
@@ -430,7 +433,7 @@ class Zend_Locale
             $httplanguages = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
         }
 
-        $languages     = array();
+        $languages = array();
         if (empty($httplanguages)) {
             return $languages;
         }
@@ -438,25 +441,25 @@ class Zend_Locale
         $accepted = preg_split('/,\s*/', $httplanguages);
 
         foreach ($accepted as $accept) {
-            $match  = null;
+            $match = null;
             $result = preg_match('/^([a-z]{1,8}(?:[-_][a-z]{1,8})*)(?:;\s*q=(0(?:\.[0-9]{1,3})?|1(?:\.0{1,3})?))?$/i',
-                                 $accept, $match);
+                $accept, $match);
 
             if ($result < 1) {
                 continue;
             }
 
             if (isset($match[2]) === true) {
-                $quality = (float) $match[2];
+                $quality = (float)$match[2];
             } else {
                 $quality = 1.0;
             }
 
             $countrys = explode('-', $match[1]);
-            $region   = array_shift($countrys);
+            $region = array_shift($countrys);
 
             $country2 = explode('_', $region);
-            $region   = array_shift($country2);
+            $region = array_shift($country2);
 
             foreach ($countrys as $country) {
                 $languages[$region . '_' . strtoupper($country)] = $quality;
@@ -479,21 +482,22 @@ class Zend_Locale
      * Sets a new locale
      *
      * @param  string|Zend_Locale $locale (Optional) New locale to set
+     *
      * @return void
      */
     public function setLocale($locale = null)
     {
         $locale = self::_prepareLocale($locale);
 
-        if (isset(self::$_localeData[(string) $locale]) === false) {
-            $region = substr((string) $locale, 0, 3);
+        if (isset(self::$_localeData[(string)$locale]) === false) {
+            $region = substr((string)$locale, 0, 3);
             if (isset($region[2]) === true) {
                 if (($region[2] === '_') or ($region[2] === '-')) {
                     $region = substr($region, 0, 2);
                 }
             }
 
-            if (isset(self::$_localeData[(string) $region]) === true) {
+            if (isset(self::$_localeData[(string)$region]) === true) {
                 $this->_locale = $region;
             } else {
                 $this->_locale = 'root';
@@ -550,11 +554,11 @@ class Zend_Locale
             }
 
             if (strpos($accept, ';') !== false) {
-                $quality        = (float) substr($accept, (strpos($accept, '=') + 1));
-                $pos            = substr($accept, 0, strpos($accept, ';'));
+                $quality = (float)substr($accept, (strpos($accept, '=') + 1));
+                $pos = substr($accept, 0, strpos($accept, ';'));
                 $charsets[$pos] = $quality;
             } else {
-                $quality           = 1.0;
+                $quality = 1.0;
                 $charsets[$accept] = $quality;
             }
         }
@@ -566,6 +570,7 @@ class Zend_Locale
      * Returns true if both locales are equal
      *
      * @param  Zend_Locale $object Locale to check for equality
+     *
      * @return boolean
      */
     public function equals(Zend_Locale $object)
@@ -585,6 +590,7 @@ class Zend_Locale
      * @param  string             $path   (Optional) Type of information to return
      * @param  string|Zend_Locale $locale (Optional) Locale|Language for which this informations should be returned
      * @param  string             $value  (Optional) Value for detail list
+     *
      * @return array Array with the wished information in the given language
      */
     public static function getTranslationList($path = null, $locale = null, $value = null)
@@ -603,6 +609,7 @@ class Zend_Locale
      * Returns an array with the name of all languages translated to the given language
      *
      * @param  string|Zend_Locale $locale (Optional) Locale for language translation
+     *
      * @return array
      * @deprecated
      */
@@ -616,6 +623,7 @@ class Zend_Locale
      * Returns an array with the name of all scripts translated to the given language
      *
      * @param  string|Zend_Locale $locale (Optional) Locale for script translation
+     *
      * @return array
      * @deprecated
      */
@@ -629,6 +637,7 @@ class Zend_Locale
      * Returns an array with the name of all countries translated to the given language
      *
      * @param  string|Zend_Locale $locale (Optional) Locale for country translation
+     *
      * @return array
      * @deprecated
      */
@@ -643,6 +652,7 @@ class Zend_Locale
      * All territories contains other countries.
      *
      * @param  string|Zend_Locale $locale (Optional) Locale for territory translation
+     *
      * @return array
      * @deprecated
      */
@@ -659,6 +669,7 @@ class Zend_Locale
      * @param  string             $value  Name to get detailed information about
      * @param  string             $path   (Optional) Type of information to return
      * @param  string|Zend_Locale $locale (Optional) Locale|Language for which this informations should be returned
+     *
      * @return string|false The wished information in the given language
      */
     public static function getTranslation($value = null, $path = null, $locale = null)
@@ -678,6 +689,7 @@ class Zend_Locale
      *
      * @param  string $value  Name to get detailed information about
      * @param  string $locale (Optional) Locale for language translation
+     *
      * @return array
      * @deprecated
      */
@@ -692,6 +704,7 @@ class Zend_Locale
      *
      * @param  string $value  Name to get detailed information about
      * @param  string $locale (Optional) locale for script translation
+     *
      * @return array
      * @deprecated
      */
@@ -706,6 +719,7 @@ class Zend_Locale
      *
      * @param  string             $value  Name to get detailed information about
      * @param  string|Zend_Locale $locale (Optional) Locale for country translation
+     *
      * @return array
      * @deprecated
      */
@@ -721,6 +735,7 @@ class Zend_Locale
      *
      * @param  string             $value  Name to get detailed information about
      * @param  string|Zend_Locale $locale (Optional) Locale for territory translation
+     *
      * @return array
      * @deprecated
      */
@@ -734,21 +749,22 @@ class Zend_Locale
      * Returns an array with translated yes strings
      *
      * @param  string|Zend_Locale $locale (Optional) Locale for language translation (defaults to $this locale)
+     *
      * @return array
      */
     public static function getQuestion($locale = null)
     {
         require_once 'Zend/Locale/Data.php';
-        $locale            = self::findLocale($locale);
-        $quest             = Zend_Locale_Data::getList($locale, 'question');
-        $yes               = explode(':', $quest['yes']);
-        $no                = explode(':', $quest['no']);
-        $quest['yes']      = $yes[0];
+        $locale = self::findLocale($locale);
+        $quest = Zend_Locale_Data::getList($locale, 'question');
+        $yes = explode(':', $quest['yes']);
+        $no = explode(':', $quest['no']);
+        $quest['yes'] = $yes[0];
         $quest['yesarray'] = $yes;
-        $quest['no']       = $no[0];
-        $quest['noarray']  = $no;
-        $quest['yesexpr']  = self::_prepareQuestionString($yes);
-        $quest['noexpr']   = self::_prepareQuestionString($no);
+        $quest['no'] = $no[0];
+        $quest['noarray'] = $no;
+        $quest['yesexpr'] = self::_prepareQuestionString($yes);
+        $quest['noexpr'] = self::_prepareQuestionString($no);
 
         return $quest;
     }
@@ -757,6 +773,7 @@ class Zend_Locale
      * Internal function for preparing the returned question regex string
      *
      * @param  string $input Regex to parse
+     *
      * @return string
      */
     private static function _prepareQuestionString($input)
@@ -770,9 +787,9 @@ class Zend_Locale
                     $regex .= '|';
                 }
 
-                $start  = false;
+                $start = false;
                 $regex .= '(';
-                $one    = null;
+                $one = null;
                 if (strlen($row) > 2) {
                     $one = true;
                 }
@@ -781,7 +798,7 @@ class Zend_Locale
                     $regex .= '[' . $char;
                     $regex .= strtoupper($char) . ']';
                     if ($one === true) {
-                        $one    = false;
+                        $one = false;
                         $regex .= '(';
                     }
                 }
@@ -806,6 +823,7 @@ class Zend_Locale
      * @param  string|Zend_Locale $locale     Locale to check for
      * @param  boolean            $strict     (Optional) If true, no rerouting will be done when checking
      * @param  boolean            $compatible (DEPRECATED) Only for internal usage, brakes compatibility mode
+     *
      * @return boolean If the locale is known dependend on the settings
      */
     public static function isLocale($locale, $strict = false, $compatible = true)
@@ -857,6 +875,7 @@ class Zend_Locale
      * Returns the found locale as string
      *
      * @param string $locale
+     *
      * @throws Zend_Locale_Exception When the given locale is no locale or the autodetection fails
      * @return string
      */
@@ -894,6 +913,7 @@ class Zend_Locale
      * Returns the expected locale for a given territory
      *
      * @param string $territory Territory for which the locale is being searched
+     *
      * @return string|null Locale string or null when no locale has been found
      */
     public static function getLocaleToTerritory($territory)
@@ -938,6 +958,7 @@ class Zend_Locale
      * Sets a cache
      *
      * @param  Zend_Cache_Core $cache Cache to set
+     *
      * @return void
      */
     public static function setCache(Zend_Cache_Core $cache)
@@ -972,6 +993,7 @@ class Zend_Locale
      * Clears all set cache data
      *
      * @param string $tag Tag to clear when the default tag name is not used
+     *
      * @return void
      */
     public static function clearCache($tag = null)
@@ -984,6 +1006,7 @@ class Zend_Locale
      * Disables the set cache
      *
      * @param  boolean $flag True disables any set cache, default is false
+     *
      * @return void
      */
     public static function disableCache($flag)
@@ -997,6 +1020,7 @@ class Zend_Locale
      *
      * @param  string|Zend_Locale $locale (Optional) Locale to work on
      * @param  boolean            $strict (Optional) Strict preparation
+     *
      * @throws Zend_Locale_Exception When no locale is set which is only possible when the class was wrong extended
      * @return string
      */
@@ -1011,10 +1035,10 @@ class Zend_Locale
         }
 
         if (empty(self::$_auto) === true) {
-            self::$_browser     = self::getBrowser();
+            self::$_browser = self::getBrowser();
             self::$_environment = self::getEnvironment();
-            self::$_breakChain  = true;
-            self::$_auto        = self::getBrowser() + self::getEnvironment() + self::getDefault();
+            self::$_breakChain = true;
+            self::$_auto = self::getBrowser() + self::getEnvironment() + self::getDefault();
         }
 
         if (!$strict) {
@@ -1058,14 +1082,14 @@ class Zend_Locale
             return '';
         }
 
-        foreach($parts as $key => $value) {
+        foreach ($parts as $key => $value) {
             if ((strlen($value) < 2) || (strlen($value) > 3)) {
                 unset($parts[$key]);
             }
         }
 
         $locale = implode('_', $parts);
-        return (string) $locale;
+        return (string)$locale;
     }
 
     /**
@@ -1075,6 +1099,7 @@ class Zend_Locale
      * Standard Searchorder is Browser, Environment, Default
      *
      * @param  string  $searchorder (Optional) Searchorder
+     *
      * @return array Returns an array of all detected locales
      */
     public static function getOrder($order = null)
@@ -1082,17 +1107,17 @@ class Zend_Locale
         switch ($order) {
             case self::ENVIRONMENT:
                 self::$_breakChain = true;
-                $languages         = self::getEnvironment() + self::getBrowser() + self::getDefault();
+                $languages = self::getEnvironment() + self::getBrowser() + self::getDefault();
                 break;
 
             case self::ZFDEFAULT:
                 self::$_breakChain = true;
-                $languages         = self::getDefault() + self::getEnvironment() + self::getBrowser();
+                $languages = self::getDefault() + self::getEnvironment() + self::getBrowser();
                 break;
 
             default:
                 self::$_breakChain = true;
-                $languages         = self::getBrowser() + self::getEnvironment() + self::getDefault();
+                $languages = self::getBrowser() + self::getEnvironment() + self::getDefault();
                 break;
         }
 

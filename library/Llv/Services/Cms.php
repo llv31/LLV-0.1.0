@@ -152,4 +152,23 @@ class Llv_Services_Cms
         }
         return $message;
     }
+
+    public function carrouselGetList(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Cms_Filter_Carrousel $filter
+    )
+    {
+        $message = new Llv_Services_Cms_Message_Carrousel();
+        try {
+            $entityFilter = new Llv_Entity_Cms_Filter_Carrousel();
+            if (isset($filter->online)) {
+                $entityFilter->online = $filter->online;
+            }
+            $message->carrousels = $this->getEntity()->carrouselGetList($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
 }

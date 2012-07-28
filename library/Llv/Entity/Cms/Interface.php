@@ -30,10 +30,19 @@ interface Llv_Entity_Cms_Interface
      */
     public function pageUpdateRow(Llv_Entity_Cms_Request_Page $request);
 
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
     /**
      * @param Llv_Entity_Cms_Request_Carrousel $request
      *
      * @return bool
      */
     public function carrouselAddRow(Llv_Entity_Cms_Request_Carrousel $request);
+
+    /**
+     * @param Llv_Entity_Cms_Filter_Carrousel $filter
+     *
+     * @return array|mixed
+     */
+    public function carrouselGetList(Llv_Entity_Cms_Filter_Carrousel $filter);
 }

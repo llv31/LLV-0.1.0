@@ -10,11 +10,14 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Services_Cms_Message_Carrousel
-    extends Llv_Services_Message_Abstract
+class Llv_Entity_Cms_Filter_Carrousel
 {
-    /** @var Llv_Dto_Cms_Carrousel[] */
-    public $carrousels;
-    /** @var Llv_Dto_Cms_Carrousel */
-    public $carrousel;
+    /** @var int */
+    public $id;
+    /** @var string */
+    public $mimeType;
+    /** @var bool */
+    public $online;
+    /** @var bool */
+    public $deleted;
 }

@@ -107,7 +107,7 @@ class Llv_Context_Application extends Llv_Context_Abstract
     public function getDefaultLocale()
     {
         $sites = array_shift(Llv_Config::getInstance()->sites->toArray());
-        return $sites['locale'];
+        return new Llv_Locale($sites['locale']);
     }
 
     /**

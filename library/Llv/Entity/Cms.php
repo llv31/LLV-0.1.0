@@ -33,8 +33,10 @@ class Llv_Entity_Cms
      */
     public function pageUpdateRow(Llv_Entity_Cms_Request_Page $request)
     {
-        return Llv_Entity_Cms_Dal_Page::updateRow($request);
+        return Llv_Entity_Cms_Dal_Page::pageUpdateRow($request);
     }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
      * @param Llv_Entity_Cms_Request_Carrousel $request
@@ -44,5 +46,19 @@ class Llv_Entity_Cms
     public function carrouselAddRow(Llv_Entity_Cms_Request_Carrousel $request)
     {
         return Llv_Entity_Cms_Dal_Page::carrouselAddRow($request);
+    }
+
+    /**
+     * @param Llv_Entity_Cms_Filter_Carrousel $filter
+     *
+     * @return array|mixed
+     */
+    public function carrouselGetList(Llv_Entity_Cms_Filter_Carrousel $filter)
+    {
+        $result = array();
+        foreach (Llv_Entity_Cms_Dal_Page::carrouselGetList($filter) as $ligne) {
+            $result[] = Llv_Entity_Cms_Helper_Carrousel::convertFromDalToDto($ligne);
+        }
+        return $result;
     }
 }

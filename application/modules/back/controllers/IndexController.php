@@ -25,6 +25,8 @@ class IndexController
         }
     }
 
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
     /**
      * Gestion du texte de bienvenue
      */
@@ -60,6 +62,8 @@ class IndexController
         }
         $this->view->assign('formPageCms', $formPageCms);
     }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
      * Gestion de la page partenaires
@@ -98,6 +102,8 @@ class IndexController
         $this->view->assign('formPageCms', $formPageCms);
     }
 
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
     /**
      * Ajout de fichiers
      */
@@ -125,8 +131,23 @@ class IndexController
      */
     public function carrouselListAction()
     {
-
+        $listFilter = new Llv_Services_Cms_Filter_Carrousel();
+        $this->view->assign('list', Llv_Context_Cms::getInstance()->carrouselGetList($listFilter));
     }
+
+    /**
+     * Liste et administration rapide
+     */
+    public function carrouselUpdateAction()
+    {
+        switch ($this->_getParam('make')) {
+            case 'delete':
+
+                break;
+        }
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
      * Connecte un utilisateur

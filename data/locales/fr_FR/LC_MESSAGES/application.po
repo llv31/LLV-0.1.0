@@ -51,6 +51,9 @@ msgstr "Oui"
 msgid "GLOBAL_NON"
 msgstr "Non"
 
+msgid "GLOBAL_AUCUNE"
+msgstr "Aucune"
+
 msgid "GLOBAL_FORM_ENVOYER"
 msgstr "Envoyer"
 
@@ -69,6 +72,42 @@ msgstr "Changer la langue d'édition"
 msgid "GLOBAL_HEADER_TITLE"
 msgstr "Luchon Location Vances"
 
+msgid "GLOBAL_MONTH_LABEL01"
+msgstr "Janvier"
+
+msgid "GLOBAL_MONTH_LABEL02"
+msgstr "Février"
+
+msgid "GLOBAL_MONTH_LABEL03"
+msgstr "Mars"
+
+msgid "GLOBAL_MONTH_LABEL04"
+msgstr "Avril"
+
+msgid "GLOBAL_MONTH_LABEL05"
+msgstr "Mail"
+
+msgid "GLOBAL_MONTH_LABEL06"
+msgstr "Juin"
+
+msgid "GLOBAL_MONTH_LABEL07"
+msgstr "Juillet"
+
+msgid "GLOBAL_MONTH_LABEL08"
+msgstr "Août"
+
+msgid "GLOBAL_MONTH_LABEL09"
+msgstr "Septembre"
+
+msgid "GLOBAL_MONTH_LABEL10"
+msgstr "Octobre"
+
+msgid "GLOBAL_MONTH_LABEL11"
+msgstr "Novembre"
+
+msgid "GLOBAL_MONTH_LABEL12"
+msgstr "Décembre"
+
 msgid "GLOBAL_ADMIN_ADD"
 msgstr "Ajouter un élément"
 
@@ -86,6 +125,18 @@ msgstr "Remonter l'élément"
 
 msgid "GLOBAL_ADMIN_DOWN"
 msgstr "Descendre l'élément"
+
+msgid "GLOBAL_ADMIN_LIST_DATE_AJOUT"
+msgstr "Ajouté le"
+
+msgid "GLOBAL_ADMIN_LIST_DATE_MODIFICATION"
+msgstr "Modifié le"
+
+msgid "GLOBAL_ADMIN_LIST_DATE_SUPPRESSION"
+msgstr "Supprimé le"
+
+msgid "GLOBAL_ADMIN_LIST_ACTIONS"
+msgstr "Actions"
 
 msgid "HOME_TITRE"
 msgstr "Qui sommes-nous ?"
@@ -149,4 +200,16 @@ msgstr "Edition des images du carrousel"
 
 msgid "HOME_CARROUSEL_FILE_LABEL"
 msgstr "Nouveau fichier"
+
+msgid "HOME_CARROUSEL_LIST_ID"
+msgstr "#"
+
+msgid "HOME_CARROUSEL_LIST_ORIGINALFILENAME"
+msgstr "Nom du fichier"
+
+msgid "HOME_CARROUSEL_LIST_TYPE"
+msgstr "Type"
+
+msgid "HOME_CARROUSEL_LIST_ONLINE"
+msgstr "Fichier en ligne ?"
 

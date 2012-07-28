@@ -777,7 +777,6 @@ class Zend_Locale_Format
         $number = $date; // working copy
         $result['date_format'] = $format; // save the format used to normalize $number (convenience)
         $result['locale'] = $options['locale']; // save the locale used to normalize $number (convenience)
-
         $oenc = iconv_get_encoding('internal_encoding');
         iconv_set_encoding('internal_encoding', 'UTF-8');
         $day   = iconv_strpos($format, 'd');

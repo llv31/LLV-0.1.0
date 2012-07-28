@@ -1,0 +1,43 @@
+/* •••••••••••••••••••••••••••••••••• */
+table.list {
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 0 5px #333;
+    border-collapse: collapse;
+    border: 1px solid #555;
+}
+
+table.list thead tr th,
+table.list tbody tr td {
+    padding: 5px;
+}
+
+table.list thead tr {
+    line-height: 30px;
+    background-color: #abc;
+    font-weight: bold;
+}
+
+table.list thead tr th.actions,
+table.list tbody tr td.actions {
+    width: 150px;
+}
+
+table.list tbody tr td {
+    border-bottom: 1px solid #555;
+}
+
+table.list tbody tr:nth-child(odd) td {
+    background: #dadcc7;
+}
+
+table.list tbody tr:nth-child(even) td {
+    background: #eaecdb;
+}
+
+table.list tbody tr:hover td {
+    background: #a9ab9d;
+    color:#fff;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
