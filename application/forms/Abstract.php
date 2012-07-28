@@ -13,5 +13,57 @@
 class App_Form_Abstract
     extends Zend_Form
 {
+    public $formDecorator = array(
+        'FormElements',
+        array('HtmlTag'),
+        'Form'
+    );
+    public $elementsDecorator = array(
+        'ViewHelper',
+        array('Label', array('placement'=> 'prepend')),
+        array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'default_element'))
+    );
+    public $submitDecorator = array(
+        'ViewHelper',
+        array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'submit_element'))
+    );
+    public $textareaDecorator = array(
+        'ViewHelper',
+        array('Label', array('placement'=> 'prepend')),
+        array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'textarea_element'))
+    );
+    public $selectDecorator = array(
+        'ViewHelper',
+        array('Label', array('placement'=> 'prepend')),
+        array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'select_element'))
+    );
+    public $fileDecorator = array(
+        'ViewHelper',
+        array('Label', array('placement'=> 'prepend')),
+        array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'file_element'))
+    );
 
+    /**
+     * Initialisation des décorateurs
+     */
+    public function init()
+    {
+        $this->setDisableLoadDefaultDecorators(true);
+        $this->setDecorators($this->formDecorator);
+
+        /** @var $element Zend_Form_Element */
+        foreach ($this->getElements() as $element) {
+            if ($element instanceof Zend_Form_Element_Submit) {
+                $element->setDecorators($this->submitDecorator);
+            } elseif ($element instanceof Zend_Form_Element_Textarea) {
+                $element->setDecorators($this->textareaDecorator);
+            } elseif ($element instanceof Zend_Form_Element_Select) {
+                $element->setDecorators($this->selectDecorator);
+            } elseif ($element instanceof Zend_Form_Element_File) {
+//                $element->setDecorators($this->fileDecorator);
+            }else{
+                $element->setDecorators($this->elementsDecorator);
+            }
+        }
+    }
 }

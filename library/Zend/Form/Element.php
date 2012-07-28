@@ -1852,6 +1852,7 @@ class Zend_Form_Element implements Zend_Validate_Interface
                 'options'   => $options,
             );
         } elseif (is_array($decorator)) {
+
             foreach ($decorator as $name => $spec) {
                 break;
             }

@@ -22,13 +22,12 @@ class App_View_Helper_DisplayMainMenu
         if (is_array($items) == false || count($items) == 0) {
             return;
         }
-
         echo '<ul' . (strlen($menuClass) > 0 ? ' class="' . htmlspecialchars($menuClass) . '"' : '') . '>' . PHP_EOL;
         foreach ($items as $key=> $item) {
             $class = null;
             if ($this->view->isController($item['controller'])) {
-                if (isset($item['action'])) {
-                    if ($this->view->isAction($item['action'])) {
+                if (isset($item['current'])) {
+                    if (in_array($this->view->getAction(), $item['current'])) {
                         $class = "current";
                     }
                 } else {

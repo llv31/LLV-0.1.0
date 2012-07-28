@@ -26,6 +26,9 @@ class Llv_Locale extends Zend_Locale
             case Llv_Constant_Locale::FRANCAIS_FRANCE_ID :
                 return Llv_Constant_Locale::FRANCAIS_FRANCE_LOCALE;
                 break;
+            case Llv_Constant_Locale::FRANCAIS_ESPAGNE_ID :
+                return Llv_Constant_Locale::FRANCAIS_ESPAGNE_LOCALE;
+                break;
         }
     }
 
@@ -40,6 +43,9 @@ class Llv_Locale extends Zend_Locale
             default :
             case Llv_Constant_Locale::FRANCAIS_FRANCE_SHORT :
                 return Llv_Constant_Locale::FRANCAIS_FRANCE_ID;
+                break;
+            case Llv_Constant_Locale::FRANCAIS_ESPAGNE_SHORT :
+                return Llv_Constant_Locale::FRANCAIS_ESPAGNE_ID;
                 break;
         }
     }

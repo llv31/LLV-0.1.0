@@ -16,4 +16,9 @@ class Llv_Constant_Locale extends Enum_Abstract
     const FRANCAIS_FRANCE_LOCALE = 'fr_FR';
     const FRANCAIS_FRANCE_SHORT = 'fr';
     const FRANCAIS_FRANCE_ID = 1;
+
+    /** Espagnol / Espagne */
+    const FRANCAIS_ESPAGNE_LOCALE = 'es_ES';
+    const FRANCAIS_ESPAGNE_SHORT = 'es';
+    const FRANCAIS_ESPAGNE_ID = 2;
 }

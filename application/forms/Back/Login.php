@@ -10,7 +10,7 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class App_Form_Login
+class App_Form_Back_Login
     extends App_Form_Abstract
 {
     public function __construct()
@@ -18,7 +18,10 @@ class App_Form_Login
         $this->setMethod(Zend_Form::METHOD_POST);
         $this->setAttrib('enctype', Zend_Form::ENCTYPE_MULTIPART);
 
-        $this->setAction('login');
+        $this->setAction('/index/login/');
+        if (APPLICATION_ENV == 'dev') {
+            $this->setAction(App_View_Helper_BaseUrl::baseUrl() . 'index/login/');
+        }
 
         /** Login */
         $elements[] = new Zend_Form_Element_Text(

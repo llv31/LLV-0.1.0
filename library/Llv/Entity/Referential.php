@@ -17,6 +17,7 @@ class Llv_Entity_Referential
 
     /**
      * Retourne la liste des modules
+     *
      * @param Llv_Entity_Referential_Filter_Modules $filter
      *
      * @return array|mixed
@@ -36,5 +37,16 @@ class Llv_Entity_Referential
     public function getModule(Llv_Entity_Referential_Filter_Module $filter)
     {
         return Llv_Entity_Referential_Dal_Modules::getOneBySiteId($filter->idSite);
+    }
+
+    /**
+     * Retourne la liste des langues du site
+     * @return Llv_Dto_Language
+     */
+    public function getLanguages()
+    {
+        return Llv_Entity_Referential_Helper_Language::convertFromDalToDtoAll(
+            Llv_Entity_Referential_Dal_Language::getAll()
+        );
     }
 }

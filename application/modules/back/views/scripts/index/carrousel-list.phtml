@@ -1,0 +1,17 @@
+<?php
+$this->headTitle('Carrousel | ');
+$this->headLink()->appendStylesheet($this->buildDesignUrl('carrousel/css/list.css'));
+?>
+
+<div class="page page_cms">
+    <h2>
+        <?= _('HOME_CARROUSEL_TITLE') ?>
+    </h2>
+
+    <p class='admin_add'>
+        <a href="<?= $this->baseUrl(); ?>index/carrousel-add" title="<?= _('GLOBAL_ADMIN_ADD') ?>">
+            <?= _('GLOBAL_ADMIN_ADD') ?>
+        </a>
+    </p>
+
+</div>

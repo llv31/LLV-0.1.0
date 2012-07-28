@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Class Llv_Context_User.php
+ * PHP Class User.php
  * PHP Version 5
  *
  * @category    : default

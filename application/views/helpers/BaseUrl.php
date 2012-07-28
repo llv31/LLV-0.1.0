@@ -17,7 +17,7 @@ class App_View_Helper_BaseUrl
      * Retourne la racine du site
      * @return string
      */
-    public function baseUrl()
+    public static function baseUrl()
     {
         $baseUrl = "";
         if (APPLICATION_ENV == 'dev') {

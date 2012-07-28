@@ -1,5 +1,15 @@
 <?php
 $this->headTitle('Home | ');
+$formPageCms = $this->formPageCms;
+$this->headLink()->appendStylesheet($this->buildDesignUrl('index/css/index.css'));
 ?>
 
-Vue
+<div class="page page_cms">
+    <h2>
+        <?= _('HOME_PAGECMS_HOME_TITLE') ?>
+    </h2>
+
+    <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
+
+    <?php echo $formPageCms; ?>
+</div>

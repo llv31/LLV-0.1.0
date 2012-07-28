@@ -1,0 +1,12 @@
+/* •••••••••••••••••••••••••••••••••• */
+form#language_toggler p {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+form#language_toggler p label {
+    width: auto;
+    height: 13px;
+}
+
+/* •••••••••••••••••••••••••••••••••• */

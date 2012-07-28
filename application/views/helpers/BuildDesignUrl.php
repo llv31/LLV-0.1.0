@@ -19,6 +19,7 @@ class App_View_Helper_BuildDesignUrl
 
     /**
      * Retourne l'url vers le fichier à inclure
+     *
      * @param $filePath
      *
      * @return null|string
@@ -32,9 +33,9 @@ class App_View_Helper_BuildDesignUrl
         $dirs[2] = Llv_Context_Application::getInstance()->getLocale()->toString();
 
         if (!file_exists($root . '/' . implode('/', $dirs) . '/' . $filePath)) {
-            $dirs[1] = self::DESIGN_DEFAULT_DIR_PATH;
+            $dirs[2] = self::DESIGN_DEFAULT_LANGUAGE_PATH;
             if (!file_exists($root . '/' . implode('/', $dirs) . '/' . $filePath)) {
-                $dirs[2] = self::DESIGN_DEFAULT_LANGUAGE_PATH;
+                $dirs[1] = self::DESIGN_DEFAULT_DIR_PATH;
                 if (!file_exists($root . '/' . implode('/', $dirs) . '/' . $filePath)) {
                     return null;
                 }

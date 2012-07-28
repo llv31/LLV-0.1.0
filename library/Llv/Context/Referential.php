@@ -42,6 +42,7 @@ class Llv_Context_Referential
 
     /**
      * Retourne un module en fonction d'un id de site
+     *
      * @param $idSite
      *
      * @return null|string
@@ -56,5 +57,17 @@ class Llv_Context_Referential
             return $message->module;
         }
         return null;
+    }
+
+    /**
+     * @return array|Llv_Dto_Language[]
+     */
+    public function getLanguages()
+    {
+        $message = $this->_service->getLanguages($this->getHeaderMessage());
+        if ($message->success) {
+            return $message->languages;
+        }
+        return array();
     }
 }

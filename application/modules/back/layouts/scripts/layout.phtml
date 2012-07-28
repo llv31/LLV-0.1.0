@@ -8,16 +8,19 @@ $doctype = new Zend_View_Helper_Doctype();
 $doctype->setDoctype('HTML5');
 
 /** Titre du site */
-$this->headTitle('Luchon Location Vacances');
+$this->headTitle(_('GLOBAL_HEADER_TITLE'));
 
 /** Metas tags */
 $this->headMeta()->setCharset(Llv_Config::getInstance()->project->charset);
 
 /** Feuilles de style */
-$this->headLink()->appendStylesheet($this->baseUrl() . '/design/default/default/_common/css/reset.css');
-$this->headLink()->appendStylesheet($this->baseUrl() . '/design/default/default/_common/css/global.css');
-$this->headLink()->appendStylesheet($this->baseUrl() . '/design/default/' . $locale . '/_common/css/global.css');
-$this->headLink()->appendStylesheet($this->baseUrl() . '/design/' . $module . '/' . $locale . '/_common/css/global.css');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'design/' . $module . '/' . $locale . '/_common/css/global.css');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'design/' . $module . '/default/_common/css/global.css');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/' . $locale . '/_common/css/global.css');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/_common/css/global.css');
+
+$this->headScript()->prependFile($this->baseUrl() . '/design/default/default/_common/js/jquery.js');
+$this->headScript()->appendFile($this->baseUrl() . '/design/' . $module . '/default/_common/js/js.niceedit.js');
 
 ?>
 <?php echo $this->doctype(); ?>
@@ -33,6 +36,7 @@ $this->headLink()->appendStylesheet($this->baseUrl() . '/design/' . $module . '/
     <?php echo $this->headLink(); ?>
 
     <?php echo $this->headScript(); ?>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 
 </head>
 
@@ -41,13 +45,13 @@ $this->headLink()->appendStylesheet($this->baseUrl() . '/design/' . $module . '/
 <div id="container">
     <div id="header">
         <?php
-            echo $this->partial(
-                'partial/header.phtml',
-                array()
-            );
+        echo $this->partial(
+            'partial/header.phtml',
+            array()
+        );
         ?>
     </div>
-
+    <?php if (Llv_Context_User::getInstance()->isUserLogged()) : ?>
     <div id="menu">
         <?php
         echo $this->partial(
@@ -56,6 +60,7 @@ $this->headLink()->appendStylesheet($this->baseUrl() . '/design/' . $module . '/
         );
         ?>
     </div>
+    <?php endif;?>
 
     <div id="wrapper"><?php echo $this->layout()->content; ?></div>
 

@@ -3,28 +3,51 @@ $items = array();
 /** Home page */
 $items['home'] = array(
     'controller' => 'index',
-    'label'      => _('GLOBAL_MENU_HOME')
+    'action'     => 'index',
+    'label'      => _('GLOBAL_MENU_HOME'),
+    'current'    => array('index')
+);
+/** Carrousel */
+$items['carrousel'] = array(
+    'controller' => 'index',
+    'action'     => 'carrousel-list',
+    'label'      => _('GLOBAL_MENU_CARROUSEL'),
+    'current'    => array('carrousel-list', 'carrousel-add')
+);
+/** Partenaires */
+$items['partners'] = array(
+    'controller' => 'index',
+    'action'     => 'partners',
+    'label'      => _('GLOBAL_MENU_PARTNERS'),
+    'current'    => array('partners')
 );
 /** Liste des chambres d'hôtes */
 $items['chambres'] = array(
     'controller' => 'products',
     'action'     => 'guesthouse-room-list',
-    'label'      => _('GLOBAL_MENU_CHAMBRES')
+    'label'      => _('GLOBAL_MENU_CHAMBRES'),
+    'current'    => array('guesthouse-room-list', 'guesthouse-room-update')
 );
 /** Liste des logements du gite */
 $items['gite'] = array(
     'controller' => 'products',
     'action'     => 'chalet-room-list',
-    'label'      => _('GLOBAL_MENU_GITE')
+    'label'      => _('GLOBAL_MENU_GITE'),
+    'current'    => array('chalet-room-list', 'chalet-room-update')
 );
 /** Liste des actualités */
 $items['news'] = array(
     'controller' => 'news',
-    'label'      => _('GLOBAL_MENU_NEWS')
+    'label'      => _('GLOBAL_MENU_NEWS'),
+    'current'    => array('news-list', 'news-add', 'news-update')
 );
 /** Liste des activités */
 $items['activities'] = array(
-    'controller' => 'activities',
-    'label'      => _('GLOBAL_MENU_ACTIVITIES')
+    'controller' => 'activities-list',
+    'label'      => _('GLOBAL_MENU_ACTIVITIES'),
+    'current'    => array('activities-list', 'activities-add', 'activities-update')
 );
 echo $this->displayMainMenu($items);
+?>
+
+<p><a href="<?= $this->baseUrl(); ?>index/logout/"><?= _('GLOBAL_MENU_DECONNEXION'); ?></a></p>

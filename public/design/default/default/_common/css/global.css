@@ -1,4 +1,8 @@
 /* •••••••••••••••••••••••••••••••••• */
+@import "reset.css";
+@import "form.css";
+
+/* •••••••••••••••••••••••••••••••••• */
 html {
     height: 100%;
 }
@@ -21,15 +25,25 @@ a {
     text-decoration: none;
     color: #4B4C43;
     font-weight: bold;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-strong {
+strong,
+b {
     font-weight: bold;
+}
+
+/** Editeur WYSIWYG */
+i {
+    font-style: italic;
+}
+
+u {
+    text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {

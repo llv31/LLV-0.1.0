@@ -10,17 +10,16 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class App_View_Helper_IsAction
+class App_View_Helper_GetAction
     extends Zend_View_Helper_Abstract
 {
     /**
-     * Retourne vrai si la chaine en paramètre est l'action courante
-     * @param $actionName
+     * Retourne l'action courante
      *
      * @return bool
      */
-    public function isAction($actionName)
+    public function getAction()
     {
-        return Zend_Controller_Front::getInstance()->getRequest()->getParam('action') == $actionName;
+        return Zend_Controller_Front::getInstance()->getRequest()->getParam('action');
     }
 }

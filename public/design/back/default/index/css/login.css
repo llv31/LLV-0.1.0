@@ -1,0 +1,38 @@
+/* •••••••••••••••••••••••••••••••••• */
+#wrapper .connexion {
+    background-color: #fff;
+    padding: 3%;
+    margin: 10% auto;
+    width: 50%;
+    box-shadow: 0 0 5px #555;
+}
+
+#wrapper .connexion h2 {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#wrapper .connexion form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#wrapper .connexion form label {
+    margin: 0;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: auto;
+    overflow: hidden;
+}
+
+form input[type=text],
+form input[type=password] {
+    width: 100%;
+}
+
+form p.submit_element {
+    text-align: center;
+}
+/* •••••••••••••••••••••••••••••••••• */

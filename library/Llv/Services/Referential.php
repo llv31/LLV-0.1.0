@@ -56,6 +56,7 @@ class Llv_Services_Referential
 
     /**
      * Retourne un module en fonction d'un id de site
+     *
      * @param Llv_Services_Message_Header             $header
      * @param Llv_Services_Referential_Filter_Modules $filter
      *
@@ -71,6 +72,24 @@ class Llv_Services_Referential
         $entityFilter->idSite = $filter->idSite;
         try {
             $message->module = $this->getEntity()->getModule($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * Retourne la liste des langues du site
+     * @param Llv_Services_Message_Header $header
+     *
+     * @return Llv_Services_Referential_Message_Languages
+     */
+    public function getLanguages(Llv_Services_Message_Header $header)
+    {
+        $message = new Llv_Services_Referential_Message_Languages();
+        try {
+            $message->languages = $this->getEntity()->getLanguages();
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

@@ -1,0 +1,13 @@
+<?php
+$this->headTitle('Carrousel | ');
+$formPageCms = $this->formPageCms;
+$this->headLink()->appendStylesheet($this->buildDesignUrl('carrousel/css/add.css'));
+?>
+
+<div class="page page_cms">
+    <h2>
+        <?= _('HOME_CARROUSEL_TITLE') ?>
+    </h2>
+
+    <?php echo $formPageCms; ?>
+</div>

@@ -1,0 +1,5 @@
+<?php
+$this->headScript()->appendFile($this->baseUrl() . '/design/back/default/_common/js/jquery.language-toggler.js');
+$this->headLink()->appendStylesheet($this->buildDesignUrl('_common/css/language-toggler.css'));
+
+echo new App_Form_Back_Language();

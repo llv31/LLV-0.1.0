@@ -10,10 +10,24 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Entity_User_Dal_User extends Zend_Db_Table_Abstract
+class Llv_Entity_User_Dal_User
+    extends Zend_Db_Table_Abstract
 {
     protected $_name = "user";
     protected $_rowClass = "Llv_Entity_Dal_Row_Abstract";
+    protected static $_instance;
+
+    /**
+     * @static
+     * @return mixed
+     */
+    public static function getInstance()
+    {
+        if (is_null(self::$_instance)) {
+            self::$_instance = new self();
+        }
+        return self::$_instance;
+    }
 
     /**
      * Retourne un utilsateur en fonction de son id
@@ -32,6 +46,7 @@ class Llv_Entity_User_Dal_User extends Zend_Db_Table_Abstract
 
     /**
      * Retourne un utilisateur en fonction de son login mot de passe
+     *
      * @static
      *
      * @param $login
@@ -42,7 +57,7 @@ class Llv_Entity_User_Dal_User extends Zend_Db_Table_Abstract
     public static function getOneByCreditentials($login, $password)
     {
         $sql = Llv_Db::getInstance()->select()
-            ->from('user')
+            ->from(self::getInstance()->_name)
             ->where('login = ?', $login)
             ->where('password = ?', $password);
         return Llv_Db::getInstance()->fetchRow($sql);

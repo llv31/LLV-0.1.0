@@ -36,6 +36,57 @@ msgstr "Activités"
 msgid "GLOBAL_MENU_CONTACT"
 msgstr "Reservations"
 
+msgid "GLOBAL_MENU_CARROUSEL"
+msgstr "Carrousel"
+
+msgid "GLOBAL_MENU_PARTNERS"
+msgstr "Partenaires"
+
+msgid "GLOBAL_MENU_DECONNEXION"
+msgstr "Se déconnecter"
+
+msgid "GLOBAL_OUI"
+msgstr "Oui"
+
+msgid "GLOBAL_NON"
+msgstr "Non"
+
+msgid "GLOBAL_FORM_ENVOYER"
+msgstr "Envoyer"
+
+msgid "GLOBAL_FORM_CONFIRMER"
+msgstr "Confirmer"
+
+msgid "GLOBAL_FORM_VALIDER"
+msgstr "Valider"
+
+msgid "GLOBAL_FORM_SUBMIT"
+msgstr "Enregistrer"
+
+msgid "GLOBAL_LANGUAGETOGGLER_LABEL"
+msgstr "Changer la langue d'édition"
+
+msgid "GLOBAL_HEADER_TITLE"
+msgstr "Luchon Location Vances"
+
+msgid "GLOBAL_ADMIN_ADD"
+msgstr "Ajouter un élément"
+
+msgid "GLOBAL_ADMIN_UPDATE"
+msgstr "Modifier un élément"
+
+msgid "GLOBAL_ADMIN_DELETE"
+msgstr "Supprimer un élément"
+
+msgid "GLOBAL_ADMIN_DELETE_CONFIRM"
+msgstr "Êtes-vous sûr de vouloir supprimer cet élément ?"
+
+msgid "GLOBAL_ADMIN_UP"
+msgstr "Remonter l'élément"
+
+msgid "GLOBAL_ADMIN_DOWN"
+msgstr "Descendre l'élément"
+
 msgid "HOME_TITRE"
 msgstr "Qui sommes-nous ?"
 
@@ -80,4 +131,22 @@ msgstr "Mot de passe"
 
 msgid "HOME_LOGIN_FORM_SUBMIT_LABEL"
 msgstr "Se connecter"
+
+msgid "HOME_PAGECMS_HOME_TITLE"
+msgstr "Edition de la page d'accueil"
+
+msgid "HOME_PAGECMS_PARTNERS_TITLE"
+msgstr "Edition de la page partenaires"
+
+msgid "HOME_PAGECMS_EDIT_TITLE_LABEL"
+msgstr "Titre"
+
+msgid "HOME_PAGECMS_EDIT_CONTENT_LABEL"
+msgstr "Contenu"
+
+msgid "HOME_CARROUSEL_TITLE"
+msgstr "Edition des images du carrousel"
+
+msgid "HOME_CARROUSEL_FILE_LABEL"
+msgstr "Nouveau fichier"
 

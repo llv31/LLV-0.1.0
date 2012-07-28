@@ -10,6 +10,27 @@ GLOBAL_MENU_GITE;Chalet de montagne
 GLOBAL_MENU_NEWS;Actualités
 GLOBAL_MENU_ACTIVITIES;Activités
 GLOBAL_MENU_CONTACT;Reservations
+GLOBAL_MENU_CARROUSEL;Carrousel
+GLOBAL_MENU_PARTNERS;Partenaires
+GLOBAL_MENU_DECONNEXION;Se déconnecter
+
+;Global
+GLOBAL_OUI;Oui
+GLOBAL_NON;Non
+GLOBAL_FORM_ENVOYER;Envoyer
+GLOBAL_FORM_CONFIRMER;Confirmer
+GLOBAL_FORM_VALIDER;Valider
+GLOBAL_FORM_SUBMIT;Enregistrer
+GLOBAL_LANGUAGETOGGLER_LABEL;Changer la langue d'édition
+GLOBAL_HEADER_TITLE;Luchon Location Vances
+
+;Global Admin
+GLOBAL_ADMIN_ADD;Ajouter un élément
+GLOBAL_ADMIN_UPDATE;Modifier un élément
+GLOBAL_ADMIN_DELETE;Supprimer un élément
+GLOBAL_ADMIN_DELETE_CONFIRM;Êtes-vous sûr de vouloir supprimer cet élément ?
+GLOBAL_ADMIN_UP;Remonter l'élément
+GLOBAL_ADMIN_DOWN;Descendre l'élément
 
 ; Homepage
 HOME_TITRE;Qui sommes-nous ?
@@ -29,3 +50,11 @@ HOME_LOGIN_TITLE;Connexion à l'interface d'administration
 HOME_LOGIN_FORM_LOGIN_LABEL;Identifiant
 HOME_LOGIN_FORM_PASSWORD_LABEL;Mot de passe
 HOME_LOGIN_FORM_SUBMIT_LABEL;Se connecter
+HOME_PAGECMS_HOME_TITLE;Edition de la page d'accueil
+HOME_PAGECMS_PARTNERS_TITLE;Edition de la page partenaires
+HOME_PAGECMS_EDIT_TITLE_LABEL;Titre
+HOME_PAGECMS_EDIT_CONTENT_LABEL;Contenu
+
+;Carrousel Admin
+HOME_CARROUSEL_TITLE;Edition des images du carrousel
+HOME_CARROUSEL_FILE_LABEL;Nouveau fichier

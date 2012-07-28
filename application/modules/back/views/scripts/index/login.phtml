@@ -1,5 +1,12 @@
-<?php $formLogin = $this->formLogin; ?>
-<h2>
-    <?= _('HOME_LOGIN_TITLE') ?>
-</h2>
-<?php echo $formLogin;
+<?php
+$this->headTitle('Connexion | ');
+$formLogin = $this->formLogin;
+$this->headLink()->appendStylesheet($this->buildDesignUrl('index/css/login.css'));
+?>
+
+<div class="connexion">
+    <h2>
+        <?= _('HOME_LOGIN_TITLE') ?>
+    </h2>
+    <?php echo $formLogin; ?>
+</div>

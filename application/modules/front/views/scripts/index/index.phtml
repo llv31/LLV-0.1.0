@@ -1,28 +1,21 @@
 <?php
 $this->headTitle('Home | ');
 $this->headLink()->appendStylesheet($this->buildDesignUrl('index/css/index.css'));
+$page = $this->page;
 ?>
 <div class="presentation">
     <h2>
-        <?= _('HOME_TITRE') ?>
+        <?= $page->title; ?>
     </h2>
 
-    <p><?= _('HOME_PARAGRAPHE1') ?></p>
+    <?= $page->content; ?>
 
-    <p><?= _('HOME_PARAGRAPHE2') ?></p>
-
-    <p><?= _('HOME_PARAGRAPHE3') ?></p>
-
-    <p><?= _('HOME_PARAGRAPHE4') ?></p>
-
-    <p><?= _('HOME_PARAGRAPHE5') ?></p>
-
-    <p class="signature"><?= _('HOME_SIGNATURE') ?></p>
 </div>
 <div class="news">
     <h3>
         <?= _('HOME_NEWS_TITRE') ?>
     </h3>
+
     <p class="illustrate">
         <img src="<?= $this->baseUrl()?>files/upload/news/default.jpg">
     </p>

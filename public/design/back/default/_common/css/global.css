@@ -1,0 +1,24 @@
+/* •••••••••••••••••••••••••••••••••• */
+#container #menu p {
+    float: right;
+    margin-right: 5px;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+#wrapper .page {
+    background-color: #fff;
+    padding: 2% 3%;
+    margin: 0 auto;
+    width: 94%;
+    box-shadow: 0 0 5px #555;
+}
+
+#wrapper .page h2 {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#wrapper .page p.admin_add {
+    text-align: right;
+}
