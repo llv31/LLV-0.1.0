@@ -29,6 +29,12 @@ class Llv_Locale extends Zend_Locale
             case Llv_Constant_Locale::ESPAGNOL_ESPAGNE_ID :
                 return Llv_Constant_Locale::ESPAGNOL_ESPAGNE_LOCALE;
                 break;
+            case Llv_Constant_Locale::ANGLAIS_GB_ID :
+                return Llv_Constant_Locale::ANGLAIS_GB_LOCALE;
+                break;
+            case Llv_Constant_Locale::ALLEMAND_ALLEMAGNE_ID :
+                return Llv_Constant_Locale::ALLEMAND_ALLEMAGNE_LOCALE;
+                break;
         }
     }
 
@@ -46,6 +52,12 @@ class Llv_Locale extends Zend_Locale
                 break;
             case Llv_Constant_Locale::ESPAGNOL_ESPAGNE_SHORT :
                 return Llv_Constant_Locale::ESPAGNOL_ESPAGNE_ID;
+                break;
+            case Llv_Constant_Locale::ANGLAIS_GB_SHORT :
+                return Llv_Constant_Locale::ANGLAIS_GB_ID;
+                break;
+            case Llv_Constant_Locale::ALLEMAND_ALLEMAGNE_SHORT :
+                return Llv_Constant_Locale::ALLEMAND_ALLEMAGNE_ID;
                 break;
         }
     }

@@ -159,6 +159,14 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url(../img/flags/es_ES.png);
 }
 
+#container #menu ul.languages li.en_GB a {
+    background-image: url(../img/flags/en_GB.png);
+}
+
+#container #menu ul.languages li.de_DE a {
+    background-image: url(../img/flags/de_DE.png);
+}
+
 /* •••••••••••••••••••••••••••••••••• */
 
 #container #wrapper {

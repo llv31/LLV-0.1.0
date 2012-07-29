@@ -1,9 +1,12 @@
 /* •••••••••••••••••••••••••••••••••• */
 
 #wrapper .presentation {
-    width: 60%;
-    float: left;
-    margin-right: 2%;
+    float:left;
+    /*display: inline-block;*/
+    width: 560px;
+    margin-right:20px;
+    clear: both;
+    text-align: justify;
 }
 
 #wrapper .presentation h2 {
@@ -11,27 +14,22 @@
     margin-bottom: 25px;
 }
 
-#wrapper .presentation p {
-    margin-bottom: 10px;
-    text-align: justify;
-}
-
-#wrapper .presentation p.signature {
-    text-align: right;
-    font-style: italic;
-}
-
 /* •••••••••••••••••••••••••••••••••• */
 
+#wrapper .activity ,
 #wrapper .news {
-    float: left;
+    float:left;
+    /*display: inline-block;*/
     box-shadow: 0 0 5px #555;
     border: 1px solid #888;
-    width: 35%;
-    padding: 1%;
+    width: 355px;
+    padding: 10px;
     background-color: #e8ead4;
+    height: 288px;
+    overflow: hidden;
 }
 
+#wrapper .activity h3 ,
 #wrapper .news h3 {
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -39,25 +37,44 @@
     padding-bottom: 5px;
 }
 
+#wrapper .activity h4 ,
 #wrapper .news h4 {
     margin-bottom: 7px;
 }
 
+#wrapper .activity p ,
 #wrapper .news p {
     text-align: justify;
     margin-bottom: 10px;
 }
 
+#wrapper .activity p.more ,
 #wrapper .news p.more {
     text-align: right;
 }
 
+#wrapper .activity p img ,
 #wrapper .news p img {
     display: block;
     width: 150px;
     float: right;
     margin: 0 0 10px 10px;
     border: 1px solid #555;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+#wrapper .carrousel {
+    float:left;
+    /*display: inline-block;*/
+    width: 560px;
+    margin-right:20px;
+    margin-bottom: 30px;
+}
+
+#wrapper .carrousel .slides_container {
+    width: 560px;
+    height: 300px;
+    border:4px solid #FFF;
 }
 
 /* •••••••••••••••••••••••••••••••••• */

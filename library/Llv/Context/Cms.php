@@ -69,6 +69,7 @@ class Llv_Context_Cms
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
+
     /**
      * @param Llv_Services_Cms_Request_Carrousel $request
      *
@@ -81,14 +82,17 @@ class Llv_Context_Cms
     }
 
     /**
-     * @param Llv_Services_Cms_Request_Carrousel $request
+     * @param Llv_Services_Cms_Filter_Carrousel $filter
      *
      * @return mixed
      */
-    public function carrouselDeleteRow(Llv_Services_Cms_Request_Carrousel $request)
+    public function carrouselGetRow(Llv_Services_Cms_Filter_Carrousel $filter)
     {
-        $message = $this->_service->carrouselDeleteRow($this->getHeaderMessage(), $request);
-        return $message->success;
+        $message = $this->_service->carrouselGetRow($this->getHeaderMessage(), $filter);
+        if ($message->success) {
+            return $message->carrousel;
+        }
+        return null;
     }
 
     /**
@@ -103,6 +107,28 @@ class Llv_Context_Cms
             return $message->carrousels;
         }
         return array();
+    }
+
+    /**
+     * @param Llv_Services_Cms_Request_Carrousel $request
+     *
+     * @return mixed
+     */
+    public function carrouselDeleteRow(Llv_Services_Cms_Request_Carrousel $request)
+    {
+        $message = $this->_service->carrouselDeleteRow($this->getHeaderMessage(), $request);
+        return $message->success;
+    }
+
+    /**
+     * @param Llv_Services_Cms_Request_Carrousel $request
+     *
+     * @return bool
+     */
+    public function carrouselUpdateRow(Llv_Services_Cms_Request_Carrousel $request)
+    {
+        $message = $this->_service->carrouselUpdateRow($this->getHeaderMessage(), $request);
+        return $message->success;
     }
 
 }

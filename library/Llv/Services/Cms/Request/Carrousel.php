@@ -24,4 +24,8 @@ class Llv_Services_Cms_Request_Carrousel
     public $error;
     /** @var int */
     public $size;
+    /** @var bool */
+    public $moveUp;
+    /** @var bool */
+    public $show;
 }

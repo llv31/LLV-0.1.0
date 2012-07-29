@@ -38,7 +38,7 @@ class Llv_Entity_Cms_Dal_Page
      *
      * @return bool|mixed
      */
-    public static function pageGetRow(Llv_Entity_Cms_Request_Page $request)
+    public static function getRow(Llv_Entity_Cms_Request_Page $request)
     {
         try {
             $sql = Llv_Db::getInstance()->select()
@@ -71,7 +71,7 @@ class Llv_Entity_Cms_Dal_Page
             return Llv_Db::getInstance()->fetchRow($sql);
         } catch (Exception $e) {
             error_log($e);
-            return false;
+            return array();
         }
     }
 
@@ -82,7 +82,7 @@ class Llv_Entity_Cms_Dal_Page
      *
      * @return bool
      */
-    public static function pageUpdateRow(Llv_Entity_Cms_Request_Page $request)
+    public static function updateRow(Llv_Entity_Cms_Request_Page $request)
     {
         try {
             /** Maj de la page */
@@ -117,139 +117,5 @@ class Llv_Entity_Cms_Dal_Page
             error_log($e);
             return false;
         }
-    }
-
-    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
-
-    /**
-     * @static
-     *
-     * @param Llv_Entity_Cms_Request_Carrousel $request
-     *
-     * @return int|null
-     */
-    public static function carrouselAddRow(Llv_Entity_Cms_Request_Carrousel $request)
-    {
-        try {
-            $params = array(
-                'filename'             => $request->filename,
-                'original_filename'    => $request->originalFilename,
-                'mime_type'            => $request->mimeType,
-                'size'                 => $request->size,
-                'online'               => true,
-                'position'             => self::carrouselGetLastOrder() + 1,
-                'date_delete'          => null
-            );
-            if ($request->dateAdd instanceof DateTime) {
-                $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
-            }
-            if ($request->dateUpdate instanceof DateTime) {
-                $params['date_update'] = $request->dateUpdate->format(Llv_Constant_Date::FORMAT_DB);
-            }
-            return Llv_Db::getInstance()->insert(
-                Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel,
-                $params
-            );
-        } catch (Exception $e) {
-            error_log($e);
-            return null;
-        }
-    }
-
-    /**
-     * Retourne l'ordre le plus grand
-     *
-     * @return null|string
-     */
-    public function carrouselGetLastOrder()
-    {
-        try {
-            $sql = Llv_Db::getInstance()->select()
-                ->from(Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel, array('MAX(position)'));
-            $result = Llv_Db::getInstance()->fetchOne($sql);
-            return !is_null($result) ? $result : 0;
-        } catch (Exception $e) {
-            Zend_Debug::dump($e);
-            error_log($e);
-            return null;
-        }
-    }
-
-    /**
-     * @param Llv_Entity_Cms_Filter_Carrousel $filter
-     *
-     * @return array
-     */
-    public static function carrouselGetList(Llv_Entity_Cms_Filter_Carrousel $filter)
-    {
-        $sql = Llv_Db::getInstance()->select()
-            ->from(Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel)
-            ->order('date_delete')
-            ->order('position DESC');
-        if (isset($filter->online)) {
-            $sql->where('online = ?', $filter->online);
-        }
-        if (isset($filter->includeDeleted)) {
-            if (!$filter->includeDeleted) {
-                $sql->where('date_delete IS NULL');
-            }
-        }
-        return Llv_Db::getInstance()->fetchAll($sql);
-    }
-
-    /**
-     * @static
-     *
-     * @param Llv_Entity_Cms_Request_Carrousel $request
-     *
-     * @return mixed
-     */
-    public static function carrouselGetOne(Llv_Entity_Cms_Request_Carrousel $request)
-    {
-        $sql = Llv_Db::getInstance()->select()
-            ->from(Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel)
-            ->where('id = ?', $request->id);
-        return Llv_Db::getInstance()->fetchRow($sql);
-    }
-
-    /**
-     * @param Llv_Entity_Cms_Request_Carrousel $request
-     *
-     * @return array
-     */
-    public static function carrouselDeleteRow(Llv_Entity_Cms_Request_Carrousel $request)
-    {
-        $carrousel = self::carrouselGetOne($request);
-        if (!is_null($carrousel)) {
-            /** On supprime l'image associée */
-            $filePath = Llv_Services_Cms_Helper_Carrousel::getCarrouselFilesPath() . $carrousel['filename'];
-            $filename = explode('.', $carrousel['filename']);
-            unset($filename[count($filename) - 1]);
-            $filename = implode('.', $filename);
-            unlink($filePath);
-            /** On supprime les miniatures associées */
-            $thumbPath = Llv_Services_Cms_Helper_Carrousel::getCarrouselFilesPath() . '_thumb/';
-            $directory = opendir($thumbPath);
-            while (($file = readdir($directory)) !== false) {
-                $explodedFile = explode('_thumb_', $file);
-                if ($explodedFile[0] == $filename) {
-                    unlink($thumbPath . $file);
-                }
-            }
-            /** Suppression Définitive */
-//            return Llv_Db::getInstance()->delete(
-//                Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel,
-//                'id = ' . $request->id
-//            );
-            /** Suppression logique */
-            $dateDelete = new DateTime();
-            $params['date_delete'] = $dateDelete->format(Llv_Constant_Date::FORMAT_DB);
-            return Llv_Db::getInstance()->update(
-                Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel,
-                $params,
-                'id = ' . $request->id
-            );
-        }
-        return false;
     }
 }

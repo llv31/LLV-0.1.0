@@ -19,8 +19,18 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'design/' . $module . '/
 $this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/' . $locale . '/_common/css/global.css');
 $this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/_common/css/global.css');
 
-$this->headScript()->prependFile($this->baseUrl() . '/design/default/default/_common/js/jquery.js');
-$this->headScript()->appendFile($this->baseUrl() . '/design/' . $module . '/default/_common/js/js.niceedit.js');
+/** JS Commun */
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_common/js/common.js');
+/** jQuery */
+$this->headScript()->prependFile($this->baseUrl() . 'design/default/default/_plugin/jquery.js');
+/** jQuery UI */
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/jquery-ui/js/jquery.ui.js');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/_plugin/jquery-ui/css/style.css');
+/** ShadowBox */
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/shadowbox/shadowbox.js');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/_plugin/shadowbox/shadowbox.css');
+/** Textarea UI */
+$this->headScript()->appendFile($this->baseUrl() . 'design/' . $module . '/default/_common/js/js.niceedit.js');
 
 ?>
 <?php echo $this->doctype(); ?>
@@ -73,6 +83,9 @@ $this->headScript()->appendFile($this->baseUrl() . '/design/' . $module . '/defa
         ?>
     </div>
 </div>
+<script type="text/javascript">
+    var i18n = <?= $this->giveJsI18nText();?>;
+</script>
 
 </body>
 

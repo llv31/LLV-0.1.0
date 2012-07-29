@@ -18,6 +18,18 @@ msgstr "ERREUR TECHNIQUE : L'entity n'est pas correcte"
 msgid "ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME"
 msgstr "La propriété demandée n'existe pas"
 
+msgid "HEAD_TITLE_HOME"
+msgstr "Accueil"
+
+msgid "HEAD_TITLE_CARROUSEL"
+msgstr "Carrousel"
+
+msgid "HEAD_TITLE_PARTNERS"
+msgstr "Partenaires"
+
+msgid "HEAD_TITLE_CONNECTION"
+msgstr "Connexion"
+
 msgid "GLOBAL_MENU_HOME"
 msgstr "Accueil"
 
@@ -70,7 +82,7 @@ msgid "GLOBAL_LANGUAGETOGGLER_LABEL"
 msgstr "Changer la langue d'édition"
 
 msgid "GLOBAL_HEADER_TITLE"
-msgstr "Luchon Location Vances"
+msgstr "Luchon Location Vacances"
 
 msgid "GLOBAL_MONTH_LABEL01"
 msgstr "Janvier"
@@ -85,7 +97,7 @@ msgid "GLOBAL_MONTH_LABEL04"
 msgstr "Avril"
 
 msgid "GLOBAL_MONTH_LABEL05"
-msgstr "Mail"
+msgstr "Mai"
 
 msgid "GLOBAL_MONTH_LABEL06"
 msgstr "Juin"
@@ -107,6 +119,105 @@ msgstr "Novembre"
 
 msgid "GLOBAL_MONTH_LABEL12"
 msgstr "Décembre"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT01"
+msgstr "Jan"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT02"
+msgstr "Fév"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT03"
+msgstr "Mars"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT04"
+msgstr "Avr"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT05"
+msgstr "Mai"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT06"
+msgstr "Juin"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT07"
+msgstr "Juil"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT08"
+msgstr "Août"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT09"
+msgstr "Sept"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT10"
+msgstr "Oct"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT11"
+msgstr "Nov"
+
+msgid "GLOBAL_MONTH_LABEL_SHORT12"
+msgstr "Déc"
+
+msgid "GLOBAL_DAY_LABEL0"
+msgstr "Dimanche"
+
+msgid "GLOBAL_DAY_LABEL1"
+msgstr "Lundi"
+
+msgid "GLOBAL_DAY_LABEL2"
+msgstr "Mardi"
+
+msgid "GLOBAL_DAY_LABEL3"
+msgstr "Mercredi"
+
+msgid "GLOBAL_DAY_LABEL4"
+msgstr "Jeudi"
+
+msgid "GLOBAL_DAY_LABEL5"
+msgstr "Vendredi"
+
+msgid "GLOBAL_DAY_LABEL6"
+msgstr "Samedi"
+
+msgid "GLOBAL_DAY_LABEL_SHORT0"
+msgstr "Di"
+
+msgid "GLOBAL_DAY_LABEL_SHORT1"
+msgstr "Lu"
+
+msgid "GLOBAL_DAY_LABEL_SHORT2"
+msgstr "Ma"
+
+msgid "GLOBAL_DAY_LABEL_SHORT3"
+msgstr "Me"
+
+msgid "GLOBAL_DAY_LABEL_SHORT4"
+msgstr "Je"
+
+msgid "GLOBAL_DAY_LABEL_SHORT5"
+msgstr "Ve"
+
+msgid "GLOBAL_DAY_LABEL_SHORT6"
+msgstr "Sa"
+
+msgid "GLOBAL_DATEPICKER_CLOSETEXT"
+msgstr "Terminer"
+
+msgid "GLOBAL_DATEPICKER_PREVIOUS"
+msgstr "Précédent"
+
+msgid "GLOBAL_DATEPICKER_NEXT"
+msgstr "Suivant"
+
+msgid "GLOBAL_DATEPICKER_CURRENT"
+msgstr "Aujourd'hui"
+
+msgid "GLOBAL_DATEPICKER_WEEK"
+msgstr "Semaine"
+
+msgid "GLOBAL_DATEPICKER_FORMAT"
+msgstr "dd/mm/yy"
+
+msgid "GLOBAL_DATEPICKER_FIRSTDAY"
+msgstr "1"
 
 msgid "GLOBAL_ADMIN_ADD"
 msgstr "Ajouter un élément"
@@ -146,27 +257,6 @@ msgstr "Supprimé le"
 
 msgid "GLOBAL_ADMIN_LIST_ACTIONS"
 msgstr "Actions"
-
-msgid "HOME_TITRE"
-msgstr "Qui sommes-nous ?"
-
-msgid "HOME_PARAGRAPHE1"
-msgstr "Charentais d'origine, nous sommes devenus pyrénéens d'adoption depuis peu, après avoir été vignerons au service du vignoble cognaçais durant trente ans. Tombés sous le charme et la quiétude qui se dégage de <a href=\"http://www.luchon.com/fr/index.php\">Bagnères de Luchon</a> et de ses alentours, nous avons décidé d'y venir vivre et de créer Luchon Location Vacances sarl."
-
-msgid "HOME_PARAGRAPHE2"
-msgstr "Que vous soyez seul, en couple, en famille ou entre amis, notre seule ambition : que vos vacances soient un vrai moment de repos, de relaxation, d'évasion et de plaisir. Pour y parvenir, notre choix s'est porté sur deux maisons et sur deux options possibles."
-
-msgid "HOME_PARAGRAPHE3"
-msgstr "<strong>'Au-Delà du Temps'</strong>, notre maison consacrée à nos 4 chambres d'hôtes de charme est située à Saint Mamet, petit village de 900 habitants jouxtant Bagnères de Luchon."
-
-msgid "HOME_PARAGRAPHE4"
-msgstr "<strong>'Etch Soulet'</strong>, charmant chalet de montagne (1275m), situé à Portet de Luchon, village d'une trentaine d'âmes au pied du col de Peyresourde, est composé de deux grands appartements. Le premier pouvant accueillir 8 personnes et le second 13 personnes. Ces gîtes de standing et de charme peuvent être réunis grâce à un escalier commun offrant une possibilité de 21 couchages."
-
-msgid "HOME_PARAGRAPHE5"
-msgstr "Après cette présentation rapide, nous vous laissons découvrir les possibilités qui s'offrent à vous pour vivre des vacances inoubliables dans ce petit coin de paradis"
-
-msgid "HOME_SIGNATURE"
-msgstr "Frédérique et François ROY"
 
 msgid "HOME_NEWS_TITRE"
 msgstr "Dernières nouvelles"

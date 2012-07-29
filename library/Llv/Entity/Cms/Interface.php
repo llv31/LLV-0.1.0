@@ -40,11 +40,11 @@ interface Llv_Entity_Cms_Interface
     public function carrouselAddRow(Llv_Entity_Cms_Request_Carrousel $request);
 
     /**
-     * @param Llv_Entity_Cms_Request_Carrousel $request
+     * @param Llv_Entity_Cms_Filter_Carrousel $filter
      *
-     * @return mixed
+     * @return array|mixed
      */
-    public function carrouselDeleteRow(Llv_Entity_Cms_Request_Carrousel $request);
+    public function carrouselGetRow(Llv_Entity_Cms_Filter_Carrousel $filter);
 
     /**
      * @param Llv_Entity_Cms_Filter_Carrousel $filter
@@ -52,4 +52,18 @@ interface Llv_Entity_Cms_Interface
      * @return array|mixed
      */
     public function carrouselGetList(Llv_Entity_Cms_Filter_Carrousel $filter);
+
+    /**
+     * @param Llv_Entity_Cms_Request_Carrousel $request
+     *
+     * @return bool|int
+     */
+    public function carrouselUpdateRow(Llv_Entity_Cms_Request_Carrousel $request);
+
+    /**
+     * @param Llv_Entity_Cms_Request_Carrousel $request
+     *
+     * @return mixed
+     */
+    public function carrouselDeleteRow(Llv_Entity_Cms_Request_Carrousel $request);
 }

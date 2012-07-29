@@ -28,4 +28,8 @@ class Llv_Entity_Cms_Request_Carrousel
     public $dateUpdate;
     /** @var DateTime */
     public $dateDelete;
+    /** @var bool */
+    public $moveUp;
+    /** @var bool */
+    public $show;
 }

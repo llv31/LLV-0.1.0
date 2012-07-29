@@ -159,6 +159,29 @@ class Llv_Services_Cms
      *
      * @return Llv_Services_Cms_Message_Carrousel
      */
+    public function carrouselGetRow(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Cms_Filter_Carrousel $filter
+    )
+    {
+        $message = new Llv_Services_Cms_Message_Carrousel();
+        try {
+            $entityFilter = new Llv_Entity_Cms_Filter_Carrousel();
+            $entityFilter->id = $filter->id;
+            $message->carrousel = $this->getEntity()->carrouselGetRow($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header       $header
+     * @param Llv_Services_Cms_Filter_Carrousel $filter
+     *
+     * @return Llv_Services_Cms_Message_Carrousel
+     */
     public function carrouselGetList(
         Llv_Services_Message_Header $header,
         Llv_Services_Cms_Filter_Carrousel $filter
@@ -197,6 +220,35 @@ class Llv_Services_Cms
             $entityFilter = new Llv_Entity_Cms_Request_Carrousel();
             $entityFilter->id = $request->id;
             $this->getEntity()->carrouselDeleteRow($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header        $header
+     * @param Llv_Services_Cms_Request_Carrousel $request
+     *
+     * @return Llv_Services_Cms_Message_Carrousel
+     */
+    public function carrouselUpdateRow(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Cms_Request_Carrousel $request
+    )
+    {
+        $message = new Llv_Services_Cms_Message_Carrousel();
+        try {
+            $entityFilter = new Llv_Entity_Cms_Request_Carrousel();
+            $entityFilter->id = $request->id;
+            if(isset($request->moveUp)){
+                $entityFilter->moveUp = $request->moveUp;
+            }
+            if(isset($request->show)){
+                $entityFilter->show = $request->show;
+            }
+            $this->getEntity()->carrouselUpdateRow($entityFilter);
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

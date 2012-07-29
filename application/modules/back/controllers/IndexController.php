@@ -133,7 +133,7 @@ class IndexController
     public function carrouselListAction()
     {
         $listFilter = new Llv_Services_Cms_Filter_Carrousel();
-        $listFilter->online = true;
+//        $listFilter->online = true;
         $listFilter->includeDeleted = false;
         $this->view->assign('list', Llv_Context_Cms::getInstance()->carrouselGetList($listFilter));
     }
@@ -151,9 +151,25 @@ class IndexController
                 case 'delete':
                     Llv_Context_Cms::getInstance()->carrouselDeleteRow($request);
                     break;
+                case 'up':
+                    $request->moveUp = true;
+                    Llv_Context_Cms::getInstance()->carrouselUpdateRow($request);
+                    break;
+                case 'down':
+                    $request->moveUp = false;
+                    Llv_Context_Cms::getInstance()->carrouselUpdateRow($request);
+                    break;
+                case 'online':
+                    $request->show = true;
+                    Llv_Context_Cms::getInstance()->carrouselUpdateRow($request);
+                    break;
+                case 'offline':
+                    $request->show = false;
+                    Llv_Context_Cms::getInstance()->carrouselUpdateRow($request);
+                    break;
             }
+            $this->_redirect('index/carrousel-list');
         }
-        $this->_redirect('index/carrousel-list');
     }
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */

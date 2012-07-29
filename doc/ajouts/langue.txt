@@ -1,14 +1,15 @@
 - DB
 • Ajout de l'entrée dans la DB
+• Ajouter les entrées en base pour les pages CMS
 
 - application.ini
 • Ajout les lignes de config
 
-- Llv_Locale.php
-• Ajout d'une condition dans le switch
-
 - Llv_Constant_Locale.php
 • Ajout des constantes de la langue
+
+- Llv_Locale.php
+• Ajout d'une condition dans le switch
 
 - App_View_Helper_DateFormat.php
 • Ajout d'une règle de formatage de date

@@ -25,6 +25,11 @@ class IndexController
         $request->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
         $page = Llv_Context_Cms::getInstance()->pageGetRow($request);
 
+        $filter = new Llv_Services_Cms_Filter_Carrousel();
+        $filter->online = true;
+        $carrousel = Llv_Context_Cms::getInstance()->carrouselGetList($filter);
+
         $this->view->assign('page', $page);
+        $this->view->assign('carrousel', $carrousel);
     }
 }

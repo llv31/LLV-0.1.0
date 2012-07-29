@@ -1,20 +1,24 @@
-; ERREURS
+; Erreurs
 ERROR_EXCEPTION_SITE_UNKNOWN;Le site que vous essayez d'atteindre n'existe pas.
 ERROR_EXCEPTION_INVALIDARGUMENT;ERREUR TECHNIQUE : L'entity n'est pas correcte
 ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME;La propriété demandée n'existe pas
 
-; MENU
+; Head
+HEAD_TITLE_HOME;Accueil
+HEAD_TITLE_PARTNERS;Partenaires
+HEAD_TITLE_CONNECTION;Connexion
+
+; Menu
 GLOBAL_MENU_HOME;Accueil
 GLOBAL_MENU_CHAMBRES;Chambres d'hôtes
 GLOBAL_MENU_GITE;Chalet de montagne
 GLOBAL_MENU_NEWS;Actualités
 GLOBAL_MENU_ACTIVITIES;Activités
 GLOBAL_MENU_CONTACT;Reservations
-GLOBAL_MENU_CARROUSEL;Carrousel
 GLOBAL_MENU_PARTNERS;Partenaires
-GLOBAL_MENU_DECONNEXION;Se déconnecter
 
-;Global
+; Global
+GLOBAL_HEADER_TITLE;Luchon Location Vacances
 GLOBAL_OUI;Oui
 GLOBAL_NON;Non
 GLOBAL_AUCUNE;Aucune
@@ -22,13 +26,13 @@ GLOBAL_FORM_ENVOYER;Envoyer
 GLOBAL_FORM_CONFIRMER;Confirmer
 GLOBAL_FORM_VALIDER;Valider
 GLOBAL_FORM_SUBMIT;Enregistrer
-GLOBAL_LANGUAGETOGGLER_LABEL;Changer la langue d'édition
-GLOBAL_HEADER_TITLE;Luchon Location Vances
+
+; Dates
 GLOBAL_MONTH_LABEL01;Janvier
 GLOBAL_MONTH_LABEL02;Février
 GLOBAL_MONTH_LABEL03;Mars
 GLOBAL_MONTH_LABEL04;Avril
-GLOBAL_MONTH_LABEL05;Mail
+GLOBAL_MONTH_LABEL05;Mai
 GLOBAL_MONTH_LABEL06;Juin
 GLOBAL_MONTH_LABEL07;Juillet
 GLOBAL_MONTH_LABEL08;Août
@@ -36,8 +40,49 @@ GLOBAL_MONTH_LABEL09;Septembre
 GLOBAL_MONTH_LABEL10;Octobre
 GLOBAL_MONTH_LABEL11;Novembre
 GLOBAL_MONTH_LABEL12;Décembre
+GLOBAL_MONTH_LABEL_SHORT01;Jan
+GLOBAL_MONTH_LABEL_SHORT02;Fév
+GLOBAL_MONTH_LABEL_SHORT03;Mars
+GLOBAL_MONTH_LABEL_SHORT04;Avr
+GLOBAL_MONTH_LABEL_SHORT05;Mai
+GLOBAL_MONTH_LABEL_SHORT06;Juin
+GLOBAL_MONTH_LABEL_SHORT07;Juil
+GLOBAL_MONTH_LABEL_SHORT08;Août
+GLOBAL_MONTH_LABEL_SHORT09;Sept
+GLOBAL_MONTH_LABEL_SHORT10;Oct
+GLOBAL_MONTH_LABEL_SHORT11;Nov
+GLOBAL_MONTH_LABEL_SHORT12;Déc
+GLOBAL_DAY_LABEL0;Dimanche
+GLOBAL_DAY_LABEL1;Lundi
+GLOBAL_DAY_LABEL2;Mardi
+GLOBAL_DAY_LABEL3;Mercredi
+GLOBAL_DAY_LABEL4;Jeudi
+GLOBAL_DAY_LABEL5;Vendredi
+GLOBAL_DAY_LABEL6;Samedi
+GLOBAL_DAY_LABEL_SHORT0;Di
+GLOBAL_DAY_LABEL_SHORT1;Lu
+GLOBAL_DAY_LABEL_SHORT2;Ma
+GLOBAL_DAY_LABEL_SHORT3;Me
+GLOBAL_DAY_LABEL_SHORT4;Je
+GLOBAL_DAY_LABEL_SHORT5;Ve
+GLOBAL_DAY_LABEL_SHORT6;Sa
+GLOBAL_DATEPICKER_CLOSETEXT;Terminer
+GLOBAL_DATEPICKER_PREVIOUS;Précédent
+GLOBAL_DATEPICKER_NEXT;Suivant
+GLOBAL_DATEPICKER_CURRENT;Aujourd'hui
+GLOBAL_DATEPICKER_WEEK;Semaine
+GLOBAL_DATEPICKER_FORMAT;dd/mm/yy
+GLOBAL_DATEPICKER_FIRSTDAY;1
 
-;Global Admin
+; Homepage
+HOME_NEWS_TITRE;Dernières nouvelles
+HOME_NEWS_TITRE_NEWS_TITRE;What's Lorem Ipsum ?
+HOME_NEWS_TITRE_NEWS_CONTENU;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+HOME_NEWS_TITRE_NEWS_MORE;Autres actualités
+
+
+•••••••••••• ADMINISTRATION ••••••••••••;inutile de traduire
+; Global Admin
 GLOBAL_ADMIN_ADD;Ajouter un élément
 GLOBAL_ADMIN_UPDATE;Modifier un élément
 GLOBAL_ADMIN_DELETE;Supprimer un élément
@@ -51,19 +96,12 @@ GLOBAL_ADMIN_LIST_DATE_AJOUT;Ajouté le
 GLOBAL_ADMIN_LIST_DATE_MODIFICATION;Modifié le
 GLOBAL_ADMIN_LIST_DATE_SUPPRESSION;Supprimé le
 GLOBAL_ADMIN_LIST_ACTIONS;Actions
+GLOBAL_LANGUAGETOGGLER_LABEL;Changer la langue d'édition
 
-; Homepage
-HOME_TITRE;Qui sommes-nous ?
-HOME_PARAGRAPHE1;Charentais d'origine, nous sommes devenus pyrénéens d'adoption depuis peu, après avoir été vignerons au service du vignoble cognaçais durant trente ans. Tombés sous le charme et la quiétude qui se dégage de <a href="http://www.luchon.com/fr/index.php">Bagnères de Luchon</a> et de ses alentours, nous avons décidé d'y venir vivre et de créer Luchon Location Vacances sarl.
-HOME_PARAGRAPHE2;Que vous soyez seul, en couple, en famille ou entre amis, notre seule ambition : que vos vacances soient un vrai moment de repos, de relaxation, d'évasion et de plaisir. Pour y parvenir, notre choix s'est porté sur deux maisons et sur deux options possibles.
-HOME_PARAGRAPHE3;<strong>'Au-Delà du Temps'</strong>, notre maison consacrée à nos 4 chambres d'hôtes de charme est située à Saint Mamet, petit village de 900 habitants jouxtant Bagnères de Luchon.
-HOME_PARAGRAPHE4;<strong>'Etch Soulet'</strong>, charmant chalet de montagne (1275m), situé à Portet de Luchon, village d'une trentaine d'âmes au pied du col de Peyresourde, est composé de deux grands appartements. Le premier pouvant accueillir 8 personnes et le second 13 personnes. Ces gîtes de standing et de charme peuvent être réunis grâce à un escalier commun offrant une possibilité de 21 couchages.
-HOME_PARAGRAPHE5;Après cette présentation rapide, nous vous laissons découvrir les possibilités qui s'offrent à vous pour vivre des vacances inoubliables dans ce petit coin de paradis
-HOME_SIGNATURE;Frédérique et François ROY
-HOME_NEWS_TITRE;Dernières nouvelles
-HOME_NEWS_TITRE_NEWS_TITRE;What's Lorem Ipsum ?
-HOME_NEWS_TITRE_NEWS_CONTENU;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-HOME_NEWS_TITRE_NEWS_MORE;Autres actualités
+; Menu Admin
+GLOBAL_MENU_CARROUSEL;Carrousel
+HEAD_TITLE_CARROUSEL;Carrousel
+GLOBAL_MENU_DECONNEXION;Se déconnecter
 
 ; Homepage Admin
 HOME_LOGIN_TITLE;Connexion à l'interface d'administration
@@ -75,7 +113,7 @@ HOME_PAGECMS_PARTNERS_TITLE;Edition de la page partenaires
 HOME_PAGECMS_EDIT_TITLE_LABEL;Titre
 HOME_PAGECMS_EDIT_CONTENT_LABEL;Contenu
 
-;Carrousel Admin
+; Carrousel Admin
 HOME_CARROUSEL_TITLE;Edition des images du carrousel
 HOME_CARROUSEL_FILE_LABEL;Nouveau fichier
 HOME_CARROUSEL_LIST_ID;#

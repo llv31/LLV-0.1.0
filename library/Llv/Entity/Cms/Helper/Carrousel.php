@@ -37,4 +37,18 @@ class Llv_Entity_Cms_Helper_Carrousel
         }
         return $dto;
     }
+
+    /**
+     * @param $dals
+     *
+     * @return array
+     */
+    public static function convertListFromDalToDto($dals)
+    {
+        $result = array();
+        foreach ($dals as $ligne) {
+            $result[] = Llv_Entity_Cms_Helper_Carrousel::convertFromDalToDto($ligne);
+        }
+        return $result;
+    }
 }

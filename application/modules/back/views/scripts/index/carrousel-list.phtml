@@ -1,6 +1,7 @@
 <?php
-$this->headTitle('Carrousel | ');
+$this->headTitle(_('HEAD_TITLE_CARROUSEL') . ' | ');
 $this->headLink()->appendStylesheet($this->buildDesignUrl('carrousel/css/list.css'));
+$this->headScript()->appendFile($this->baseUrl() . '/design/back/default/_common/js/jquery.table-action.js');
 $liste = $this->list;
 ?>
 
@@ -32,8 +33,11 @@ $liste = $this->list;
             <?php foreach ($liste as $ligne): ?>
         <tr>
             <td class="picture">
-                <img
-                    src="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 100, 75); ?>"/>
+                <a href="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 800, 600); ?>"
+                   rel="shadowbox[picture]">
+                    <img
+                        src="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 100, 75); ?>"/>
+                </a>
             </td>
             <td><?= $ligne->originalFilename; ?></td>
             <td><?= $ligne->mimeType; ?></td>
@@ -42,7 +46,7 @@ $liste = $this->list;
             <td><?= $this->dateFormat($ligne->dateUpdate); ?></td>
             <td class="actions">
                 <a href="<?= $this->baseUrl(); ?>index/carrousel-update/make/delete/id/<?= $ligne->id; ?>"
-                   class="delete"
+                   class="jq-delete delete"
                    title="<?= _('GLOBAL_ADMIN_DELETE') ?>">
                     <?= _('GLOBAL_ADMIN_DELETE') ?>
                 </a>

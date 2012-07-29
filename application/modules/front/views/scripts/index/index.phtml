@@ -1,8 +1,48 @@
 <?php
-$this->headTitle('Home | ');
+$module = Llv_Context_Application::getInstance()->getActiveModule();
+$this->headTitle(_('HEAD_TITLE_HOME') . ' | ');
+/** Carrousel */
+$this->headScript()->appendFile($this->baseUrl() . 'design/' . $module . '/default/_plugin/carrousel/js/jquery.carrousel.js');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'design/' . $module . '/default/_plugin/carrousel/css/global.css');
+/**  */
 $this->headLink()->appendStylesheet($this->buildDesignUrl('index/css/index.css'));
+$this->headScript()->appendFile($this->buildDesignUrl('index/js/index.js'));
+
 $page = $this->page;
+$carrousel = $this->carrousel;
 ?>
+
+<div class="jq-carrousel carrousel">
+    <div class="slides_container">
+        <?php foreach ($carrousel as $ligne): ?>
+        <div class="slide">
+            <a href="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 800, 600); ?>"
+               rel="shadowbox[picture]">
+                <img
+                    src="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 580, 9999); ?>"/>
+            </a>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+<div class="news">
+    <h3>
+        <?= _('HOME_NEWS_TITRE') ?>
+    </h3>
+
+    <p class="illustrate">
+        <img src="<?= $this->baseUrl()?>files/upload/news/default.jpg">
+    </p>
+    <h4>
+        <?= _('HOME_NEWS_TITRE_NEWS_TITRE') ?>
+    </h4>
+
+    <p><?= _('HOME_NEWS_TITRE_NEWS_CONTENU') ?></p>
+
+    <p class="more"><a href="#"><?= _('HOME_NEWS_TITRE_NEWS_MORE') ?></a></p>
+</div>
+
 <div class="presentation">
     <h2>
         <?= $page->title; ?>
@@ -11,7 +51,8 @@ $page = $this->page;
     <?= $page->content; ?>
 
 </div>
-<div class="news">
+
+<div class="activity">
     <h3>
         <?= _('HOME_NEWS_TITRE') ?>
     </h3>
