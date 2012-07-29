@@ -35,7 +35,6 @@ $application = new Zend_Application(
 require_once 'Zend/Loader/Autoloader.php';
 Zend_Loader_Autoloader::getInstance()
     ->registerNamespace('Llv_')
-    ->registerNamespace('PhpThumb')
     ->registerNamespace('Enum_');
 
 

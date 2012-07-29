@@ -126,6 +126,15 @@ msgstr "Remonter l'élément"
 msgid "GLOBAL_ADMIN_DOWN"
 msgstr "Descendre l'élément"
 
+msgid "GLOBAL_ADMIN_ONLINE"
+msgstr "Mettre en ligne"
+
+msgid "GLOBAL_ADMIN_OFFLINE"
+msgstr "Mettre hors ligne"
+
+msgid "GLOBAL_ADMIN_LIST_APERCU"
+msgstr "Aperçu"
+
 msgid "GLOBAL_ADMIN_LIST_DATE_AJOUT"
 msgstr "Ajouté le"
 
@@ -211,5 +220,5 @@ msgid "HOME_CARROUSEL_LIST_TYPE"
 msgstr "Type"
 
 msgid "HOME_CARROUSEL_LIST_ONLINE"
-msgstr "Fichier en ligne ?"
+msgstr "En ligne ?"
 

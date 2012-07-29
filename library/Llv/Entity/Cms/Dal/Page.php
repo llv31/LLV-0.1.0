@@ -184,10 +184,72 @@ class Llv_Entity_Cms_Dal_Page
     {
         $sql = Llv_Db::getInstance()->select()
             ->from(Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel)
+            ->order('date_delete')
             ->order('position DESC');
         if (isset($filter->online)) {
             $sql->where('online = ?', $filter->online);
         }
+        if (isset($filter->includeDeleted)) {
+            if (!$filter->includeDeleted) {
+                $sql->where('date_delete IS NULL');
+            }
+        }
         return Llv_Db::getInstance()->fetchAll($sql);
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_Cms_Request_Carrousel $request
+     *
+     * @return mixed
+     */
+    public static function carrouselGetOne(Llv_Entity_Cms_Request_Carrousel $request)
+    {
+        $sql = Llv_Db::getInstance()->select()
+            ->from(Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel)
+            ->where('id = ?', $request->id);
+        return Llv_Db::getInstance()->fetchRow($sql);
+    }
+
+    /**
+     * @param Llv_Entity_Cms_Request_Carrousel $request
+     *
+     * @return array
+     */
+    public static function carrouselDeleteRow(Llv_Entity_Cms_Request_Carrousel $request)
+    {
+        $carrousel = self::carrouselGetOne($request);
+        if (!is_null($carrousel)) {
+            /** On supprime l'image associée */
+            $filePath = Llv_Services_Cms_Helper_Carrousel::getCarrouselFilesPath() . $carrousel['filename'];
+            $filename = explode('.', $carrousel['filename']);
+            unset($filename[count($filename) - 1]);
+            $filename = implode('.', $filename);
+            unlink($filePath);
+            /** On supprime les miniatures associées */
+            $thumbPath = Llv_Services_Cms_Helper_Carrousel::getCarrouselFilesPath() . '_thumb/';
+            $directory = opendir($thumbPath);
+            while (($file = readdir($directory)) !== false) {
+                $explodedFile = explode('_thumb_', $file);
+                if ($explodedFile[0] == $filename) {
+                    unlink($thumbPath . $file);
+                }
+            }
+            /** Suppression Définitive */
+//            return Llv_Db::getInstance()->delete(
+//                Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel,
+//                'id = ' . $request->id
+//            );
+            /** Suppression logique */
+            $dateDelete = new DateTime();
+            $params['date_delete'] = $dateDelete->format(Llv_Constant_Date::FORMAT_DB);
+            return Llv_Db::getInstance()->update(
+                Llv_Entity_Cms_Dal_Page::getInstance()->_nameCarrousel,
+                $params,
+                'id = ' . $request->id
+            );
+        }
+        return false;
     }
 }

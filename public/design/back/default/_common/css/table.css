@@ -16,15 +16,20 @@ table.list thead tr {
     line-height: 30px;
     background-color: #abc;
     font-weight: bold;
+    text-align: left;
 }
 
+table.list thead tr th.picture,
+table.list tbody tr td.picture,
 table.list thead tr th.actions,
 table.list tbody tr td.actions {
-    width: 150px;
+    width: 80px;
+    text-align: center;
 }
 
 table.list tbody tr td {
     border-bottom: 1px solid #555;
+    vertical-align: middle;
 }
 
 table.list tbody tr:nth-child(odd) td {
@@ -37,7 +42,51 @@ table.list tbody tr:nth-child(even) td {
 
 table.list tbody tr:hover td {
     background: #a9ab9d;
-    color:#fff;
+    color: #fff;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+table.list tbody tr td.picture img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+table.list tbody tr td.actions a {
+    display: inline-block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -1000em;
+}
+
+table.list tbody tr td.actions a.delete {
+    background-image: url(../img/ui/delete.png);
+}
+
+table.list tbody tr td.actions a.putoffline {
+    background-image: url(../img/ui/putoffline.png);
+}
+
+table.list tbody tr td.actions a.putonline {
+    background-image: url(../img/ui/putonline.png);
+}
+
+table.list tbody tr td.actions a.moveup {
+    background-image: url(../img/ui/arrow_up.png);
+}
+
+table.list tbody tr td.actions a.movedown {
+    background-image: url(../img/ui/arrow_down.png);
+}
+
+table.list tbody tr td.actions a.update {
+    background-image: url(../img/ui/update.png);
 }
 
 /* •••••••••••••••••••••••••••••••••• */

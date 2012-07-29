@@ -19,48 +19,52 @@ $liste = $this->list;
     <table class="list">
         <thead>
         <tr>
-            <th><?= _('HOME_CARROUSEL_LIST_ID')?></th>
-            <th><?= _('GLOBAL_ADMIN_LIST_APERCU')?></th>
+            <th class="picture"><?= _('GLOBAL_ADMIN_LIST_APERCU')?></th>
             <th><?= _('HOME_CARROUSEL_LIST_ORIGINALFILENAME')?></th>
             <th><?= _('HOME_CARROUSEL_LIST_TYPE')?></th>
             <th><?= _('HOME_CARROUSEL_LIST_ONLINE')?></th>
             <th><?= _('GLOBAL_ADMIN_LIST_DATE_AJOUT')?></th>
             <th><?= _('GLOBAL_ADMIN_LIST_DATE_MODIFICATION')?></th>
-            <th><?= _('GLOBAL_ADMIN_LIST_DATE_SUPPRESSION')?></th>
             <th class="actions"><?= _('GLOBAL_ADMIN_LIST_ACTIONS')?></th>
         </tr>
         </thead>
         <tbody>
             <?php foreach ($liste as $ligne): ?>
         <tr>
-            <td><?= $ligne->id; ?></td>
-            <td><?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL); ?><img src=""/></td>
+            <td class="picture">
+                <img
+                    src="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 100, 75); ?>"/>
+            </td>
             <td><?= $ligne->originalFilename; ?></td>
             <td><?= $ligne->mimeType; ?></td>
             <td><?= $ligne->online ? _('GLOBAL_OUI') : _('GLOBAL_NON'); ?></td>
             <td><?= $this->dateFormat($ligne->dateAdd); ?></td>
             <td><?= $this->dateFormat($ligne->dateUpdate); ?></td>
-            <td><?= !is_null($ligne->dateDelete) ? $this->dateFormat($ligne->dateDelete) : _('GLOBAL_AUCUNE') ; ?></td>
             <td class="actions">
                 <a href="<?= $this->baseUrl(); ?>index/carrousel-update/make/delete/id/<?= $ligne->id; ?>"
+                   class="delete"
                    title="<?= _('GLOBAL_ADMIN_DELETE') ?>">
                     <?= _('GLOBAL_ADMIN_DELETE') ?>
                 </a>
                 <a href="<?= $this->baseUrl(); ?>index/carrousel-update/make/up/id/<?= $ligne->id; ?>"
+                   class="moveup"
                    title="<?= _('GLOBAL_ADMIN_UP') ?>">
                     <?= _('GLOBAL_ADMIN_UP') ?>
                 </a>
                 <a href="<?= $this->baseUrl(); ?>index/carrousel-update/make/down/id/<?= $ligne->id; ?>"
+                   class="movedown"
                    title="<?= _('GLOBAL_ADMIN_DOWN') ?>">
                     <?= _('GLOBAL_ADMIN_DOWN') ?>
                 </a>
                 <?php if ($ligne->online): ?>
                 <a href="<?= $this->baseUrl(); ?>index/carrousel-update/make/offline/id/<?= $ligne->id; ?>"
+                   class="putoffline"
                    title="<?= _('GLOBAL_ADMIN_OFFLINE') ?>">
                     <?= _('GLOBAL_ADMIN_OFFLINE') ?>
                 </a>
                 <?php else: ?>
                 <a href="<?= $this->baseUrl(); ?>index/carrousel-update/make/online/id/<?= $ligne->id; ?>"
+                   class="putonline"
                    title="<?= _('GLOBAL_ADMIN_ONLINE') ?>">
                     <?= _('GLOBAL_ADMIN_ONLINE') ?>
                 </a>

@@ -19,5 +19,5 @@ class Llv_Services_Cms_Filter_Carrousel
     /** @var bool */
     public $online;
     /** @var bool */
-    public $deleted;
+    public $includeDeleted;
 }

@@ -49,6 +49,16 @@ class Llv_Entity_Cms
     }
 
     /**
+     * @param Llv_Entity_Cms_Request_Carrousel $request
+     *
+     * @return mixed
+     */
+    public function carrouselDeleteRow(Llv_Entity_Cms_Request_Carrousel $request)
+    {
+        return Llv_Entity_Cms_Dal_Page::carrouselDeleteRow($request);
+    }
+
+    /**
      * @param Llv_Entity_Cms_Filter_Carrousel $filter
      *
      * @return array|mixed

@@ -12,6 +12,8 @@
 
 class Llv_Services_Cms_Request_Carrousel
 {
+    /** @var int */
+    public $id;
     /** @var string */
     public $filename;
     /** @var string */

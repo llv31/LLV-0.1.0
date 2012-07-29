@@ -22,6 +22,16 @@ class Llv_Services_Referential_Helper_Files
     {
         return Llv_Config::getInstance()->project->path->files->upload;
     }
+    /**
+     * Retourne l'url vers les fichiers uploadés
+     *
+     * @static
+     * @return mixed
+     */
+    public static function getUploadUrl()
+    {
+        return Llv_Config::getInstance()->project->url->files->upload;
+    }
 
     /**
      * Retourne le chemin vers les fichiers à dowloader
@@ -32,5 +42,16 @@ class Llv_Services_Referential_Helper_Files
     public static function getDownloadPath()
     {
         return Llv_Config::getInstance()->project->path->files->download;
+    }
+
+    /**
+     * Retourne l'url vers les fichiers à dowloader
+     *
+     * @static
+     * @return mixed
+     */
+    public static function getDownloadUrl()
+    {
+        return Llv_Config::getInstance()->project->url->files->download;
     }
 }

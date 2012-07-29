@@ -81,6 +81,17 @@ class Llv_Context_Cms
     }
 
     /**
+     * @param Llv_Services_Cms_Request_Carrousel $request
+     *
+     * @return mixed
+     */
+    public function carrouselDeleteRow(Llv_Services_Cms_Request_Carrousel $request)
+    {
+        $message = $this->_service->carrouselDeleteRow($this->getHeaderMessage(), $request);
+        return $message->success;
+    }
+
+    /**
      * @param Llv_Services_Cms_Filter_Carrousel $filter
      *
      * @return array|Llv_Dto_Cms_Carrousel[]

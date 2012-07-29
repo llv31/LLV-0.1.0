@@ -153,6 +153,12 @@ class Llv_Services_Cms
         return $message;
     }
 
+    /**
+     * @param Llv_Services_Message_Header       $header
+     * @param Llv_Services_Cms_Filter_Carrousel $filter
+     *
+     * @return Llv_Services_Cms_Message_Carrousel
+     */
     public function carrouselGetList(
         Llv_Services_Message_Header $header,
         Llv_Services_Cms_Filter_Carrousel $filter
@@ -164,7 +170,33 @@ class Llv_Services_Cms
             if (isset($filter->online)) {
                 $entityFilter->online = $filter->online;
             }
+            if (isset($filter->includeDeleted)) {
+                $entityFilter->includeDeleted = $filter->includeDeleted;
+            }
             $message->carrousels = $this->getEntity()->carrouselGetList($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header        $header
+     * @param Llv_Services_Cms_Request_Carrousel $request
+     *
+     * @return Llv_Services_Cms_Message_Carrousel
+     */
+    public function carrouselDeleteRow(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Cms_Request_Carrousel $request
+    )
+    {
+        $message = new Llv_Services_Cms_Message_Carrousel();
+        try {
+            $entityFilter = new Llv_Entity_Cms_Request_Carrousel();
+            $entityFilter->id = $request->id;
+            $this->getEntity()->carrouselDeleteRow($entityFilter);
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

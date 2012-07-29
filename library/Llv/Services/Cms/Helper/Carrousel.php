@@ -14,10 +14,20 @@ class Llv_Services_Cms_Helper_Carrousel
 {
     /**
      * Retourne le chemin vers les fichiers du carrousel
+     *
      * @return string
      */
     public static function getCarrouselFilesPath()
     {
         return Llv_Services_Referential_Helper_Files::getUploadPath() . Llv_Constant_Cms_Carrousel::DIRECTORY_PATH;
+    }
+
+    /**
+     * @static
+     * @return string
+     */
+    public static function getCarrouselFilesUrl()
+    {
+        return Llv_Services_Referential_Helper_Files::getUploadUrl() . Llv_Constant_Cms_Carrousel::DIRECTORY_PATH;
     }
 }

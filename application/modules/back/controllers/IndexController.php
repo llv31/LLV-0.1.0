@@ -121,6 +121,7 @@ class IndexController
                     $request->size = $file['size'];
                     Llv_Context_Cms::getInstance()->carrouselAddRow($request);
                 }
+                $this->_redirect('index/carrousel-list');
             }
         }
         $this->view->assign('formPageCms', $formPageCms);
@@ -132,6 +133,8 @@ class IndexController
     public function carrouselListAction()
     {
         $listFilter = new Llv_Services_Cms_Filter_Carrousel();
+        $listFilter->online = true;
+        $listFilter->includeDeleted = false;
         $this->view->assign('list', Llv_Context_Cms::getInstance()->carrouselGetList($listFilter));
     }
 
@@ -140,11 +143,17 @@ class IndexController
      */
     public function carrouselUpdateAction()
     {
-        switch ($this->_getParam('make')) {
-            case 'delete':
-
-                break;
+        $id = $this->_getParam('id');
+        if (!is_null($id)) {
+            $request = new Llv_Services_Cms_Request_Carrousel();
+            $request->id = $id;
+            switch ($this->_getParam('make')) {
+                case 'delete':
+                    Llv_Context_Cms::getInstance()->carrouselDeleteRow($request);
+                    break;
+            }
         }
+        $this->_redirect('index/carrousel-list');
     }
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */

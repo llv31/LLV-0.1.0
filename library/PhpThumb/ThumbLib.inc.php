@@ -111,15 +111,15 @@ class PhpThumbFactory
 			'imagick'	=> 'ImagickThumb',
 			'gd' 		=> 'GdThumb'
 		);
-		
+
 		// grab an instance of PhpThumb
 		$pt = PhpThumb::getInstance();
 		// load the plugins
 		$pt->loadPlugins(self::$pluginPath);
-		
+
 		$toReturn = null;
 		$implementation = self::$defaultImplemenation;
-		
+
 		// attempt to load the default implementation
 		if ($pt->isValidImplementation(self::$defaultImplemenation))
 		{
@@ -138,7 +138,7 @@ class PhpThumbFactory
 		{
 			throw new Exception('You must have either the GD or iMagick extension loaded to use this library');
 		}
-		
+
 		$registry = $pt->getPluginRegistry($implementation);
 		$toReturn->importPlugins($registry);
 		return $toReturn;
