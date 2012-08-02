@@ -19,6 +19,7 @@ class App_View_Helper_GiveJsI18nText
     public function giveJsI18nText()
     {
         $i18n = array();
+        /** DATEPICKER */
         $i18n['datepicker']['closeText'] = _('GLOBAL_DATEPICKER_CLOSETEXT');
         $i18n['datepicker']['prevText'] = _('GLOBAL_DATEPICKER_PREVIOUS');
         $i18n['datepicker']['nextText'] = _('GLOBAL_DATEPICKER_NEXT');
@@ -33,6 +34,15 @@ class App_View_Helper_GiveJsI18nText
         $i18n['datepicker']['weekHeader'] = _('GLOBAL_DATEPICKER_WEEK');
         $i18n['datepicker']['dateFormat'] = _('GLOBAL_DATEPICKER_FORMAT');
         $i18n['datepicker']['firstDay'] = _('GLOBAL_DATEPICKER_FIRSTDAY');
+
+        /** MODAL */
+        /** CONFIRM */
+        /** DELETE */
+        $i18n['modal']['delete']['text'] = _('GLOBAL_MODAL_DELETE_TEXT');
+        $i18n['modal']['delete']['confirm'] = _('GLOBAL_MODAL_DELETE_CONFIRM');
+        $i18n['modal']['delete']['cancel'] = _('GLOBAL_MODAL_DELETE_CANCEL');
+
+
         return Zend_Json::encode($i18n);
     }
 }

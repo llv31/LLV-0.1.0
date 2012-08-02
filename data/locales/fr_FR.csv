@@ -26,6 +26,15 @@ GLOBAL_FORM_ENVOYER;Envoyer
 GLOBAL_FORM_CONFIRMER;Confirmer
 GLOBAL_FORM_VALIDER;Valider
 GLOBAL_FORM_SUBMIT;Enregistrer
+GLOBAL_COORDONNEES_ADRESSE;Adresse : 28, avenue de Gascogne - 31 110 Saint Mamet
+GLOBAL_COORDONNEES_TELEPHONE_LABEL;Tél.
+GLOBAL_COORDONNEES_TELEPHONE;05 61 89 13 53
+GLOBAL_COORDONNEES_MOBILE_LABEL;Mob.
+GLOBAL_COORDONNEES_MOBILE;06 18 64 14 29
+
+; Footer
+FOOTER_COPYRIGHT;Tous droits reservés© 2008
+FOOTER_CREDITS;Réalisation : <a href="http://www.aroy.fr">Alexandre ROY</a>
 
 ; Dates
 GLOBAL_MONTH_LABEL01;Janvier
@@ -76,9 +85,11 @@ GLOBAL_DATEPICKER_FIRSTDAY;1
 
 ; Homepage
 HOME_NEWS_TITRE;Dernières nouvelles
-HOME_NEWS_TITRE_NEWS_TITRE;What's Lorem Ipsum ?
-HOME_NEWS_TITRE_NEWS_CONTENU;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-HOME_NEWS_TITRE_NEWS_MORE;Autres actualités
+HOME_NEWS_TITRE2;What's Lorem Ipsum ?
+HOME_NEWS_CONTENU;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+HOME_NEWS_MORE;Autres actualités
+HOME_ACTIVITY_TITRE;Activité au hasard
+HOME_ACTIVITY_MORE;Autres activités
 
 
 •••••••••••• ADMINISTRATION ••••••••••••;inutile de traduire
@@ -97,6 +108,9 @@ GLOBAL_ADMIN_LIST_DATE_MODIFICATION;Modifié le
 GLOBAL_ADMIN_LIST_DATE_SUPPRESSION;Supprimé le
 GLOBAL_ADMIN_LIST_ACTIONS;Actions
 GLOBAL_LANGUAGETOGGLER_LABEL;Changer la langue d'édition
+GLOBAL_MODAL_DELETE_TEXT;Vous êtes sur le point de supprimer un élément. Confirmez vous cette suppression ?
+GLOBAL_MODAL_DELETE_CONFIRM;Confirmer
+GLOBAL_MODAL_DELETE_CANCEL;Annuler
 
 ; Menu Admin
 GLOBAL_MENU_CARROUSEL;Carrousel

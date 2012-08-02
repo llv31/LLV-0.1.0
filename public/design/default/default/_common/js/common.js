@@ -1,7 +1,8 @@
 $(document).ready(function () {
     Shadowbox.init({
         handleOversize:"drag",
-        modal:true
+        modal:false,
+        overlayOpacity:0.75
     });
 
     if (i18n != undefined) {

@@ -20,4 +20,6 @@ class Llv_Entity_Cms_Filter_Carrousel
     public $online;
     /** @var bool */
     public $includeDeleted;
+    /** @var int */
+    public $position;
 }

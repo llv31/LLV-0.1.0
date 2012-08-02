@@ -143,19 +143,22 @@ class Llv_Entity_Cms_Dal_Carrousel
                 $positionInitiale = $carrousel['position'];
                 if ($request->moveUp) {
                     $nouvellePosition = $positionInitiale + 1;
+                    $params['position'] = $positionInitiale;
+                    $where = 'position > ' . $positionInitiale . ' AND ' . 'position <= ' . $nouvellePosition;
                     /**
                      * Sinon on déplace vers le bas
                      */
                 } else {
                     $nouvellePosition = $positionInitiale - 1;
+                    $nouvellePosition = $nouvellePosition > 0 ? $nouvellePosition : 1;
+                    $params['position'] = $positionInitiale;
+                    $where = 'position < ' . $positionInitiale . ' AND ' . 'position >= ' . $nouvellePosition;
                 }
-                /** On met à jour l'élément qui possède la nouvelle position de l'élément courant */
+                /** On met à jour tous les éléments avant ou après l'élément courant */
                 Llv_Db::getInstance()->update(
                     Llv_Entity_Cms_Dal_Carrousel::getInstance()->_name,
-                    array(
-                         'position'=> $positionInitiale
-                    ),
-                    'position = ' . $nouvellePosition
+                    $params,
+                    $where
                 );
                 $params['position'] = $nouvellePosition;
             }
