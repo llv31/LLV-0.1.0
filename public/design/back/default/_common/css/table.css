@@ -23,7 +23,7 @@ table.list thead tr th.picture,
 table.list tbody tr td.picture,
 table.list thead tr th.actions,
 table.list tbody tr td.actions {
-    width: 80px;
+    width: 95px;
     text-align: center;
 }
 

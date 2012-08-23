@@ -18,6 +18,9 @@ msgstr "ERREUR TECHNIQUE : L'entity n'est pas correcte"
 msgid "ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME"
 msgstr "La propriété demandée n'existe pas"
 
+msgid "ERROR_DB_CONNECTION"
+msgstr "Erreur lors de la connexion à la base de données"
+
 msgid "HEAD_TITLE_HOME"
 msgstr "Accueil"
 
@@ -245,6 +248,12 @@ msgstr "Activité au hasard"
 
 msgid "HOME_ACTIVITY_MORE"
 msgstr "Autres activités"
+
+msgid "HEAD_TITLE_NEWS"
+msgstr "Actualités"
+
+msgid "NEWS_TITLE"
+msgstr "Actualités"
 
 msgid "•••••••••••• ADMINISTRATION ••••••••••••"
 msgstr "inutile de traduire"

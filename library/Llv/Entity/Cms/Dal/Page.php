@@ -13,9 +13,9 @@
 class Llv_Entity_Cms_Dal_Page
     extends Zend_Db_Table_Abstract
 {
-    protected $_namePage = "cms_page";
-    protected $_nameCarrousel = "cms_caroussel_element";
-    protected $_nameTrad = "cms_page_language";
+    protected static $_namePage = "cms_page";
+    protected static $_nameCarrousel = "cms_caroussel_element";
+    protected static $_nameTrad = "cms_page_language";
     protected $_rowClass = "Llv_Entity_Dal_Row_Abstract";
     protected static $_instance;
 
@@ -44,7 +44,7 @@ class Llv_Entity_Cms_Dal_Page
             $sql = Llv_Db::getInstance()->select()
                 ->from(
                 array(
-                     'p'=> Llv_Entity_Cms_Dal_Page::getInstance()->_namePage
+                     'p'=> self::$_namePage
                 ),
                 array(
                      'date_add', 'date_update', 'date_delete'
@@ -52,7 +52,7 @@ class Llv_Entity_Cms_Dal_Page
             )
                 ->joinLeft(
                 array(
-                     'pl'=> Llv_Entity_Cms_Dal_Page::getInstance()->_nameTrad
+                     'pl'=> self::$_nameTrad
                 ),
                 'p.id = pl.page_id',
                 array(
@@ -97,13 +97,13 @@ class Llv_Entity_Cms_Dal_Page
                 $params['date_delete'] = $request->dateDelete->format(Llv_Constant_Date::FORMAT_DB);
             }
             Llv_Db::getInstance()->update(
-                Llv_Entity_Cms_Dal_Page::getInstance()->_namePage,
+                self::$_namePage,
                 $params,
                 'id = ' . $request->id
             );
             /** Maj de la traduction */
             Llv_Db::getInstance()->update(
-                Llv_Entity_Cms_Dal_Page::getInstance()->_nameTrad,
+                self::$_nameTrad,
                 array(
                      'title'    => $request->title,
                      'content'  => $request->content,

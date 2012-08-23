@@ -58,7 +58,7 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/
         );
         ?>
     </div>
-
+    <?php if (Llv_Db::getInstance()->isConnected()) : ?>
     <div id="menu">
         <?php
         echo $this->partial(
@@ -69,6 +69,11 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/
     </div>
 
     <div id="wrapper"><?php echo $this->layout()->content; ?></div>
+    <?php else : ?>
+    <div id="wrapper">
+        <?php echo _('ERROR_DB_CONNECTION'); ?>
+    </div>
+    <?php endif;?>
 
     <div id="footer">
         <?php

@@ -14,6 +14,18 @@ $items['carrousel'] = array(
     'label'      => _('GLOBAL_MENU_CARROUSEL'),
     'current'    => array('carrousel-list', 'carrousel-add')
 );
+/** Liste des actualités */
+$items['news'] = array(
+    'controller' => 'news',
+    'label'      => _('GLOBAL_MENU_NEWS'),
+    'current'    => array('news-list', 'news-add', 'news-update')
+);
+/** Liste des activités */
+$items['activities'] = array(
+    'controller' => 'activities-list',
+    'label'      => _('GLOBAL_MENU_ACTIVITIES'),
+    'current'    => array('activities-list', 'activities-add', 'activities-update')
+);
 /** Partenaires */
 $items['partners'] = array(
     'controller' => 'index',
@@ -34,18 +46,6 @@ $items['gite'] = array(
     'action'     => 'chalet-room-list',
     'label'      => _('GLOBAL_MENU_GITE'),
     'current'    => array('chalet-room-list', 'chalet-room-update')
-);
-/** Liste des actualités */
-$items['news'] = array(
-    'controller' => 'news',
-    'label'      => _('GLOBAL_MENU_NEWS'),
-    'current'    => array('news-list', 'news-add', 'news-update')
-);
-/** Liste des activités */
-$items['activities'] = array(
-    'controller' => 'activities-list',
-    'label'      => _('GLOBAL_MENU_ACTIVITIES'),
-    'current'    => array('activities-list', 'activities-add', 'activities-update')
 );
 echo $this->displayMainMenu($items);
 ?>
