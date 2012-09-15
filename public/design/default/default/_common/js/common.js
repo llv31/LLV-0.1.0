@@ -5,8 +5,10 @@ $(document).ready(function () {
         overlayOpacity:0.75
     });
 
+    $('.jq-tabs').tabs({ spinner: "Retrieving data..." });
+
     if (i18n != undefined) {
-        $('input').datepicker({
+        $('input.jq-datepicker').datepicker({
             closeText:i18n.datepicker.closeText,
             prevText:i18n.datepicker.prevText,
             nextText:i18n.datepicker.nextText,

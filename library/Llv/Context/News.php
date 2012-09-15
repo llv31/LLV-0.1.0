@@ -70,6 +70,34 @@ class Llv_Context_News
         return null;
     }
 
+    /**
+     * @param Llv_Services_News_Request_Edit $request
+     *
+     * @return null
+     */
+    public function addRow(Llv_Services_News_Request_Edit $request)
+    {
+        $message = $this->_service->editRow($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return $message->idActualite;
+        }
+        return false;
+    }
+
+    /**
+     * @param Llv_Services_News_Request_Edit $request
+     *
+     * @return null
+     */
+    public function updateRow(Llv_Services_News_Request_Edit $request)
+    {
+            $message = $this->_service->editRow($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return true;
+        }
+        return false;
+    }
+
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
@@ -81,7 +109,7 @@ class Llv_Context_News
     {
         $message = $this->_service->categoryGetOne($this->getHeaderMessage(), $filter);
         if ($message->success) {
-            return $message->actualite;
+            return $message->categorie;
         }
         return null;
     }
@@ -89,13 +117,13 @@ class Llv_Context_News
     /**
      * @param Llv_Services_News_Filter_Category $filter
      *
-     * @return null
+     * @return array
      */
     public function categoryGetAll(Llv_Services_News_Filter_Category $filter)
     {
         $message = $this->_service->categoryGetAll($this->getHeaderMessage(), $filter);
         if ($message->success) {
-            return $message->actualites;
+            return $message->categories;
         }
         return null;
     }

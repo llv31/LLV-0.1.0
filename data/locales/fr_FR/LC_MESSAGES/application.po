@@ -75,6 +75,9 @@ msgstr "Valider"
 msgid "GLOBAL_FORM_SUBMIT"
 msgstr "Enregistrer"
 
+msgid "GLOBAL_FORM_SUBMIT_QUIT"
+msgstr "Enregistrer & quitter"
+
 msgid "GLOBAL_COORDONNEES_ADRESSE"
 msgstr "Adresse : 28, avenue de Gascogne - 31 110 Saint Mamet"
 
@@ -255,6 +258,39 @@ msgstr "Actualités"
 msgid "NEWS_TITLE"
 msgstr "Actualités"
 
+msgid "NEWS_LIST_TITRE"
+msgstr "Titre"
+
+msgid "NEWS_EDIT_TABS_CONTENT"
+msgstr "Contenus"
+
+msgid "NEWS_EDIT_TABS_PICTURES"
+msgstr "Illustrations"
+
+msgid "NEWS_LIST_CATEGORIE"
+msgstr "Catégorie"
+
+msgid "NEWS_LIST_ONLINE"
+msgstr "En ligne ?"
+
+msgid "NEWS_EDIT_TITLE"
+msgstr "Édition de news"
+
+msgid "NEWS_CATEGORY_LABEL"
+msgstr "Catégorie"
+
+msgid "NEWS_EDIT_TITLE_LABEL"
+msgstr "Titre"
+
+msgid "NEWS_EDIT_CONTENT_LABEL"
+msgstr "Contenu"
+
+msgid "NEWS_EDIT_LINK_LABEL"
+msgstr "Lien"
+
+msgid "NEWS_EDIT_LOCATION_LABEL"
+msgstr "Coordonnées GPS"
+
 msgid "•••••••••••• ADMINISTRATION ••••••••••••"
 msgstr "inutile de traduire"
 
@@ -331,10 +367,10 @@ msgid "HOME_LOGIN_FORM_SUBMIT_LABEL"
 msgstr "Se connecter"
 
 msgid "HOME_PAGECMS_HOME_TITLE"
-msgstr "Edition de la page d'accueil"
+msgstr "Édition de la page d'accueil"
 
 msgid "HOME_PAGECMS_PARTNERS_TITLE"
-msgstr "Edition de la page partenaires"
+msgstr "Édition de la page partenaires"
 
 msgid "HOME_PAGECMS_EDIT_TITLE_LABEL"
 msgstr "Titre"
@@ -343,7 +379,7 @@ msgid "HOME_PAGECMS_EDIT_CONTENT_LABEL"
 msgstr "Contenu"
 
 msgid "HOME_CARROUSEL_TITLE"
-msgstr "Edition des images du carrousel"
+msgstr "Édition des images du carrousel"
 
 msgid "HOME_CARROUSEL_FILE_LABEL"
 msgstr "Nouveau fichier"

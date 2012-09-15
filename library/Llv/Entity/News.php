@@ -37,6 +37,46 @@ class Llv_Entity_News
         );
     }
 
+    /**
+     * @param Llv_Entity_News_Request_Edit $request
+     *
+     * @return int
+     */
+    public function addRow(Llv_Entity_News_Request_Edit $request)
+    {
+        return Llv_Entity_News_Dal_News::addRow($request);
+    }
+
+    /**
+     * @param Llv_Entity_News_Request_Edit $request
+     *
+     * @return bool
+     */
+    public function updateRow(Llv_Entity_News_Request_Edit $request)
+    {
+        return Llv_Entity_News_Dal_News::updateRow($request);
+    }
+
+    /**
+     * @param Llv_Entity_News_Request_EditContent $request
+     *
+     * @return int
+     */
+    public function addRowContent(Llv_Entity_News_Request_EditContent $request)
+    {
+        return Llv_Entity_News_Dal_News::addRowContent($request);
+    }
+
+    /**
+     * @param Llv_Entity_News_Request_EditContent $request
+     *
+     * @return bool
+     */
+    public function updateRowContent(Llv_Entity_News_Request_EditContent $request)
+    {
+        return Llv_Entity_News_Dal_News::updateRowContent($request);
+    }
+
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**

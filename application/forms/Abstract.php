@@ -61,9 +61,22 @@ class App_Form_Abstract
                 $element->setDecorators($this->selectDecorator);
             } elseif ($element instanceof Zend_Form_Element_File) {
 //                $element->setDecorators($this->fileDecorator);
-            }else{
+            } else {
                 $element->setDecorators($this->elementsDecorator);
             }
+        }
+    }
+
+    /**
+     * Set l'action du form quel que soit l'environnement
+     * @param $action
+     */
+    protected function _setAction($action)
+    {
+        if (APPLICATION_ENV == 'dev') {
+            $this->setAction(App_View_Helper_BaseUrl::baseUrl() . $action);
+        } else {
+            $this->setAction($action);
         }
     }
 }

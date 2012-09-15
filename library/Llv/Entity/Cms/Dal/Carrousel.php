@@ -11,10 +11,9 @@
  */
 
 class Llv_Entity_Cms_Dal_Carrousel
-    extends Zend_Db_Table_Abstract
 {
-    protected $_name = "cms_caroussel_element";
-    protected $_rowClass = "Llv_Entity_Dal_Row_Abstract";
+    protected static $_name = "cms_caroussel_element";
+    protected static $_rowClass = "Llv_Entity_Dal_Row_Abstract";
     protected static $_instance;
 
     /**
@@ -54,10 +53,11 @@ class Llv_Entity_Cms_Dal_Carrousel
             if ($request->dateUpdate instanceof DateTime) {
                 $params['date_update'] = $request->dateUpdate->format(Llv_Constant_Date::FORMAT_DB);
             }
-            return Llv_Db::getInstance()->insert(
-                Llv_Entity_Cms_Dal_Carrousel::getInstance()->_name,
+            Llv_Db::getInstance()->insert(
+                self::$_name,
                 $params
             );
+            return Llv_Db::getInstance()->lastInsertId(self::$_name);
         } catch (Exception $e) {
             error_log($e);
             return null;
@@ -73,7 +73,7 @@ class Llv_Entity_Cms_Dal_Carrousel
     {
         try {
             $sql = Llv_Db::getInstance()->select()
-                ->from(Llv_Entity_Cms_Dal_Carrousel::getInstance()->_name, array('MAX(position)'));
+                ->from(self::$_name, array('MAX(position)'));
             $result = Llv_Db::getInstance()->fetchOne($sql);
             return !is_null($result) ? $result : 0;
         } catch (Exception $e) {
@@ -91,7 +91,7 @@ class Llv_Entity_Cms_Dal_Carrousel
     public static function getList(Llv_Entity_Cms_Filter_Carrousel $filter)
     {
         $sql = Llv_Db::getInstance()->select()
-            ->from(Llv_Entity_Cms_Dal_Carrousel::getInstance()->_name)
+            ->from(self::$_name)
             ->order('date_delete')
             ->order('position DESC');
         if (isset($filter->online)) {
@@ -115,7 +115,7 @@ class Llv_Entity_Cms_Dal_Carrousel
     public static function getOne(Llv_Entity_Cms_Filter_Carrousel $filter)
     {
         $sql = Llv_Db::getInstance()->select()
-            ->from(Llv_Entity_Cms_Dal_Carrousel::getInstance()->_name)
+            ->from(self::$_name)
             ->where('id = ?', $filter->id);
         return Llv_Db::getInstance()->fetchRow($sql);
     }
@@ -156,7 +156,7 @@ class Llv_Entity_Cms_Dal_Carrousel
                 }
                 /** On met à jour tous les éléments avant ou après l'élément courant */
                 Llv_Db::getInstance()->update(
-                    Llv_Entity_Cms_Dal_Carrousel::getInstance()->_name,
+                    self::$_name,
                     $params,
                     $where
                 );
@@ -169,7 +169,7 @@ class Llv_Entity_Cms_Dal_Carrousel
 
             /** On met à jour l'élément courant */
             Llv_Db::getInstance()->update(
-                Llv_Entity_Cms_Dal_Carrousel::getInstance()->_name,
+                self::$_name,
                 $params,
                 'id = ' . $carrousel['id']
             );
@@ -193,7 +193,7 @@ class Llv_Entity_Cms_Dal_Carrousel
             if (self::deleteRowFiles($carrousel)) {
                 /** Suppression Définitive */
 //                return Llv_Db::getInstance()->delete(
-//                    Llv_Entity_Cms_Dal_Carrousel::getInstance()->_name,
+//                    self::$_name,
 //                    'id = ' . $request->id
 //                );
                 /** Suppression logique */
@@ -202,7 +202,7 @@ class Llv_Entity_Cms_Dal_Carrousel
                 $params['position'] = 0;
                 $params['online'] = false;
                 return Llv_Db::getInstance()->update(
-                    Llv_Entity_Cms_Dal_Carrousel::getInstance()->_name,
+                    self::$_name,
                     $params,
                     'id = ' . $request->id
                 );

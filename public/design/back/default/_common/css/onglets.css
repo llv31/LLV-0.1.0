@@ -1,0 +1,11 @@
+/* •••••••••••••••••••••••••••••••••• */
+.onglets form p label {
+    font-size: .92em;
+}
+
+.onglets form input[type="text"],
+.onglets form input[type="password"] {
+    width: 718px;
+}
+
+/* •••••••••••••••••••••••••••••••••• */

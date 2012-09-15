@@ -11,7 +11,7 @@ $liste = $this->list;
     </h2>
 
     <p class='admin_add'>
-        <a href="<?= $this->baseUrl(); ?>news/add" title="<?= _('GLOBAL_ADMIN_ADD') ?>">
+        <a href="<?= $this->baseUrl(); ?>news/edit" title="<?= _('GLOBAL_ADMIN_ADD') ?>">
             <?= _('GLOBAL_ADMIN_ADD') ?>
         </a>
     </p>
@@ -20,7 +20,6 @@ $liste = $this->list;
     <table class="list">
         <thead>
         <tr>
-            <th class="picture"><?= _('GLOBAL_ADMIN_LIST_APERCU')?></th>
             <th><?= _('NEWS_LIST_TITRE')?></th>
             <th><?= _('NEWS_LIST_CATEGORIE')?></th>
             <th><?= _('NEWS_LIST_ONLINE')?></th>
@@ -32,22 +31,13 @@ $liste = $this->list;
         <tbody>
             <?php foreach ($liste as $ligne): ?>
         <tr>
-            <td class="picture">
-                <?php if (!is_null($ligne->filename)): ?>
-                <a href="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::NEWS, 800, 600); ?>"
-                   rel="shadowbox[picture]">
-                    <img
-                        src="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::NEWS, 100, 75); ?>"/>
-                </a>
-                <?php endif;?>
-            </td>
             <td><?= $ligne->title; ?></td>
             <td><?= $ligne->category->title; ?></td>
             <td><?= $ligne->online ? _('GLOBAL_OUI') : _('GLOBAL_NON'); ?></td>
             <td><?= $this->dateFormat($ligne->dateAdd); ?></td>
             <td><?= $this->dateFormat($ligne->dateUpdate); ?></td>
             <td class="actions">
-                <a href="<?= $this->baseUrl(); ?>news/update/make/edit/id/<?= $ligne->id; ?>"
+                <a href="<?= $this->baseUrl(); ?>news/edit/id/<?= $ligne->id; ?>"
                    class="jq-update update"
                    title="<?= _('GLOBAL_ADMIN_UPDATE') ?>">
                     <?= _('GLOBAL_ADMIN_UPDATE') ?>

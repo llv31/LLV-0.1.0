@@ -30,7 +30,7 @@ class Llv_Entity_News_Helper_News
         $dto->content = $dal['content'];
         $dto->link= $dal['link'];
         $dto->location = $dal['location'];
-        $dto->filename = $dal['filepath'];
+        $dto->filename = "";
         $dto->online = $dal['online'];
         $dto->dateAdd = new DateTime($dal['date_add']);
         $dto->dateUpdate = new DateTime($dal['date_update']);

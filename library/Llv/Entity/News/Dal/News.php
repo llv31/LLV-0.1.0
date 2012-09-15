@@ -89,4 +89,96 @@ class Llv_Entity_News_Dal_News
         return array();
     }
 
+    /**
+     * Retourne l'ordre le plus grand
+     *
+     * @return null|string
+     */
+    public static function getLastOrder()
+    {
+        try {
+            $sql = Llv_Db::getInstance()->select()
+                ->from(self::$_nameTable, array('MAX(position)'));
+            $result = Llv_Db::getInstance()->fetchOne($sql);
+            return !is_null($result) ? $result : 0;
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+            error_log($e);
+            return null;
+        }
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_News_Request_Edit $request
+     *
+     * @return bool|int
+     */
+    public static function addRow(Llv_Entity_News_Request_Edit $request)
+    {
+        try {
+            $params = array();
+            $params['category_id'] = $request->idCategorie;
+            $params['position'] = self::getLastOrder() + 1;
+            $params['location'] = $request->coordonnees;
+            $params['online'] = $request->online;
+            if ($request->dateAdd instanceof DateTime) {
+                $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
+            }
+            if ($request->dateUpdate instanceof DateTime) {
+                $params['date_update'] = $request->dateUpdate->format(Llv_Constant_Date::FORMAT_DB);
+            }
+            if ($request->dateDelete instanceof DateTime) {
+                $params['date_delete'] = $request->dateDelete->format(Llv_Constant_Date::FORMAT_DB);
+            }
+            Zend_Debug::dump($params);
+            Llv_Db::getInstance()
+                ->insert(
+                self::$_nameTable,
+                $params
+            );
+            return Llv_Db::getInstance()->lastInsertId(self::$_nameTable);
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+        return false;
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_News_Request_Edit $request
+     *
+     * @return bool|int
+     */
+    public static function updateRow(Llv_Entity_News_Request_Edit $request)
+    {
+        try {
+            $params = array();
+            $params['category_id'] = $request->idCategorie;
+            $params['position'] = $request->position;
+            $params['location'] = $request->coordonnees;
+            $params['online'] = (bool)$request->online;
+            if ($request->dateAdd instanceof DateTime) {
+                $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
+            }
+            if ($request->dateUpdate instanceof DateTime) {
+                $params['date_update'] = $request->dateUpdate->format(Llv_Constant_Date::FORMAT_DB);
+            }
+            if ($request->dateDelete instanceof DateTime) {
+                $params['date_delete'] = $request->dateDelete->format(Llv_Constant_Date::FORMAT_DB);
+            }
+            return Llv_Db::getInstance()
+                ->update(
+                self::$_nameTable,
+                $params,
+                'id = ' . $request->id
+            );
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+        return false;
+    }
+
 }

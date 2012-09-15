@@ -77,8 +77,10 @@ class Llv_Entity_News_Dal_Category
                 'n.id = nl.category_id',
                 array('title', 'language_id')
             )
-                ->joinLeft(array('l'=> 'language'), 'l.id = nl.language_id', array())
-                ->where('l.id = ?', $filter->idLangue);
+                ->joinLeft(array('l'=> 'language'), 'l.id = nl.language_id', array());
+            if (isset($filter->idLangue)) {
+                $sql->where('l.id = ?', $filter->idLangue);
+            }
             if ($filter->online) {
                 $sql->where('n.online = ?', $filter->online);
             }

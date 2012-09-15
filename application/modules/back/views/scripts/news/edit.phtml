@@ -1,0 +1,33 @@
+<?php
+$this->headTitle(_('HEAD_TITLE_HOME') . ' | ');
+$formNewsEdit = $this->formNewsEdit;
+$this->headLink()->appendStylesheet($this->buildDesignUrl('_common/css/onglets.css'));
+$this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/index.css'));
+?>
+
+<div class="page page_cms">
+    <h2>
+        <?= _('NEWS_EDIT_TITLE') ?>
+    </h2>
+
+
+    <div class="jq-tabs onglets">
+        <ul>
+            <li>
+                <a href="#jq-content"><?php echo _('NEWS_EDIT_TABS_CONTENT'); ?></a>
+            </li>
+            <li>
+                <a href="#jq-pictures"><?php echo _('NEWS_EDIT_TABS_PICTURES'); ?></a>
+            </li>
+        </ul>
+
+        <div id="jq-content">
+            <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
+            <?php echo $formNewsEdit; ?>
+        </div>
+
+        <div id="jq-pictures">
+            test
+        </div>
+    </div>
+</div>

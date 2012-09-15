@@ -40,7 +40,53 @@ class NewsController
     /**
      *
      */
-    public function addAction()
+    public function editAction()
     {
+        $formNewsEdit = new App_Form_Back_News_Edit();
+        $id = $this->_getParam('id');
+        if ($this->getRequest()->isPost()) {
+            if ($formNewsEdit->isValid($_POST)) {
+                $callback = $this->_getParam('submit');
+                $request = new Llv_Services_News_Request_Edit();
+                $request->id = $formNewsEdit->getValue('id');
+                $request->idCategorie = $formNewsEdit->getValue('category');
+                $request->coordonnees = $formNewsEdit->getValue('location');
+                $request->dateUpdate = new DateTime();
+                $issetId = isset($request->id) || is_null($request->id) || empty($request->id);
+                if ($issetId) {
+                    $request->dateAdd = $request->dateUpdate;
+                    $request->online = true;
+                    $idNews = Llv_Context_News::getInstance()->addRow($request);
+                } else {
+                    Llv_Context_News::getInstance()->updateRow($request);
+                }
+
+                $title = $this->_getParam(App_Model_Constant_News::FORM_PREFIX_TITLE);
+                $content = $this->_getParam(App_Model_Constant_News::FORM_PREFIX_CONTENT);
+                foreach (Llv_Context_Referential::getInstance()->getLanguages() as $language) {
+                    $request = new Llv_Entity_News_Request_EditContent();
+                    $request->idNews = $idNews;
+                    $request->idLangue = $language->id;
+                    $request->title = $title[App_Model_Constant_News::FORM_PREFIX_TITLE . $language->id];
+                    $request->content = $content[App_Model_Constant_News::FORM_PREFIX_CONTENT . $language->id];
+                    if ($issetId) {
+                        Zend_Debug::dump($request);
+                        Llv_Context_News::getInstance()->addRowContent($request);
+                    } else {
+                        Llv_Context_News::getInstance()->updateRowContent($request);
+                    }
+                }
+                if (is_null($callback)) {
+                    $this->_redirect('news/list');
+                } else {
+                    $this->_redirect('news/edit/id/' . $id);
+                }
+            }
+        } else {
+            if (!is_null($id)) {
+                $formNewsEdit->fillForm($id);
+            }
+        }
+        $this->view->assign('formNewsEdit', $formNewsEdit);
     }
 }

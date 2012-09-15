@@ -1,13 +1,13 @@
 $(document).ready(function () {
     $('form select#language')
         .change(function () {
-            togglerLanguage($('form#cms_page'), $(this).val());
+            togglerLanguage($('form.i18ned'), $(this).val());
         })
         .change();
 });
 
 function togglerLanguage($targetForm, locale) {
-    $targetForm.find('p:not(.submit_element)').hide();
+    $targetForm.find('.jq-lang').parents('p').hide();
     $('.jq-lang').each(function (index, that) {
         var $that = $(that);
         if ($that.data('language') == locale) {

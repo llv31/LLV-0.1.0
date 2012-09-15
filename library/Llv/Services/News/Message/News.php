@@ -13,6 +13,8 @@
 class Llv_Services_News_Message_News
     extends Llv_Services_Message_Abstract
 {
+    /** @var int */
+    public $idActualite;
     /** @var Llv_Dto_News */
     public $actualite;
     /** @var Llv_Dto_News[] */

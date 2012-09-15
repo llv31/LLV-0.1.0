@@ -10,7 +10,6 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-require_once APPLICATION_PATH . '/controllers/IndexController.php';
 class IndexController
     extends Zend_Controller_Action
 //    extends IndexController

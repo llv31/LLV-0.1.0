@@ -30,6 +30,7 @@ form textarea {
 /* •••••••••••••••••••••••••••••••••• */
 form p.submit_element {
     text-align: right;
+    display: inline-block;
 }
 
 form input[type=submit] {

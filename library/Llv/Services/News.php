@@ -107,7 +107,7 @@ class Llv_Services_News
             $actualites = $this->getEntity()->newsGetAll($entityFilter);
             /** On ajoute les catégories */
             $result = array();
-            foreach($actualites as $actualite){
+            foreach ($actualites as $actualite) {
                 $categoryFilter = new Llv_Services_News_Filter_Category();
                 $categoryFilter->id = $actualite->category->id;
                 $categorie = $this->categoryGetOne($header, $categoryFilter);
@@ -115,6 +115,44 @@ class Llv_Services_News
                 $result[] = $actualite;
             }
             $message->actualites = $result;
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header    $header
+     * @param Llv_Services_News_Request_Edit $request
+     *
+     * @return Llv_Services_News_Message_News
+     */
+    public function editRow(
+        Llv_Services_Message_Header $header,
+        Llv_Services_News_Request_Edit $request
+    )
+    {
+        $message = new Llv_Services_News_Message_News();
+        try {
+            $entityRequest = new Llv_Entity_News_Request_Edit();
+            $entityRequest->id = isset($request->id)
+                && !is_null($request->id)
+                && !empty($request->id)
+                ? $request->id
+                : null;
+            $entityRequest->idCategorie = $request->idCategorie;
+            $entityRequest->position = $request->position;
+            $entityRequest->online = $request->online;
+            $entityRequest->coordonnees = $request->coordonnees;
+            $entityRequest->dateAdd = $request->dateAdd;
+            $entityRequest->dateUpdate = $request->dateUpdate;
+            $entityRequest->dateDelete = $request->dateDelete;
+            if (is_null($entityRequest->id)) {
+                $message->idActualite = $this->getEntity()->addRow($entityRequest);
+            } else {
+                $this->getEntity()->updateRow($entityRequest);
+            }
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

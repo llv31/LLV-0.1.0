@@ -18,13 +18,27 @@ $items['carrousel'] = array(
 $items['news'] = array(
     'controller' => 'news',
     'label'      => _('GLOBAL_MENU_NEWS'),
-    'current'    => array('news-list', 'news-add', 'news-update')
+    'current'    => array('edit', 'index', 'list')
 );
 /** Liste des activités */
 $items['activities'] = array(
     'controller' => 'activities-list',
     'label'      => _('GLOBAL_MENU_ACTIVITIES'),
-    'current'    => array('activities-list', 'activities-add', 'activities-update')
+    'current'    => array('edit', 'index', 'list')
+);
+/** Liste des chambres d'hôtes */
+$items['chambres'] = array(
+    'controller' => 'products',
+    'action'     => 'guesthouse-room-list',
+    'label'      => _('GLOBAL_MENU_CHAMBRES'),
+    'current'    => array('edit', 'index', 'list')
+);
+/** Liste des logements du gite */
+$items['gite'] = array(
+    'controller' => 'products',
+    'action'     => 'chalet-room-list',
+    'label'      => _('GLOBAL_MENU_GITE'),
+    'current'    => array('edit', 'index', 'list')
 );
 /** Partenaires */
 $items['partners'] = array(
@@ -32,20 +46,6 @@ $items['partners'] = array(
     'action'     => 'partners',
     'label'      => _('GLOBAL_MENU_PARTNERS'),
     'current'    => array('partners')
-);
-/** Liste des chambres d'hôtes */
-$items['chambres'] = array(
-    'controller' => 'products',
-    'action'     => 'guesthouse-room-list',
-    'label'      => _('GLOBAL_MENU_CHAMBRES'),
-    'current'    => array('guesthouse-room-list', 'guesthouse-room-update')
-);
-/** Liste des logements du gite */
-$items['gite'] = array(
-    'controller' => 'products',
-    'action'     => 'chalet-room-list',
-    'label'      => _('GLOBAL_MENU_GITE'),
-    'current'    => array('chalet-room-list', 'chalet-room-update')
 );
 echo $this->displayMainMenu($items);
 ?>

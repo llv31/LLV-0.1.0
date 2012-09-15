@@ -17,12 +17,9 @@ class App_Form_Back_Cms_Page
     {
         $this->setMethod(Zend_Form::METHOD_POST);
         $this->setAttrib('enctype', Zend_Form::ENCTYPE_MULTIPART);
-
-        $this->setAction('/index/index/');
-        if (APPLICATION_ENV == 'dev') {
-            $this->setAction(App_View_Helper_BaseUrl::baseUrl() . 'index/index/');
-        }
+        $this->_setAction('/index/index/');
         $this->setAttrib('id', 'cms_page');
+        $this->setAttrib('class', 'i18ned');
 
         $elements = array();
         /** @var $language Llv_Dto_Language */
