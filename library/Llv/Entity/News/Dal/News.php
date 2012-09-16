@@ -15,6 +15,7 @@ class Llv_Entity_News_Dal_News
 {
     protected static $_nameTable = "news";
     protected static $_nameTrad = "news_language";
+    protected static $_nameFile = "news_illustration";
     protected $_rowClass = "Llv_Entity_Dal_Row_Abstract";
     protected static $_instance;
 
@@ -49,9 +50,17 @@ class Llv_Entity_News_Dal_News
                 'n.id = nl.news_id',
                 array('title', 'content', 'link', 'language_id')
             )
-                ->joinLeft(array('l'=> 'language'), 'l.id = nl.language_id')
+                ->joinLeft(
+                array('l'=> 'language'),
+                'l.id = nl.language_id',
+                array('label', 'locale', 'short_tag')
+            )
                 ->where('n.id = ?', $filter->id);
+            if (isset($filter->idLangue)) {
+                $sql->where('l.id = ?', $filter->idLangue);
+            }
             return Llv_Db::getInstance()->fetchRow($sql);
+            return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);
         }
@@ -179,6 +188,132 @@ class Llv_Entity_News_Dal_News
             Zend_Debug::dump($e);
         }
         return false;
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Entity_News_Request_EditContent $request
+     *
+     * @return int
+     */
+    public static function addRowContent(Llv_Entity_News_Request_EditContent $request)
+    {
+        try {
+            $params = array();
+            $params['news_id'] = $request->idNews;
+            $params['language_id'] = $request->idLangue;
+            $params['title'] = $request->title;
+            $params['content'] = $request->content;
+            $params['link'] = $request->lien;
+            return Llv_Db::getInstance()
+                ->insert(
+                self::$_nameTrad,
+                $params
+            );
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+    }
+
+    /**
+     * @param Llv_Entity_News_Request_EditContent $request
+     *
+     * @return int
+     */
+    public static function updateRowContent(Llv_Entity_News_Request_EditContent $request)
+    {
+        try {
+            $params = array();
+            $where = 'news_id = ' . $request->idNews . ' AND language_id = ' . $request->idLangue;
+            $params['title'] = $request->title;
+            $params['content'] = $request->content;
+            $params['link'] = $request->lien;
+            return Llv_Db::getInstance()
+                ->update(
+                self::$_nameTrad,
+                $params,
+                $where
+            );
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_News_Filter_File $filter
+     *
+     * @return array
+     */
+    public static function getNewsFile(Llv_Entity_News_Filter_File $filter)
+    {
+        try {
+            $sql = Llv_Db::getInstance()->select()
+                ->from(self::$_nameFile)
+                ->where('news_id = ?', $filter->idNews);
+            Zend_Debug::dump($sql->assemble());
+            return Llv_Db::getInstance()->fetchAll($sql);
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+        return array();
+
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_News_Request_File $request
+     *
+     * @return bool|int
+     */
+    public static function addRowFile(Llv_Entity_News_Request_File $request)
+    {
+        try {
+            $params = array();
+            $params['news_id'] = $request->idNews;
+            $params['online'] = 1;
+            $params['position'] = self::getFileLastOrder();
+            $params['original_filename'] = $request->originalFilename;
+            $params['filename'] = $request->filename;
+            if ($request->dateAdd instanceof DateTime) {
+                $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
+            }
+            if ($request->dateDelete instanceof DateTime) {
+                $params['date_delete'] = $request->dateDelete->format(Llv_Constant_Date::FORMAT_DB);
+            }
+            return Llv_Db::getInstance()
+                ->insert(
+                self::$_nameFile,
+                $params
+            );
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+        return false;
+    }
+
+    /**
+     * Retourne l'ordre le plus grand
+     *
+     * @return null|string
+     */
+    public static function getFileLastOrder()
+    {
+        try {
+            $sql = Llv_Db::getInstance()->select()
+                ->from(self::$_nameFile, array('MAX(position)'));
+            $result = Llv_Db::getInstance()->fetchOne($sql);
+            return !is_null($result) ? $result : 0;
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+            error_log($e);
+            return null;
+        }
     }
 
 }

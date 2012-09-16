@@ -1,6 +1,7 @@
 <?php
 $this->headTitle(_('HEAD_TITLE_HOME') . ' | ');
 $formNewsEdit = $this->formNewsEdit;
+$formFileUploader = $this->formFileUploader;
 $this->headLink()->appendStylesheet($this->buildDesignUrl('_common/css/onglets.css'));
 $this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/index.css'));
 ?>
@@ -11,6 +12,7 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/index.css'))
     </h2>
 
 
+    <?php if (isset($formFileUploader)): ?>
     <div class="jq-tabs onglets">
         <ul>
             <li>
@@ -20,14 +22,24 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/index.css'))
                 <a href="#jq-pictures"><?php echo _('NEWS_EDIT_TABS_PICTURES'); ?></a>
             </li>
         </ul>
+    <?php endif;?>
 
-        <div id="jq-content">
-            <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
-            <?php echo $formNewsEdit; ?>
-        </div>
+    <div id="jq-content">
+        <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
+        <?php echo $formNewsEdit; ?>
+    </div>
 
+    <?php if (isset($formFileUploader)): ?>
         <div id="jq-pictures">
-            test
+            <?php
+            echo $this->partial(
+                '/news/partial/illustration.phtml',
+                array(
+                     'formFileUploader' => $formFileUploader
+                )
+            );
+            ?>
         </div>
     </div>
+    <?php endif;?>
 </div>

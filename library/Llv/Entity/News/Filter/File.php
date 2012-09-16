@@ -1,16 +1,17 @@
 <?php
 /**
- * PHP Class News.php
+ * PHP Class File.php
  * PHP Version 5
  *
  * @category    : default
  * @package     : default
  * @license     : Not for free use
- * @date        : 29/07/12
+ * @date        : 16/09/12
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Constant_News
+class Llv_Entity_News_Filter_File
 {
-    const DIRECTORY_PATH = 'news/';
+    /** @var int */
+    public $idNews;
 }

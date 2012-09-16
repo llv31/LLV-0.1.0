@@ -47,9 +47,9 @@ class Llv_Context_News
      *
      * @return Llv_Dto_News|null
      */
-    public function newsGetOneById(Llv_Services_News_Filter_News $filter)
+    public function getOne(Llv_Services_News_Filter_News $filter)
     {
-        $message = $this->_service->newsGetOne($this->getHeaderMessage(), $filter);
+        $message = $this->_service->getOne($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->actualite;
         }
@@ -61,9 +61,9 @@ class Llv_Context_News
      *
      * @return null
      */
-    public function newsGetAll(Llv_Services_News_Filter_News $filter)
+    public function getAll(Llv_Services_News_Filter_News $filter)
     {
-        $message = $this->_service->newsGetAll($this->getHeaderMessage(), $filter);
+        $message = $this->_service->getAll($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->actualites;
         }
@@ -91,7 +91,54 @@ class Llv_Context_News
      */
     public function updateRow(Llv_Services_News_Request_Edit $request)
     {
-            $message = $this->_service->editRow($this->getHeaderMessage(), $request);
+        $message = $this->_service->editRow($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return true;
+        }
+        return false;
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_News_Request_EditContent $request
+     *
+     * @return bool
+     */
+    public function editRowContent(Llv_Services_News_Request_EditContent $request)
+    {
+        $message = $this->_service->editRowContent($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return true;
+        }
+        return false;
+    }
+
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_News_Request_File $request
+     *
+     * @return bool
+     */
+    public function addRowFile(Llv_Services_News_Request_File $request)
+    {
+        $message = $this->_service->addRowFile($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * @param Llv_Services_News_Filter_File $filter
+     *
+     * @return bool
+     */
+    public function getNewsFiles(Llv_Services_News_Filter_File $filter)
+    {
+        $message = $this->_service->getNewsFiles($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return true;
         }

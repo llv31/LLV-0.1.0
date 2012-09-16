@@ -18,7 +18,7 @@ class Llv_Entity_News
      *
      * @return Llv_Dto_News
      */
-    public function newsGetOne(Llv_Entity_News_Filter_News $filter)
+    public function getOne(Llv_Entity_News_Filter_News $filter)
     {
         return Llv_Entity_News_Helper_News::convertFromDalToDto(
             Llv_Entity_News_Dal_News::getOne($filter)
@@ -30,7 +30,7 @@ class Llv_Entity_News
      *
      * @return array
      */
-    public function newsGetAll(Llv_Entity_News_Filter_News $filter)
+    public function getAll(Llv_Entity_News_Filter_News $filter)
     {
         return Llv_Entity_News_Helper_News::convertListFromDalToDto(
             Llv_Entity_News_Dal_News::getAll($filter)
@@ -75,6 +75,30 @@ class Llv_Entity_News
     public function updateRowContent(Llv_Entity_News_Request_EditContent $request)
     {
         return Llv_Entity_News_Dal_News::updateRowContent($request);
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Entity_News_Request_File $request
+     *
+     * @return bool|int
+     */
+    public function addRowFile(Llv_Entity_News_Request_File $request)
+    {
+        return Llv_Entity_News_Dal_News::addRowFile($request);
+    }
+
+    /**
+     * @param Llv_Entity_News_Filter_File $filter
+     *
+     * @return array
+     */
+    public function getNewsFiles(Llv_Entity_News_Filter_File $filter)
+    {
+        return Llv_Entity_News_Helper_File::convertListFromDalToDto(
+            Llv_Entity_News_Dal_News::getNewsFiles($filter)
+        );
     }
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */

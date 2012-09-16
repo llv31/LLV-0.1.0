@@ -21,21 +21,23 @@ class Llv_Entity_News_Helper_News
      */
     public static function convertFromDalToDto($dal)
     {
-        $dto = new Llv_Dto_News();
-        $dto->id = $dal['id'];
-        $dto->category = new Llv_Dto_News_Category();
-        $dto->category->id = $dal['category_id'];
-        $dto->idLangue = $dal['language_id'];
-        $dto->title = $dal['title'];
-        $dto->content = $dal['content'];
-        $dto->link= $dal['link'];
-        $dto->location = $dal['location'];
-        $dto->filename = "";
-        $dto->online = $dal['online'];
-        $dto->dateAdd = new DateTime($dal['date_add']);
-        $dto->dateUpdate = new DateTime($dal['date_update']);
-        $dto->dateDelete = new DateTime($dal['date_delete']);
-        return $dto;
+        if (count($dal) > 0) {
+            $dto = new Llv_Dto_News();
+            $dto->id = $dal['id'];
+            $dto->category = new Llv_Dto_News_Category();
+            $dto->category->id = $dal['category_id'];
+            $dto->idLangue = $dal['language_id'];
+            $dto->title = $dal['title'];
+            $dto->content = $dal['content'];
+            $dto->link = $dal['link'];
+            $dto->location = $dal['location'];
+            $dto->online = $dal['online'];
+            $dto->dateAdd = new DateTime($dal['date_add']);
+            $dto->dateUpdate = new DateTime($dal['date_update']);
+            $dto->dateDelete = new DateTime($dal['date_delete']);
+            return $dto;
+        }
+        return null;
     }
 
     /**

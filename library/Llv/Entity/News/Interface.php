@@ -19,7 +19,7 @@ interface Llv_Entity_News_Interface
      *
      * @return Llv_Dto_News
      */
-    public function newsGetOne(Llv_Entity_News_Filter_News $filter);
+    public function getOne(Llv_Entity_News_Filter_News $filter);
 
     /**
      * @abstract
@@ -28,7 +28,7 @@ interface Llv_Entity_News_Interface
      *
      * @return array
      */
-    public function newsGetAll(Llv_Entity_News_Filter_News $filter);
+    public function getAll(Llv_Entity_News_Filter_News $filter);
 
     /**
      * @param Llv_Entity_News_Request_Edit $request
@@ -57,6 +57,15 @@ interface Llv_Entity_News_Interface
      * @return bool
      */
     public function updateRowContent(Llv_Entity_News_Request_EditContent $request);
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Entity_News_Request_File $request
+     *
+     * @return bool|int
+     */
+    public function addRowFile(Llv_Entity_News_Request_File $request);
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 

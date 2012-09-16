@@ -38,4 +38,6 @@ class Llv_Dto_News
     public $dateDelete;
     /** @var Llv_Dto_News_Category */
     public $category;
+    /** @var Llv_Dto_News_File[] */
+    public $illustrations;
 }

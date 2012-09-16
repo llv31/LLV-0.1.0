@@ -2,7 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Back/FileUploader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/news/partial/illustration.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Dto/News/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Filter/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Request/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/News/Filter/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/News/Message/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/News/Request/File.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Back/News/Edit.php" afterPath="$PROJECT_DIR$/application/forms/Back/News/Edit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/controllers/NewsController.php" afterPath="$PROJECT_DIR$/application/modules/back/controllers/NewsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Constant/News.php" afterPath="$PROJECT_DIR$/library/Llv/Constant/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/News.php" afterPath="$PROJECT_DIR$/library/Llv/Context/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Dto/File.php" afterPath="$PROJECT_DIR$/library/Llv/Dto/File.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Dto/News.php" afterPath="$PROJECT_DIR$/library/Llv/Dto/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Dal/Category.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Dal/Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/Category.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/Category.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Interface.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Interface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/News.php" afterPath="$PROJECT_DIR$/library/Llv/Services/News.php" />
     </list>
     <ignored path="LLV-0.1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,10 +47,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Edit.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/forms/Back/News/Edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="0" selection-start="4500" selection-end="4500" vertical-scroll-proportion="-12.02">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="NewsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/NewsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="65" selection-start="1685" selection-end="1685" vertical-scroll-proportion="-16.75">
+            <state line="93" column="56" selection-start="3613" selection-end="3613" vertical-scroll-proportion="-15.833333">
               <folding>
                 <element signature="e#6#220#0" expanded="true" />
               </folding>
@@ -38,16 +70,16 @@
       <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/Llv/Context/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="39" selection-start="1840" selection-end="1840" vertical-scroll-proportion="-13.5">
+            <state line="126" column="42" selection-start="3063" selection-end="3063" vertical-scroll-proportion="-9.208333">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="News.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/Llv/Services/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="62" selection-start="5070" selection-end="5070" vertical-scroll-proportion="-26.0">
+            <state line="267" column="49" selection-start="9440" selection-end="9440" vertical-scroll-proportion="0.72347826">
               <folding>
                 <element signature="e#6#210#0" expanded="true" />
               </folding>
@@ -58,7 +90,16 @@
       <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="45" selection-start="1109" selection-end="1109" vertical-scroll-proportion="-13.5">
+            <state line="94" column="20" selection-start="2286" selection-end="2286" vertical-scroll-proportion="-13.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="30" selection-start="429" selection-end="429" vertical-scroll-proportion="-8.75">
               <folding />
             </state>
           </provider>
@@ -67,55 +108,10 @@
       <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="14" selection-start="4194" selection-end="4269" vertical-scroll-proportion="-25.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Carrousel.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Cms/Dal/Carrousel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="43" selection-start="474" selection-end="474" vertical-scroll-proportion="0.3488372">
+            <state line="276" column="0" selection-start="8368" selection-end="8368" vertical-scroll-proportion="-5.76">
               <folding>
-                <element signature="e#6#215#0" expanded="true" />
+                <element signature="e#6#210#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Abstract.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Abstract.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="541" column="20" selection-start="17429" selection-end="17429" vertical-scroll-proportion="-12.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditContent.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Request/EditContent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="6" selection-start="218" selection-end="253" vertical-scroll-proportion="-1.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Edit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/forms/Back/News/Edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="18" selection-start="677" selection-end="677" vertical-scroll-proportion="-11.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/Llv/Dto/News.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="21" selection-start="524" selection-end="569" vertical-scroll-proportion="-11.25">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -133,22 +129,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Helper/Category.php" />
         <option value="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Request/EditContent.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Services/News/Request/EditContent.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Services/News/Request/Edit.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Services/News/Message/News.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Context/News.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Request/Edit.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Interface.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Dal/Category.php" />
         <option value="$PROJECT_DIR$/library/Llv/Dto/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Interface.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Filter/File.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Helper/File.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Dto/News/File.php" />
         <option value="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/News/Filter/File.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Context/News.php" />
         <option value="$PROJECT_DIR$/application/forms/Back/News/Edit.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" />
         <option value="$PROJECT_DIR$/application/modules/back/controllers/NewsController.php" />
         <option value="$PROJECT_DIR$/library/Llv/Services/News.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/Cms/Dal/Carrousel.php" />
       </list>
     </option>
   </component>
@@ -265,262 +261,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -540,6 +280,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Llv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Llv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Llv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="News" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Llv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="News" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Filter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -617,125 +435,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Request" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Llv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="News" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Helper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Llv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Llv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="locales" />
+              <option name="myItemId" value="Filter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -750,6 +450,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -768,36 +490,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -826,10 +518,6 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -850,48 +538,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -984,6 +630,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="News" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="configs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1033,18 +697,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/forms/Back" />
       <recent name="$PROJECT_DIR$/library/Llv/Services/News/Request" />
       <recent name="$PROJECT_DIR$/library/Llv/Entity/News/Request" />
       <recent name="$PROJECT_DIR$/public/design/back/default/_common/css" />
       <recent name="$PROJECT_DIR$/library/Llv/Entity/News/Helper" />
-      <recent name="$PROJECT_DIR$/library/Llv/Entity/News/Dal" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/modules/back/views/scripts/news/partial" />
       <recent name="$PROJECT_DIR$/public/design/front/default/index/js" />
       <recent name="$PROJECT_DIR$/public/design/front/default/_plugin/carrousel" />
       <recent name="$PROJECT_DIR$/public/design/front/default/_plugin" />
       <recent name="$PROJECT_DIR$/public/design/default/default/_plugin/jquery-ui" />
-      <recent name="$PROJECT_DIR$/public/design/default/default/_plugin/jquery-ui/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -1183,7 +847,7 @@
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1273,65 +937,102 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News/Message/News.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Request/File.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="309" selection-end="309" vertical-scroll-proportion="0.10204082">
+        <state line="28" column="24" selection-start="576" selection-end="576" vertical-scroll-proportion="0.32312927">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Request/Edit.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Helper/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="23" selection-start="604" selection-end="604" vertical-scroll-proportion="0.3488372">
+        <state line="43" column="19" selection-start="864" selection-end="864" vertical-scroll-proportion="0.5782313">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Interface.php">
+    <entry file="file://$PROJECT_DIR$/application/views/helpers/DisplayImage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.8503401">
+        <state line="25" column="49" selection-start="642" selection-end="642" vertical-scroll-proportion="0.42517006">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Request/EditContent.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/index/carrousel-list.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="218" selection-end="253" vertical-scroll-proportion="-1.875">
+        <state line="38" column="64" selection-start="1509" selection-end="1509" vertical-scroll-proportion="0.64625853">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Cms/Dal/Page.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Dto/News/File.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="30" selection-start="2301" selection-end="2817" vertical-scroll-proportion="1.3779069">
+        <state line="28" column="1" selection-start="539" selection-end="539" vertical-scroll-proportion="0.32312927">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Helper/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="9" selection-start="841" selection-end="841" vertical-scroll-proportion="0.40816328">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="53" selection-start="518" selection-end="518" vertical-scroll-proportion="0.2877698">
+        <state line="23" column="30" selection-start="429" selection-end="429" vertical-scroll-proportion="-8.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Dto/News.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Filter/File.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="21" selection-start="524" selection-end="569" vertical-scroll-proportion="-11.25">
+        <state line="13" column="1" selection-start="247" selection-end="287" vertical-scroll-proportion="0.06802721">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News/Message/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="1" selection-start="446" selection-end="446" vertical-scroll-proportion="0.20408164">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="20" selection-start="2286" selection-end="2286" vertical-scroll-proportion="-13.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News/Filter/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="19" selection-start="289" selection-end="289" vertical-scroll-proportion="0.10204082">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/forms/Back/News/Edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="18" selection-start="677" selection-end="677" vertical-scroll-proportion="-11.25">
+        <state line="119" column="0" selection-start="4500" selection-end="4500" vertical-scroll-proportion="-12.02">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="276" column="0" selection-start="8368" selection-end="8368" vertical-scroll-proportion="-5.76">
+          <folding>
+            <element signature="e#6#210#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/NewsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="65" selection-start="1685" selection-end="1685" vertical-scroll-proportion="-16.75">
+        <state line="93" column="56" selection-start="3613" selection-end="3613" vertical-scroll-proportion="-15.833333">
           <folding>
             <element signature="e#6#220#0" expanded="true" />
           </folding>
@@ -1340,53 +1041,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Llv/Context/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="39" selection-start="1840" selection-end="1840" vertical-scroll-proportion="-13.5">
+        <state line="126" column="42" selection-start="3063" selection-end="3063" vertical-scroll-proportion="-9.208333">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Llv/Services/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="62" selection-start="5070" selection-end="5070" vertical-scroll-proportion="-26.0">
+        <state line="267" column="49" selection-start="9440" selection-end="9440" vertical-scroll-proportion="0.72347826">
           <folding>
             <element signature="e#6#210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="45" selection-start="1109" selection-end="1109" vertical-scroll-proportion="-13.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Zend/Db/Adapter/Abstract.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="541" column="20" selection-start="17429" selection-end="17429" vertical-scroll-proportion="-12.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="14" selection-start="4194" selection-end="4269" vertical-scroll-proportion="-25.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="30" selection-start="847" selection-end="847" vertical-scroll-proportion="-17.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Cms/Dal/Carrousel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="43" selection-start="474" selection-end="474" vertical-scroll-proportion="0.3488372">
-          <folding>
-            <element signature="e#6#215#0" expanded="true" />
           </folding>
         </state>
       </provider>

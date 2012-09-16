@@ -51,6 +51,9 @@ class Llv_Entity_News_Dal_Category
             )
                 ->joinLeft(array('l'=> 'language'), 'l.id = nl.language_id')
                 ->where('n.id = ?', $filter->id);
+            if (isset($filter->idLangue)) {
+                $sql->where('l.id = ?', $filter->idLangue);
+            }
             return Llv_Db::getInstance()->fetchRow($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);
