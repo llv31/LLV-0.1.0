@@ -21,12 +21,16 @@ class App_View_Helper_AvailableLanguages
             if ($site['front']) {
                 echo '<li class="' . htmlspecialchars($site['locale']) . ' ' .
                     ($site['locale'] == $currentLanguage ? 'current' : '') . '">' . PHP_EOL;
-                echo '<a href="http://' . $site['host'] . '">';
+                echo '<a href="http://' . $site['host'] . '/' . $this->getCurrentPage() . '">';
                 echo htmlspecialchars($site['locale']);
                 echo '</a>' . PHP_EOL;
                 echo '</li>' . PHP_EOL;
             }
         }
         echo '</ul>' . PHP_EOL;
+    }
+
+    public function getCurrentPage()
+    {
     }
 }

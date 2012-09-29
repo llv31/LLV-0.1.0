@@ -154,6 +154,7 @@ class Llv_Entity_Cms_Dal_Carrousel
                     $params['position'] = $positionInitiale;
                     $where = 'position < ' . $positionInitiale . ' AND ' . 'position >= ' . $nouvellePosition;
                 }
+                $where .= ' AND date_delete is null';
                 /** On met à jour tous les éléments avant ou après l'élément courant */
                 Llv_Db::getInstance()->update(
                     self::$_name,

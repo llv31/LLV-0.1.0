@@ -1,0 +1,79 @@
+<?php
+//$module = Llv_Context_Application::getInstance()->getActiveModule();
+$this->headTitle(_('HEAD_TITLE_NEWS') . ' | ');
+/**  */
+$this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/list.css'));
+$this->headScript()->appendFile($this->buildDesignUrl('news/js/list.js'));
+/** @var $spotlight Llv_Dto_News */
+$spotlight = $this->spotlight;
+$news = $this->news;
+$newsPerRow = 3; $i = 0;
+?>
+
+<h2><?= _('HEAD_TITLE_NEWS'); ?></h2>
+
+<?php if (count($spotlight) == 1): ?>
+<div class="spotlight">
+    <div class="left">
+        <h3>
+            <a href="news/read/id/<?= $spotlight->id; ?>">
+                <?= $spotlight->title; ?>
+            </a>
+        </h3>
+        <?php if (isset($spotlight->illustrations[0])): ?>
+        <a href="news/read/id/<?= $spotlight->id; ?>">
+            <img
+                src="<?=
+                    $this->displayImage(
+                        $spotlight->illustrations[0]->filename,
+                        Llv_Constant_File_Category::NEWS,
+                        300,
+                        9999
+                    );
+                    ?>"/>
+        </a>
+        <?php endif; ?>
+    </div>
+    <div class="right">
+        <p><?= $spotlight->content; ?></p>
+    </div>
+</div>
+<?php endif; ?>
+
+<?php if (count($news) > 0): ?>
+<div class="news">
+    <ul>
+        <?php foreach ($news as $newsItem): ?>
+        <?php $i++; ?>
+        <li<?php if($i%3==0): ?> class="no-space"<?php endif; ?>>
+            <div class="left">
+                <h3>
+                    <a href="news/read/id/<?= $newsItem->id; ?>">
+                        <?= $newsItem->title; ?>
+                    </a>
+                </h3>
+
+                <?php if (isset($newsItem->illustrations[0])): ?>
+                <p>
+                    <a href="news/read/id/<?= $newsItem->id; ?>">
+                        <img
+                            src="<?=
+                                $this->displayImage(
+                                    $newsItem->illustrations[0]->filename,
+                                    Llv_Constant_File_Category::NEWS,
+                                    448,
+                                    9999
+                                );
+                                ?>"/>
+                    </a>
+                </p>
+                <?php endif; ?>
+            </div>
+            <div class="right">
+                <p><?= $newsItem->content; ?></p>
+            </div>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>

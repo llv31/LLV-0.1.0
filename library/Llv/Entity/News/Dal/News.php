@@ -134,7 +134,9 @@ class Llv_Entity_News_Dal_News
             $params['category_id'] = $request->idCategorie;
             $params['position'] = self::getLastOrder() + 1;
             $params['location'] = $request->coordonnees;
-            $params['online'] = !is_null($request->online) ? $request->online : true;
+            if (isset($request->online)) {
+                $params['online'] = !is_null($request->online) ? $request->online : true;
+            }
             if ($request->dateAdd instanceof DateTime) {
                 $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
             }
@@ -184,6 +186,7 @@ class Llv_Entity_News_Dal_News
                         $params['position'] = $positionInitiale;
                         $where = 'position < ' . $positionInitiale . ' AND ' . 'position >= ' . $nouvellePosition;
                     }
+                    $where .= ' AND date_delete is null';
                     Llv_Db::getInstance()->update(
                         self::$_nameTable,
                         $params,
@@ -198,7 +201,9 @@ class Llv_Entity_News_Dal_News
                 $params['category_id'] = $request->idCategorie;
                 $params['position'] = $request->position;
                 $params['location'] = $request->coordonnees;
-                $params['online'] = (bool)$request->online;
+                if (isset($request->online)) {
+                    $params['online'] = !is_null($request->online) ? $request->online : true;
+                }
                 if ($request->dateAdd instanceof DateTime) {
                     $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
                 }
@@ -414,6 +419,7 @@ class Llv_Entity_News_Dal_News
                     $params['position'] = $positionInitiale;
                     $where = 'position < ' . $positionInitiale . ' AND ' . 'position >= ' . $nouvellePosition;
                 }
+                $where .= ' AND date_delete is null';
                 /** On met à jour tous les éléments avant ou après l'élément courant */
                 Llv_Db::getInstance()->update(
                     self::$_nameFile,
@@ -440,6 +446,7 @@ class Llv_Entity_News_Dal_News
 
     /**
      * Suppression logique
+     *
      * @static
      *
      * @param Llv_Entity_News_Filter_File $filter

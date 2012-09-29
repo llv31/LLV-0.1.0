@@ -110,11 +110,17 @@ class Llv_Services_News
             $actualites = $this->getEntity()->getAll($entityFilter);
             /** On ajoute les catégories */
             $result = array();
+            /** @var $actualite Llv_Dto_News */
             foreach ($actualites as $actualite) {
                 $categoryFilter = new Llv_Services_News_Filter_Category();
                 $categoryFilter->id = $actualite->category->id;
                 $categorie = $this->categoryGetOne($header, $categoryFilter);
                 $actualite->category = $categorie->categorie;
+
+                $illuFilter = new Llv_Services_News_Filter_File();
+                $illuFilter->idNews = $actualite->id;
+                $illustrations = $this->getNewsFiles($header, $illuFilter);
+                $actualite->illustrations = $illustrations->files;
                 $result[] = $actualite;
             }
             $message->actualites = $result;
@@ -146,7 +152,9 @@ class Llv_Services_News
                 : null;
             $entityRequest->idCategorie = $request->idCategorie;
             $entityRequest->position = $request->position;
-            $entityRequest->online = $request->online;
+            if (isset($request->online)) {
+                $entityRequest->online = $request->online;
+            }
             $entityRequest->coordonnees = $request->coordonnees;
             $entityRequest->dateAdd = $request->dateAdd;
             $entityRequest->dateUpdate = $request->dateUpdate;

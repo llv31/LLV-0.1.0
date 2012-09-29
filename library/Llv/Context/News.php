@@ -63,6 +63,9 @@ class Llv_Context_News
      */
     public function getAll(Llv_Services_News_Filter_News $filter)
     {
+        if (!isset($filter->idLangue)) {
+            $filter->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
+        }
         $message = $this->_service->getAll($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->actualites;

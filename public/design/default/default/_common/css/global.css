@@ -1,6 +1,7 @@
 /* •••••••••••••••••••••••••••••••••• */
 @import "reset.css";
 @import "form.css";
+@import "fonts.css";
 
 /* •••••••••••••••••••••••••••••••••• */
 html {
@@ -47,7 +48,19 @@ u {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    /*font-weight: bold;*/
+    font-family: 'HelveticaNeueLight';
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 1px dashed #4B4C43;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
 /* •••••••••••••••••••••••••••••••••• */

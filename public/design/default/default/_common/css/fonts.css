@@ -1,0 +1,25 @@
+/* •••••••••••••••••••••••••••••••••• */
+/** HelveticaNeueUltraLight */
+@font-face {
+    font-family: 'HelveticaNeueUltraLight';
+    src: url('../fonts/HelveticaNeueUltraLight.eot');
+    src: local('☺'),
+    url('../fonts/HelveticaNeueUltraLight.woff') format('woff'),
+    url('../fonts/HelveticaNeueUltraLight.ttf') format('truetype'),
+    url('../fonts/HelveticaNeueUltraLight.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* •••••••••••••••••••••••••••••••••• */
+/** HelveticaNeueLight */
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../fonts/HelveticaNeueLight.eot');
+    src: local('☺'),
+    url('../fonts/HelveticaNeueLight.woff') format('woff'),
+    url('../fonts/HelveticaNeueLight.ttf') format('truetype'),
+    url('../fonts/HelveticaNeueLight.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* •••••••••••••••••••••••••••••••••• */
