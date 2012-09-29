@@ -154,8 +154,37 @@ class Llv_Services_News
             if (is_null($entityRequest->id)) {
                 $message->idActualite = $this->getEntity()->addRow($entityRequest);
             } else {
+                if (isset($request->moveUp)) {
+                    $entityRequest->moveUp = $request->moveUp;
+                }
+                if (isset($request->show)) {
+                    $entityRequest->show = $request->show;
+                }
                 $this->getEntity()->updateRow($entityRequest);
             }
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header   $header
+     * @param Llv_Services_News_Filter_News $filter
+     *
+     * @return Llv_Services_News_Message_News
+     */
+    public function deleteRow(
+        Llv_Services_Message_Header $header,
+        Llv_Services_News_Filter_News $filter
+    )
+    {
+        $message = new Llv_Services_News_Message_News();
+        try {
+            $entityFilter = new Llv_Entity_News_Filter_News();
+            $entityFilter->id = $filter->id;
+            $this->getEntity()->deleteRow($entityFilter);
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;
@@ -211,8 +240,8 @@ class Llv_Services_News
                 ? $request->idNews
                 : null;
             $entityRequest->idLangue = $request->idLangue;
-            $entityRequest->lien = $request->lien;
-            $entityRequest->content = $request->content;
+            $entityRequest->lien = stripslashes($request->lien);
+            $entityRequest->content = stripslashes($request->content);
             $entityRequest->title = $request->title;
 
             $filter = new Llv_Services_News_Filter_News();

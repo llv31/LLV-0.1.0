@@ -28,4 +28,8 @@ class Llv_Entity_News_Request_Edit
     public $dateUpdate;
     /** @var DateTime */
     public $dateDelete;
+    /** @var bool */
+    public $moveUp;
+    /** @var bool */
+    public $show;
 }

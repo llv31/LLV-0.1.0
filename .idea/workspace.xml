@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/back/default/_common/css/liste.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/back/default/_common/css/ui-actions.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/controllers/NewsController.php" afterPath="$PROJECT_DIR$/application/modules/back/controllers/NewsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/news/partial/illustration.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/news/partial/illustration.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/News.php" afterPath="$PROJECT_DIR$/library/Llv/Context/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Dto/News/File.php" afterPath="$PROJECT_DIR$/library/Llv/Dto/News/File.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Filter/File.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Filter/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/File.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Cms.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Cms.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Interface.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Interface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Request/Edit.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Request/Edit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/News.php" afterPath="$PROJECT_DIR$/library/Llv/Services/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/News/Filter/File.php" afterPath="$PROJECT_DIR$/library/Llv/Services/News/Filter/File.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/back/default/_common/css/global.css" afterPath="$PROJECT_DIR$/public/design/back/default/_common/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/back/default/_common/css/table.css" afterPath="$PROJECT_DIR$/public/design/back/default/_common/css/table.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/back/default/_common/js/jquery.table-action.js" afterPath="$PROJECT_DIR$/public/design/back/default/_common/js/jquery.table-action.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/News/Request/Edit.php" afterPath="$PROJECT_DIR$/library/Llv/Services/News/Request/Edit.php" />
     </list>
     <ignored path="LLV-0.1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,25 +35,16 @@
       <file leaf-file-name="NewsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/NewsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="28" selection-start="4205" selection-end="4205" vertical-scroll-proportion="0.0">
+            <state line="116" column="68" selection-start="4536" selection-end="4536" vertical-scroll-proportion="-14.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="10" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="News.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/Llv/Context/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="21" selection-start="4287" selection-end="4287" vertical-scroll-proportion="0.3197279">
+            <state line="103" column="59" selection-start="2436" selection-end="2465" vertical-scroll-proportion="-11.625">
               <folding />
             </state>
           </provider>
@@ -71,7 +53,16 @@
       <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/Llv/Services/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="350" column="36" selection-start="12118" selection-end="12118" vertical-scroll-proportion="0.0">
+            <state line="184" column="59" selection-start="6157" selection-end="6157" vertical-scroll-proportion="-21.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Edit.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Request/Edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="17" selection-start="684" selection-end="684" vertical-scroll-proportion="-15.0">
               <folding />
             </state>
           </provider>
@@ -95,10 +86,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="News.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="45" selection-start="3061" selection-end="3061" vertical-scroll-proportion="0.0">
+            <state line="32" column="49" selection-start="728" selection-end="728" vertical-scroll-proportion="0.4011628">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Interface.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Interface.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="67" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-12.08">
               <folding />
             </state>
           </provider>
@@ -107,7 +107,7 @@
       <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="407" column="32" selection-start="12847" selection-end="12847" vertical-scroll-proportion="0.0">
+            <state line="230" column="64" selection-start="7801" selection-end="7828" vertical-scroll-proportion="-12.25">
               <folding />
             </state>
           </provider>
@@ -135,22 +135,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/design/back/default/_common/css/table.css" />
-        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" />
-        <option value="$PROJECT_DIR$/public/design/back/default/_common/css/global.css" />
         <option value="$PROJECT_DIR$/public/design/back/default/_common/css/liste.css" />
         <option value="$PROJECT_DIR$/public/design/back/default/_common/css/ui-actions.css" />
         <option value="$PROJECT_DIR$/application/modules/back/views/scripts/news/partial/illustration.phtml" />
         <option value="$PROJECT_DIR$/library/Llv/Services/Cms.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Filter/File.php" />
         <option value="$PROJECT_DIR$/library/Llv/Entity/News/Helper/File.php" />
         <option value="$PROJECT_DIR$/library/Llv/Dto/News/File.php" />
         <option value="$PROJECT_DIR$/library/Llv/Services/News/Filter/File.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/News/Request/Edit.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Request/Edit.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Filter/File.php" />
         <option value="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Services/News.php" />
         <option value="$PROJECT_DIR$/application/modules/back/controllers/NewsController.php" />
         <option value="$PROJECT_DIR$/library/Llv/Context/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Interface.php" />
       </list>
     </option>
   </component>
@@ -1076,13 +1076,18 @@
       <created>1347791550492</created>
       <updated>1347791550492</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="News&#10;Admin&#10;Illustration&#10;Contenu&#10;Formulaire">
+      <created>1348922382009</created>
+      <updated>1348922382009</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1054" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1098,7 +1103,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1176,32 +1180,7 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Filter/File.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="14" selection-start="282" selection-end="282" vertical-scroll-proportion="0.10204082" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Services/Cms.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="46" selection-start="8102" selection-end="8102" vertical-scroll-proportion="0.6972789" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Services/Cms/Request/Carrousel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="223" selection-end="223" vertical-scroll-proportion="0.05102041" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Dto/News/File.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="331" selection-end="331" vertical-scroll-proportion="0.15306123" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Request/File.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="218" selection-end="218" vertical-scroll-proportion="0.05102041" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News/Request/File.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="6" selection-start="218" selection-end="218" vertical-scroll-proportion="0.05102041" />
       </provider>
@@ -1211,23 +1190,9 @@
         <state line="24" column="35" selection-start="465" selection-end="465" vertical-scroll-proportion="0.25510204" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="28" selection-start="4205" selection-end="4205" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="10" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="350" column="36" selection-start="12118" selection-end="12118" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1246,20 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="45" selection-start="3061" selection-end="3061" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="407" column="32" selection-start="12847" selection-end="12847" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/forms/Back/News/Edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1267,9 +1218,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News/Request/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="17" selection-start="539" selection-end="619" vertical-scroll-proportion="0.3139535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News/Request/Edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="23" selection-start="606" selection-end="686" vertical-scroll-proportion="0.3488372">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Request/Edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="17" selection-start="684" selection-end="684" vertical-scroll-proportion="-15.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Filter/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="19" selection-start="364" selection-end="364" vertical-scroll-proportion="0.1744186">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="68" selection-start="4536" selection-end="4536" vertical-scroll-proportion="-14.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/library/Llv/Context/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="21" selection-start="4287" selection-end="4287" vertical-scroll-proportion="0.3197279">
+        <state line="103" column="59" selection-start="2436" selection-end="2465" vertical-scroll-proportion="-11.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="230" column="64" selection-start="7801" selection-end="7828" vertical-scroll-proportion="-12.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="59" selection-start="6157" selection-end="6157" vertical-scroll-proportion="-21.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Interface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="67" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-12.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="49" selection-start="728" selection-end="728" vertical-scroll-proportion="0.4011628">
           <folding />
         </state>
       </provider>

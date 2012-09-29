@@ -45,6 +45,13 @@ interface Llv_Entity_News_Interface
     public function updateRow(Llv_Entity_News_Request_Edit $request);
 
     /**
+     * @param Llv_Entity_News_Filter_News $filter
+     *
+     * @return null
+     */
+    public function deleteRow(Llv_Entity_News_Filter_News $filter);
+
+    /**
      * @param Llv_Entity_News_Request_EditContent $request
      *
      * @return int

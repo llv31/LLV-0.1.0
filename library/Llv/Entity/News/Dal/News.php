@@ -55,12 +55,13 @@ class Llv_Entity_News_Dal_News
                 'l.id = nl.language_id',
                 array('label', 'locale', 'short_tag')
             )
+                ->where('n.date_delete is null')
                 ->where('n.id = ?', $filter->id);
             if (isset($filter->idLangue)) {
                 $sql->where('l.id = ?', $filter->idLangue);
             }
             return Llv_Db::getInstance()->fetchRow($sql);
-            return Llv_Db::getInstance()->fetchAll($sql);
+//            return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);
         }
@@ -87,7 +88,9 @@ class Llv_Entity_News_Dal_News
                 array('title', 'content', 'link', 'language_id')
             )
                 ->joinLeft(array('l'=> 'language'), 'l.id = nl.language_id', array())
-                ->where('l.id = ?', $filter->idLangue);
+                ->where('l.id = ?', $filter->idLangue)
+                ->where('n.date_delete is null')
+                ->order('n.position DESC');
             if ($filter->online) {
                 $sql->where('n.online = ?', $filter->online);
             }
@@ -131,7 +134,7 @@ class Llv_Entity_News_Dal_News
             $params['category_id'] = $request->idCategorie;
             $params['position'] = self::getLastOrder() + 1;
             $params['location'] = $request->coordonnees;
-            $params['online'] = $request->online;
+            $params['online'] = !is_null($request->online) ? $request->online : true;
             if ($request->dateAdd instanceof DateTime) {
                 $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
             }
@@ -141,7 +144,6 @@ class Llv_Entity_News_Dal_News
             if ($request->dateDelete instanceof DateTime) {
                 $params['date_delete'] = $request->dateDelete->format(Llv_Constant_Date::FORMAT_DB);
             }
-            Zend_Debug::dump($params);
             Llv_Db::getInstance()
                 ->insert(
                 self::$_nameTable,
@@ -165,18 +167,47 @@ class Llv_Entity_News_Dal_News
     {
         try {
             $params = array();
-            $params['category_id'] = $request->idCategorie;
-            $params['position'] = $request->position;
-            $params['location'] = $request->coordonnees;
-            $params['online'] = (bool)$request->online;
-            if ($request->dateAdd instanceof DateTime) {
-                $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
-            }
-            if ($request->dateUpdate instanceof DateTime) {
-                $params['date_update'] = $request->dateUpdate->format(Llv_Constant_Date::FORMAT_DB);
-            }
-            if ($request->dateDelete instanceof DateTime) {
-                $params['date_delete'] = $request->dateDelete->format(Llv_Constant_Date::FORMAT_DB);
+            if (isset($request->show) || isset($request->moveUp)) {
+                $filter = new Llv_Entity_News_Filter_News();
+                $filter->id = $request->id;
+                $news = self::getOne($filter);
+                /** On veut déplacer le fichier */
+                if (isset($request->moveUp)) {
+                    $positionInitiale = $news['position'];
+                    if ($request->moveUp) {
+                        $nouvellePosition = $positionInitiale + 1;
+                        $params['position'] = $positionInitiale;
+                        $where = 'position > ' . $positionInitiale . ' AND ' . 'position <= ' . $nouvellePosition;
+                    } else {
+                        $nouvellePosition = $positionInitiale - 1;
+                        $nouvellePosition = $nouvellePosition > 0 ? $nouvellePosition : 1;
+                        $params['position'] = $positionInitiale;
+                        $where = 'position < ' . $positionInitiale . ' AND ' . 'position >= ' . $nouvellePosition;
+                    }
+                    Llv_Db::getInstance()->update(
+                        self::$_nameTable,
+                        $params,
+                        $where
+                    );
+                    $params['position'] = $nouvellePosition;
+                }
+                if (isset($request->show)) {
+                    $params['online'] = $request->show;
+                }
+            } else {
+                $params['category_id'] = $request->idCategorie;
+                $params['position'] = $request->position;
+                $params['location'] = $request->coordonnees;
+                $params['online'] = (bool)$request->online;
+                if ($request->dateAdd instanceof DateTime) {
+                    $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
+                }
+                if ($request->dateUpdate instanceof DateTime) {
+                    $params['date_update'] = $request->dateUpdate->format(Llv_Constant_Date::FORMAT_DB);
+                }
+                if ($request->dateDelete instanceof DateTime) {
+                    $params['date_delete'] = $request->dateDelete->format(Llv_Constant_Date::FORMAT_DB);
+                }
             }
             return Llv_Db::getInstance()
                 ->update(
@@ -188,6 +219,32 @@ class Llv_Entity_News_Dal_News
             Zend_Debug::dump($e);
         }
         return false;
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_News_Filter_News $filter
+     *
+     * @return null
+     */
+    public static function deleteRow(Llv_Entity_News_Filter_News $filter)
+    {
+        try {
+            $file = self::getOne($filter);
+            $date = new DateTime();
+            $params['date_delete'] = $date->format(Llv_Constant_Date::FORMAT_DB);
+            Llv_Db::getInstance()->update(
+                self::$_nameTable,
+                $params,
+                'id = ' . $filter->id
+            );
+            return $file['news_id'];
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+            error_log($e);
+            return null;
+        }
     }
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
@@ -254,6 +311,7 @@ class Llv_Entity_News_Dal_News
         try {
             $sql = Llv_Db::getInstance()->select()
                 ->from(self::$_nameFile)
+                ->where('date_delete is null')
                 ->where('id = ?', $filter->id);
             return Llv_Db::getInstance()->fetchRow($sql);
         } catch (Exception $e) {
@@ -276,6 +334,7 @@ class Llv_Entity_News_Dal_News
             $sql = Llv_Db::getInstance()->select()
                 ->from(self::$_nameFile)
                 ->where('news_id = ?', $filter->idNews)
+                ->where('date_delete is null')
                 ->order('position ASC');
             if (isset($filter->online)) {
                 $sql->where('online = ?', $filter->online);
@@ -380,6 +439,7 @@ class Llv_Entity_News_Dal_News
     }
 
     /**
+     * Suppression logique
      * @static
      *
      * @param Llv_Entity_News_Filter_File $filter
@@ -389,21 +449,13 @@ class Llv_Entity_News_Dal_News
     public static function deleteRowFile(Llv_Entity_News_Filter_File $filter)
     {
         try {
-            $where = array();
-            if (isset($filter->id)) {
-                $where[] = 'id = ' . $filter->id;
-            }
-            if (isset($filter->idNews)) {
-                $where[] = 'news_id = ' . $filter->idNews;
-            }
-            $where = implode(
-                ' AND ',
-                $where
-            );
             $file = self::getNewsFile($filter);
-            Llv_Db::getInstance()->delete(
+            $date = new DateTime();
+            $params['date_delete'] = $date->format(Llv_Constant_Date::FORMAT_DB);
+            Llv_Db::getInstance()->update(
                 self::$_nameFile,
-                $where
+                $params,
+                'id = ' . $filter->id
             );
             return $file['news_id'];
         } catch (Exception $e) {

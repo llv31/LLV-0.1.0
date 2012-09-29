@@ -58,6 +58,16 @@ class Llv_Entity_News
     }
 
     /**
+     * @param Llv_Entity_News_Filter_News $filter
+     *
+     * @return null
+     */
+    public function deleteRow(Llv_Entity_News_Filter_News $filter)
+    {
+        return Llv_Entity_News_Dal_News::deleteRow($filter);
+    }
+
+    /**
      * @param Llv_Entity_News_Request_EditContent $request
      *
      * @return int
