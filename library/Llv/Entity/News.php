@@ -101,6 +101,28 @@ class Llv_Entity_News
         );
     }
 
+    /**
+     * @param Llv_Entity_News_Request_File $request
+     *
+     * @return Llv_Dto_News
+     */
+    public function updateRowFile(Llv_Entity_News_Request_File $request)
+    {
+        return Llv_Entity_News_Helper_File::convertFromDalToDto(
+            Llv_Entity_News_Dal_News::updateRowFile($request)
+        );
+    }
+
+    /**
+     * @param Llv_Entity_News_Filter_File $filter
+     *
+     * @return mixed
+     */
+    public function deleteRowFile(Llv_Entity_News_Filter_File $filter)
+    {
+        return Llv_Entity_News_Dal_News::deleteRowFile($filter);
+    }
+
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**

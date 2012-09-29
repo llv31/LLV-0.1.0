@@ -125,10 +125,7 @@ class Llv_Context_News
     public function addRowFile(Llv_Services_News_Request_File $request)
     {
         $message = $this->_service->addRowFile($this->getHeaderMessage(), $request);
-        if ($message->success) {
-            return true;
-        }
-        return false;
+        return $message->success;
     }
 
     /**
@@ -140,7 +137,35 @@ class Llv_Context_News
     {
         $message = $this->_service->getNewsFiles($this->getHeaderMessage(), $filter);
         if ($message->success) {
-            return true;
+            return $message->files;
+        }
+        return false;
+    }
+
+    /**
+     * @param Llv_Services_News_Request_File $request
+     *
+     * @return bool|Llv_Dto_News_File[]
+     */
+    public function updateRowFile(Llv_Services_News_Request_File $request)
+    {
+        $message = $this->_service->updateRowFile($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return $message->file->idNews;
+        }
+        return false;
+    }
+
+    /**
+     * @param Llv_Services_News_Request_File $request
+     *
+     * @return bool
+     */
+    public function deleteRowFile(Llv_Services_News_Request_File $request)
+    {
+        $message = $this->_service->deleteRowFile($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return $message->idActualite;
         }
         return false;
     }

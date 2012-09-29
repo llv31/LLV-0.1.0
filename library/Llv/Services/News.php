@@ -302,6 +302,60 @@ class Llv_Services_News
         return $message;
     }
 
+    /**
+     * @param Llv_Services_Message_Header    $header
+     * @param Llv_Services_News_Request_File $request
+     *
+     * @return Llv_Services_News_Message_File
+     */
+    public function updateRowFile(
+        Llv_Services_Message_Header $header,
+        Llv_Services_News_Request_File $request
+    )
+    {
+        $message = new Llv_Services_News_Message_File();
+        try {
+            /** On ajoute les illustrations */
+            $entityRequest = new Llv_Entity_News_Request_File();
+            $entityRequest->id = $request->id;
+            if (isset($request->moveUp)) {
+                $entityRequest->moveUp = $request->moveUp;
+            }
+            if (isset($request->show)) {
+                $entityRequest->show = $request->show;
+            }
+            $message->file = $this->getEntity()->updateRowFile($entityRequest);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header    $header
+     * @param Llv_Services_News_Request_File $filter
+     *
+     * @return Llv_Services_News_Message_File
+     */
+    public function deleteRowFile(
+        Llv_Services_Message_Header $header,
+        Llv_Services_News_Request_File $filter
+    )
+    {
+        $message = new Llv_Services_News_Message_File();
+        try {
+            /** On ajoute les illustrations */
+            $entityFilter = new Llv_Entity_News_Filter_File();
+            $entityFilter->id = $filter->id;
+            $message->idActualite = $this->getEntity()->deleteRowFile($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**

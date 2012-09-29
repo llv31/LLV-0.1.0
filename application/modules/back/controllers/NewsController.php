@@ -48,6 +48,10 @@ class NewsController
             $formNewsEdit->fillForm($id);
             $formFileUploader = new App_Form_Back_FileUploader();
             $this->view->assign('formFileUploader', $formFileUploader);
+            $filter = new Llv_Services_News_Filter_File();
+            $filter->idNews = $id;
+            $illustrations = Llv_Context_News::getInstance()->getNewsFiles($filter);
+            $this->view->assign('illustrations', $illustrations);
         }
         if ($this->getRequest()->isPost()) {
             if ($formNewsEdit->isValid($_POST)) {
@@ -92,10 +96,45 @@ class NewsController
                     $request->error = $file['error'];
                     $request->size = $file['size'];
                     Llv_Context_News::getInstance()->addRowFile($request);
+                    $this->_redirect('news/edit/id/' . $id . '#jq-pictures');
                 }
 
             }
         }
         $this->view->assign('formNewsEdit', $formNewsEdit);
+    }
+
+    public function fileUpdateAction()
+    {
+        $id = $this->_getParam('id');
+        if (!is_null($id)) {
+            $idNews = false;
+            $request = new Llv_Services_News_Request_File();
+            $request->id = $id;
+            switch ($this->_getParam('make')) {
+                case 'delete':
+                    $idNews = Llv_Context_News::getInstance()->deleteRowFile($request);
+                    break;
+                case 'up':
+                    $request->moveUp = true;
+                    $idNews = Llv_Context_News::getInstance()->updateRowFile($request);
+                    break;
+                case 'down':
+                    $request->moveUp = false;
+                    $idNews = Llv_Context_News::getInstance()->updateRowFile($request);
+                    break;
+                case 'online':
+                    $request->show = true;
+                    $idNews = Llv_Context_News::getInstance()->updateRowFile($request);
+                    break;
+                case 'offline':
+                    $request->show = false;
+                    $idNews = Llv_Context_News::getInstance()->updateRowFile($request);
+                    break;
+            }
+            if ($idNews != false) {
+                $this->_redirect('news/edit/id/' . $idNews . '#jq-pictures');
+            }
+        }
     }
 }

@@ -24,6 +24,7 @@ class Llv_Entity_News_Helper_File
         if (count($dal) > 0) {
             $dto = new Llv_Dto_News_File();
             $dto->id = $dal['id'];
+            $dto->idNews = $dal['news_id'];
             $dto->filename = $dal['filename'];
             $dto->position = $dal['position'];
             $dto->id = $dal['id'];

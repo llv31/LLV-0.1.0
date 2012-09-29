@@ -254,8 +254,32 @@ class Llv_Entity_News_Dal_News
         try {
             $sql = Llv_Db::getInstance()->select()
                 ->from(self::$_nameFile)
-                ->where('news_id = ?', $filter->idNews);
-            Zend_Debug::dump($sql->assemble());
+                ->where('id = ?', $filter->id);
+            return Llv_Db::getInstance()->fetchRow($sql);
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+        return array();
+
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_News_Filter_File $filter
+     *
+     * @return array
+     */
+    public static function getNewsFiles(Llv_Entity_News_Filter_File $filter)
+    {
+        try {
+            $sql = Llv_Db::getInstance()->select()
+                ->from(self::$_nameFile)
+                ->where('news_id = ?', $filter->idNews)
+                ->order('position ASC');
+            if (isset($filter->online)) {
+                $sql->where('online = ?', $filter->online);
+            }
             return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);
@@ -277,7 +301,7 @@ class Llv_Entity_News_Dal_News
             $params = array();
             $params['news_id'] = $request->idNews;
             $params['online'] = 1;
-            $params['position'] = self::getFileLastOrder();
+            $params['position'] = self::getFileLastOrder() + 1;
             $params['original_filename'] = $request->originalFilename;
             $params['filename'] = $request->filename;
             if ($request->dateAdd instanceof DateTime) {
@@ -295,6 +319,98 @@ class Llv_Entity_News_Dal_News
             Zend_Debug::dump($e);
         }
         return false;
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_News_Request_File $request
+     *
+     * @return bool
+     */
+    public static function updateRowFile(Llv_Entity_News_Request_File $request)
+    {
+        $filter = new Llv_Entity_News_Filter_File();
+        $filter->id = $request->id;
+        $file = self::getNewsFile($filter);
+        if (!is_null($file)) {
+            $params = array();
+            /** On veut déplacer le fichier */
+            if (isset($request->moveUp)) {
+                /**
+                 * On veut déplacer vers le haut
+                 * On va donc augmenter la valeur de la position
+                 */
+                $positionInitiale = $file['position'];
+                if (!$request->moveUp) {
+                    $nouvellePosition = $positionInitiale + 1;
+                    $params['position'] = $positionInitiale;
+                    $where = 'position > ' . $positionInitiale . ' AND ' . 'position <= ' . $nouvellePosition;
+                    /**
+                     * Sinon on déplace vers le bas
+                     */
+                } else {
+                    $nouvellePosition = $positionInitiale - 1;
+                    $nouvellePosition = $nouvellePosition > 0 ? $nouvellePosition : 1;
+                    $params['position'] = $positionInitiale;
+                    $where = 'position < ' . $positionInitiale . ' AND ' . 'position >= ' . $nouvellePosition;
+                }
+                /** On met à jour tous les éléments avant ou après l'élément courant */
+                Llv_Db::getInstance()->update(
+                    self::$_nameFile,
+                    $params,
+                    $where
+                );
+                $params['position'] = $nouvellePosition;
+            }
+            /** Affichage masquage du fichier */
+            if (isset($request->show)) {
+                $params['online'] = $request->show;
+            }
+
+            /** On met à jour l'élément courant */
+            Llv_Db::getInstance()->update(
+                self::$_nameFile,
+                $params,
+                'id = ' . $file['id']
+            );
+            return self::getNewsFile($filter);
+        }
+        return false;
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_News_Filter_File $filter
+     *
+     * @return int|null
+     */
+    public static function deleteRowFile(Llv_Entity_News_Filter_File $filter)
+    {
+        try {
+            $where = array();
+            if (isset($filter->id)) {
+                $where[] = 'id = ' . $filter->id;
+            }
+            if (isset($filter->idNews)) {
+                $where[] = 'news_id = ' . $filter->idNews;
+            }
+            $where = implode(
+                ' AND ',
+                $where
+            );
+            $file = self::getNewsFile($filter);
+            Llv_Db::getInstance()->delete(
+                self::$_nameFile,
+                $where
+            );
+            return $file['news_id'];
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+            error_log($e);
+            return null;
+        }
     }
 
     /**

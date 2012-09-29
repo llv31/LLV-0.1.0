@@ -4,6 +4,7 @@ $formNewsEdit = $this->formNewsEdit;
 $formFileUploader = $this->formFileUploader;
 $this->headLink()->appendStylesheet($this->buildDesignUrl('_common/css/onglets.css'));
 $this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/index.css'));
+$this->headScript()->appendFile($this->baseUrl() . '/design/back/default/_common/js/jquery.table-action.js');
 ?>
 
 <div class="page page_cms">
@@ -30,16 +31,17 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/index.css'))
     </div>
 
     <?php if (isset($formFileUploader)): ?>
-        <div id="jq-pictures">
-            <?php
-            echo $this->partial(
-                '/news/partial/illustration.phtml',
-                array(
-                     'formFileUploader' => $formFileUploader
-                )
-            );
-            ?>
-        </div>
+    <div id="jq-pictures">
+        <?php
+        echo $this->partial(
+            '/news/partial/illustration.phtml',
+            array(
+                 'formFileUploader' => $formFileUploader,
+                 'illustrations'    => $this->illustrations
+            )
+        );
+        ?>
+    </div>
     </div>
     <?php endif;?>
 </div>

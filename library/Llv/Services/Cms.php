@@ -240,15 +240,15 @@ class Llv_Services_Cms
     {
         $message = new Llv_Services_Cms_Message_Carrousel();
         try {
-            $entityFilter = new Llv_Entity_Cms_Request_Carrousel();
-            $entityFilter->id = $request->id;
+            $entityRequest = new Llv_Entity_Cms_Request_Carrousel();
+            $entityRequest->id = $request->id;
             if(isset($request->moveUp)){
-                $entityFilter->moveUp = $request->moveUp;
+                $entityRequest->moveUp = $request->moveUp;
             }
             if(isset($request->show)){
-                $entityFilter->show = $request->show;
+                $entityRequest->show = $request->show;
             }
-            $this->getEntity()->carrouselUpdateRow($entityFilter);
+            $this->getEntity()->carrouselUpdateRow($entityRequest);
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

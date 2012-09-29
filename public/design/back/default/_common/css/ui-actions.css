@@ -1,0 +1,43 @@
+/* •••••••••••••••••••••••••••••••••• */
+table.list tbody tr td.actions a,
+ul.list li p.actions a {
+    display: inline-block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -1000em;
+}
+
+table.list tbody tr td.actions a.delete,
+ul.list li p.actions a.delete {
+    background-image: url(../img/ui/delete.png);
+}
+
+table.list tbody tr td.actions a.putoffline,
+ul.list li p.actions a.putoffline {
+    background-image: url(../img/ui/putoffline.png);
+}
+
+table.list tbody tr td.actions a.putonline,
+ul.list li p.actions a.putonline {
+    background-image: url(../img/ui/putonline.png);
+}
+
+table.list tbody tr td.actions a.moveup,
+ul.list li p.actions a.moveup {
+    background-image: url(../img/ui/arrow_up.png);
+}
+
+table.list tbody tr td.actions a.movedown,
+ul.list li p.actions a.movedown {
+    background-image: url(../img/ui/arrow_down.png);
+}
+
+table.list tbody tr td.actions a.update,
+ul.list li p.actions a.update {
+    background-image: url(../img/ui/update.png);
+}
+
+/* •••••••••••••••••••••••••••••••••• */

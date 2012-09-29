@@ -13,5 +13,9 @@
 class Llv_Services_News_Filter_File
 {
     /** @var int */
+    public $id;
+    /** @var int */
     public $idNews;
+    /** @var bool */
+    public $online;
 }

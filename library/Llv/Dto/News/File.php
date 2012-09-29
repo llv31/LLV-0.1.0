@@ -14,8 +14,8 @@ class Llv_Dto_News_File
 {
     /** @var int */
     public $id;
-    /** @var string */
-    public $path;
+    /** @var int */
+    public $idNews;
     /** @var bool */
     public $online;
     /** @var string */
