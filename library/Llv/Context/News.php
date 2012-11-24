@@ -47,7 +47,7 @@ class Llv_Context_News
      *
      * @return Llv_Dto_News|null
      */
-        public function getOne(Llv_Services_News_Filter_News $filter)
+    public function getOne(Llv_Services_News_Filter_News $filter)
     {
         $message = $this->_service->getOne($this->getHeaderMessage(), $filter);
         if ($message->success) {
@@ -81,7 +81,6 @@ class Llv_Context_News
     public function addRow(Llv_Services_News_Request_Edit $request)
     {
         $message = $this->_service->editRow($this->getHeaderMessage(), $request);
-        Zend_Debug::dump($request);
         if ($message->success) {
             return $message->idActualite;
         }

@@ -27,8 +27,8 @@ class Llv_Entity_News_Helper_News
             $dto->category = new Llv_Dto_News_Category();
             $dto->category->id = $dal['category_id'];
             $dto->idLangue = $dal['language_id'];
-            $dto->title = $dal['title'];
-            $dto->content = $dal['content'];
+            $dto->title = stripcslashes($dal['title']);
+            $dto->content = stripcslashes($dal['content']);
             $dto->link = $dal['link'];
             $dto->location = $dal['location'];
             $dto->online = $dal['online'];

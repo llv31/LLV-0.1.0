@@ -1,10 +1,10 @@
 /* •••••••••••••••••••••••••••••••••• */
 
 #wrapper .presentation {
-    float:left;
+    float: left;
     /*display: inline-block;*/
     width: 560px;
-    margin-right:20px;
+    margin-right: 20px;
     clear: both;
     text-align: justify;
 }
@@ -16,9 +16,9 @@
 
 /* •••••••••••••••••••••••••••••••••• */
 
-#wrapper .activity ,
+#wrapper .activity,
 #wrapper .news {
-    float:left;
+    float: left;
     /*display: inline-block;*/
     box-shadow: 0 0 5px #555;
     border: 1px solid #888;
@@ -27,9 +27,10 @@
     background-color: #e8ead4;
     height: 288px;
     overflow: hidden;
+    position: relative;;
 }
 
-#wrapper .activity h3 ,
+#wrapper .activity h3,
 #wrapper .news h3 {
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -37,23 +38,55 @@
     padding-bottom: 5px;
 }
 
-#wrapper .activity h4 ,
+#wrapper .activity h4,
 #wrapper .news h4 {
     margin-bottom: 7px;
+    font-size: 1.2em;
 }
 
-#wrapper .activity p ,
+#wrapper .activity p,
 #wrapper .news p {
     text-align: justify;
     margin-bottom: 10px;
+    font-weight: normal;
 }
 
-#wrapper .activity p.more ,
+#wrapper .activity a:hover,
+#wrapper .news a:hover {
+    text-decoration: none;
+}
+
+#wrapper .activity div.content,
+#wrapper .news div.content {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height:230px;
+}
+
+#wrapper .activity p.more,
 #wrapper .news p.more {
     text-align: right;
+    text-decoration: underline;
+    position: absolute;
+    bottom:0;
+    right:10px;
 }
 
-#wrapper .activity p img ,
+#wrapper .activity p.more a,
+#wrapper .news p.more a{
+    color:#fff;
+    display:block;
+    font-weight:normal;
+    padding: 2px 7px 5px;
+    background:#4B4C43;
+}
+
+#wrapper .activity p.more a:hover,
+#wrapper .news p.more a:hover{
+    text-decoration: underline;
+}
+
+#wrapper .activity p img,
 #wrapper .news p img {
     display: block;
     width: 150px;
@@ -64,17 +97,17 @@
 
 /* •••••••••••••••••••••••••••••••••• */
 #wrapper .carrousel {
-    float:left;
+    float: left;
     /*display: inline-block;*/
     width: 560px;
-    margin-right:20px;
+    margin-right: 20px;
     margin-bottom: 30px;
 }
 
 #wrapper .carrousel .slides_container {
     width: 560px;
     height: 300px;
-    border:4px solid #FFF;
+    border: 4px solid #FFF;
 }
 
 /* •••••••••••••••••••••••••••••••••• */

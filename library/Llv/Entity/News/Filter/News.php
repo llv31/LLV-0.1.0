@@ -18,4 +18,6 @@ class Llv_Entity_News_Filter_News
     public $idLangue;
     /** @var bool */
     public $online;
+    /** @var bool */
+    public $spotlight;
 }

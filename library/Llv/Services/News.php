@@ -73,6 +73,8 @@ class Llv_Services_News
             $entityFilter = new Llv_Entity_News_Filter_News();
             $entityFilter->id = $filter->id;
             $entityFilter->idLangue = $filter->idLangue;
+            $entityFilter->online = $filter->online;
+            $entityFilter->spotlight = $filter->spotlight;
             $actualite = $this->getEntity()->getOne($entityFilter);
             if (!is_null($actualite->id)) {
                 /** On ajoute la catégorie */

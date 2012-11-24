@@ -55,8 +55,17 @@ class Llv_Entity_News_Dal_News
                 'l.id = nl.language_id',
                 array('label', 'locale', 'short_tag')
             )
-                ->where('n.date_delete is null')
-                ->where('n.id = ?', $filter->id);
+                ->where('n.date_delete is null');
+
+            if (isset($filter->id)) {
+                $sql->where('n.id = ?', $filter->id);
+            }
+
+            if (isset($filter->spotlight)) {
+                $sql->order('n.position DESC')
+                    ->limit(1);
+            }
+
             if (isset($filter->idLangue)) {
                 $sql->where('l.id = ?', $filter->idLangue);
             }
@@ -199,7 +208,9 @@ class Llv_Entity_News_Dal_News
                 }
             } else {
                 $params['category_id'] = $request->idCategorie;
-                $params['position'] = $request->position;
+                if (!is_null($request->position)) {
+                    $params['position'] = $request->position;
+                }
                 $params['location'] = $request->coordonnees;
                 if (isset($request->online)) {
                     $params['online'] = !is_null($request->online) ? $request->online : true;

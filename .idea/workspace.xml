@@ -2,53 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/5015536f8a121.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/5015a4fe4f920.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/5015a4fe501f1.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/501ac3adaf8be.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/501ac3adb3ecb.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/501ac3adb4755.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/50375fdab45e1.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/50375fec808f5.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f8a121.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f8a121.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f8a121.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f9bed3.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f9bed3.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f9bed3.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f9f298.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f9f298.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f9f298.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f9f782.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f9f782.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015536f9f782.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe45e78.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe45e78.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe4f920.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe4f920.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe4f920.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe4fe1c.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe4fe1c.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe501f1.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe501f1.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/5015a4fe501f1.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adaf8be.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adaf8be.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adaf8be.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adb3ecb.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adb3ecb.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adb3ecb.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adb4311.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adb4311.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adb4755.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/501ac3adb4755.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/50375fdab45e1.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/50375fdab45e1.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/50375fdab45e1.jpeg_thumb_800_600.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/50375fec808f5.jpeg_thumb_100_75.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/50375fec808f5.jpeg_thumb_580_9999.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/files/upload/carrousel/_thumb/50375fec808f5.jpeg_thumb_800_600.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/news/read.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/news/read.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/partial/header.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/partial/header.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/News.php" afterPath="$PROJECT_DIR$/library/Llv/Context/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Filter/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Filter/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/News.php" afterPath="$PROJECT_DIR$/library/Llv/Services/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/News/Filter/News.php" afterPath="$PROJECT_DIR$/library/Llv/Services/News/Filter/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/index/css/index.css" afterPath="$PROJECT_DIR$/public/design/front/default/index/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/news/css/list.css" afterPath="$PROJECT_DIR$/public/design/front/default/news/css/list.css" />
     </list>
     <ignored path="LLV-0.1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,22 +49,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/helpers/DisplayImage.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/Cms/Dal/Carrousel.php" />
-        <option value="$PROJECT_DIR$/public/design/default/default/_common/css/global.css" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" />
-        <option value="$PROJECT_DIR$/public/design/front/default/news/css/list.css" />
-        <option value="$PROJECT_DIR$/library/Llv/Context/News.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Services/News.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Helper/File.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/Cms/Helper/Carrousel.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/Cms/Helper/Page.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" />
         <option value="$PROJECT_DIR$/application/modules/front/controllers/NewsController.php" />
         <option value="$PROJECT_DIR$/public/design/front/default/news/css/element.css" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml" />
         <option value="$PROJECT_DIR$/data/locales/fr_FR.csv" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/partial/header.phtml" />
         <option value="$PROJECT_DIR$/application/modules/front/views/scripts/news/read.phtml" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/News/Filter/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Filter/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/News.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml" />
+        <option value="$PROJECT_DIR$/public/design/front/default/news/css/list.css" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Context/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml" />
+        <option value="$PROJECT_DIR$/public/design/front/default/index/css/index.css" />
       </list>
     </option>
   </component>
@@ -233,11 +200,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="files" />
+              <option name="myItemId" value="design" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
+              <option name="myItemId" value="front" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -255,7 +222,401 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="files" />
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="news" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="back" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="back" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -469,7 +830,11 @@
       <created>1353758326951</created>
       <updated>1353758326951</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Suppression fichiers images">
+      <created>1353758405236</created>
+      <updated>1353758405236</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -534,7 +899,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="News &#10;Affichage front reste plus que peaufinnage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Suppression fichiers images" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -567,119 +932,120 @@
     <MESSAGE value="News finalisation" />
     <MESSAGE value="News &#10;Affichage front" />
     <MESSAGE value="News &#10;Affichage front reste plus que peaufinnage" />
+    <MESSAGE value="Suppression fichiers images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News/Message/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="59" selection-start="940" selection-end="940" vertical-scroll-proportion="0.5311615">
+        <state line="12" column="6" selection-start="218" selection-end="218" vertical-scroll-proportion="0.063739374">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/User/Helper/User.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Filter/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="1" selection-start="602" selection-end="602" vertical-scroll-proportion="0.42492917">
+        <state line="21" column="22" selection-start="410" selection-end="410" vertical-scroll-proportion="0.2549575">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/NewsController.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.063739374">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/front/default/news/css/list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="22" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/news/list.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="48" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.41501418">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/default/default/_common/css/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="21" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/partial/menu.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/news/read.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="2" selection-start="407" selection-end="407" vertical-scroll-proportion="0.21246459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="5" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.74362606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/locales/fr_FR.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="655" selection-end="655" vertical-scroll-proportion="0.39073807">
+        <state line="32" column="13" selection-start="918" selection-end="923" vertical-scroll-proportion="-14.375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="40" selection-start="871" selection-end="871" vertical-scroll-proportion="0.53571427">
+        <state line="23" column="16" selection-start="765" selection-end="765" vertical-scroll-proportion="-14.375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News.php">
+    <entry file="file://$PROJECT_DIR$/public/design/front/default/news/css/list.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="54" selection-start="2659" selection-end="2659" vertical-scroll-proportion="0.364011">
+        <state line="83" column="1" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/design/default/default/_common/css/fonts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="48" selection-start="618" selection-end="618" vertical-scroll-proportion="0.32876712">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/partial/footer.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="4" selection-start="354" selection-end="354" vertical-scroll-proportion="0.29745042">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="16" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.4532967">
+        <state line="45" column="28" selection-start="1690" selection-end="1690" vertical-scroll-proportion="0.49008498">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/front/default/news/css/element.css">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/news/read.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.11968085">
+        <state line="15" column="41" selection-start="442" selection-end="470" vertical-scroll-proportion="0.3186969">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Context/News.php">
+    <entry file="file://$PROJECT_DIR$/public/design/front/default/index/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="39" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.364011">
+        <state line="57" column="0" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.24657534">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="41" selection-start="381" selection-end="381" vertical-scroll-proportion="0.2549575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="212" column="17" selection-start="7065" selection-end="7065" vertical-scroll-proportion="0.5014245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="41" selection-start="554" selection-end="554" vertical-scroll-proportion="0.020604396">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Llv/Services/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="339" column="55" selection-start="11975" selection-end="11975" vertical-scroll-proportion="0.52884614">
+        <state line="161" column="53" selection-start="5470" selection-end="5470" vertical-scroll-proportion="0.3708791">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Context/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="29" selection-start="2252" selection-end="2261" vertical-scroll-proportion="0.4945055">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="68" selection-start="2317" selection-end="2317" vertical-scroll-proportion="0.5769231">
           <folding />
         </state>
       </provider>

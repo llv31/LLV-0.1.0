@@ -10,6 +10,7 @@ $this->headScript()->appendFile($this->buildDesignUrl('index/js/index.js'));
 
 $page = $this->page;
 $carrousel = $this->carrousel;
+$news = $this->news;
 ?>
 
 <div class="jq-carrousel carrousel">
@@ -31,16 +32,30 @@ $carrousel = $this->carrousel;
         <?= _('HOME_NEWS_TITRE') ?>
     </h3>
 
-    <p class="illustrate">
-        <img src="<?= $this->baseUrl()?>files/upload/news/default.jpg">
-    </p>
-    <h4>
-        <?= _('HOME_NEWS_TITRE2') ?>
-    </h4>
+    <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $news->id; ?>">
+        <h4>
+            <?= $news->title ?>
+        </h4>
+        <p class="illustrate">
+            <?php if (isset($news->illustrations[0])): ?>
+            <img
+                src="<?=
+                    $this->displayImage(
+                        $news->illustrations[0]->filename,
+                        Llv_Constant_File_Category::NEWS,
+                        448,
+                        9999
+                    );
+                    ?>"/>
+            <?php else: ?>
+            <img src="<?= $this->baseUrl()?>files/upload/news/default.jpg">
+            <?php endif; ?>
+        </p>
 
-    <p><?= _('HOME_NEWS_CONTENU') ?></p>
+        <div class="content"><?= $news->content ?></div>
+    </a>
 
-    <p class="more"><a href="#"><?= _('HOME_NEWS_MORE') ?></a></p>
+    <p class="more"><a href="<?= $this->baseUrl(); ?>news"><?= _('HOME_NEWS_MORE') ?></a></p>
 </div>
 
 <div class="presentation">

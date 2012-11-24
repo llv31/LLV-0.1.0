@@ -7,21 +7,20 @@ $this->headScript()->appendFile($this->buildDesignUrl('news/js/list.js'));
 /** @var $spotlight Llv_Dto_News */
 $spotlight = $this->spotlight;
 $news = $this->news;
-$newsPerRow = 3; $i = 0;
+$newsPerRow = 3;
+$i = 0;
 ?>
 
 <h2><?= _('NEWS_LIST_TITLE'); ?></h2>
 
 <?php if (count($spotlight) == 1): ?>
-<div class="spotlight">
-    <div class="left">
-        <h3>
-            <a href="news/read/id/<?= $spotlight->id; ?>">
+<a href="<?= $this->baseUrl(); ?>news/read/id/<?= $spotlight->id; ?>">
+    <div class="spotlight">
+        <div class="left">
+            <h3>
                 <?= $spotlight->title; ?>
-            </a>
-        </h3>
-        <?php if (isset($spotlight->illustrations[0])): ?>
-        <a href="news/read/id/<?= $spotlight->id; ?>">
+            </h3>
+            <?php if (isset($spotlight->illustrations[0])): ?>
             <img
                 src="<?=
                     $this->displayImage(
@@ -31,13 +30,13 @@ $newsPerRow = 3; $i = 0;
                         9999
                     );
                     ?>"/>
-        </a>
-        <?php endif; ?>
+            <?php endif; ?>
+        </div>
+        <div class="right">
+            <p><?= $spotlight->content; ?></p>
+        </div>
     </div>
-    <div class="right">
-        <p><?= $spotlight->content; ?></p>
-    </div>
-</div>
+</a>
 <?php endif; ?>
 
 <?php if (count($news) > 0): ?>
@@ -45,34 +44,18 @@ $newsPerRow = 3; $i = 0;
     <ul>
         <?php foreach ($news as $newsItem): ?>
         <?php $i++; ?>
-        <li<?php if($i%3==0): ?> class="no-space"<?php endif; ?>>
-            <div class="left">
-                <h3>
-                    <a href="news/read/id/<?= $newsItem->id; ?>">
+        <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $newsItem->id; ?>">
+            <li<?php if ($i % 3 == 0): ?> class="no-space"<?php endif; ?>>
+                <div class="left">
+                    <h3>
                         <?= $newsItem->title; ?>
-                    </a>
-                </h3>
-
-                <?php if (isset($newsItem->illustrations[0])): ?>
-                <p>
-                    <a href="news/read/id/<?= $newsItem->id; ?>">
-                        <img
-                            src="<?=
-                                $this->displayImage(
-                                    $newsItem->illustrations[0]->filename,
-                                    Llv_Constant_File_Category::NEWS,
-                                    448,
-                                    9999
-                                );
-                                ?>"/>
-                    </a>
-                </p>
-                <?php endif; ?>
-            </div>
-            <div class="right">
-                <p><?= $newsItem->content; ?></p>
-            </div>
-        </li>
+                    </h3>
+                </div>
+                <div class="right">
+                    <p><?= $newsItem->content; ?></p>
+                </div>
+            </li>
+        </a>
         <?php endforeach; ?>
     </ul>
 </div>

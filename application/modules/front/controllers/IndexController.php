@@ -28,7 +28,12 @@ class IndexController
         $filter->online = true;
         $carrousel = Llv_Context_Cms::getInstance()->carrouselGetList($filter);
 
+        $filter = new Llv_Services_News_Filter_News();
+        $filter->spotlight = true;
+        $news = Llv_Context_News::getInstance()->getOne($filter);
+
         $this->view->assign('page', $page);
         $this->view->assign('carrousel', $carrousel);
+        $this->view->assign('news', $news);
     }
 }
