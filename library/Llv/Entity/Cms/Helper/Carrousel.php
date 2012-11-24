@@ -32,9 +32,7 @@ class Llv_Entity_Cms_Helper_Carrousel
         $dto->link = $dal['link'];
         $dto->dateAdd = new DateTime($dal['date_add']);
         $dto->dateUpdate = new DateTime($dal['date_update']);
-        if (!is_null($dal['date_delete'])) {
-            $dto->dateDelete = new DateTime($dal['date_delete']);
-        }
+        $dto->dateDelete = isset($dal['date_delete']) ? new DateTime($dal['date_delete']) : null;
         return $dto;
     }
 

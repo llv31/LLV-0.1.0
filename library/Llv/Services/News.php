@@ -80,6 +80,12 @@ class Llv_Services_News
                 $categoryFilter->id = $actualite->category->id;
                 $categorie = $this->categoryGetOne($header, $categoryFilter);
                 $actualite->category = $categorie->categorie;
+
+                $illuFilter = new Llv_Services_News_Filter_File();
+                $illuFilter->idNews = $actualite->id;
+                $illustrations = $this->getNewsFiles($header, $illuFilter);
+                $actualite->illustrations = $illustrations->files;
+
                 $message->actualite = $actualite;
                 $message->success = true;
             }

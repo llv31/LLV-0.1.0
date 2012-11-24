@@ -33,8 +33,8 @@ class Llv_Entity_News_Helper_News
             $dto->location = $dal['location'];
             $dto->online = $dal['online'];
             $dto->dateAdd = new DateTime($dal['date_add']);
-            $dto->dateUpdate = new DateTime($dal['date_update']);
-            $dto->dateDelete = new DateTime($dal['date_delete']);
+            $dto->dateUpdate = isset($dal['date_update']) ? new DateTime($dal['date_update']) : null;
+            $dto->dateDelete = isset($dal['date_delete']) ? new DateTime($dal['date_delete']) : null;
             return $dto;
         }
         return null;

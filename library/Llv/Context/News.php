@@ -47,7 +47,7 @@ class Llv_Context_News
      *
      * @return Llv_Dto_News|null
      */
-    public function getOne(Llv_Services_News_Filter_News $filter)
+        public function getOne(Llv_Services_News_Filter_News $filter)
     {
         $message = $this->_service->getOne($this->getHeaderMessage(), $filter);
         if ($message->success) {

@@ -29,7 +29,7 @@ class Llv_Entity_Cms_Helper_Page
         $dto->url = stripslashes($dal['url']);
         $dto->dateAdd = $dal['date_add'];
         $dto->dateUpdate = $dal['date_update'];
-        $dto->dateDelete = $dal['date_delete'];
+        $dto->dateDelete = isset($dal['date_delete']) ? new DateTime($dal['date_delete']) : null;
         return $dto;
     }
 }

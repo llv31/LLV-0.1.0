@@ -38,8 +38,9 @@ class NewsController
 
     public function readAction()
     {
-        foreach ($this->getFrontController()->getParams() as $test) {
-            Zend_Debug::dump($test);
-        }
+        $filter = new Llv_Services_News_Filter_News();
+        $filter->id = $this->_getParam('id');
+        $news = Llv_Context_News::getInstance()->getOne($filter);
+        $this->view->assign('news', $news);
     }
 }

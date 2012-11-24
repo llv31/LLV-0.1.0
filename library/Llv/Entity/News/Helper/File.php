@@ -30,7 +30,7 @@ class Llv_Entity_News_Helper_File
             $dto->id = $dal['id'];
             $dto->online = $dal['online'];
             $dto->dateAdd = new DateTime($dal['date_add']);
-            $dto->dateDelete = new DateTime($dal['date_delete']);
+            $dto->dateDelete = isset($dal['date_delete']) ? new DateTime($dal['date_delete']) : null;
             return $dto;
         }
         return null;
