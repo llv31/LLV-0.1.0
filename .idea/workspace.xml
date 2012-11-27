@@ -1,58 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="Activités">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Back/Activity/Edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/Constant/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/controllers/ActivitiesController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/edit.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/list.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/partial/illustration.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/controllers/ActivitiesController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/activities/read.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/carrousel.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/news.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Context/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Dto/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Dto/Activity/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Dto/Activity/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Dal/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Dal/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Filter/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Filter/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Filter/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Helper/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Helper/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Helper/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Interface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Request/Edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Request/EditContent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Request/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity/Filter/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity/Filter/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity/Filter/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity/Message/Activity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity/Message/Category.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity/Message/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity/Request/Edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity/Request/EditContent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity/Request/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/front/default/activities/css/element.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/front/default/activities/css/list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.mo" afterPath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.mo" />
+    <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/news/list.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/news/list.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/partial/menu.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/partial/menu.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR.csv" afterPath="$PROJECT_DIR$/data/locales/fr_FR.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.po" afterPath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.po" />
     </list>
     <ignored path="LLV-0.1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -577,7 +527,11 @@
       <created>1353762022120</created>
       <updated>1353762022120</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Activités Front (Home, liste, indiv) + Back">
+      <created>1354043868015</created>
+      <updated>1354043868015</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -642,7 +596,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualité sur la home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Activités Front (Home, liste, indiv) + Back" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -677,6 +631,7 @@
     <MESSAGE value="News &#10;Affichage front reste plus que peaufinnage" />
     <MESSAGE value="Suppression fichiers images" />
     <MESSAGE value="Actualité sur la home" />
+    <MESSAGE value="Activités Front (Home, liste, indiv) + Back" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
