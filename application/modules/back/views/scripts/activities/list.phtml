@@ -1,5 +1,5 @@
 <?php
-$this->headTitle(_('HEAD_TITLE_NEWS') . ' | ');
+$this->headTitle(_('HEAD_TITLE_ACTIVITY') . ' | ');
 $this->headLink()->appendStylesheet($this->buildDesignUrl('carrousel/css/list.css'));
 $this->headScript()->appendFile($this->baseUrl() . '/design/back/default/_common/js/jquery.table-action.js');
 $liste = $this->list;
@@ -7,11 +7,11 @@ $liste = $this->list;
 
 <div class="page page_cms">
     <h2>
-        <?= _('NEWS_LIST_TITLE') ?>
+        <?= _('ACTIVITY_LIST_TITLE') ?>
     </h2>
 
     <p class='admin_add'>
-        <a href="<?= $this->baseUrl(); ?>news/edit" title="<?= _('GLOBAL_ADMIN_ADD') ?>">
+        <a href="<?= $this->baseUrl(); ?>activities/edit" title="<?= _('GLOBAL_ADMIN_ADD') ?>">
             <?= _('GLOBAL_ADMIN_ADD') ?>
         </a>
     </p>
@@ -20,9 +20,9 @@ $liste = $this->list;
     <table class="list">
         <thead>
         <tr>
-            <th><?= _('NEWS_LIST_TITRE')?></th>
-            <th><?= _('NEWS_LIST_CATEGORIE')?></th>
-            <th><?= _('NEWS_LIST_ONLINE')?></th>
+            <th><?= _('ACTIVITY_LIST_TITRE')?></th>
+            <th><?= _('ACTIVITY_LIST_CATEGORIE')?></th>
+            <th><?= _('ACTIVITY_LIST_ONLINE')?></th>
             <th><?= _('GLOBAL_ADMIN_LIST_DATE_AJOUT')?></th>
             <th><?= _('GLOBAL_ADMIN_LIST_DATE_MODIFICATION')?></th>
             <th class="actions"><?= _('GLOBAL_ADMIN_LIST_ACTIONS')?></th>
@@ -37,34 +37,34 @@ $liste = $this->list;
             <td><?= $this->dateFormat($ligne->dateAdd); ?></td>
             <td><?= $this->dateFormat($ligne->dateUpdate); ?></td>
             <td class="actions">
-                <a href="<?= $this->baseUrl(); ?>news/edit/id/<?= $ligne->id; ?>"
+                <a href="<?= $this->baseUrl(); ?>activities/edit/id/<?= $ligne->id; ?>"
                    class="jq-update update"
                    title="<?= _('GLOBAL_ADMIN_UPDATE') ?>">
                     <?= _('GLOBAL_ADMIN_UPDATE') ?>
                 </a>
-                <a href="<?= $this->baseUrl(); ?>news/update/make/delete/id/<?= $ligne->id; ?>"
+                <a href="<?= $this->baseUrl(); ?>activities/update/make/delete/id/<?= $ligne->id; ?>"
                    class="jq-delete delete"
                    title="<?= _('GLOBAL_ADMIN_DELETE') ?>">
                     <?= _('GLOBAL_ADMIN_DELETE') ?>
                 </a>
-                <a href="<?= $this->baseUrl(); ?>news/update/make/up/id/<?= $ligne->id; ?>"
+                <a href="<?= $this->baseUrl(); ?>activities/update/make/up/id/<?= $ligne->id; ?>"
                    class="moveup"
                    title="<?= _('GLOBAL_ADMIN_UP') ?>">
                     <?= _('GLOBAL_ADMIN_UP') ?>
                 </a>
-                <a href="<?= $this->baseUrl(); ?>news/update/make/down/id/<?= $ligne->id; ?>"
+                <a href="<?= $this->baseUrl(); ?>activities/update/make/down/id/<?= $ligne->id; ?>"
                    class="movedown"
                    title="<?= _('GLOBAL_ADMIN_DOWN') ?>">
                     <?= _('GLOBAL_ADMIN_DOWN') ?>
                 </a>
                 <?php if ($ligne->online): ?>
-                <a href="<?= $this->baseUrl(); ?>news/update/make/offline/id/<?= $ligne->id; ?>"
+                <a href="<?= $this->baseUrl(); ?>activities/update/make/offline/id/<?= $ligne->id; ?>"
                    class="putoffline"
                    title="<?= _('GLOBAL_ADMIN_OFFLINE') ?>">
                     <?= _('GLOBAL_ADMIN_OFFLINE') ?>
                 </a>
                 <?php else: ?>
-                <a href="<?= $this->baseUrl(); ?>news/update/make/online/id/<?= $ligne->id; ?>"
+                <a href="<?= $this->baseUrl(); ?>activities/update/make/online/id/<?= $ligne->id; ?>"
                    class="putonline"
                    title="<?= _('GLOBAL_ADMIN_ONLINE') ?>">
                     <?= _('GLOBAL_ADMIN_ONLINE') ?>

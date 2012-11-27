@@ -1,0 +1,65 @@
+<?php
+$formFileUploader = $this->formFileUploader;
+$illustrations = $this->illustrations;
+?>
+
+<div class="add">
+    <?php echo $formFileUploader; ?>
+</div>
+
+<?php if (count($illustrations) > 0): ?>
+<ul class="list files">
+    <?php foreach ($illustrations as $illustration): ?>
+    <li>
+        <a href="<?=
+            $this->displayImage(
+                $illustration->filename,
+                Llv_Constant_File_Category::ACTIVITY,
+                800,
+                600
+            );
+            ?>"
+           rel="shadowbox[picture]">
+            <img src="<?=
+                $this->displayImage(
+                    $illustration->filename,
+                    Llv_Constant_File_Category::ACTIVITY,
+                    195
+                );
+                ?>"/>
+        </a>
+
+        <p class="actions">
+            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/delete/id/<?= $illustration->id; ?>"
+               class="jq-delete delete"
+               title="<?= _('GLOBAL_ADMIN_DELETE') ?>">
+                <?= _('GLOBAL_ADMIN_DELETE') ?>
+            </a>
+            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/up/id/<?= $illustration->id; ?>"
+               class="moveup"
+               title="<?= _('GLOBAL_ADMIN_UP') ?>">
+                <?= _('GLOBAL_ADMIN_UP') ?>
+            </a>
+            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/down/id/<?= $illustration->id; ?>"
+               class="movedown"
+               title="<?= _('GLOBAL_ADMIN_DOWN') ?>">
+                <?= _('GLOBAL_ADMIN_DOWN') ?>
+            </a>
+            <?php if ($illustration->online): ?>
+            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/offline/id/<?= $illustration->id; ?>"
+               class="putoffline"
+               title="<?= _('GLOBAL_ADMIN_OFFLINE') ?>">
+                <?= _('GLOBAL_ADMIN_OFFLINE') ?>
+            </a>
+            <?php else: ?>
+            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/online/id/<?= $illustration->id; ?>"
+               class="putonline"
+               title="<?= _('GLOBAL_ADMIN_ONLINE') ?>">
+                <?= _('GLOBAL_ADMIN_ONLINE') ?>
+            </a>
+            <?php endif; ?>
+        </p>
+    </li>
+    <?php endforeach; ?>
+</ul>
+<?php endif; ?>

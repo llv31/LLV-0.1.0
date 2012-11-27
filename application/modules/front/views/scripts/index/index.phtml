@@ -1,62 +1,29 @@
 <?php
-$module = Llv_Context_Application::getInstance()->getActiveModule();
 $this->headTitle(_('HEAD_TITLE_HOME') . ' | ');
-/** Carrousel */
-$this->headScript()->appendFile($this->baseUrl() . 'design/' . $module . '/default/_plugin/carrousel/js/jquery.carrousel.js');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'design/' . $module . '/default/_plugin/carrousel/css/global.css');
 /**  */
 $this->headLink()->appendStylesheet($this->buildDesignUrl('index/css/index.css'));
 $this->headScript()->appendFile($this->buildDesignUrl('index/js/index.js'));
 
 $page = $this->page;
-$carrousel = $this->carrousel;
-$news = $this->news;
 ?>
 
-<div class="jq-carrousel carrousel">
-    <div class="slides_container">
-        <?php foreach ($carrousel as $ligne): ?>
-        <div class="slide">
-            <a href="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 800, 600); ?>"
-               rel="shadowbox[picture]">
-                <img
-                    src="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 580, 9999); ?>"/>
-            </a>
-        </div>
-        <?php endforeach; ?>
-    </div>
-</div>
+<?php
+echo $this->partial(
+    'index/partial/carrousel.phtml',
+    array(
+         'carrousel' => $this->carrousel
+    )
+);
+?>
 
-<div class="news">
-    <h3>
-        <?= _('HOME_NEWS_TITRE') ?>
-    </h3>
-
-    <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $news->id; ?>">
-        <h4>
-            <?= $news->title ?>
-        </h4>
-        <p class="illustrate">
-            <?php if (isset($news->illustrations[0])): ?>
-            <img
-                src="<?=
-                    $this->displayImage(
-                        $news->illustrations[0]->filename,
-                        Llv_Constant_File_Category::NEWS,
-                        448,
-                        9999
-                    );
-                    ?>"/>
-            <?php else: ?>
-            <img src="<?= $this->baseUrl()?>files/upload/news/default.jpg">
-            <?php endif; ?>
-        </p>
-
-        <div class="content"><?= $news->content ?></div>
-    </a>
-
-    <p class="more"><a href="<?= $this->baseUrl(); ?>news"><?= _('HOME_NEWS_MORE') ?></a></p>
-</div>
+<?php
+echo $this->partial(
+    'index/partial/news.phtml',
+    array(
+         'news' => $this->news
+    )
+);
+?>
 
 <div class="presentation">
     <h2>
@@ -67,18 +34,11 @@ $news = $this->news;
 
 </div>
 
-<div class="activity">
-    <h3>
-        <?= _('HOME_ACTIVITY_TITRE') ?>
-    </h3>
-
-    <p class="illustrate">
-        <img src="<?= $this->baseUrl()?>files/upload/news/default.jpg">
-    </p>
-    <h4>
-    </h4>
-
-    <p></p>
-
-    <p class="more"><a href="#"><?= _('HOME_ACTIVITY_MORE') ?></a></p>
-</div>
+<?php
+echo $this->partial(
+    'index/partial/activity.phtml',
+    array(
+         'activity' => $this->activity
+    )
+);
+?>

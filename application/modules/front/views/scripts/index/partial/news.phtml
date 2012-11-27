@@ -1,0 +1,34 @@
+<?php
+$news = $this->news;
+?>
+
+<div class="news">
+    <h3>
+        <?= _('HOME_NEWS_TITRE') ?>
+    </h3>
+
+    <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $news->id; ?>">
+        <h4>
+            <?= $news->title ?>
+        </h4>
+        <p class="illustrate">
+            <?php if (isset($news->illustrations[0])): ?>
+            <img
+                src="<?=
+                    $this->displayImage(
+                        $news->illustrations[0]->filename,
+                        Llv_Constant_File_Category::NEWS,
+                        448,
+                        9999
+                    );
+                    ?>"/>
+            <?php else: ?>
+            <img src="<?= $this->baseUrl()?>files/upload/news/default.jpg">
+            <?php endif; ?>
+        </p>
+
+        <div class="content"><?= $news->content ?></div>
+    </a>
+
+    <p class="more"><a href="<?= $this->baseUrl(); ?>news"><?= _('HOME_NEWS_MORE') ?></a></p>
+</div>

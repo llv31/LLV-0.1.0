@@ -31,19 +31,19 @@ $this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plug
 $this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/_plugin/shadowbox/shadowbox.css');
 
 ?>
-<?php echo $this->doctype(); ?>
+<?= $this->doctype(); ?>
 
 <html>
 
 <head>
 
-    <?php echo $this->headTitle(); ?>
+    <?= $this->headTitle(); ?>
 
-    <?php echo $this->headMeta(); ?>
+    <?= $this->headMeta(); ?>
 
-    <?php echo $this->headLink(); ?>
+    <?= $this->headLink(); ?>
 
-    <?php echo $this->headScript(); ?>
+    <?= $this->headScript(); ?>
 
 </head>
 
@@ -68,10 +68,11 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/
         ?>
     </div>
 
-    <div id="wrapper"><?php echo $this->layout()->content; ?></div>
+    <div id="wrapper"><?= $this->layout()->content; ?></div>
     <?php else : ?>
     <div id="wrapper">
-        <?php echo _('ERROR_DB_CONNECTION'); ?>
+        <?php $this->headTitle(_('HEAD_TITLE_ERROR') . ' | '); ?>
+        <?= _('ERROR_DB_CONNECTION'); ?>
     </div>
     <?php endif;?>
 

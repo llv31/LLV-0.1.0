@@ -1,0 +1,43 @@
+<?php
+//$module = Llv_Context_Application::getInstance()->getActiveModule();
+$this->headTitle(_('HEAD_TITLE_ACTIVITY') . ' | ');
+/**  */
+$this->headLink()->appendStylesheet($this->buildDesignUrl('activities/css/element.css'));
+$this->headScript()->appendFile($this->buildDesignUrl('activities/js/list.js'));
+$activity = $this->activity;
+?>
+
+
+<div class="activity">
+    <a href="<?= $this->baseUrl(); ?>activity"><?= _('GLOBAL_BACK') ?></a>
+    <h2><?= $activity->title ?></h2>
+
+    <div class="contenu"><?= $activity->content ?></div>
+    <?php if (count($activity->illustrations) > 0): ?>
+    <h3><?= _('NEWS_ELEMENT_ILLUSTRATION') ?></h3>
+    <ul>
+        <?php foreach ($activity->illustrations as $illustration): ?>
+        <li>
+            <a href="<?=
+                $this->displayImage(
+                    $illustration->filename,
+                    Llv_Constant_File_Category::ACTIVITY,
+                    800,
+                    9999
+                );
+                ?>" rel="shadowbox[picture]">
+                <img
+                    src="<?=
+                        $this->displayImage(
+                            $illustration->filename,
+                            Llv_Constant_File_Category::ACTIVITY,
+                            200,
+                            9999
+                        );
+                        ?>"/>
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    <?php endif; ?>
+</div>

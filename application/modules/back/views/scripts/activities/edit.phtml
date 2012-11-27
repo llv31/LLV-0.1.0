@@ -1,15 +1,15 @@
 <?php
-$this->headTitle(_('HEAD_TITLE_NEWS') . ' | ');
-$formNewsEdit = $this->formNewsEdit;
+$this->headTitle(_('HEAD_TITLE_HOME') . ' | ');
+$formActivityEdit = $this->formActivityEdit;
 $formFileUploader = $this->formFileUploader;
 $this->headLink()->appendStylesheet($this->buildDesignUrl('_common/css/onglets.css'));
-$this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/index.css'));
+$this->headLink()->appendStylesheet($this->buildDesignUrl('activities/css/index.css'));
 $this->headScript()->appendFile($this->baseUrl() . '/design/back/default/_common/js/jquery.table-action.js');
 ?>
 
 <div class="page page_cms">
     <h2>
-        <?= _('NEWS_EDIT_TITLE') ?>
+        <?= _('ACTIVITY_EDIT_TITLE') ?>
     </h2>
 
 
@@ -17,24 +17,24 @@ $this->headScript()->appendFile($this->baseUrl() . '/design/back/default/_common
     <div class="jq-tabs onglets">
         <ul>
             <li>
-                <a href="#jq-content"><?php echo _('NEWS_EDIT_TABS_CONTENT'); ?></a>
+                <a href="#jq-content"><?php echo _('ACTIVITY_EDIT_TABS_CONTENT'); ?></a>
             </li>
             <li>
-                <a href="#jq-pictures"><?php echo _('NEWS_EDIT_TABS_PICTURES'); ?></a>
+                <a href="#jq-pictures"><?php echo _('ACTIVITY_EDIT_TABS_PICTURES'); ?></a>
             </li>
         </ul>
     <?php endif;?>
 
     <div id="jq-content">
         <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
-        <?php echo $formNewsEdit; ?>
+        <?php echo $formActivityEdit; ?>
     </div>
 
     <?php if (isset($formFileUploader)): ?>
     <div id="jq-pictures">
         <?php
         echo $this->partial(
-            '/news/partial/illustration.phtml',
+            '/activities/partial/illustration.phtml',
             array(
                  'formFileUploader' => $formFileUploader,
                  'illustrations'    => $this->illustrations

@@ -30,10 +30,17 @@ class IndexController
 
         $filter = new Llv_Services_News_Filter_News();
         $filter->spotlight = true;
+        $filter->idLangue = Llv_Context_Application::getInstance()->getDefaultLocale()->getIdLangue();
         $news = Llv_Context_News::getInstance()->getOne($filter);
+
+        $filter = new Llv_Services_Activity_Filter_Activity();
+        $filter->idLangue = Llv_Context_Application::getInstance()->getDefaultLocale()->getIdLangue();
+        $filter->spotlight = true;
+        $activity = Llv_Context_Activity::getInstance()->getOne($filter);
 
         $this->view->assign('page', $page);
         $this->view->assign('carrousel', $carrousel);
         $this->view->assign('news', $news);
+        $this->view->assign('activity', $activity);
     }
 }

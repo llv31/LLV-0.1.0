@@ -6,8 +6,9 @@ msgstr ""
 "Last-Translator: Alec <aroybase@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 msgid "ERROR_EXCEPTION_SITE_UNKNOWN"
 msgstr "Le site que vous essayez d'atteindre n'existe pas."
@@ -16,10 +17,10 @@ msgid "ERROR_EXCEPTION_INVALIDARGUMENT"
 msgstr "ERREUR TECHNIQUE : L'entity n'est pas correcte"
 
 msgid "ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME"
-msgstr "La propriÃ©tÃ© demandÃ©e n'existe pas"
+msgstr "La propriété demandée n'existe pas"
 
 msgid "ERROR_DB_CONNECTION"
-msgstr "Erreur lors de la connexion Ã  la base de donnÃ©es"
+msgstr "Erreur lors de la connexion à la base de données"
 
 msgid "HEAD_TITLE_HOME"
 msgstr "Accueil"
@@ -34,16 +35,16 @@ msgid "GLOBAL_MENU_HOME"
 msgstr "Accueil"
 
 msgid "GLOBAL_MENU_CHAMBRES"
-msgstr "Chambres d'hÃ´tes"
+msgstr "Chambres d'hôtes"
 
 msgid "GLOBAL_MENU_GITE"
 msgstr "Chalet de montagne"
 
 msgid "GLOBAL_MENU_NEWS"
-msgstr "ActualitÃ©s"
+msgstr "Actualités"
 
 msgid "GLOBAL_MENU_ACTIVITIES"
-msgstr "ActivitÃ©s"
+msgstr "Activités"
 
 msgid "GLOBAL_MENU_CONTACT"
 msgstr "Reservations"
@@ -82,7 +83,7 @@ msgid "GLOBAL_COORDONNEES_ADRESSE"
 msgstr "Adresse : 28, avenue de Gascogne - 31 110 Saint Mamet"
 
 msgid "GLOBAL_COORDONNEES_TELEPHONE_LABEL"
-msgstr "TÃ©l."
+msgstr "Tél."
 
 msgid "GLOBAL_COORDONNEES_TELEPHONE"
 msgstr "05 61 89 13 53"
@@ -93,17 +94,20 @@ msgstr "Mob."
 msgid "GLOBAL_COORDONNEES_MOBILE"
 msgstr "06 18 64 14 29"
 
+msgid "GLOBAL_BACK"
+msgstr "Retour"
+
 msgid "FOOTER_COPYRIGHT"
-msgstr "Tous droits reservÃ©sÂ© 2008"
+msgstr "Tous droits reservés© 2008"
 
 msgid "FOOTER_CREDITS"
-msgstr "RÃ©alisation : <a href=\"http://www.aroy.fr\">Alexandre ROY</a>"
+msgstr "Réalisation : <a href=\"http://www.aroy.fr\">Alexandre ROY</a>"
 
 msgid "GLOBAL_MONTH_LABEL01"
 msgstr "Janvier"
 
 msgid "GLOBAL_MONTH_LABEL02"
-msgstr "FÃ©vrier"
+msgstr "Février"
 
 msgid "GLOBAL_MONTH_LABEL03"
 msgstr "Mars"
@@ -121,7 +125,7 @@ msgid "GLOBAL_MONTH_LABEL07"
 msgstr "Juillet"
 
 msgid "GLOBAL_MONTH_LABEL08"
-msgstr "AoÃ»t"
+msgstr "Août"
 
 msgid "GLOBAL_MONTH_LABEL09"
 msgstr "Septembre"
@@ -133,13 +137,13 @@ msgid "GLOBAL_MONTH_LABEL11"
 msgstr "Novembre"
 
 msgid "GLOBAL_MONTH_LABEL12"
-msgstr "DÃ©cembre"
+msgstr "Décembre"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT01"
 msgstr "Jan"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT02"
-msgstr "FÃ©v"
+msgstr "Fév"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT03"
 msgstr "Mars"
@@ -157,7 +161,7 @@ msgid "GLOBAL_MONTH_LABEL_SHORT07"
 msgstr "Juil"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT08"
-msgstr "AoÃ»t"
+msgstr "Août"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT09"
 msgstr "Sept"
@@ -169,7 +173,7 @@ msgid "GLOBAL_MONTH_LABEL_SHORT11"
 msgstr "Nov"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT12"
-msgstr "DÃ©c"
+msgstr "Déc"
 
 msgid "GLOBAL_DAY_LABEL0"
 msgstr "Dimanche"
@@ -217,7 +221,7 @@ msgid "GLOBAL_DATEPICKER_CLOSETEXT"
 msgstr "Terminer"
 
 msgid "GLOBAL_DATEPICKER_PREVIOUS"
-msgstr "PrÃ©cÃ©dent"
+msgstr "Précédent"
 
 msgid "GLOBAL_DATEPICKER_NEXT"
 msgstr "Suivant"
@@ -235,28 +239,22 @@ msgid "GLOBAL_DATEPICKER_FIRSTDAY"
 msgstr "1"
 
 msgid "HOME_NEWS_TITRE"
-msgstr "DerniÃ¨res nouvelles"
-
-msgid "HOME_NEWS_TITRE2"
-msgstr "What's Lorem Ipsum ?"
-
-msgid "HOME_NEWS_CONTENU"
-msgstr "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+msgstr "Dernières nouvelles"
 
 msgid "HOME_NEWS_MORE"
-msgstr "Autres actualitÃ©s"
+msgstr "Autres actualités"
 
 msgid "HOME_ACTIVITY_TITRE"
-msgstr "ActivitÃ© au hasard"
+msgstr "Activité au hasard"
 
 msgid "HOME_ACTIVITY_MORE"
-msgstr "Autres activitÃ©s"
+msgstr "Autres activités"
 
 msgid "HEAD_TITLE_NEWS"
-msgstr "ActualitÃ©s"
+msgstr "Actualités"
 
-msgid "NEWS_TITLE"
-msgstr "ActualitÃ©s"
+msgid "NEWS_LIST_TITLE"
+msgstr "Actualités"
 
 msgid "NEWS_LIST_TITRE"
 msgstr "Titre"
@@ -268,16 +266,16 @@ msgid "NEWS_EDIT_TABS_PICTURES"
 msgstr "Illustrations"
 
 msgid "NEWS_LIST_CATEGORIE"
-msgstr "CatÃ©gorie"
+msgstr "Catégorie"
 
 msgid "NEWS_LIST_ONLINE"
 msgstr "En ligne ?"
 
 msgid "NEWS_EDIT_TITLE"
-msgstr "Ã‰dition de news"
+msgstr "Édition de news"
 
 msgid "NEWS_CATEGORY_LABEL"
-msgstr "CatÃ©gorie"
+msgstr "Catégorie"
 
 msgid "NEWS_EDIT_TITLE_LABEL"
 msgstr "Titre"
@@ -289,28 +287,70 @@ msgid "NEWS_EDIT_LINK_LABEL"
 msgstr "Lien"
 
 msgid "NEWS_EDIT_LOCATION_LABEL"
-msgstr "CoordonnÃ©es GPS"
+msgstr "Coordonnées GPS"
 
-msgid "â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢ ADMINISTRATION â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
-msgstr "inutile de traduire"
+msgid "NEWS_ELEMENT_ILLUSTRATION"
+msgstr "Galerie photo"
+
+msgid "HEAD_TITLE_ACTIVITY"
+msgstr "Activités"
+
+msgid "ACTIVITY_LIST_TITLE"
+msgstr "Activités"
+
+msgid "ACTIVITY_LIST_TITRE"
+msgstr "Titre"
+
+msgid "ACTIVITY_EDIT_TABS_CONTENT"
+msgstr "Contenus"
+
+msgid "ACTIVITY_EDIT_TABS_PICTURES"
+msgstr "Illustrations"
+
+msgid "ACTIVITY_LIST_CATEGORIE"
+msgstr "Catégorie"
+
+msgid "ACTIVITY_LIST_ONLINE"
+msgstr "En ligne ?"
+
+msgid "ACTIVITY_EDIT_TITLE"
+msgstr "Édition de l'activité"
+
+msgid "ACTIVITY_CATEGORY_LABEL"
+msgstr "Catégorie"
+
+msgid "ACTIVITY_EDIT_TITLE_LABEL"
+msgstr "Titre"
+
+msgid "ACTIVITY_EDIT_CONTENT_LABEL"
+msgstr "Contenu"
+
+msgid "ACTIVITY_EDIT_LINK_LABEL"
+msgstr "Lien"
+
+msgid "ACTIVITY_EDIT_LOCATION_LABEL"
+msgstr "Coordonnées GPS"
+
+msgid "ACTIVITY_ELEMENT_ILLUSTRATION"
+msgstr "Galerie photo"
 
 msgid "GLOBAL_ADMIN_ADD"
-msgstr "Ajouter un Ã©lÃ©ment"
+msgstr "Ajouter un élément"
 
 msgid "GLOBAL_ADMIN_UPDATE"
-msgstr "Modifier un Ã©lÃ©ment"
+msgstr "Modifier un élément"
 
 msgid "GLOBAL_ADMIN_DELETE"
-msgstr "Supprimer un Ã©lÃ©ment"
+msgstr "Supprimer un élément"
 
 msgid "GLOBAL_ADMIN_DELETE_CONFIRM"
-msgstr "ÃŠtes-vous sÃ»r de vouloir supprimer cet Ã©lÃ©ment ?"
+msgstr "Êtes-vous sûr de vouloir supprimer cet élément ?"
 
 msgid "GLOBAL_ADMIN_UP"
-msgstr "Remonter l'Ã©lÃ©ment"
+msgstr "Remonter l'élément"
 
 msgid "GLOBAL_ADMIN_DOWN"
-msgstr "Descendre l'Ã©lÃ©ment"
+msgstr "Descendre l'élément"
 
 msgid "GLOBAL_ADMIN_ONLINE"
 msgstr "Mettre en ligne"
@@ -319,25 +359,27 @@ msgid "GLOBAL_ADMIN_OFFLINE"
 msgstr "Mettre hors ligne"
 
 msgid "GLOBAL_ADMIN_LIST_APERCU"
-msgstr "AperÃ§u"
+msgstr "Aperçu"
 
 msgid "GLOBAL_ADMIN_LIST_DATE_AJOUT"
-msgstr "AjoutÃ© le"
+msgstr "Ajouté le"
 
 msgid "GLOBAL_ADMIN_LIST_DATE_MODIFICATION"
-msgstr "ModifiÃ© le"
+msgstr "Modifié le"
 
 msgid "GLOBAL_ADMIN_LIST_DATE_SUPPRESSION"
-msgstr "SupprimÃ© le"
+msgstr "Supprimé le"
 
 msgid "GLOBAL_ADMIN_LIST_ACTIONS"
 msgstr "Actions"
 
 msgid "GLOBAL_LANGUAGETOGGLER_LABEL"
-msgstr "Changer la langue d'Ã©dition"
+msgstr "Changer la langue d'édition"
 
 msgid "GLOBAL_MODAL_DELETE_TEXT"
-msgstr "Vous Ãªtes sur le point de supprimer un Ã©lÃ©ment. Confirmez vous cette suppression ?"
+msgstr ""
+"Vous êtes sur le point de supprimer un élément. Confirmez vous cette "
+"suppression ?"
 
 msgid "GLOBAL_MODAL_DELETE_CONFIRM"
 msgstr "Confirmer"
@@ -352,10 +394,10 @@ msgid "HEAD_TITLE_CARROUSEL"
 msgstr "Carrousel"
 
 msgid "GLOBAL_MENU_DECONNEXION"
-msgstr "Se dÃ©connecter"
+msgstr "Se déconnecter"
 
 msgid "HOME_LOGIN_TITLE"
-msgstr "Connexion Ã  l'interface d'administration"
+msgstr "Connexion à l'interface d'administration"
 
 msgid "HOME_LOGIN_FORM_LOGIN_LABEL"
 msgstr "Identifiant"
@@ -367,10 +409,10 @@ msgid "HOME_LOGIN_FORM_SUBMIT_LABEL"
 msgstr "Se connecter"
 
 msgid "HOME_PAGECMS_HOME_TITLE"
-msgstr "Ã‰dition de la page d'accueil"
+msgstr "Édition de la page d'accueil"
 
 msgid "HOME_PAGECMS_PARTNERS_TITLE"
-msgstr "Ã‰dition de la page partenaires"
+msgstr "Édition de la page partenaires"
 
 msgid "HOME_PAGECMS_EDIT_TITLE_LABEL"
 msgstr "Titre"
@@ -379,7 +421,7 @@ msgid "HOME_PAGECMS_EDIT_CONTENT_LABEL"
 msgstr "Contenu"
 
 msgid "HOME_CARROUSEL_TITLE"
-msgstr "Ã‰dition des images du carrousel"
+msgstr "Édition des images du carrousel"
 
 msgid "HOME_CARROUSEL_FILE_LABEL"
 msgstr "Nouveau fichier"
@@ -395,4 +437,3 @@ msgstr "Type"
 
 msgid "HOME_CARROUSEL_LIST_ONLINE"
 msgstr "En ligne ?"
-
