@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/NewsController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/NewsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/news.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/news.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR.csv" afterPath="$PROJECT_DIR$/data/locales/fr_FR.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/Activity.php" afterPath="$PROJECT_DIR$/library/Llv/Context/Activity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/Cms.php" afterPath="$PROJECT_DIR$/library/Llv/Context/Cms.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/News.php" afterPath="$PROJECT_DIR$/library/Llv/Context/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Activity/Helper/Activity.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Helper/Activity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Activity.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/News.php" afterPath="$PROJECT_DIR$/library/Llv/Services/News.php" />
     </list>
     <ignored path="LLV-0.1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,7 +83,7 @@
       <file leaf-file-name="Activity.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/Llv/Services/Activity.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="50" selection-start="2641" selection-end="2641" vertical-scroll-proportion="0.5566572">
+            <state line="93" column="32" selection-start="3064" selection-end="3064" vertical-scroll-proportion="0.7691218">
               <folding>
                 <element signature="e#6#214#0" expanded="true" />
               </folding>
@@ -770,7 +756,11 @@
       <created>1354043868015</created>
       <updated>1354043868015</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Gestion du masquage des news et activities quand elles ne sont pas traduite dans la langue courante">
+      <created>1355067280702</created>
+      <updated>1355067280703</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -788,7 +778,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318507" sideWeight="0.67137355" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1743185" sideWeight="0.67137355" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -835,7 +825,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Activités Front (Home, liste, indiv) + Back" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gestion du masquage des news et activities quand elles ne sont pas traduite dans la langue courante" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -871,6 +861,7 @@
     <MESSAGE value="Suppression fichiers images" />
     <MESSAGE value="Actualité sur la home" />
     <MESSAGE value="Activités Front (Home, liste, indiv) + Back" />
+    <MESSAGE value="Gestion du masquage des news et activities quand elles ne sont pas traduite dans la langue courante" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -987,7 +978,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Llv/Services/Activity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="50" selection-start="2641" selection-end="2641" vertical-scroll-proportion="0.5566572">
+        <state line="93" column="32" selection-start="3064" selection-end="3064" vertical-scroll-proportion="0.7691218">
           <folding>
             <element signature="e#6#214#0" expanded="true" />
           </folding>
