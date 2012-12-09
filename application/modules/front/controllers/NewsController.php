@@ -32,7 +32,6 @@ class NewsController
             $spotlight = array_shift($news);
             $this->view->assign('spotlight', $spotlight);
         }
-
         $this->view->assign('news', $news);
     }
 

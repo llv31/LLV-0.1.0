@@ -21,7 +21,7 @@ class Llv_Entity_News_Helper_News
      */
     public static function convertFromDalToDto($dal)
     {
-        if (count($dal) > 0) {
+        if (count($dal) > 0 && strlen($dal['title']) > 0) {
             $dto = new Llv_Dto_News();
             $dto->id = $dal['id'];
             $dto->category = new Llv_Dto_News_Category();

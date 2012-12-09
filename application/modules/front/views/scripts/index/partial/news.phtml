@@ -7,10 +7,12 @@ $news = $this->news;
         <?= _('HOME_NEWS_TITRE') ?>
     </h3>
 
+    <?php if (!is_null($news)): ?>
     <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $news->id; ?>">
         <h4>
             <?= $news->title ?>
         </h4>
+
         <p class="illustrate">
             <?php if (isset($news->illustrations[0])): ?>
             <img
@@ -29,6 +31,9 @@ $news = $this->news;
 
         <div class="content"><?= $news->content ?></div>
     </a>
+    <?php else: ?>
+    <p class='no-result'><?= _('NEWS_LIST_NORESULT'); ?></p>
+    <?php endif; ?>
 
     <p class="more"><a href="<?= $this->baseUrl(); ?>news"><?= _('HOME_NEWS_MORE') ?></a></p>
 </div>

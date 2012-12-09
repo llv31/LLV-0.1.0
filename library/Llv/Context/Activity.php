@@ -49,6 +49,9 @@ class Llv_Context_Activity
      */
     public function getOne(Llv_Services_Activity_Filter_Activity $filter)
     {
+        if (!isset($filter->idLangue)) {
+            $filter->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
+        }
         $message = $this->_service->getOne($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->activite;

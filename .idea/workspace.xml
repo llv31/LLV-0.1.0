@@ -3,6 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/NewsController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/NewsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/news.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/news.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR.csv" afterPath="$PROJECT_DIR$/data/locales/fr_FR.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/Activity.php" afterPath="$PROJECT_DIR$/library/Llv/Context/Activity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/Cms.php" afterPath="$PROJECT_DIR$/library/Llv/Context/Cms.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/News.php" afterPath="$PROJECT_DIR$/library/Llv/Context/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Activity/Helper/Activity.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Activity/Helper/Activity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Activity.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Activity.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/News.php" afterPath="$PROJECT_DIR$/library/Llv/Services/News.php" />
     </list>
     <ignored path="LLV-0.1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +37,102 @@
     <favorites_list name="LLV-0.1.0" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="list.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="14" selection-start="2130" selection-end="2187" vertical-scroll-proportion="-24.708334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/IndexController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="-16.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="28" selection-start="475" selection-end="475" vertical-scroll-proportion="-13.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/news.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="105" selection-end="140" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="32" selection-start="154" selection-end="154" vertical-scroll-proportion="-5.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Activity.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Context/Activity.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="36" selection-start="1294" selection-end="1294" vertical-scroll-proportion="-13.25">
+              <folding>
+                <element signature="e#6#214#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Activity.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Services/Activity.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="50" selection-start="2641" selection-end="2641" vertical-scroll-proportion="0.5566572">
+              <folding>
+                <element signature="e#6#214#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cms.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Context/Cms.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="20" selection-start="1143" selection-end="1143" vertical-scroll-proportion="-12.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Context/News.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="9" selection-start="1217" selection-end="1217" vertical-scroll-proportion="-13.208333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="News.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Services/News.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="35" selection-start="2250" selection-end="2250" vertical-scroll-proportion="-18.541666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -36,22 +145,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/modules/back/controllers/NewsController.php" />
-        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/activities/list.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/activities/edit.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/news/list.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/news.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/carrousel.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml" />
-        <option value="$PROJECT_DIR$/library/Llv/Entity/Activity/Dal/Activity.php" />
-        <option value="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/controllers/ActivitiesController.php" />
-        <option value="$PROJECT_DIR$/public/design/front/default/activities/css/list.css" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/activities/read.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml" />
-        <option value="$PROJECT_DIR$/data/locales/fr_FR.csv" />
         <option value="$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/News/Helper/News.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/controllers/NewsController.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/Activity/Helper/Activity.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml" />
+        <option value="$PROJECT_DIR$/data/locales/fr_FR.csv" />
+        <option value="$PROJECT_DIR$/library/Llv/Context/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Context/Cms.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Context/Activity.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/news.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/News.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/Activity.php" />
       </list>
     </option>
   </component>
@@ -169,7 +278,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -183,11 +292,103 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="locales" />
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Llv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Llv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Llv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Llv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Helper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -257,11 +458,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -287,7 +492,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -536,7 +775,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1440" y="172" width="1440" height="900" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -549,7 +788,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318507" sideWeight="0.67137355" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24318507" sideWeight="0.67137355" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -637,43 +876,67 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Activity/Filter/Activity.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ActivitiesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="222" selection-end="222" vertical-scroll-proportion="0.063739374">
+        <state line="29" column="61" selection-start="608" selection-end="608" vertical-scroll-proportion="0.56657225">
+          <folding>
+            <element signature="e#6#226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="52" selection-start="579" selection-end="579" vertical-scroll-proportion="0.41208792">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Activity/Dal/Activity.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="41" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.4674221">
-          <folding>
-            <element signature="e#6#214#0" expanded="true" />
-          </folding>
+        <state line="35" column="41" selection-start="859" selection-end="859" vertical-scroll-proportion="0.4052198">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Activity.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/News/Dal/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="49" selection-start="602" selection-end="602" vertical-scroll-proportion="0.2875354">
-          <folding>
-            <element signature="e#6#214#0" expanded="true" />
-          </folding>
+        <state line="105" column="57" selection-start="3081" selection-end="3081" vertical-scroll-proportion="0.72527474">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Services/Activity.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="46" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.34065935">
-          <folding>
-            <element signature="e#6#214#0" expanded="true" />
-          </folding>
+        <state line="64" column="28" selection-start="2229" selection-end="2251" vertical-scroll-proportion="-25.333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/locales/fr_FR.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="47" selection-start="3865" selection-end="3865" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Context/Cms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="20" selection-start="1143" selection-end="1143" vertical-scroll-proportion="-12.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Context/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="9" selection-start="1217" selection-end="1217" vertical-scroll-proportion="-13.208333">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/library/Llv/Context/Activity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="38" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.25824177">
+        <state line="54" column="36" selection-start="1294" selection-end="1294" vertical-scroll-proportion="-13.25">
           <folding>
             <element signature="e#6#214#0" expanded="true" />
           </folding>
@@ -682,79 +945,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="62" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.53571427">
+        <state line="36" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="-16.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/front/default/index/css/index.css">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="18" selection-start="612" selection-end="620" vertical-scroll-proportion="0.63829786">
+        <state line="22" column="28" selection-start="475" selection-end="475" vertical-scroll-proportion="-13.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="14" selection-start="2130" selection-end="2187" vertical-scroll-proportion="-24.708334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/news.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="0" selection-end="944" vertical-scroll-proportion="0.22664835">
+        <state line="8" column="0" selection-start="105" selection-end="140" vertical-scroll-proportion="-5.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="20" selection-start="91" selection-end="99" vertical-scroll-proportion="0.12362637">
+        <state line="9" column="32" selection-start="154" selection-end="154" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/error/error.phtml">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="0.10623229">
+        <state line="78" column="35" selection-start="2250" selection-end="2250" vertical-scroll-proportion="-18.541666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/Activity.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="19" selection-start="2079" selection-end="2079" vertical-scroll-proportion="0.15304606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/locales/fr_FR.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="479" selection-end="495" vertical-scroll-proportion="0.2393617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="128" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/activities/read.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="39" selection-start="116" selection-end="116" vertical-scroll-proportion="0.041208792">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/front/default/activities/css/list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="20" selection-start="1386" selection-end="1396" vertical-scroll-proportion="0.892396">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ActivitiesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="412" selection-end="412" vertical-scroll-proportion="0.44368133">
+        <state line="83" column="50" selection-start="2641" selection-end="2641" vertical-scroll-proportion="0.5566572">
           <folding>
-            <element signature="e#6#226#0" expanded="true" />
+            <element signature="e#6#214#0" expanded="true" />
           </folding>
         </state>
       </provider>

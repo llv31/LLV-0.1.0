@@ -76,7 +76,7 @@ class Llv_Services_News
             $entityFilter->online = $filter->online;
             $entityFilter->spotlight = $filter->spotlight;
             $actualite = $this->getEntity()->getOne($entityFilter);
-            if (!is_null($actualite->id)) {
+            if (!is_null($actualite)) {
                 /** On ajoute la catégorie */
                 $categoryFilter = new Llv_Services_News_Filter_Category();
                 $categoryFilter->id = $actualite->category->id;
@@ -120,16 +120,18 @@ class Llv_Services_News
             $result = array();
             /** @var $actualite Llv_Dto_News */
             foreach ($actualites as $actualite) {
-                $categoryFilter = new Llv_Services_News_Filter_Category();
-                $categoryFilter->id = $actualite->category->id;
-                $categorie = $this->categoryGetOne($header, $categoryFilter);
-                $actualite->category = $categorie->categorie;
+                if (!is_null($actualite)) {
+                    $categoryFilter = new Llv_Services_News_Filter_Category();
+                    $categoryFilter->id = $actualite->category->id;
+                    $categorie = $this->categoryGetOne($header, $categoryFilter);
+                    $actualite->category = $categorie->categorie;
 
-                $illuFilter = new Llv_Services_News_Filter_File();
-                $illuFilter->idNews = $actualite->id;
-                $illustrations = $this->getNewsFiles($header, $illuFilter);
-                $actualite->illustrations = $illustrations->files;
-                $result[] = $actualite;
+                    $illuFilter = new Llv_Services_News_Filter_File();
+                    $illuFilter->idNews = $actualite->id;
+                    $illustrations = $this->getNewsFiles($header, $illuFilter);
+                    $actualite->illustrations = $illustrations->files;
+                    $result[] = $actualite;
+                }
             }
             $message->actualites = $result;
             $message->success = true;

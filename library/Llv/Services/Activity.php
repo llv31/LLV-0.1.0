@@ -58,7 +58,7 @@ class Llv_Services_Activity
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
-     * @param Llv_Services_Message_Header   $header
+     * @param Llv_Services_Message_Header           $header
      * @param Llv_Services_Activity_Filter_Activity $filter
      *
      * @return Llv_Services_Activity_Message_Activity
@@ -76,7 +76,7 @@ class Llv_Services_Activity
             $entityFilter->online = $filter->online;
             $entityFilter->spotlight = $filter->spotlight;
             $activite = $this->getEntity()->getOne($entityFilter);
-            if (!is_null($activite->id)) {
+            if (!is_null($activite)) {
                 /** On ajoute la catégorie */
                 $categoryFilter = new Llv_Services_Activity_Filter_Category();
                 $categoryFilter->id = $activite->category->id;
@@ -98,7 +98,7 @@ class Llv_Services_Activity
     }
 
     /**
-     * @param Llv_Services_Message_Header   $header
+     * @param Llv_Services_Message_Header           $header
      * @param Llv_Services_Activity_Filter_Activity $filter
      *
      * @return Llv_Services_Activity_Message_Activity
@@ -120,16 +120,18 @@ class Llv_Services_Activity
             $result = array();
             /** @var $activite Llv_Dto_Activity */
             foreach ($activites as $activite) {
-                $categoryFilter = new Llv_Services_Activity_Filter_Category();
-                $categoryFilter->id = $activite->category->id;
-                $categorie = $this->categoryGetOne($header, $categoryFilter);
-                $activite->category = $categorie->categorie;
+                if (!is_null($activite)) {
+                    $categoryFilter = new Llv_Services_Activity_Filter_Category();
+                    $categoryFilter->id = $activite->category->id;
+                    $categorie = $this->categoryGetOne($header, $categoryFilter);
+                    $activite->category = $categorie->categorie;
 
-                $illuFilter = new Llv_Services_Activity_Filter_File();
-                $illuFilter->idActivity = $activite->id;
-                $illustrations = $this->getActivityFiles($header, $illuFilter);
-                $activite->illustrations = $illustrations->files;
-                $result[] = $activite;
+                    $illuFilter = new Llv_Services_Activity_Filter_File();
+                    $illuFilter->idActivity = $activite->id;
+                    $illustrations = $this->getActivityFiles($header, $illuFilter);
+                    $activite->illustrations = $illustrations->files;
+                    $result[] = $activite;
+                }
             }
             $message->activites = $result;
             $message->success = true;
@@ -140,7 +142,7 @@ class Llv_Services_Activity
     }
 
     /**
-     * @param Llv_Services_Message_Header    $header
+     * @param Llv_Services_Message_Header        $header
      * @param Llv_Services_Activity_Request_Edit $request
      *
      * @return Llv_Services_Activity_Message_Activity
@@ -186,7 +188,7 @@ class Llv_Services_Activity
     }
 
     /**
-     * @param Llv_Services_Message_Header   $header
+     * @param Llv_Services_Message_Header           $header
      * @param Llv_Services_Activity_Filter_Activity $filter
      *
      * @return Llv_Services_Activity_Message_Activity
@@ -211,7 +213,7 @@ class Llv_Services_Activity
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
-     * @param Llv_Services_Message_Header   $header
+     * @param Llv_Services_Message_Header           $header
      * @param Llv_Services_Activity_Filter_Activity $request
      *
      * @return Llv_Services_Activity_Message_Activity
@@ -237,7 +239,7 @@ class Llv_Services_Activity
     }
 
     /**
-     * @param Llv_Services_Message_Header           $header
+     * @param Llv_Services_Message_Header               $header
      * @param Llv_Services_Activity_Request_EditContent $request
      *
      * @return Llv_Services_Activity_Message_Activity
@@ -279,7 +281,7 @@ class Llv_Services_Activity
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
     /**
-     * @param Llv_Services_Message_Header    $header
+     * @param Llv_Services_Message_Header        $header
      * @param Llv_Services_Activity_Request_File $request
      *
      * @return Llv_Services_Activity_Message_File
@@ -324,7 +326,7 @@ class Llv_Services_Activity
     }
 
     /**
-     * @param Llv_Services_Message_Header   $header
+     * @param Llv_Services_Message_Header       $header
      * @param Llv_Services_Activity_Filter_File $filter
      *
      * @return Llv_Services_Activity_Message_File
@@ -348,7 +350,7 @@ class Llv_Services_Activity
     }
 
     /**
-     * @param Llv_Services_Message_Header    $header
+     * @param Llv_Services_Message_Header        $header
      * @param Llv_Services_Activity_Request_File $request
      *
      * @return Llv_Services_Activity_Message_File
@@ -378,7 +380,7 @@ class Llv_Services_Activity
     }
 
     /**
-     * @param Llv_Services_Message_Header    $header
+     * @param Llv_Services_Message_Header        $header
      * @param Llv_Services_Activity_Request_File $filter
      *
      * @return Llv_Services_Activity_Message_File
@@ -404,7 +406,7 @@ class Llv_Services_Activity
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
-     * @param Llv_Services_Message_Header       $header
+     * @param Llv_Services_Message_Header           $header
      * @param Llv_Services_Activity_Filter_Category $filter
      *
      * @return Llv_Services_Activity_Message_Category
@@ -427,7 +429,7 @@ class Llv_Services_Activity
     }
 
     /**
-     * @param Llv_Services_Message_Header       $header
+     * @param Llv_Services_Message_Header           $header
      * @param Llv_Services_Activity_Filter_Category $filter
      *
      * @return Llv_Services_Activity_Message_Category

@@ -21,7 +21,6 @@ class IndexController
     {
         $request = new Llv_Services_Cms_Request_Page();
         $request->id = Llv_Constant_Cms_Page::HOME_ID;
-        $request->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
         $page = Llv_Context_Cms::getInstance()->pageGetRow($request);
 
         $filter = new Llv_Services_Cms_Filter_Carrousel();
@@ -30,11 +29,9 @@ class IndexController
 
         $filter = new Llv_Services_News_Filter_News();
         $filter->spotlight = true;
-        $filter->idLangue = Llv_Context_Application::getInstance()->getDefaultLocale()->getIdLangue();
         $news = Llv_Context_News::getInstance()->getOne($filter);
 
         $filter = new Llv_Services_Activity_Filter_Activity();
-        $filter->idLangue = Llv_Context_Application::getInstance()->getDefaultLocale()->getIdLangue();
         $filter->spotlight = true;
         $activity = Llv_Context_Activity::getInstance()->getOne($filter);
 

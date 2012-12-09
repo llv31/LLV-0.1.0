@@ -21,7 +21,7 @@ class Llv_Entity_Activity_Helper_Activity
      */
     public static function convertFromDalToDto($dal)
     {
-        if (count($dal) > 0) {
+        if (count($dal) > 0 && strlen($dal['title']) > 0) {
             $dto = new Llv_Dto_Activity();
             $dto->id = $dal['id'];
             $dto->category = new Llv_Dto_Activity_Category();

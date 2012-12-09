@@ -49,6 +49,9 @@ class Llv_Context_Cms
      */
     public function pageGetRow(Llv_Services_Cms_Request_Page $request)
     {
+        if (!isset($request->idLangue)) {
+            $request->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
+        }
         $message = $this->_service->pageGetRow($this->getHeaderMessage(), $request);
         if ($message->success) {
             return $message->page;

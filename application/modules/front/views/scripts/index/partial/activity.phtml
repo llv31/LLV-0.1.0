@@ -7,10 +7,12 @@ $activity = $this->activity;
         <?= _('HOME_ACTIVITY_TITRE') ?>
     </h3>
 
+    <?php if (!is_null($activity)): ?>
     <a href="<?= $this->baseUrl(); ?>activity/read/id/<?= $activity->id; ?>">
         <h4>
             <?= $activity->title ?>
         </h4>
+
         <p class="illustrate">
             <?php if (isset($activity->illustrations[0])): ?>
             <img
@@ -31,6 +33,9 @@ $activity = $this->activity;
             <?= $activity->content ?>
         </div>
     </a>
+    <?php else: ?>
+    <p class='no-result'><?= _('NEWS_LIST_NORESULT'); ?></p>
+    <?php endif; ?>
 
     <p class="more"><a href="<?= $this->baseUrl(); ?>activity"><?= _('HOME_ACTIVITY_MORE') ?></a></p>
 </div>

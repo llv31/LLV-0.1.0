@@ -49,6 +49,9 @@ class Llv_Context_News
      */
     public function getOne(Llv_Services_News_Filter_News $filter)
     {
+        if (!isset($filter->idLangue)) {
+            $filter->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
+        }
         $message = $this->_service->getOne($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->actualite;
@@ -56,13 +59,13 @@ class Llv_Context_News
         return null;
     }
 
-    /**
+/**
      * @param Llv_Services_News_Filter_News $filter
      *
      * @return null
      */
-    public function getAll(Llv_Services_News_Filter_News $filter)
-    {
+public function getAll(Llv_Services_News_Filter_News $filter)
+{
         if (!isset($filter->idLangue)) {
             $filter->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
         }
