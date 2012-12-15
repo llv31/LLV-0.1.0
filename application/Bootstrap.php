@@ -132,6 +132,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         Zend_Db_Table::setDefaultAdapter(Llv_Db::getInstance());
 
+        Llv_Db::getInstance()->getConnection();
         return parent::run();
     }
 }

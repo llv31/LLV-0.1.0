@@ -1,0 +1,44 @@
+/* •••••••••••••••••••••••••••••••••• */
+
+form fieldset {
+    float: left;
+    width: 48%;
+}
+
+form fieldset#fieldset-informations {
+    margin-right: 4%;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+form fieldset#fieldset-informations p.textarea_element label {
+    width: 25%;
+    padding-bottom:5px;
+}
+
+form fieldset#fieldset-informations p.select_element label {
+    width: 53%;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+form fieldset#fieldset-demande p.select_element label ,
+form fieldset#fieldset-demande p.default_element label {
+    width: 37%;
+}
+
+form fieldset#fieldset-demande p.textarea_element label {
+    width: 56%;
+    padding-bottom:5px;
+}
+
+form fieldset#fieldset-demande p.submit_element{
+    float: right;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+#googlemap{
+    width: 100%;
+    height: 500px;
+}
+
+/* •••••••••••••••••••••••••••••••••• */

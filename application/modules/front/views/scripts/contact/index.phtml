@@ -1,0 +1,34 @@
+<?php
+$this->headTitle(_('HEAD_TITLE_CONTACT') . ' | ');
+/**  */
+$this->headLink()->appendStylesheet($this->buildDesignUrl('contact/css/style.css'));
+$this->headScript()->appendFile($this->buildDesignUrl('contact/js/index.js'));
+
+$successMessage = $this->successMessage;
+$errorMessage = $this->errorMessage;
+
+?>
+<div class="page">
+    <h2><?= _('CONTACT_TITLE'); ?></h2>
+    <?php if (strlen($successMessage) > 0): ?>
+    <ul class='infomessage success'>
+        <li><?= $successMessage; ?></li>
+    </ul>
+    <?php endif; ?>
+
+    <?php if (strlen($errorMessage) > 0): ?>
+    <ul class='infomessage error'>
+        <li><?= $errorMessage; ?></li>
+    </ul>
+    <?php endif; ?>
+
+    <?= $this->contactForm; ?>
+
+    <?=
+    $this->partial(
+        'contact/partial/map.phtml',
+        array()
+    )
+    ;
+    ?>
+</div>

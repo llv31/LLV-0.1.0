@@ -1,0 +1,29 @@
+/* •••••••••••••••••••••••••••••••••• */
+form label {
+    width: 15%;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+form textarea {
+    min-height: 100px;
+    height: 100px;
+    width: 99%;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+form input[type=submit] {
+    border: 1px solid transparent;
+    background-image: -moz-linear-gradient(center top, #4D90FE, #4787ED);
+    box-shadow: 0 0 2px #bbb;
+    font-size: 1.1em;
+    padding: 5px;
+    color: #fff;
+}
+
+form input[type=submit]:hover {
+    background-image: -moz-linear-gradient(center top , #4D90FE, #357AE8);
+    border: 1px solid #3079ED;
+}
+
+/* •••••••••••••••••••••••••••••••••• */

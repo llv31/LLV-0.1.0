@@ -1,5 +1,6 @@
-@import url('table.css');
-@import url('liste.css');
+@import 'table.css';
+@import 'liste.css';
+@import 'form.css';
 
 /* •••••••••••••••••••••••••••••••••• */
 #container #menu p {
@@ -8,20 +9,7 @@
 }
 
 /* •••••••••••••••••••••••••••••••••• */
-#wrapper .page {
-    background-color: #fff;
-    padding: 2% 3%;
-    margin: 0 auto;
-    width: 94%;
-    box-shadow: 0 0 5px #555;
-}
 
-#wrapper .page h2 {
-    font-size: 1.6em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-#wrapper .page p.admin_add {
+#container #wrapper .page p.admin_add {
     text-align: right;
 }

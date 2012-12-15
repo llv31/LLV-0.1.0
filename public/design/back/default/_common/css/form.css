@@ -1,0 +1,30 @@
+/* •••••••••••••••••••••••••••••••••• */
+form label {
+    width: 13%;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+form input[type=text],
+form input[type=password] {
+    width: 753px;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+form textarea {
+    min-height: 300px;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+form input[type=submit] {
+    border: 1px solid #999;
+    background-color: #ddd;
+}
+
+form input[type=submit]:hover {
+    background-color: #eee;
+    border: 1px solid #aaa;
+}
+
+/* •••••••••••••••••••••••••••••••••• */

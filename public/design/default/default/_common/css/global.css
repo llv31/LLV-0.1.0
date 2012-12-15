@@ -192,6 +192,48 @@ h2 {
 
 /* •••••••••••••••••••••••••••••••••• */
 
+#container #wrapper .page {
+    background-color: #fff;
+    padding: 2% 3%;
+    margin: 0 auto;
+    width: 94%;
+    box-shadow: 0 0 5px #555;
+    overflow: hidden;
+}
+
+#container #wrapper .page h2 {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#container #wrapper ul.infomessage {
+    color: #fff;
+    padding: 10px;
+    font-size: 1.1em;
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 20px;
+}
+
+#container #wrapper ul.success {
+    background-color: #D9EDF7;
+    border: 1px solid #3A87AD;
+    color: #3A87AD;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+#container #wrapper ul.error {
+    background-color: #EED3D7;
+    border: 1px solid #8D2823;
+    color: #B94A48;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
 #container #footer {
     float: left;
     height: 25px;

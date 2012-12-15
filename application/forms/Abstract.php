@@ -13,34 +13,46 @@
 class App_Form_Abstract
     extends Zend_Form
 {
-    public $formDecorator = array(
+    protected $formDecorator = array(
         'FormElements',
         array('HtmlTag'),
         'Form'
     );
-    public $elementsDecorator = array(
+
+    protected $fieldsetDecorator = array(
+        'FormElements',
+        array('HtmlTag', array('tag'=> 'dl')),
+        'Fieldset'
+    );
+
+    protected $elementsDecorator = array(
         'ViewHelper',
         array('Label', array('placement'=> 'prepend')),
         array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'default_element'))
     );
-    public $submitDecorator = array(
+    protected $submitDecorator = array(
         'ViewHelper',
         array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'submit_element'))
     );
-    public $textareaDecorator = array(
+    protected $textareaDecorator = array(
         'ViewHelper',
         array('Label', array('placement'=> 'prepend')),
         array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'textarea_element'))
     );
-    public $selectDecorator = array(
+    protected $selectDecorator = array(
         'ViewHelper',
         array('Label', array('placement'=> 'prepend')),
         array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'select_element'))
     );
-    public $fileDecorator = array(
+    protected $fileDecorator = array(
         'ViewHelper',
         array('Label', array('placement'=> 'prepend')),
         array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'file_element'))
+    );
+    protected $smallElementsDecorator = array(
+        'ViewHelper',
+        array('Label', array('placement'=> 'prepend')),
+        array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'small_element'))
     );
 
     /**
@@ -50,9 +62,13 @@ class App_Form_Abstract
     {
         $this->setDisableLoadDefaultDecorators(true);
         $this->setDecorators($this->formDecorator);
+        $this->setDisplayGroupDecorators($this->fieldsetDecorator);
 
         /** @var $element Zend_Form_Element */
         foreach ($this->getElements() as $element) {
+            if ($element->isRequired()) {
+                $element->setLabel($element->getLabel() . _('GLOBAL_CHAMP_OBLIGATOIRE'));
+            }
             if ($element instanceof Zend_Form_Element_Submit) {
                 $element->setDecorators($this->submitDecorator);
             } elseif ($element instanceof Zend_Form_Element_Textarea) {
@@ -61,6 +77,8 @@ class App_Form_Abstract
                 $element->setDecorators($this->selectDecorator);
             } elseif ($element instanceof Zend_Form_Element_File) {
 //                $element->setDecorators($this->fileDecorator);
+            } elseif ($element instanceof Zend_Form_Element_Text && $element->getAttrib('class') == 'small') {
+                $element->setDecorators($this->smallElementsDecorator);
             } else {
                 $element->setDecorators($this->elementsDecorator);
             }
@@ -69,6 +87,7 @@ class App_Form_Abstract
 
     /**
      * Set l'action du form quel que soit l'environnement
+     *
      * @param $action
      */
     protected function _setAction($action)

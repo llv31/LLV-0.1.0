@@ -31,6 +31,7 @@ $this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plug
 $this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/_plugin/shadowbox/shadowbox.css');
 
 ?>
+
 <?= $this->doctype(); ?>
 
 <html>
@@ -58,7 +59,9 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/
         );
         ?>
     </div>
+
     <?php if (Llv_Db::getInstance()->isConnected()) : ?>
+
     <div id="menu">
         <?php
         echo $this->partial(
@@ -69,11 +72,14 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/
     </div>
 
     <div id="wrapper"><?= $this->layout()->content; ?></div>
+
     <?php else : ?>
+
     <div id="wrapper">
         <?php $this->headTitle(_('HEAD_TITLE_ERROR') . ' | '); ?>
         <?= _('ERROR_DB_CONNECTION'); ?>
     </div>
+
     <?php endif;?>
 
     <div id="footer">
