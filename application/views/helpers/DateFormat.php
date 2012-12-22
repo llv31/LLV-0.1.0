@@ -15,35 +15,34 @@ class App_View_Helper_DateFormat
 {
     /**
      * @param DateTime $date
+     * @param bool     $withTime
      *
-     * @return array|null
+     * @return null|string
      */
-    public function dateFormat(DateTime $date)
+    public function dateFormat(DateTime $date, $withTime = false)
     {
         if (!is_null($date)) {
             $locale = Llv_Context_Application::getInstance()->getCurrentLocale();
-            $format = Zend_Locale_Format::getDate(
-                $date->format(Llv_Constant_Date::FORMAT_DB),
-                array(
-                     'locale'     => $locale,
-                     'date_format'=> Zend_Locale_Format::STANDARD,
-                     'fix_date'   => true
-                )
-            );
+            $format = $date->format(Llv_Constant_Date::FORMAT_DB);
+            $dateTime = explode(' ', $format);
+            $date = explode('-', $dateTime[0]);
+
+
             $result = array();
             switch ($locale) {
                 default:
-                case Llv_Constant_Locale::FRANCAIS_FRANCE_LOCALE:
-                case Llv_Constant_Locale::ESPAGNOL_ESPAGNE_LOCALE:
-                    $result[] = $format['day'];
-                    $result[] = _('GLOBAL_MONTH_LABEL' . $format['month']);
-                    $result[] = $format['year'];
+                    $result[] = $date[2];
+                    $result[] = _('GLOBAL_MONTH_LABEL' . $date[1]);
+                    $result[] = $date[0];
                     break;
                 case Llv_Constant_Locale::ANGLAIS_GB_LOCALE:
-                    $result[] = $format['year'];
-                    $result[] = _('GLOBAL_MONTH_LABEL') . $format['month'];
-                    $result[] = $format['day'];
+                    $result[] = $date[0];
+                    $result[] = _('GLOBAL_MONTH_LABEL') . $date[1];
+                    $result[] = $date[2];
                     break;
+            }
+            if ($withTime) {
+                $result[] = _('GLOBAL_TIME_SEPARATOR_LABEL').'&nbsp;' . $dateTime[1];
             }
             return implode(' ', $result);
         }

@@ -134,7 +134,7 @@ class IndexController
         $listFilter = new Llv_Services_Cms_Filter_Carrousel();
 //        $listFilter->online = true;
         $listFilter->includeDeleted = false;
-        $this->view->assign('liste', Llv_Context_Cms::getInstance()->carrouselGetList($listFilter));
+        $this->view->assign('carrousel', Llv_Context_Cms::getInstance()->carrouselGetList($listFilter));
     }
 
     /**
@@ -203,5 +203,14 @@ class IndexController
     {
         Llv_Context_User::getInstance()->logoutUser();
         $this->_redirect('/');
+    }
+
+    /**
+     * PHP Info
+     */
+    public function infoAction()
+    {
+        print phpinfo();
+        die;
     }
 }

@@ -2,7 +2,7 @@
 $this->headTitle(_('HEAD_TITLE_CARROUSEL') . ' | ');
 $this->headLink()->appendStylesheet($this->buildDesignUrl('carrousel/css/list.css'));
 $this->headScript()->appendFile($this->buildDesignUrl('_common/js/jquery.table-action.js'));
-$liste = $this->liste;
+$liste = $this->carrousel;
 ?>
 
 <div class="page page_cms">
@@ -22,7 +22,7 @@ $liste = $this->liste;
         <tr>
             <th class="picture"><?= _('GLOBAL_ADMIN_LIST_APERCU')?></th>
             <th><?= _('HOME_CARROUSEL_LIST_ORIGINALFILENAME')?></th>
-            <th><?= _('HOME_CARROUSEL_LIST_TYPE')?></th>
+<!--            <th>--><?//= _('HOME_CARROUSEL_LIST_TYPE')?><!--</th>-->
             <th><?= _('HOME_CARROUSEL_LIST_ONLINE')?></th>
             <th><?= _('GLOBAL_ADMIN_LIST_DATE_AJOUT')?></th>
             <th><?= _('GLOBAL_ADMIN_LIST_DATE_MODIFICATION')?></th>
@@ -40,7 +40,7 @@ $liste = $this->liste;
                 </a>
             </td>
             <td><?= $ligne->originalFilename; ?></td>
-            <td><?= $ligne->mimeType; ?></td>
+<!--            <td>--><?//= $ligne->mimeType; ?><!--</td>-->
             <td><?= $ligne->online ? _('GLOBAL_OUI') : _('GLOBAL_NON'); ?></td>
             <td><?= $this->dateFormat($ligne->dateAdd); ?></td>
             <td><?= $this->dateFormat($ligne->dateUpdate); ?></td>
