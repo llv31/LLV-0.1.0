@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/helpers/Googlemap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/modules/back/controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/index/carrousel-list.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/index/carrousel-list.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/helpers/DateFormat.php" afterPath="$PROJECT_DIR$/application/views/helpers/DateFormat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR.csv" afterPath="$PROJECT_DIR$/data/locales/fr_FR.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.mo" afterPath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.mo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.po" afterPath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.po" />
     </list>
     <ignored path="LLV-0.1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -753,7 +746,11 @@
       <created>1356180765636</created>
       <updated>1356180765636</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Correction formatage Date">
+      <created>1356182593815</created>
+      <updated>1356182593815</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -819,7 +816,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en ligne Bêta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction formatage Date" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -832,7 +829,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Mise en place du contexte application et finalisation de la configuration de l'application&#10;# TODO : Initialiser l'environnement" />
     <MESSAGE value="Finalisation de l'environnement de base &#10;- Installation des modules&#10;- Installation des locales" />
     <MESSAGE value="Finalisation de l'environnement de base &#10;Ajout des scripts de bdd" />
     <MESSAGE value="Nouveau script de base de données&#10;Enrichissement de l'initialisation&#10;" />
@@ -857,6 +853,7 @@
     <MESSAGE value="Gestion du masquage des news et activities quand elles ne sont pas traduite dans la langue courante" />
     <MESSAGE value="Page de contact front" />
     <MESSAGE value="Mise en ligne Bêta" />
+    <MESSAGE value="Correction formatage Date" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
