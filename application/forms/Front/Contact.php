@@ -79,7 +79,7 @@ class App_Form_Front_Contact
             array(
                  'name'    => 'decouverte',
                  'label'   => _('CONTACT_FORM_LABEL_DECOUVERTE'),
-                 'required'=> true
+//                 'required'=> true
             )
         );
         $decouverte->addMultiOptions($options);
@@ -126,7 +126,7 @@ class App_Form_Front_Contact
             array(
                  'name'    => 'locations',
                  'label'   => _('CONTACT_FORM_LABEL_LOCATIONS'),
-                 'required'=> true
+//                 'required'=> true
             )
         );
         $decouverte->addMultiOptions($options);

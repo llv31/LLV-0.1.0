@@ -26,6 +26,8 @@ class App_View_Helper_BaseUrl
             $baseUrl = implode('/', $expScriptName);
         } else if (APPLICATION_ENV == 'dev') {
             $baseUrl = $_SERVER['SERVER_NAME'];
+        } else if (APPLICATION_ENV == 'production') {
+            $baseUrl = 'http://' . $_SERVER['SERVER_NAME'];
         }
         return $baseUrl . '/';
     }

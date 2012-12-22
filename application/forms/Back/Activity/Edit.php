@@ -111,10 +111,12 @@ class App_Form_Back_Activity_Edit
             $filter->id = $idActivity;
             $filter->idLangue = $language->id;
             $activity = Llv_Context_Activity::getInstance()->getOne($filter);
-            $this->getElement(App_Model_Constant_Activity::FORM_PREFIX_TITLE . $language->id)->setValue($activity->title);
-            $this->getElement(App_Model_Constant_Activity::FORM_PREFIX_CONTENT . $language->id)->setValue($activity->content);
-            $this->getElement(App_Model_Constant_Activity::FORM_PREFIX_LINK . $language->id)->setValue($activity->link);
-            $this->getElement('location')->setValue($activity->location);
+            if (!is_null($activity)) {
+                $this->getElement(App_Model_Constant_Activity::FORM_PREFIX_TITLE . $language->id)->setValue($activity->title);
+                $this->getElement(App_Model_Constant_Activity::FORM_PREFIX_CONTENT . $language->id)->setValue($activity->content);
+                $this->getElement(App_Model_Constant_Activity::FORM_PREFIX_LINK . $language->id)->setValue($activity->link);
+                $this->getElement('location')->setValue($activity->location);
+            }
         }
     }
 

@@ -27,7 +27,7 @@
     background-color: #e8ead4;
     height: 288px;
     overflow: hidden;
-    position: relative;;
+    position: relative;
 }
 
 #wrapper .activity h3,
@@ -58,31 +58,48 @@
 
 #wrapper .activity div.content,
 #wrapper .news div.content {
-    text-overflow: ellipsis;
     overflow: hidden;
-    height:230px;
+    height: 230px;
+    text-align: justify;
 }
 
+#wrapper .activity p.next,
+#wrapper .news p.next,
 #wrapper .activity p.more,
 #wrapper .news p.more {
     text-align: right;
     text-decoration: underline;
     position: absolute;
-    bottom:0;
-    right:10px;
 }
 
+#wrapper .activity p.next,
+#wrapper .news p.next {
+    bottom: 100px;
+    right: 10px;
+}
+
+#wrapper .activity p.more,
+#wrapper .news p.more {
+    bottom: 0;
+    right: 10px;
+}
+
+#wrapper .activity p.next a,
+#wrapper .news p.next a,
 #wrapper .activity p.more a,
-#wrapper .news p.more a{
-    color:#fff;
-    display:block;
-    font-weight:normal;
+#wrapper .news p.more a {
+    color: #fff;
+    display: block;
+    font-weight: normal;
     padding: 2px 7px 5px;
-    background:#4B4C43;
+    background: #4B4C43;
+    width:138px;
 }
 
+#wrapper .activity p.next a:hover,
+#wrapper .news p.next a:hover,
 #wrapper .activity p.more a:hover,
-#wrapper .news p.more a:hover{
+#wrapper .news p.more a:hover {
     text-decoration: underline;
 }
 

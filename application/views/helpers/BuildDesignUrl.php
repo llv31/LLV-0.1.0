@@ -13,7 +13,7 @@
 class App_View_Helper_BuildDesignUrl
     extends Zend_View_Helper_Abstract
 {
-    const DESIGN_DIR_PATH = 'design';
+    const DESIGN_DIR_PATH = 'public/design';
     const DESIGN_DEFAULT_DIR_PATH = 'default';
     const DESIGN_DEFAULT_LANGUAGE_PATH = 'default';
 
@@ -26,7 +26,7 @@ class App_View_Helper_BuildDesignUrl
      */
     public function buildDesignUrl($filePath)
     {
-        $root = realpath(APPLICATION_PATH . '/../public/');
+        $root = realpath(APPLICATION_PATH . '/../');
         $dirs = array();
         $dirs[0] = self::DESIGN_DIR_PATH;
         $dirs[1] = Llv_Context_Application::getInstance()->getActiveModule();

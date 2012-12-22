@@ -1,8 +1,8 @@
 <?php
 $this->headTitle(_('HEAD_TITLE_CARROUSEL') . ' | ');
 $this->headLink()->appendStylesheet($this->buildDesignUrl('carrousel/css/list.css'));
-$this->headScript()->appendFile($this->baseUrl() . '/design/back/default/_common/js/jquery.table-action.js');
-$liste = $this->list;
+$this->headScript()->appendFile($this->buildDesignUrl('_common/js/jquery.table-action.js'));
+$liste = $this->liste;
 ?>
 
 <div class="page page_cms">

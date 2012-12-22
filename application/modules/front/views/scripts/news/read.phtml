@@ -12,16 +12,23 @@ $i = 0;
 ?>
 
 
-<div class="news">
-    <a href="<?= $this->baseUrl(); ?>news"><?= _('GLOBAL_BACK') ?></a>
+<div class="news page">
+    <p class="back"><a href="<?= $this->baseUrl(); ?>news"><?= _('GLOBAL_BACK') ?></a></p>
+
     <h2><?= $news->title ?></h2>
 
     <div class="contenu"><?= $news->content ?></div>
+
     <?php if (count($news->illustrations) > 0): ?>
     <h3><?= _('NEWS_ELEMENT_ILLUSTRATION') ?></h3>
-    <ul>
+    <ul class="illustrations">
         <?php foreach ($news->illustrations as $illustration): ?>
-        <li>
+        <li style="background-image: url(<?=$this->displayImage(
+            $illustration->filename,
+            Llv_Constant_File_Category::NEWS,
+            200,
+            9999
+        );?>)">
             <a href="<?=
                 $this->displayImage(
                     $illustration->filename,

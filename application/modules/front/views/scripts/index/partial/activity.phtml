@@ -12,8 +12,10 @@ $activity = $this->activity;
         <h4>
             <?= $activity->title ?>
         </h4>
+    </a>
 
-        <p class="illustrate">
+    <p class="illustrate">
+        <a href="<?= $this->baseUrl(); ?>activity/read/id/<?= $activity->id; ?>">
             <?php if (isset($activity->illustrations[0])): ?>
             <img
                 src="<?=
@@ -27,12 +29,17 @@ $activity = $this->activity;
             <?php else: ?>
             <img src="<?= $this->baseUrl()?>files/upload/activity/default.jpg">
             <?php endif; ?>
-        </p>
+        </a>
+    </p>
+    <p class="next">
+        <a href="<?= $this->baseUrl(); ?>activity/read/id/<?= $activity->id; ?>">
+            <?= _('HOME_ACTIVITY_NEXT') ?>
+        </a>
+    </p>
 
-        <div class="content">
-            <?= $activity->content ?>
-        </div>
-    </a>
+    <div class="content">
+        <div class="content"><?= $this->shortify($activity->content, 600); ?></div>
+    </div>
     <?php else: ?>
     <p class='no-result'><?= _('NEWS_LIST_NORESULT'); ?></p>
     <?php endif; ?>

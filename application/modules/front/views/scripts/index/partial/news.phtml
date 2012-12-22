@@ -12,8 +12,10 @@ $news = $this->news;
         <h4>
             <?= $news->title ?>
         </h4>
+    </a>
 
-        <p class="illustrate">
+    <p class="illustrate">
+        <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $news->id; ?>">
             <?php if (isset($news->illustrations[0])): ?>
             <img
                 src="<?=
@@ -27,10 +29,11 @@ $news = $this->news;
             <?php else: ?>
             <img src="<?= $this->baseUrl()?>files/upload/news/default.jpg">
             <?php endif; ?>
-        </p>
+        </a>
+    </p>
+    <p class="next"><a href="<?= $this->baseUrl(); ?>news/read/id/<?= $news->id; ?>"><?= _('HOME_NEWS_NEXT') ?></a></p>
 
-        <div class="content"><?= $news->content ?></div>
-    </a>
+    <div class="content"><?= $this->shortify($news->content, 600); ?></div>
     <?php else: ?>
     <p class='no-result'><?= _('NEWS_LIST_NORESULT'); ?></p>
     <?php endif; ?>

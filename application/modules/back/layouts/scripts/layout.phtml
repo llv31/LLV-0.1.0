@@ -14,23 +14,23 @@ $this->headTitle(_('GLOBAL_HEADER_TITLE'));
 $this->headMeta()->setCharset(Llv_Config::getInstance()->project->charset);
 
 /** Feuilles de style */
-$this->headLink()->prependStylesheet($this->baseUrl() . 'design/' . $module . '/' . $locale . '/_common/css/global.css');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'design/' . $module . '/default/_common/css/global.css');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/' . $locale . '/_common/css/global.css');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/_common/css/global.css');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/' . $module . '/' . $locale . '/_common/css/global.css');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/' . $module . '/default/_common/css/global.css');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/' . $locale . '/_common/css/global.css');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/default/_common/css/global.css');
 
 /** JS Commun */
-$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_common/js/common.js');
+$this->headScript()->appendFile($this->baseUrl() . 'public/design/default/default/_common/js/common.js');
 /** jQuery */
-$this->headScript()->prependFile($this->baseUrl() . 'design/default/default/_plugin/jquery.js');
+$this->headScript()->prependFile($this->baseUrl() . 'public/design/default/default/_plugin/jquery.js');
 /** jQuery UI */
-$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/jquery-ui/js/jquery.ui.js');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/_plugin/jquery-ui/css/style.css');
+$this->headScript()->appendFile($this->baseUrl() . 'public/design/default/default/_plugin/jquery-ui/js/jquery.ui.js');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/default/_plugin/jquery-ui/css/style.css');
 /** ShadowBox */
-$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/shadowbox/shadowbox.js');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'design/default/default/_plugin/shadowbox/shadowbox.css');
+$this->headScript()->appendFile($this->baseUrl() . 'public/design/default/default/_plugin/shadowbox/shadowbox.js');
+$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/default/_plugin/shadowbox/shadowbox.css');
 /** Textarea UI */
-$this->headScript()->appendFile($this->baseUrl() . 'design/' . $module . '/default/_common/js/js.niceedit.js');
+$this->headScript()->appendFile($this->baseUrl() . 'public/design/' . $module . '/default/_common/js/js.niceedit.js');
 
 ?>
 <?php echo $this->doctype(); ?>

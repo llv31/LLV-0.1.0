@@ -15,6 +15,7 @@ class App_View_Helper_Googlemap
 {
     public function googlemap()
     {
+        //@TODO : Dynamiser ça par rapport au données en DB
         return Zend_Json::encode(
             array(
                  array(

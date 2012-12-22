@@ -19,7 +19,7 @@ abstract class Llv_Context_Abstract
      * @abstract
      * @return mixed
      */
-    abstract public static function getInstance();
+//    abstract public static function getInstance();
 
     /**
      * Retourne les en-têtes attendues par les services

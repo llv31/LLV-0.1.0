@@ -26,8 +26,8 @@ class App_View_Helper_DisplayMainMenu
         foreach ($items as $key=> $item) {
             $class = null;
             if ($this->view->isController($item['controller'])) {
-                if (isset($item['current'])) {
-                    if (in_array($this->view->getAction(), $item['current'])) {
+                if (isset($item['actions'])) {
+                    if (in_array($this->view->getAction(), $item['actions'])) {
                         $class = "current";
                     }
                 } else {

@@ -1,7 +1,10 @@
-<h1>An error occurred</h1>
-<h2><?php echo $this->message ?></h2>
+<h2><?= _('ERROR_404_TITLE')?></h2>
+<p><?= _('ERROR_404_CONTENT')?></p>
+
+<p class="back"><a href="<?= $this->baseUrl(); ?>"><?= _('GLOBAL_BACK_HOME') ?></a></p>
 
 <?php if (APPLICATION_ENV == 'dev'): ?>
+    <h3><?php echo $this->message ?></h3>
     <?php if (isset($this->exception)): ?>
 
         <h3>Exception information:</h3>

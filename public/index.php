@@ -4,21 +4,16 @@
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
 
-$appEnv = $_SERVER['REMOTE_ADDR'] == '127.0.0.1' ? 'dev' : 'production';
 // Define application environment
+$appEnv = ($_SERVER['REMOTE_ADDR'] != '127.0.0.1') ? 'production' : 'dev';
 defined('APPLICATION_ENV')
     || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : $appEnv));
 
 // Ensure library/ is on include_path
-set_include_path(
-    implode(
-        PATH_SEPARATOR,
-        array(
-             realpath(APPLICATION_PATH . '/../library'),
-             get_include_path(),
-        )
-    )
-);
+set_include_path(implode(PATH_SEPARATOR, array(
+    realpath(APPLICATION_PATH . '/../library'),
+    get_include_path(),
+)));
 
 ini_set('log', APPLICATION_ENV . '/../data/logs/error.log');
 ini_set('date.timezone', 'Europe/Paris');

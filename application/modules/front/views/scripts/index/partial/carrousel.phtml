@@ -2,8 +2,8 @@
 $carrousel = $this->carrousel;
 /** Carrousel */
 $module = Llv_Context_Application::getInstance()->getActiveModule();
-$this->headScript()->appendFile($this->baseUrl() . 'design/' . $module . '/default/_plugin/carrousel/js/jquery.carrousel.js');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'design/' . $module . '/default/_plugin/carrousel/css/global.css');
+$this->headScript()->appendFile($this->buildDesignUrl('_plugin/carrousel/js/jquery.carrousel.js'));
+$this->headLink()->appendStylesheet($this->buildDesignUrl('_plugin/carrousel/css/global.css'));
 ?>
 <div class="jq-carrousel carrousel">
     <div class="slides_container">

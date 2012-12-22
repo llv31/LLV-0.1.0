@@ -111,10 +111,12 @@ class App_Form_Back_News_Edit
             $filter->id = $idNews;
             $filter->idLangue = $language->id;
             $news = Llv_Context_News::getInstance()->getOne($filter);
-            $this->getElement(App_Model_Constant_News::FORM_PREFIX_TITLE . $language->id)->setValue($news->title);
-            $this->getElement(App_Model_Constant_News::FORM_PREFIX_CONTENT . $language->id)->setValue($news->content);
-            $this->getElement(App_Model_Constant_News::FORM_PREFIX_LINK . $language->id)->setValue($news->link);
-            $this->getElement('location')->setValue($news->location);
+            if (!is_null($news)) {
+                $this->getElement(App_Model_Constant_News::FORM_PREFIX_TITLE . $language->id)->setValue($news->title);
+                $this->getElement(App_Model_Constant_News::FORM_PREFIX_CONTENT . $language->id)->setValue($news->content);
+                $this->getElement(App_Model_Constant_News::FORM_PREFIX_LINK . $language->id)->setValue($news->link);
+                $this->getElement('location')->setValue($news->location);
+            }
         }
     }
 

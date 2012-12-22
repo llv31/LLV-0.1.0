@@ -62,7 +62,9 @@ class App_View_Helper_DisplayImage
                         $thumb->resize($width, $height);
                         $thumb->save($destPath);
                     }
+
                     $fileUrl .= ltrim($newFile, '/');
+
                     return $this->view->baseUrl() . $fileUrl;
                 }
             }

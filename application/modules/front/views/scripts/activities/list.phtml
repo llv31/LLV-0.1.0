@@ -11,56 +11,59 @@ $activitiesPerRow = 3;
 $i = 0;
 ?>
 
-<h2><?= _('ACTIVITY_LIST_TITLE'); ?></h2>
+<div class="page">
+    <h2><?= _('ACTIVITY_LIST_TITLE'); ?></h2>
 
-<?php if (count($spotlight) == 1 && count($activities) > 0): ?>
-<?php if (count($spotlight) == 1): ?>
-    <a href="<?= $this->baseUrl(); ?>activities/read/id/<?= $spotlight->id; ?>">
-        <div class="spotlight">
-            <div class="left">
-                <h3>
-                    <?= $spotlight->title; ?>
-                </h3>
-                <?php if (isset($spotlight->illustrations[0])): ?>
-                <img
-                    src="<?=
-                        $this->displayImage(
-                            $spotlight->illustrations[0]->filename,
-                            Llv_Constant_File_Category::ACTIVITY,
-                            300,
-                            9999
-                        );
-                        ?>"/>
-                <?php endif; ?>
+    <?php if (count($spotlight) == 1 && count($activities) > 0): ?>
+    <?php if (count($spotlight) == 1): ?>
+        <a href="<?= $this->baseUrl(); ?>activities/read/id/<?= $spotlight->id; ?>">
+            <div class="spotlight">
+                <div class="left">
+                    <?php if (isset($spotlight->illustrations[0])): ?>
+                    <img
+                        src="<?=
+                            $this->displayImage(
+                                $spotlight->illustrations[0]->filename,
+                                Llv_Constant_File_Category::ACTIVITY,
+                                300,
+                                9999
+                            );
+                            ?>"/>
+                    <?php endif; ?>
+                </div>
+                <div class="right">
+                    <h3>
+                        <?= $spotlight->title; ?>
+                    </h3>
+
+                    <p><?= $this->shortify($spotlight->content, 1000); ?></p>
+                </div>
             </div>
-            <div class="right">
-                <p><?= $spotlight->content; ?></p>
-            </div>
+        </a>
+        <?php endif; ?>
+
+    <?php if (count($activities) > 0): ?>
+        <div class="activities">
+            <ul>
+                <?php foreach ($activities as $activity): ?>
+                <?php $i++; ?>
+                <a href="<?= $this->baseUrl(); ?>activities/read/id/<?= $activity->id; ?>">
+                    <li<?php if ($i % 3 == 0): ?> class="no-space"<?php endif; ?>>
+                        <div class="left">
+                            <h3>
+                                <?= $activity->title; ?>
+                            </h3>
+                        </div>
+                        <div class="right">
+                            <p><?= $this->shortify($activity->content, 400); ?></p>
+                        </div>
+                    </li>
+                </a>
+                <?php endforeach; ?>
+            </ul>
         </div>
-    </a>
+        <?php endif; ?>
+    <?php else: ?>
+    <p class='no-result'><?= _('ACTIVITY_LIST_NORESULT'); ?></p>
     <?php endif; ?>
-
-<?php if (count($activities) > 0): ?>
-    <div class="activities">
-        <ul>
-            <?php foreach ($activities as $activity): ?>
-            <?php $i++; ?>
-            <a href="<?= $this->baseUrl(); ?>activities/read/id/<?= $activity->id; ?>">
-                <li<?php if ($i % 3 == 0): ?> class="no-space"<?php endif; ?>>
-                    <div class="left">
-                        <h3>
-                            <?= $activity->title; ?>
-                        </h3>
-                    </div>
-                    <div class="right">
-                        <p><?= $activity->content; ?></p>
-                    </div>
-                </li>
-            </a>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-    <?php endif; ?>
-<?php else: ?>
-<p class='no-result'><?= _('ACTIVITY_LIST_NORESULT'); ?></p>
-<?php endif; ?>
+</div>

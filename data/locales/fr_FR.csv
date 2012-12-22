@@ -3,6 +3,8 @@ ERROR_EXCEPTION_SITE_UNKNOWN;Le site que vous essayez d'atteindre n'existe pas.
 ERROR_EXCEPTION_INVALIDARGUMENT;ERREUR TECHNIQUE : L'entity n'est pas correcte
 ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME;La propriété demandée n'existe pas
 ERROR_DB_CONNECTION;Erreur lors de la connexion à la base de données
+ERROR_404_TITLE;Oops !
+ERROR_404_CONTENT;Oops ! La page souhaitée n'existe pas =/
 
 ; Head
 HEAD_TITLE_HOME;Accueil
@@ -36,7 +38,8 @@ GLOBAL_COORDONNEES_TELEPHONE_LABEL;Tél.
 GLOBAL_COORDONNEES_TELEPHONE;+33(0) 561 891 353
 GLOBAL_COORDONNEES_MOBILE_LABEL;Mob.
 GLOBAL_COORDONNEES_MOBILE;+33(0) 618 641 429
-GLOBAL_BACK;Retour
+GLOBAL_BACK;Retourner à la liste
+GLOBAL_BACK_HOME;Retourner à l'accueil
 GLOBAL_CHAMP_OBLIGATOIRE;*
 
 ; Footer
@@ -92,9 +95,11 @@ GLOBAL_DATEPICKER_FIRSTDAY;1
 
 ; Homepage
 HOME_NEWS_TITRE;Dernières nouvelles
-HOME_NEWS_MORE;Autres actualités
+HOME_NEWS_MORE;Voir les autres actualités
+HOME_NEWS_NEXT;Lire la suite de l'article
 HOME_ACTIVITY_TITRE;Activité au hasard
-HOME_ACTIVITY_MORE;Autres activités
+HOME_ACTIVITY_MORE;Voir les autres activités
+HOME_ACTIVITY_NEXT;Lire la suite de l'article
 
 ; News
 NEWS_LIST_TITLE;Actualités
@@ -154,7 +159,7 @@ CONTACT_FORM_LABEL_PRECISIONS;Souhaitez vous apporter des précisions ?
 CONTACT_ENVOI_MAIL_MESSAGE_SUCCES;Votre message nous a bien été envoyé. Nous y répondrons dans les meilleurs délais.
 CONTACT_ENVOI_MAIL_MESSAGE_OBLIGATOIRE;Tous les champs marqués d'un * sont obligatoires.
 CONTACT_FORM_SUBMIT;Faire une demande de réservation
-CONTACT_ENVOI_MAIL_MAIL;aroybase@hotmail.fr
+CONTACT_ENVOI_MAIL_MAIL;contact@gite-luchon.com
 CONTACT_ENVOI_MAIL_SUJET;[Gite-luchon.com] Nouvelle demande de réservation
 CONTACT_ENVOI_MAIL_ALT;Pour afficher ce message, vous devez utiliser un client compatible HTML
 
