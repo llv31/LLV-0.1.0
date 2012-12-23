@@ -11,27 +11,10 @@
  */
 
 class Llv_Dto_Cms_Carrousel
+    extends Llv_Dto_File
 {
-    /** @var int */
-    public $id;
-    /** @var string */
-    public $filename;
-    /** @var string */
-    public $originalFilename;
-    /** @var string */
-    public $mimeType;
-    /** @var int */
-    public $size;
-    /** @var bool */
-    public $online;
-    /** @var int */
-    public $position;
     /** @var string */
     public $link;
     /** @var DateTime */
-    public $dateAdd;
-    /** @var DateTime */
     public $dateUpdate;
-    /** @var DateTime */
-    public $dateDelete;
 }

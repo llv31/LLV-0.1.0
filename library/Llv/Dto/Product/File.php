@@ -10,9 +10,9 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_Activity_File
+class Llv_Dto_Product_File
     extends Llv_Dto_File
 {
     /** @var int */
-    public $idActivity;
+    public $idProduct;
 }

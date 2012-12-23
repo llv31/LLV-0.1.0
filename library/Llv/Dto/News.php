@@ -24,10 +24,6 @@ class Llv_Dto_News
     public $link;
     /** @var int */
     public $position;
-    /** @var string */
-    public $location;
-    /** @var string */
-    public $filename;
     /** @var bool */
     public $online;
     /** @var DateTime */

@@ -11,19 +11,8 @@
  */
 
 class Llv_Dto_News_File
+    extends Llv_Dto_File
 {
     /** @var int */
-    public $id;
-    /** @var int */
     public $idNews;
-    /** @var bool */
-    public $online;
-    /** @var string */
-    public $filename;
-    /** @var int */
-    public $position;
-    /** @var DateTime */
-    public $dateAdd;
-    /** @var DateTime */
-    public $dateDelete;
 }

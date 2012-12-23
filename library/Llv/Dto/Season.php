@@ -1,18 +1,21 @@
 <?php
 /**
- * PHP Class File.php
+ * PHP Class Season.php
  * PHP Version 5
  *
  * @category    : default
  * @package     : default
  * @license     : Not for free use
- * @date        : 15/09/12
+ * @date        : 04/08/12
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_Activity_File
-    extends Llv_Dto_File
+class Llv_Dto_Season
 {
     /** @var int */
-    public $idActivity;
+    public $id;
+    /** @var int */
+    public $idLangue;
+    /** @var int */
+    public $label;
 }

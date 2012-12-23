@@ -6,13 +6,16 @@
  * @category    : default
  * @package     : default
  * @license     : Not for free use
- * @date        : 15/09/12
+ * @date        : 16/09/12
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_Activity_File
-    extends Llv_Dto_File
+class Llv_Entity_Product_Filter_File
 {
     /** @var int */
-    public $idActivity;
+    public $id;
+    /** @var int */
+    public $idProduct;
+    /** @var bool */
+    public $online;
 }

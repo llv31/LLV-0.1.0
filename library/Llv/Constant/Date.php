@@ -12,5 +12,5 @@
 
 class Llv_Constant_Date
 {
-    const FORMAT_DB = 'Y-m-d h:i:s';
+    const FORMAT_DB = 'Y-m-d H:i:s';
 }

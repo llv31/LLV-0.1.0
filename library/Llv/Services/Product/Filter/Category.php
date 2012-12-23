@@ -1,18 +1,19 @@
 <?php
 /**
- * PHP Class File.php
+ * PHP Class Category.php
  * PHP Version 5
  *
  * @category    : default
  * @package     : default
  * @license     : Not for free use
- * @date        : 15/09/12
+ * @date        : 05/08/12
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_Activity_File
-    extends Llv_Dto_File
+class Llv_Services_Product_Filter_Category
 {
     /** @var int */
-    public $idActivity;
+    public $id;
+    /** @var string */
+    public $route;
 }

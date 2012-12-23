@@ -1,18 +1,16 @@
 <?php
 /**
- * PHP Class File.php
+ * PHP Class Product.php
  * PHP Version 5
  *
  * @category    : default
  * @package     : default
  * @license     : Not for free use
- * @date        : 15/09/12
+ * @date        : 29/07/12
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_Activity_File
-    extends Llv_Dto_File
+class Llv_Constant_Product
 {
-    /** @var int */
-    public $idActivity;
+    const DIRECTORY_PATH = 'product';
 }

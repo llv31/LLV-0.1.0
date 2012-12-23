@@ -10,9 +10,13 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_Activity_File
-    extends Llv_Dto_File
+class Llv_Services_Product_Message_File
+    extends Llv_Services_Message_Abstract
 {
     /** @var int */
-    public $idActivity;
+    public $idProduct;
+    /** @var Llv_Dto_Product_File */
+    public $file;
+    /** @var Llv_Dto_Product_File[] */
+    public $files;
 }

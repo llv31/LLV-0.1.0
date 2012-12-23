@@ -10,11 +10,11 @@
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Entity_Activity_Dal_Category
+class Llv_Entity_Product_Dal_Category
     extends Zend_Db_Table_Abstract
 {
-    protected static $_nameTable = "activity_category";
-    protected static $_nameTrad = "activity_category_language";
+    protected static $_nameTable = "product_category";
+    protected static $_nameTrad = "product_category_language";
     protected $_rowClass = "Llv_Entity_Dal_Row_Abstract";
     protected static $_instance;
 
@@ -33,24 +33,24 @@ class Llv_Entity_Activity_Dal_Category
     /**
      * @static
      *
-     * @param Llv_Entity_Activity_Filter_Category $filter
+     * @param Llv_Entity_Product_Filter_Category $filter
      *
      * @return array
      */
-    public static function getOne(Llv_Entity_Activity_Filter_Category $filter)
+    public static function getOne(Llv_Entity_Product_Filter_Category $filter)
     {
         try {
             $sql = Llv_Db::getInstance()->select()
-                ->from(array('a'=> self::$_nameTable))
+                ->from(array('pc'=> self::$_nameTable))
                 ->joinLeft(
                 array(
-                     'al'=> self::$_nameTrad
+                     'pcl'=> self::$_nameTrad
                 ),
-                'a.id = al.category_id',
-                array('title', 'language_id')
+                'pc.id = pcl.category_id',
+                array('title', 'content', 'language_id')
             )
-                ->joinLeft(array('l'=> 'language'), 'l.id = al.language_id')
-                ->where('a.id = ?', $filter->id);
+                ->joinLeft(array('l'=> 'language'), 'l.id = pcl.language_id')
+                ->where('pc.id = ?', $filter->id);
             if (isset($filter->idLangue)) {
                 $sql->where('l.id = ?', $filter->idLangue);
             }
@@ -64,28 +64,28 @@ class Llv_Entity_Activity_Dal_Category
     /**
      * @static
      *
-     * @param Llv_Entity_Activity_Filter_Category $filter
+     * @param Llv_Entity_Product_Filter_Category $filter
      *
      * @return array
      */
-    public static function getAll(Llv_Entity_Activity_Filter_Category $filter)
+    public static function getAll(Llv_Entity_Product_Filter_Category $filter)
     {
         try {
             $sql = Llv_Db::getInstance()->select()
-                ->from(array('a'=> self::$_nameTable))
+                ->from(array('pc'=> self::$_nameTable))
                 ->joinLeft(
                 array(
-                     'al'=> self::$_nameTrad
+                     'pcl'=> self::$_nameTrad
                 ),
-                'a.id = al.category_id',
+                'pc.id = pcl.category_id',
                 array('title', 'language_id')
             )
-                ->joinLeft(array('l'=> 'language'), 'l.id = al.language_id', array());
+                ->joinLeft(array('l'=> 'language'), 'l.id = pcl.language_id', array());
             if (isset($filter->idLangue)) {
                 $sql->where('l.id = ?', $filter->idLangue);
             }
             if ($filter->online) {
-                $sql->where('a.online = ?', $filter->online);
+                $sql->where('pc.online = ?', $filter->online);
             }
             return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {

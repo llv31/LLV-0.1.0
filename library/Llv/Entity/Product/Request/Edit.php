@@ -1,30 +1,25 @@
 <?php
 /**
- * PHP Class News.php
+ * PHP Class Edit.php
  * PHP Version 5
  *
  * @category    : default
  * @package     : default
  * @license     : Not for free use
- * @date        : 04/08/12
+ * @date        : 24/08/12
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_Activity
+class Llv_Entity_Product_Request_Edit
 {
     /** @var int */
     public $id;
     /** @var int */
-    public $idLangue;
-    /** @var string */
-    public $title;
-    /** @var string */
-    public $content;
-    /** @var string */
-    public $link;
+    public $idCategorie;
     /** @var int */
     public $position;
     /** @var string */
+    public $coordonnees;
     /** @var bool */
     public $online;
     /** @var DateTime */
@@ -33,8 +28,8 @@ class Llv_Dto_Activity
     public $dateUpdate;
     /** @var DateTime */
     public $dateDelete;
-    /** @var Llv_Dto_Activity_Category */
-    public $category;
-    /** @var Llv_Dto_Activity_File[] */
-    public $illustrations;
+    /** @var bool */
+    public $moveUp;
+    /** @var bool */
+    public $show;
 }

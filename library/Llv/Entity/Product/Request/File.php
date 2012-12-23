@@ -6,35 +6,30 @@
  * @category    : default
  * @package     : default
  * @license     : Not for free use
- * @date        : 28/07/12
+ * @date        : 15/09/12
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_File
+class Llv_Entity_Product_Request_File
 {
+    /** @var int */
+    public $idProduct;
+    /** @var int */
+    public $id;
     /** @var string */
     public $filename;
     /** @var string */
     public $originalFilename;
     /** @var string */
     public $mimeType;
-    /** @var string */
-    public $extension;
-    /** @var string */
-    public $tmpName;
-    /** @var int */
-    public $error;
     /** @var int */
     public $size;
-
-    /** @var int */
-    public $id;
-    /** @var bool */
-    public $online;
-    /** @var int */
-    public $position;
     /** @var DateTime */
     public $dateAdd;
     /** @var DateTime */
     public $dateDelete;
+    /** @var bool */
+    public $moveUp;
+    /** @var bool */
+    public $show;
 }
