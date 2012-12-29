@@ -74,6 +74,7 @@ class Llv_Services_Product
             $entityFilter->id = $filter->id;
             $entityFilter->idLangue = $filter->idLangue;
             $entityFilter->url = $filter->url;
+            $entityFilter->onlineIllustration = $filter->onlineIllustration;
             $produit = $this->getEntity()->getOne($entityFilter);
             $message->product = $produit;
             $message->success = true;
@@ -203,16 +204,7 @@ class Llv_Services_Product
             $entityRequest->introduction = stripslashes($request->introduction);
             $entityRequest->content = stripslashes($request->content);
 
-            $filter = new Llv_Services_Product_Filter_Product();
-            $filter->id = $request->idProduct;
-            $filter->idLangue = $request->idLangue;
-            $result = $this->getOne($header, $filter);
-
-            if (!$result->success) {
-                $this->getEntity()->addRowContent($entityRequest);
-            } else {
-                $this->getEntity()->updateRowContent($entityRequest);
-            }
+            $this->getEntity()->updateRowContent($entityRequest);
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;
@@ -234,6 +226,7 @@ class Llv_Services_Product
     {
         $message = new Llv_Services_Product_Message_File();
         try {
+            Zend_Debug::dump($request);
             $file = new Llv_Dto_File();
             $file->filename = $request->filename;
             $file->tmpName = $request->tmpName;
@@ -339,7 +332,11 @@ class Llv_Services_Product
             /** On ajoute les illustrations */
             $entityFilter = new Llv_Entity_Product_Filter_File();
             $entityFilter->id = $filter->id;
-            $message->idProduct = $this->getEntity()->deleteRowFile($entityFilter);
+            $filename = $this->getEntity()->deleteRowFile($entityFilter);
+            $this->getUploaderEntity()->deleteFile(
+                $filename,
+                Llv_Constant_File_Category::PRODUCTS
+            );
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;
@@ -456,6 +453,43 @@ class Llv_Services_Product
             $entityRequest->title = $request->title;
             $entityRequest->content = $request->content;
             $this->getEntity()->categoryEditRowContent($entityRequest);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header               $header
+     * @param Llv_Services_Product_Request_File         $request
+     *
+     * @return Llv_Services_Product_Message_Category
+     */
+    public function categoryUpdateFile(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Request_File $request
+    )
+    {
+        $message = new Llv_Services_Product_Message_Category();
+        try {
+            $file = new Llv_Dto_File();
+            $file->filename = $request->filename;
+            $file->tmpName = $request->tmpName;
+            $file->error = $request->error;
+            if ($file->error == UPLOAD_ERR_OK) {
+                if (!$message->success) {
+                    $this->getUploaderEntity()->deleteFile(
+                        $request->id . '.jpg',
+                        Llv_Constant_File_Category::PRODUCTS_CATEGORY
+                    );
+                }
+                $this->getUploaderEntity()->moveFile(
+                    $file,
+                    Llv_Constant_File_Category::PRODUCTS_CATEGORY,
+                    $request->id
+                );
+            }
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

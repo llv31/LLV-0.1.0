@@ -52,6 +52,7 @@ class ActivitiesController
             $filter->idActivity = $id;
             $illustrations = Llv_Context_Activity::getInstance()->getActivityFiles($filter);
             $this->view->assign('illustrations', $illustrations);
+            $this->view->assign('idActivite', $id);
         }
         if ($this->getRequest()->isPost()) {
             if ($formActivityEdit->isValid($_POST)) {
@@ -61,7 +62,7 @@ class ActivitiesController
                 $request->idCategorie = $formActivityEdit->getValue('category');
                 $request->coordonnees = $formActivityEdit->getValue('location');
                 $request->dateUpdate = new DateTime();
-                $issetId = isset($request->id) && !is_null($request->id) && !empty($request->id) ;
+                $issetId = isset($request->id) && !is_null($request->id) && !empty($request->id);
                 if (!$issetId) {
                     $request->dateAdd = $request->dateUpdate;
                     $request->online = true;
@@ -97,7 +98,6 @@ class ActivitiesController
                     Llv_Context_Activity::getInstance()->addRowFile($request);
                     $this->_redirect('activities/edit/id/' . $id . '#jq-pictures');
                 }
-
             }
         }
         $this->view->assign('formActivityEdit', $formActivityEdit);
@@ -148,7 +148,8 @@ class ActivitiesController
             $request->id = $id;
             switch ($this->_getParam('make')) {
                 case 'delete':
-                    $idActivity = Llv_Context_Activity::getInstance()->deleteRowFile($request);
+                    $idActivity = $this->_getParam('idActivite');
+                    Llv_Context_Activity::getInstance()->deleteRowFile($request);
                     break;
                 case 'up':
                     $request->moveUp = true;
@@ -168,7 +169,7 @@ class ActivitiesController
                     break;
             }
             if ($idActivity != false) {
-                $this->_redirect('news/edit/id/' . $idActivity . '#jq-pictures');
+                $this->_redirect('activities/edit/id/' . $idActivity . '#jq-pictures');
             }
         }
     }

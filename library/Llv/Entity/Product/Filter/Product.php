@@ -16,14 +16,16 @@ class Llv_Entity_Product_Filter_Product
     public $id;
     /** @var int */
     public $exceptThisId;
-    /** @var bool */
-    public $url;
-    /** @var bool */
-    public $position;
     /** @var int */
     public $idLangue;
     /** @var int */
     public $idCategory;
+    /** @var bool */
+    public $url;
+    /** @var bool */
+    public $position;
+    /** @var bool */
+    public $onlineIllustration;
     /** @var int */
     public $priceType;
 }

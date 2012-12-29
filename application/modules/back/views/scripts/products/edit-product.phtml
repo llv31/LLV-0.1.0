@@ -1,6 +1,56 @@
 <?php
-$this->headTitle(_('HEAD_TITLE_PRODUCTS') . ' | ');
-$product = $this->product;
-
-Zend_Debug::dump($product);
+$this->headTitle(_('PRODUCTS_EDIT_PRODUCT_TITLE') . ' | ');
+/** @var $formCategoryEdit App_Form_Back_Products_Category */
+$formProductEdit = $this->formProductEdit;
+$formFileUploader = $this->formFileUploader;
+$this->headLink()->appendStylesheet($this->buildDesignUrl('_common/css/onglets.css'));
+$this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-category.css'));
 ?>
+
+<div class="page page_cms">
+    <h2>
+        <?= _('PRODUCTS_EDIT_PRODUCT_TITLE') ?>
+        -
+        <?= $this->product->title ?>
+    </h2>
+
+
+    <?php if (isset($formFileUploader)): ?>
+    <div class="jq-tabs onglets">
+        <ul>
+            <li>
+                <a href="#jq-content"><?php echo _('PRODUCTS_EDIT_TABS_CONTENT'); ?></a>
+            </li>
+            <li>
+                <a href="#jq-prices"><?php echo _('PRODUCTS_EDIT_TABS_PRICES'); ?></a>
+            </li>
+            <li>
+                <a href="#jq-pictures"><?php echo _('PRODUCTS_EDIT_TABS_PICTURES'); ?></a>
+            </li>
+        </ul>
+    <?php endif;?>
+
+    <div id="jq-content">
+        <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
+        <?php echo $formProductEdit; ?>
+    </div>
+
+    <div id="jq-prices">
+        <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
+    </div>
+
+    <?php if (isset($formFileUploader)): ?>
+    <div id="jq-pictures">
+        <?=
+        $this->partial(
+            '/products/partial/illustration-product.phtml',
+            array(
+                 'formFileUploader' => $formFileUploader,
+                 'product'    => $this->product
+            )
+        );
+        ?>
+    </div>
+    </div>
+    <?php endif;?>
+</div>

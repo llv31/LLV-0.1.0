@@ -52,6 +52,9 @@ class Llv_Context_Product
         if (!isset($filter->idLangue)) {
             $filter->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
         }
+        if (!isset($filter->onlineIllustration)) {
+            $filter->onlineIllustration = false;
+        }
         $message = $this->_service->getOne($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->product;
@@ -149,7 +152,7 @@ class Llv_Context_Product
     {
         $message = $this->_service->deleteRowFile($this->getHeaderMessage(), $request);
         if ($message->success) {
-            return $message->idProduct;
+            return true;
         }
         return false;
     }
@@ -209,6 +212,17 @@ class Llv_Context_Product
     public function categoryEditRowContent(Llv_Services_Product_Request_EditCategoryContent $request)
     {
         $message = $this->_service->categoryEditRowContent($this->getHeaderMessage(), $request);
+        return $message->success;
+    }
+
+    /**
+     * @param Llv_Services_Product_Request_File $request
+     *
+     * @return mixed
+     */
+    public function categoryUpdateFile(Llv_Services_Product_Request_File $request)
+    {
+        $message = $this->_service->categoryUpdateFile($this->getHeaderMessage(), $request);
         return $message->success;
     }
 

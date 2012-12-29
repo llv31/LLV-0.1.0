@@ -398,7 +398,11 @@ class Llv_Services_Activity
             /** On ajoute les illustrations */
             $entityFilter = new Llv_Entity_Activity_Filter_File();
             $entityFilter->id = $filter->id;
-            $message->idActivite = $this->getEntity()->deleteRowFile($entityFilter);
+            $filename = $this->getEntity()->deleteRowFile($entityFilter);
+            $this->getUploaderEntity()->deleteFile(
+                $filename,
+                Llv_Constant_File_Category::ACTIVITY
+            );
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

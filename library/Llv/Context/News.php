@@ -176,7 +176,7 @@ public function getAll(Llv_Services_News_Filter_News $filter)
     {
         $message = $this->_service->deleteRowFile($this->getHeaderMessage(), $request);
         if ($message->success) {
-            return $message->idActualite;
+            return true;
         }
         return false;
     }

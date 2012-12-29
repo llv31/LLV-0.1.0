@@ -36,6 +36,8 @@ class Llv_Entity_Product_Helper_Category
             $dto->pricingType = $dal['pricing_type'];
             $dto->pinColor = $dal['pin_color'];
             $dto->route = $dal['route'];
+            $dto->illustration = new Llv_Dto_File();
+            $dto->illustration->filename = $dto->id . '.jpg';
             return $dto;
         }
         return null;

@@ -42,6 +42,7 @@ class ProductsController
 
         $productFilter = new Llv_Services_Product_Filter_Product();
         $productFilter->url = $url;
+        $productFilter->onlineIllustration = true;
         $product = Llv_Context_Product::getInstance()->getOne($productFilter);
         $this->view->assign('product', $product);
 

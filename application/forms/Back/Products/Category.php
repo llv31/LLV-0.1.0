@@ -18,6 +18,7 @@ class App_Form_Back_Products_Category
         $this->setMethod(Zend_Form::METHOD_POST);
         $this->setAttrib('enctype', Zend_Form::ENCTYPE_MULTIPART);
         $this->setAttrib('class', 'i18ned');
+        $this->_setAction('products/edit-category/');
 
         /**  */
         $elements[] = new Zend_Form_Element_Hidden(
@@ -48,7 +49,7 @@ class App_Form_Back_Products_Category
             $textarea = new Zend_Form_Element_Textarea(
                 array(
                      'name'            => App_Model_Constant_Products_Category::FORM_PREFIX_CONTENT . $language->id,
-                     'label'           => _('PRODUCTS_LIST_CATEGORIE') . ' ' . $language->label,
+                     'label'           => _('PRODUCTS_LIST_DESCRIPTION') . ' ' . $language->label,
                      'class'           => 'jq-lang',
                      'data-language'   => $language->locale->toString()
                 )

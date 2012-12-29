@@ -474,12 +474,13 @@ class Llv_Entity_Activity_Dal_Activity
             $file = self::getActivityFile($filter);
             $date = new DateTime();
             $params['date_delete'] = $date->format(Llv_Constant_Date::FORMAT_DB);
+            $params['position'] = 0;
             Llv_Db::getInstance()->update(
                 self::$_nameFile,
                 $params,
                 'id = ' . $filter->id
             );
-            return $file['activity_id'];
+            return $file['filename'];
         } catch (Exception $e) {
             Zend_Debug::dump($e);
             error_log($e);

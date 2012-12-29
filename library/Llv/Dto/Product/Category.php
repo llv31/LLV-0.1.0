@@ -30,4 +30,6 @@ class Llv_Dto_Product_Category
     public $pinColor;
     /** @var int */
     public $pricingType;
+    /** @var string */
+    public $illustration;
 }

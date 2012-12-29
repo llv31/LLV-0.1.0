@@ -444,8 +444,14 @@ msgstr "Catégories"
 msgid "PRODUCTS_PRODUCT_LIST_TITLE"
 msgstr "Produits"
 
+msgid "PRODUCTS_LIST_TYPE"
+msgstr "Type"
+
 msgid "PRODUCTS_LIST_TITRE"
 msgstr "Titre"
+
+msgid "PRODUCTS_LIST_DESCRIPTION"
+msgstr "Description"
 
 msgid "PRODUCTS_LIST_CATEGORIE"
 msgstr "Catégorie"
@@ -468,6 +474,9 @@ msgstr "Contenus"
 msgid "PRODUCTS_EDIT_TABS_PICTURES"
 msgstr "Illustrations"
 
+msgid "PRODUCTS_LIST_CATEGORIE_ROUTE"
+msgstr "URL de la catégorie"
+
 msgid "PRODUCTS_LIST_CATEGORIE_COORDONNEES"
 msgstr "Coordonnées GPS"
 
@@ -488,6 +497,15 @@ msgstr "Violet"
 
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_YELLOW"
 msgstr "Jaune"
+
+msgid "PRODUCTS_EDIT_PRODUCT_TITLE"
+msgstr "Éditer la location"
+
+msgid "PRODUCTS_EDIT_TABS_PRICES"
+msgstr "Disponibilités & tarifs"
+
+msgid "PRODUCTS_LIST_INTRO"
+msgstr "Introduction"
 
 msgid "PRODUCTS_ONGLET_CONTENT"
 msgstr "Description"

@@ -312,7 +312,7 @@ class Llv_Entity_Product_Dal_Product
             $where = 'product_id = ' . $request->idProduct . ' AND language_id = ' . $request->idLangue;
             $params['title'] = $request->title;
             $params['content'] = $request->content;
-            $params['link'] = $request->lien;
+            $params['introduction'] = $request->introduction;
             return Llv_Db::getInstance()
                 ->update(
                 self::$_nameTrad,
@@ -481,12 +481,13 @@ class Llv_Entity_Product_Dal_Product
             $file = self::getProductFile($filter);
             $date = new DateTime();
             $params['date_delete'] = $date->format(Llv_Constant_Date::FORMAT_DB);
+            $params['position'] = 0;
             Llv_Db::getInstance()->update(
                 self::$_nameFile,
                 $params,
                 'id = ' . $filter->id
             );
-            return $file['product_id'];
+            return $file['filename'];
         } catch (Exception $e) {
             Zend_Debug::dump($e);
             error_log($e);

@@ -176,7 +176,7 @@ class Llv_Context_Activity
     {
         $message = $this->_service->deleteRowFile($this->getHeaderMessage(), $request);
         if ($message->success) {
-            return $message->idActivity;
+            return true;
         }
         return false;
     }

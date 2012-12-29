@@ -16,10 +16,11 @@ class Llv_Entity_Uploader
     /**
      * @param Llv_Dto_File $file
      * @param              $type
+     * @param null         $id
      *
      * @return bool|null|string
      */
-    public function moveFile(Llv_Dto_File $file, $type)
+    public function moveFile(Llv_Dto_File $file, $type, $id = null)
     {
         if (Llv_Constant_File_Category::isValid($type)) {
             $path = Llv_Services_Referential_Helper_Files::getUploadPath() . $type . '/';
@@ -28,22 +29,36 @@ class Llv_Entity_Uploader
             unset($filename[count($filename) - 1]);
             $file->filename = uniqid();
 
-            if (move_uploaded_file($file->tmpName, $path . $file->filename . '.' . $file->extension)) {
-                return $file->filename . '.' . $file->extension;
+            $file->filename = (is_null($id) ? $file->filename . '.' . $file->extension : $id . '.jpg');
+            if (move_uploaded_file($file->tmpName, $path . $file->filename)) {
+                return $file->filename;
             }
         }
         return null;
     }
 
     /**
-     * @param $filename
+     * @param $filenameWithExt
      * @param $type
      */
-    public function deleteFile($filename, $type)
+    public function deleteFile($filenameWithExt, $type)
     {
         if (Llv_Constant_File_Category::isValid($type)) {
             $path = Llv_Services_Referential_Helper_Files::getUploadPath() . $type . '/';
-            unlink($path . $filename);
+            $thumbPath = Llv_Services_Referential_Helper_Files::getUploadPath() . $type . '/_thumb/';
+            unlink($path . $filenameWithExt);
+
+            $files = new DirectoryIterator($thumbPath);
+            $filename = explode('.', $filenameWithExt);
+            $filename = $filename[0];
+            /** @var $file SplFileInfo */
+            foreach ($files as $file) {
+                if (!$file->isDir()) {
+                    if (strstr($file->getFilename(), $filename)) {
+                        unlink($thumbPath . $file->getFilename());
+                    }
+                }
+            }
         }
     }
 }

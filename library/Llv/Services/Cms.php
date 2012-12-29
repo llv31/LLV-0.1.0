@@ -222,7 +222,11 @@ class Llv_Services_Cms
         try {
             $entityFilter = new Llv_Entity_Cms_Request_Carrousel();
             $entityFilter->id = $request->id;
-            $this->getEntity()->carrouselDeleteRow($entityFilter);
+            $filename = $this->getEntity()->carrouselDeleteRow($entityFilter);
+            $this->getUploaderEntity()->deleteFile(
+                $filename,
+                Llv_Constant_File_Category::CARROUSEL
+            );
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

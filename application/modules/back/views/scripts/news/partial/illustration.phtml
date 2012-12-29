@@ -1,6 +1,7 @@
 <?php
 $formFileUploader = $this->formFileUploader;
 $illustrations = $this->illustrations;
+$idNews = $this->idNews;
 ?>
 
 <div class="add">
@@ -30,7 +31,7 @@ $illustrations = $this->illustrations;
         </a>
 
         <p class="actions">
-            <a href="<?= $this->baseUrl(); ?>news/file-update/make/delete/id/<?= $illustration->id; ?>"
+            <a href="<?= $this->baseUrl(); ?>news/file-update/make/delete/id/<?= $illustration->id; ?>/idNews/<?= $idNews; ?>"
                class="jq-delete delete"
                title="<?= _('GLOBAL_ADMIN_DELETE') ?>">
                 <?= _('GLOBAL_ADMIN_DELETE') ?>

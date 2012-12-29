@@ -1,4 +1,8 @@
 /* •••••••••••••••••••••••••••••••••• */
+#wrapper .category {
+    overflow: hidden;
+}
+
 #wrapper .category h2 em {
     font-size: .8em;
 }
@@ -6,12 +10,22 @@
 #wrapper .category .content {
     text-align: justify;
     font-size: 1.1em;
-    width: 50%;
-    margin-right: 3%;
+    margin-right: 20px;
 }
 
 #wrapper .category .adresse {
     display: none;
+}
+
+#wrapper .category .illustration {
+    width: 460px;
+    float: right;
+    margin: 0 0 20px 20px
+}
+
+#wrapper .category .illustration img {
+    display: block;
+    border: 5px solid #D1D3BB;
 }
 
 /* •••••••••••••••••••••••••••••••••• */

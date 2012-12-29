@@ -52,6 +52,7 @@ class NewsController
             $filter->idNews = $id;
             $illustrations = Llv_Context_News::getInstance()->getNewsFiles($filter);
             $this->view->assign('illustrations', $illustrations);
+            $this->view->assign('idNews', $id);
         }
         if ($this->getRequest()->isPost()) {
             if ($formNewsEdit->isValid($_POST)) {
@@ -148,7 +149,8 @@ class NewsController
             $request->id = $id;
             switch ($this->_getParam('make')) {
                 case 'delete':
-                    $idNews = Llv_Context_News::getInstance()->deleteRowFile($request);
+                    $idNews = $this->_getParam('idNews');
+                    Llv_Context_News::getInstance()->deleteRowFile($request);
                     break;
                 case 'up':
                     $request->moveUp = true;

@@ -6,6 +6,25 @@ $this->headTitle($category->title . ' | ');
 <div class="category">
     <h2><?= $category->title ?> <em>(<?= $category->type ?>)</em></h2>
 
+    <div class="illustration">
+        <a href="<?=
+        $this->displayImage(
+            $category->illustration->filename,
+            Llv_Constant_File_Category::PRODUCTS_CATEGORY,
+            1000,
+            600
+        );
+        ?>"
+           rel="shadowbox[picture]">
+            <img src="<?=
+            $this->displayImage(
+                $category->illustration->filename,
+                Llv_Constant_File_Category::PRODUCTS_CATEGORY,
+                450
+            );
+            ?>"/>
+        </a>
+    </div>
     <div class="content"><?= $category->content; ?></div>
     <div class="adresse"><?= $category->adresse; ?></div>
 </div>

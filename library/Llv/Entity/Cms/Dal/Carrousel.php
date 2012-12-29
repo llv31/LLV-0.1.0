@@ -191,52 +191,16 @@ class Llv_Entity_Cms_Dal_Carrousel
         $filter->id = $request->id;
         $carrousel = self::getOne($filter);
         if (!is_null($carrousel)) {
-            if (self::deleteRowFiles($carrousel)) {
-                /** Suppression Définitive */
-//                return Llv_Db::getInstance()->delete(
-//                    self::$_name,
-//                    'id = ' . $request->id
-//                );
-                /** Suppression logique */
-                $dateDelete = new DateTime();
-                $params['date_delete'] = $dateDelete->format(Llv_Constant_Date::FORMAT_DB);
-                $params['position'] = 0;
-                $params['online'] = false;
-                return Llv_Db::getInstance()->update(
-                    self::$_name,
-                    $params,
-                    'id = ' . $request->id
-                );
-            }
-        }
-        return false;
-    }
-
-    /**
-     * @static
-     *
-     * @param array $carrousel
-     *
-     * @return bool
-     */
-    public static function deleteRowFiles(array $carrousel)
-    {
-        /** On supprime l'image associée */
-        $filePath = Llv_Services_Cms_Helper_Carrousel::getCarrouselFilesPath() . $carrousel['filename'];
-        $filename = explode('.', $carrousel['filename']);
-        unset($filename[count($filename) - 1]);
-        $filename = implode('.', $filename);
-        if (unlink($filePath)) {
-            /** On supprime les miniatures associées */
-            $thumbPath = Llv_Services_Cms_Helper_Carrousel::getCarrouselFilesPath() . '_thumb/';
-            $directory = opendir($thumbPath);
-            while (($file = readdir($directory)) !== false) {
-                $explodedFile = explode('_thumb_', $file);
-                if ($explodedFile[0] == $filename) {
-                    unlink($thumbPath . $file);
-                }
-            }
-            return true;
+            $dateDelete = new DateTime();
+            $params['date_delete'] = $dateDelete->format(Llv_Constant_Date::FORMAT_DB);
+            $params['position'] = 0;
+            $params['online'] = false;
+            Llv_Db::getInstance()->update(
+                self::$_name,
+                $params,
+                'id = ' . $request->id
+            );
+            return $carrousel['filename'];
         }
         return false;
     }

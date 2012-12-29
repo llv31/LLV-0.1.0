@@ -24,4 +24,6 @@ class Llv_Services_Product_Filter_Product
     public $url;
     /** @var bool */
     public $position;
+    /** @var bool */
+    public $onlineIllustration;
 }

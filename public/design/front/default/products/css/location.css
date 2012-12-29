@@ -17,11 +17,18 @@
     overflow: hidden;
     margin-bottom: 30px;
     text-align: justify;
+    font-size: 1.1em;
 }
 
 /* •••••••••••••••••••••••••••••••••• */
 
 #wrapper .content {
+    font-size: 1.03em;
+}
+
+#wrapper .content ul {
+    list-style-type: disc;
+    list-style-position: inside;
 }
 
 /* •••••••••••••••••••••••••••••••••• */

@@ -1,7 +1,8 @@
 <?php
 $formFileUploader = $this->formFileUploader;
 $illustrations = $this->illustrations;
-$idActivite = $this->idActivite;
+$product = $this->product;
+$illustrations = $product->illustrations;
 ?>
 
 <div class="add">
@@ -15,7 +16,7 @@ $idActivite = $this->idActivite;
         <a href="<?=
             $this->displayImage(
                 $illustration->filename,
-                Llv_Constant_File_Category::ACTIVITY,
+                Llv_Constant_File_Category::PRODUCTS,
                 800,
                 600
             );
@@ -24,36 +25,36 @@ $idActivite = $this->idActivite;
             <img src="<?=
                 $this->displayImage(
                     $illustration->filename,
-                    Llv_Constant_File_Category::ACTIVITY,
+                    Llv_Constant_File_Category::PRODUCTS,
                     195
                 );
                 ?>"/>
         </a>
 
         <p class="actions">
-            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/delete/id/<?= $illustration->id; ?>/idActivite/<?= $idActivite; ?>"
+            <a href="<?= $this->baseUrl(); ?>products/file-update/make/delete/id/<?= $illustration->id; ?>/idProduct/<?= $product->id; ?>"
                class="jq-delete delete"
                title="<?= _('GLOBAL_ADMIN_DELETE') ?>">
                 <?= _('GLOBAL_ADMIN_DELETE') ?>
             </a>
-            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/up/id/<?= $illustration->id; ?>"
+            <a href="<?= $this->baseUrl(); ?>products/file-update/make/up/id/<?= $illustration->id; ?>"
                class="moveup"
                title="<?= _('GLOBAL_ADMIN_UP') ?>">
                 <?= _('GLOBAL_ADMIN_UP') ?>
             </a>
-            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/down/id/<?= $illustration->id; ?>"
+            <a href="<?= $this->baseUrl(); ?>products/file-update/make/down/id/<?= $illustration->id; ?>"
                class="movedown"
                title="<?= _('GLOBAL_ADMIN_DOWN') ?>">
                 <?= _('GLOBAL_ADMIN_DOWN') ?>
             </a>
             <?php if ($illustration->online): ?>
-            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/offline/id/<?= $illustration->id; ?>"
+            <a href="<?= $this->baseUrl(); ?>products/file-update/make/offline/id/<?= $illustration->id; ?>"
                class="putoffline"
                title="<?= _('GLOBAL_ADMIN_OFFLINE') ?>">
                 <?= _('GLOBAL_ADMIN_OFFLINE') ?>
             </a>
             <?php else: ?>
-            <a href="<?= $this->baseUrl(); ?>activities/file-update/make/online/id/<?= $illustration->id; ?>"
+            <a href="<?= $this->baseUrl(); ?>products/file-update/make/online/id/<?= $illustration->id; ?>"
                class="putonline"
                title="<?= _('GLOBAL_ADMIN_ONLINE') ?>">
                 <?= _('GLOBAL_ADMIN_ONLINE') ?>

@@ -398,7 +398,11 @@ class Llv_Services_News
             /** On ajoute les illustrations */
             $entityFilter = new Llv_Entity_News_Filter_File();
             $entityFilter->id = $filter->id;
-            $message->idActualite = $this->getEntity()->deleteRowFile($entityFilter);
+            $filename = $this->getEntity()->deleteRowFile($entityFilter);
+            $this->getUploaderEntity()->deleteFile(
+                $filename,
+                Llv_Constant_File_Category::NEWS
+            );
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

@@ -232,11 +232,11 @@ var nicEditorConfig = bkClass.extend({
         'right':{name:__('Right Align'), command:'justifyright', noActive:true},
         'justify':{name:__('Justify Align'), command:'justifyfull', noActive:true},
 //        'ol' : {name : __('Insert Ordered List'), command : 'insertorderedlist', tags : ['OL']},
-//        'ul' : 	{name : __('Insert Unordered List'), command : 'insertunorderedlist', tags : ['UL']},
+        'ul' : 	{name : __('Insert Unordered List'), command : 'insertunorderedlist', tags : ['UL']},
 //        'subscript' : {name : __('Click to Subscript'), command : 'subscript', tags : ['SUB']},
 //        'superscript' : {name : __('Click to Superscript'), command : 'superscript', tags : ['SUP']},
 //        'strikethrough' : {name : __('Click to Strike Through'), command : 'strikeThrough', css : {'text-decoration' : 'line-through'}},
-        'removeformat':{name:__('Remove Formatting'), command:'removeformat', noActive:true},
+//        'removeformat':{name:__('Remove Formatting'), command:'removeformat', noActive:true},
 //        'indent' : {name : __('Indent Text'), command : 'indent', noActive : true},
 //        'outdent' : {name : __('Remove Indent'), command : 'outdent', noActive : true},
 //        'hr' : {name : __('Horizontal Rule'), command : 'insertHorizontalRule', noActive : true}
@@ -738,7 +738,7 @@ var nicSelectOptions = {
     buttons:{
 //        'fontSize' : {name : __('Select Font Size'), type : 'nicEditorFontSizeSelect', command : 'fontsize'},
 //        'fontFamily' : {name : __('Select Font Family'), type : 'nicEditorFontFamilySelect', command : 'fontname'},
-//        'fontFormat' : {name : __('Select Font Format'), type : 'nicEditorFontFormatSelect', command : 'formatBlock'}
+        'fontFormat' : {name : __('Select Font Format'), type : 'nicEditorFontFormatSelect', command : 'formatBlock'}
     }
 };
 

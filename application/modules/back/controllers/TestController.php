@@ -78,10 +78,29 @@ class TestController
     /**
      * PHP Info
      */
+    public function directoryAction()
+    {
+        $directory = Llv_Services_Referential_Helper_Files::getUploadPath() . Llv_Constant_File_Category::CARROUSEL . '/_thumb/';
+        $files = new DirectoryIterator($directory);
+        Zend_Debug::dump($files);
+        $needle = '50b0b71d4b629';
+        foreach ($files as $file) {
+            if (!$file->isDir()) {
+                if (strstr($file->getFilename(), $needle)) {
+                    echo $file->getFilename() . '++</br>';
+                } else {
+                    echo $file->getFilename() . '--</br>';
+                }
+            }
+        }
+    }
+
+    /**
+     * PHP Info
+     */
     public function infoAction()
     {
         print phpinfo();
-        die;
     }
 
 

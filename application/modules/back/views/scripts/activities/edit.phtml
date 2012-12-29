@@ -36,7 +36,8 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('activities/css/index.
             '/activities/partial/illustration.phtml',
             array(
                  'formFileUploader' => $formFileUploader,
-                 'illustrations'    => $this->illustrations
+                 'illustrations'    => $this->illustrations,
+                 'idActivite'    => $this->idActivite,
             )
         );
         ?>

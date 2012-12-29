@@ -19,7 +19,7 @@ class Llv_Entity_Product_Request_EditContent
     /** @var string */
     public $title;
     /** @var string */
-    public $content;
+    public $introduction;
     /** @var string */
-    public $lien;
+    public $content;
 }

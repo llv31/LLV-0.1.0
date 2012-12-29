@@ -470,12 +470,13 @@ class Llv_Entity_News_Dal_News
             $file = self::getNewsFile($filter);
             $date = new DateTime();
             $params['date_delete'] = $date->format(Llv_Constant_Date::FORMAT_DB);
+            $params['position'] = 0;
             Llv_Db::getInstance()->update(
                 self::$_nameFile,
                 $params,
                 'id = ' . $filter->id
             );
-            return $file['news_id'];
+            return $file['filename'];
         } catch (Exception $e) {
             Zend_Debug::dump($e);
             error_log($e);

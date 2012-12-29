@@ -53,6 +53,10 @@ class ProductsController
     public function editCategoryAction()
     {
         $id = $this->_getParam('id');
+        $filter = new Llv_Services_Product_Filter_Category();
+        $filter->id = $id;
+        $categorie = Llv_Context_Product::getInstance()->categoryGetOne($filter);
+        $this->view->assign('categorie', $categorie);
 
         $formCategoryEdit = new App_Form_Back_Products_Category($id);
         $formFileUploader = new App_Form_Back_FileUploader(1);
@@ -79,9 +83,20 @@ class ProductsController
                     $request->content = $content[App_Model_Constant_Products_Category::FORM_PREFIX_CONTENT . $language->id];
                     Llv_Context_Product::getInstance()->categoryEditRowContent($request);
                 }
+                $this->_redirect('products/edit-category/id/' . $id);
 
             } elseif ($formFileUploader->isValid($_POST)) {
-
+                foreach ($_FILES as $file) {
+                    $request = new Llv_Services_Product_Request_File();
+                    $request->id = $id;
+                    $request->filename = $file['name'];
+                    $request->mimeType = $file['type'];
+                    $request->tmpName = $file['tmp_name'];
+                    $request->error = $file['error'];
+                    $request->size = $file['size'];
+                    Llv_Context_Product::getInstance()->categoryUpdateFile($request);
+                    $this->_redirect('products/edit-category/id/' . $id . '#jq-pictures');
+                }
             }
         }
 
@@ -100,5 +115,79 @@ class ProductsController
         $filter->id = $id;
         $product = Llv_Context_Product::getInstance()->getOne($filter);
         $this->view->assign('product', $product);
+
+        $formProductEdit = new App_Form_Back_Product($id);
+        $formFileUploader = new App_Form_Back_FileUploader();
+
+        if ($this->getRequest()->isPost()) {
+            if ($formProductEdit->isValid($_POST)) {
+                $title = $this->_getParam(App_Model_Constant_Product::FORM_PREFIX_TITLE);
+                $intro = $this->_getParam(App_Model_Constant_Product::FORM_PREFIX_INTRO);
+                $content = $this->_getParam(App_Model_Constant_Product::FORM_PREFIX_CONTENT);
+                foreach (Llv_Context_Referential::getInstance()->getLanguages() as $language) {
+                    $request = new Llv_Services_Product_Request_EditContent();
+                    $request->idProduct = $formProductEdit->getValue('id');
+                    $request->idLangue = $language->id;
+                    $request->title = $title[App_Model_Constant_Product::FORM_PREFIX_TITLE . $language->id];
+                    $request->introduction = $intro[App_Model_Constant_Product::FORM_PREFIX_INTRO . $language->id];
+                    $request->content = $content[App_Model_Constant_Product::FORM_PREFIX_CONTENT . $language->id];
+                    Llv_Context_Product::getInstance()->editRowContent($request);
+                }
+                $this->_redirect('products/edit-product/id/' . $id);
+            } elseif ($formFileUploader->isValid($_POST)) {
+                foreach ($_FILES as $file) {
+                    $request = new Llv_Services_Product_Request_File();
+                    $request->idProduct = $id;
+                    $request->filename = $file['name'];
+                    $request->mimeType = $file['type'];
+                    $request->tmpName = $file['tmp_name'];
+                    $request->error = $file['error'];
+                    $request->size = $file['size'];
+                    Llv_Context_Product::getInstance()->addRowFile($request);
+                }
+                $this->_redirect('products/edit-product/id/' . $id . '#jq-pictures');
+            }
+        }
+
+        $this->view->assign('formProductEdit', $formProductEdit);
+        $this->view->assign('formFileUploader', $formFileUploader);
+    }
+
+    /**
+     *
+     */
+    public function fileUpdateAction()
+    {
+        $id = $this->_getParam('id');
+        if (!is_null($id)) {
+            $idProduct = false;
+            $request = new Llv_Services_Product_Request_File();
+            $request->id = $id;
+            switch ($this->_getParam('make')) {
+                case 'delete':
+                    $idProduct = $this->_getParam('idProduct');
+                    Llv_Context_Product::getInstance()->deleteRowFile($request);
+                    break;
+                case 'up':
+                    $request->moveUp = true;
+                    $idProduct = Llv_Context_Product::getInstance()->updateRowFile($request);
+                    break;
+                case 'down':
+                    $request->moveUp = false;
+                    $idProduct = Llv_Context_Product::getInstance()->updateRowFile($request);
+                    break;
+                case 'online':
+                    $request->show = true;
+                    $idProduct = Llv_Context_Product::getInstance()->updateRowFile($request);
+                    break;
+                case 'offline':
+                    $request->show = false;
+                    $idProduct = Llv_Context_Product::getInstance()->updateRowFile($request);
+                    break;
+            }
+            if ($idProduct != false) {
+                $this->_redirect('/products/edit-product/id/' . $idProduct . '#jq-pictures');
+            }
+        }
     }
 }

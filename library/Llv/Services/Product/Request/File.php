@@ -19,15 +19,21 @@ class Llv_Services_Product_Request_File
     /** @var string */
     public $filename;
     /** @var string */
-    public $mimeType;
+    public $originalFilename;
     /** @var string */
-    public $tmpName;
-    /** @var array */
-    public $error;
+    public $mimeType;
     /** @var int */
     public $size;
+    /** @var DateTime */
+    public $dateAdd;
+    /** @var DateTime */
+    public $dateDelete;
     /** @var bool */
     public $moveUp;
     /** @var bool */
     public $show;
+    /** @var string */
+    public $tmpName;
+    /** @var array */
+    public $error;
 }

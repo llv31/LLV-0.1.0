@@ -10,6 +10,8 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-cat
 <div class="page page_cms">
     <h2>
         <?= _('PRODUCTS_EDIT_CATEGORIE_TITLE') ?>
+        -
+        <?= $this->categorie->title ?>
     </h2>
 
 
@@ -37,7 +39,7 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-cat
             '/products/partial/illustration-category.phtml',
             array(
                  'formFileUploader' => $formFileUploader,
-                 'illustrations'    => $this->illustrations
+                 'categorie'    => $this->categorie
             )
         );
         ?>
