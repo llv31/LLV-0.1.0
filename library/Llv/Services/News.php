@@ -300,7 +300,7 @@ class Llv_Services_News
             if ($file->error == UPLOAD_ERR_OK) {
                 $filename = $this->getUploaderEntity()->moveFile(
                     $file,
-                    Llv_Services_News_Helper_News::getNewsFilesPath()
+                    Llv_Constant_File_Category::NEWS
                 );
                 if (!is_null($filename)) {
                     $entityFilter = new Llv_Entity_News_Request_File();
@@ -316,7 +316,10 @@ class Llv_Services_News
                     }
                 }
                 if (!$message->success) {
-                    unlink(Llv_Services_News_Helper_News::getNewsFilesPath() . $filename);
+                    $this->getUploaderEntity()->deleteFile(
+                        $filename,
+                        Llv_Constant_File_Category::NEWS
+                    );
                 }
             }
         } catch (Exception $e) {

@@ -15,20 +15,35 @@ class Llv_Entity_Uploader
 {
     /**
      * @param Llv_Dto_File $file
-     * @param              $path
+     * @param              $type
      *
-     * @return bool
+     * @return bool|null|string
      */
-    public function moveFile(Llv_Dto_File $file, $path)
+    public function moveFile(Llv_Dto_File $file, $type)
     {
-        $filename = explode('.', $file->filename);
-        $file->extension = $filename[count($filename) - 1];
-        unset($filename[count($filename) - 1]);
-        $file->filename = uniqid();
+        if (Llv_Constant_File_Category::isValid($type)) {
+            $path = Llv_Services_Referential_Helper_Files::getUploadPath() . $type . '/';
+            $filename = explode('.', $file->filename);
+            $file->extension = $filename[count($filename) - 1];
+            unset($filename[count($filename) - 1]);
+            $file->filename = uniqid();
 
-        if (move_uploaded_file($file->tmpName, $path . $file->filename . '.' . $file->extension)) {
-            return $file->filename . '.' . $file->extension;
+            if (move_uploaded_file($file->tmpName, $path . $file->filename . '.' . $file->extension)) {
+                return $file->filename . '.' . $file->extension;
+            }
         }
         return null;
+    }
+
+    /**
+     * @param $filename
+     * @param $type
+     */
+    public function deleteFile($filename, $type)
+    {
+        if (Llv_Constant_File_Category::isValid($type)) {
+            $path = Llv_Services_Referential_Helper_Files::getUploadPath() . $type . '/';
+            unlink($path . $filename);
+        }
     }
 }

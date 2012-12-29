@@ -31,7 +31,6 @@ class App_Form_Back_FileUploader
                 )
             );
             $file->addValidator('Extension', false, 'jpg,png,jpeg');
-//            $file->setDestination(Llv_Services_Cms_Helper_Carrousel::getCarrouselFilesPath());
             $elements[] = $file->setBelongsTo(App_Model_Constant_Upload::FORM_PREFIX_FILE);
         }
 

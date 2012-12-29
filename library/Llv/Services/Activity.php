@@ -300,7 +300,7 @@ class Llv_Services_Activity
             if ($file->error == UPLOAD_ERR_OK) {
                 $filename = $this->getUploaderEntity()->moveFile(
                     $file,
-                    Llv_Services_Activity_Helper_Activity::getActivityFilesPath()
+                    Llv_Constant_File_Category::ACTIVITY
                 );
                 if (!is_null($filename)) {
                     $entityFilter = new Llv_Entity_Activity_Request_File();
@@ -316,7 +316,10 @@ class Llv_Services_Activity
                     }
                 }
                 if (!$message->success) {
-                    unlink(Llv_Services_Activity_Helper_Activity::getActivityFilesPath() . $filename);
+                    $this->getUploaderEntity()->deleteFile(
+                        $filename,
+                        Llv_Constant_File_Category::ACTIVITY
+                    );
                 }
             }
         } catch (Exception $e) {
