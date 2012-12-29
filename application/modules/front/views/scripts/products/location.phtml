@@ -7,8 +7,11 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/location
 $this->headScript()->appendFile($this->buildDesignUrl('products/js/location.js'));
 ?>
 <div class="page">
-    <p class="back"><a href="<?= $this->urlRetour; ?>"><?= _('GLOBAL_BACK') ?></a></p>
+
+    <p class="back"><a href="<?= $this->urlRetour; ?>"><?= _('GLOBAL_BACK_SIMPLE') ?></a></p>
+
     <h2><?= $product->title; ?></h2>
+
     <div class="introduction"><?= $product->introduction; ?></div>
     <div class="jq-tabs onglets">
         <?=
@@ -56,4 +59,5 @@ $this->headScript()->appendFile($this->buildDesignUrl('products/js/location.js')
         ?>
 
     </div>
+    <p class="back"><a href="<?= $this->urlRetour; ?>"><?= _('GLOBAL_BACK_SIMPLE') ?></a></p>
 </div>

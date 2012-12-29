@@ -24,6 +24,7 @@ class Llv_Entity_Product_Helper_Category
         if (count($dal) > 0) {
             $dto = new Llv_Dto_Product_Category();
             $dto->id = $dal['id'];
+            $dto->type = $dal['type'];
             $dto->title = $dal['title'];
             $dto->content = $dal['content'];
             $dto->adresse = nl2br($dal['address']);

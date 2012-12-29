@@ -29,7 +29,7 @@ class App_View_Helper_Googlemap
                     array(
                          "<ul class=\"adresse\">",
                          "<li><strong>" . $categorie->title . "</strong></li>",
-                         "<li class=\"type\">(" . _('CONTACT_CATEGORY_TYPE' . $categorie->id) . ")</li>",
+                         "<li class=\"type\">(" . $categorie->type . ")</li>",
                          "<li>" . $categorie->adresse . "</li>",
                          "<li class=\"phone\"><span>" . _('GLOBAL_COORDONNEES_TELEPHONE_LABEL') . "</span>&nbsp;"
                              . _('GLOBAL_COORDONNEES_TELEPHONE') . "</li>",

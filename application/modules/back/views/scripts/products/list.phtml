@@ -1,0 +1,81 @@
+<?php
+$this->headTitle(_('HEAD_TITLE_PRODUCTS') . ' | ');
+$this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/list.css'));
+$categories = $this->categories;
+$products = $this->products;
+?>
+
+<div class="page page_cms">
+    <h2>
+        <?= _('PRODUCTS_CATEGORY_LIST_TITLE') ?>
+    </h2>
+
+
+    <?php if (count($categories) > 0): ?>
+    <table class="list">
+        <thead>
+        <tr>
+            <th><?= _('PRODUCTS_LIST_TITRE')?></th>
+            <th class="actions"><?= _('GLOBAL_ADMIN_LIST_ACTIONS')?></th>
+        </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($categories as $categorie): ?>
+        <tr>
+            <td><?= $categorie->title; ?></td>
+            <td class="actions">
+                <a href="<?= $this->baseUrl(); ?>products/edit-category/id/<?= $categorie->id; ?>"
+                   class="jq-update update"
+                   title="<?= _('GLOBAL_ADMIN_UPDATE') ?>">
+                    <?= _('GLOBAL_ADMIN_UPDATE') ?>
+                </a>
+<!--                <a href="--><?//= $this->baseUrl(); ?><!--products/update-category/make/delete/id/--><?//= $categorie->id; ?><!--"-->
+<!--                   class="jq-delete delete"-->
+<!--                   title="--><?//= _('GLOBAL_ADMIN_DELETE') ?><!--">-->
+<!--                    --><?//= _('GLOBAL_ADMIN_DELETE') ?>
+<!--                </a>-->
+            </td>
+        </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?php endif; ?>
+
+
+    <h2 class="produits">
+        <?= _('PRODUCTS_PRODUCT_LIST_TITLE') ?>
+    </h2>
+
+
+    <?php if (count($categories) > 0): ?>
+    <table class="list">
+        <thead>
+        <tr>
+            <th><?= _('PRODUCTS_LIST_TITRE')?></th>
+            <th><?= _('PRODUCTS_LIST_CATEGORIE')?></th>
+            <th class="actions"><?= _('GLOBAL_ADMIN_LIST_ACTIONS')?></th>
+        </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($products as $product): ?>
+        <tr>
+            <td><?= $product->title; ?></td>
+            <td><?= $product->category->title; ?></td>
+            <td class="actions">
+                <a href="<?= $this->baseUrl(); ?>products/edit-product/id/<?= $product->id; ?>"
+                   class="jq-update update"
+                   title="<?= _('GLOBAL_ADMIN_UPDATE') ?>">
+                    <?= _('GLOBAL_ADMIN_UPDATE') ?>
+                </a>
+<!--                <a href="--><?//= $this->baseUrl(); ?><!--products/update-product/make/delete/id/--><?//= $product->id; ?><!--"-->
+<!--                   class="jq-delete delete"-->
+<!--                   title="--><?//= _('GLOBAL_ADMIN_DELETE') ?><!--">-->
+<!--                    --><?//= _('GLOBAL_ADMIN_DELETE') ?>
+<!--                </a>-->
+            </td>
+        </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?php endif; ?>
+</div>

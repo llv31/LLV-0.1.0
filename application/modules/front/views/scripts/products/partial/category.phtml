@@ -4,7 +4,8 @@ $category = $this->category;
 $this->headTitle($category->title . ' | ');
 ?>
 <div class="category">
-    <h2><?= $category->title ?></h2>
+    <h2><?= $category->title ?> <em>(<?= $category->type ?>)</em></h2>
+
     <div class="content"><?= $category->content; ?></div>
     <div class="adresse"><?= $category->adresse; ?></div>
 </div>

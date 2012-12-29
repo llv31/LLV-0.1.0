@@ -20,4 +20,8 @@ class Llv_Services_Product_Request_EditCategory
     public $label;
     /** @var string */
     public $coordonnees;
+    /** @var int */
+    public $princingType;
+    /** @var string */
+    public $pinColor;
 }

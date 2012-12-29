@@ -19,9 +19,12 @@ class App_View_Helper_DisplaySeasonCalendar
     /**
      *
      */
-    public function displaySeasonCalendar($productPrice, $anneeCourante = null)
+    public function displaySeasonCalendar($productPrice = null, $anneeCourante = null)
     {
+        $siteCourant = Llv_Context_Application::getInstance()->getCurrentSite();
         $anneeCourante = !is_null($anneeCourante) ? $anneeCourante : date('Y');
+        $semainesAjoutees = array();
+
         if (self::$_nombreMois % self::$_moisParLigne == 0) {
             $moisCourant = 1;
             $html[] = "<table class=\"calendrier\">";
@@ -63,49 +66,57 @@ class App_View_Helper_DisplaySeasonCalendar
                         $timestampJour = strtotime($anneeCourante . '-' . $moisCourant . '-' . $jour);
                         if ($colonne % self::$_nombreColonneDansMois == 0) {
                             /** @var $week Llv_Dto_Week */
-                            $week = $this->getDateWeek(
-                                date(Llv_Constant_Date::FORMAT_DB_TIME17, $timestampJour),
-                                date('w', $timestampJour)
-                            );
-                            /** @var $price Llv_Dto_Product_Season_Price */
-                            $price = $this->getPriceForSeason($productPrice, $week->season->id);
+                            $week = $this->getWeekFromDate($timestampJour);
 
-
-                            /** Le prix apparîtra en infobulle au survol */
                             $infobulle = array();
-                            if (!is_null($price->week)) {
-                                $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEK') . "</em> : "
-                                    . "<strong>"
-                                    . $price->week . "&nbsp;" . _('GLOBAL_MONNAIE')
-                                    . "</strong>";
-                            } else {
-                                $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEK') . "</em> : "
-                                    . _('PRODUCT_PRICE_SEASON_PERIODES_INDISPO');
-                            }
+                            if (!is_null($productPrice)) {
+                                /** @var $price Llv_Dto_Product_Season_Price */
+                                $price = $this->getPriceForSeason($productPrice, $week->season->id);
 
-                            if (!is_null($price->weekend)) {
-                                $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEKEND') . "</em> : "
-                                    . "<strong>"
-                                    . $price->weekend . "&nbsp;" . _('GLOBAL_MONNAIE')
-                                    . "</strong>";
-                            } else {
-                                $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEKEND') . "</em> : "
-                                    . _('PRODUCT_PRICE_SEASON_PERIODES_INDISPO');
-                            }
+                                /** Le prix apparîtra en infobulle au survol */
+                                if (!is_null($price->week)) {
+                                    $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEK') . "</em> : "
+                                        . "<strong>"
+                                        . $price->week . "&nbsp;" . _('GLOBAL_MONNAIE')
+                                        . "</strong>";
+                                } else {
+                                    $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEK') . "</em> : "
+                                        . _('PRODUCT_PRICE_SEASON_PERIODES_INDISPO');
+                                }
 
-                            if (!is_null($price->midweek)) {
-                                $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK') . "</em> : "
-                                    . _('PRODUCT_PRICE_SEASON_CONTACT_US');
-                            } else {
-                                $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK') . "</em> : "
-                                    . _('PRODUCT_PRICE_SEASON_PERIODES_INDISPO');
+                                if (!is_null($price->weekend)) {
+                                    $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEKEND') . "</em> : "
+                                        . "<strong>"
+                                        . $price->weekend . "&nbsp;" . _('GLOBAL_MONNAIE')
+                                        . "</strong>";
+                                } else {
+                                    $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEKEND') . "</em> : "
+                                        . _('PRODUCT_PRICE_SEASON_PERIODES_INDISPO');
+                                }
+
+                                if (!is_null($price->midweek)) {
+                                    $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK') . "</em> : "
+                                        . _('PRODUCT_PRICE_SEASON_CONTACT_US');
+                                } else {
+                                    $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK') . "</em> : "
+                                        . _('PRODUCT_PRICE_SEASON_PERIODES_INDISPO');
+                                }
                             }
 
 
                             $html[] = "<tr class=\"jq-semaine semaine saison" . $week->season->id . "\"
-                            data-price=\"" . nl2br(implode(PHP_EOL, $infobulle)) . "\">";
+                            data-infobulle=\"" . nl2br(implode(PHP_EOL, $infobulle)) . "\">";
                             /** Numero de semaine */
-                            $html[] = "<td class=\"jq-week week\">" . $this->getDayWeekNumber($timestampJour) . "</td>";
+                            if ($siteCourant == Llv_Constant_Application::FRONT) {
+                                $html[] = "<td class=\"jq-week week\">" . $this->getDayWeekNumber($timestampJour) . "</td>";
+                            } elseif ($siteCourant == Llv_Constant_Application::BACK) {
+                                $html[] = "<td class=\"jq-week week\">";
+                                if (!in_array($week->id, $semainesAjoutees)) {
+                                    $html[] = "<input type=\"checkbox\" name=\"semaines[]\" value=\"" . $week->id . "\" id=\"week" . $week->id . "\" />";
+                                    $semainesAjoutees[] = $week->id;
+                                }
+                                $html[] = "</td>";
+                            }
                             $colonne = 1;
                         }
 
@@ -128,7 +139,7 @@ class App_View_Helper_DisplaySeasonCalendar
                                 }
                             } while ($jourMalPlace);
                         }
-                        $html[] = "<td>" . date('d', $timestampJour) . "</td>";
+                        $html[] = "<td><label for=\"week" . $week->id . "\">" . date('d', $timestampJour) . "</label></td>";
                         $colonne++;
 
                         if ($colonne % self::$_nombreColonneDansMois == 0) {
@@ -150,20 +161,21 @@ class App_View_Helper_DisplaySeasonCalendar
     }
 
     /**
-     * @param $debut
-     * @param $numeroJourDansSemaine
+     * @param $timestampJour
      *
      * @return Llv_Dto_Week[]|null
      */
-    private function getDateWeek($debut, $numeroJourDansSemaine)
+    private function getWeekFromDate($timestampJour)
     {
-        $nombreJourAEnlever = 7 - (2 + $numeroJourDansSemaine);
+        $debut = date(Llv_Constant_Date::FORMAT_DB_TIME17, $timestampJour);
+        $numeroJourDansSemaine = date('w', $timestampJour);
         $debut = new DateTime($debut);
-        if ($nombreJourAEnlever > 0) {
+
+        if (7 - (2 + $numeroJourDansSemaine) > 0 && date('d', $timestampJour) != 1) {
             $dateDebut = new DateTime(
                 date(
-                    Llv_Constant_Date::FORMAT_DB,
-                    strtotime('-' . $nombreJourAEnlever . ' days', $debut->getTimestamp())
+                    Llv_Constant_Date::FORMAT_DB_TIME17,
+                    strtotime('-7 days', $debut->getTimestamp())
                 )
             );
         } else {

@@ -1,10 +1,13 @@
 /* •••••••••••••••••••••••••••••••••• */
-#wrapper .category {
-
+#wrapper .category h2 em {
+    font-size: .8em;
 }
 
 #wrapper .category .content {
     text-align: justify;
+    font-size: 1.1em;
+    width: 50%;
+    margin-right: 3%;
 }
 
 #wrapper .category .adresse {

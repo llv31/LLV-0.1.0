@@ -90,6 +90,20 @@ interface Llv_Entity_Product_Interface
      */
     public function categoryGetAll(Llv_Entity_Product_Filter_Category $filter);
 
+    /**
+     * @param Llv_Entity_Product_Request_EditCategory $request
+     *
+     * @return array
+     */
+    public function categoryUpdateRow(Llv_Entity_Product_Request_EditCategory $request);
+
+    /**
+     * @param Llv_Entity_Product_Request_EditCategoryContent $request
+     *
+     * @return mixed
+     */
+    public function categoryEditRowContent(Llv_Entity_Product_Request_EditCategoryContent $request);
+
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
@@ -97,5 +111,28 @@ interface Llv_Entity_Product_Interface
      *
      * @return array
      */
+    public function weeksGetOne(Llv_Entity_Product_Filter_Season $filter);
+
+    /**
+     * @param Llv_Entity_Product_Filter_Season $filter
+     *
+     * @return array
+     */
     public function weeksGetAll(Llv_Entity_Product_Filter_Season $filter);
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Entity_Product_Filter_Season $filter
+     *
+     * @return array
+     */
+    public function seasonGetAll(Llv_Entity_Product_Filter_Season $filter);
+
+    /**
+     * @param Llv_Entity_Product_Request_Season $filter
+     *
+     * @return mixed
+     */
+    public function weekUpdateLot(Llv_Entity_Product_Request_Season $filter);
 }

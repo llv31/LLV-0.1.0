@@ -1,99 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="Début chambres">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/files/upload/products/10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/files/upload/products/7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/files/upload/products/8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/files/upload/products/9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/controllers/PartnersController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/controllers/ProductsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/partners/index.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/location.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/category.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/content.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/goldbook.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/onglets.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/photos.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/prices.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/reservation.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/products.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/room.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/helpers/DisplayProductPrice.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/helpers/DisplaySeasonCalendar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/helpers/GetParams.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sql/route.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sql/route_language.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/sql/route_parameter.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Context/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Dto/Coordinate.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Dto/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Season.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Filter/Season.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Season.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Route/Dal/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Route/Filter/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Route/Helper/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Route/Interface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Router/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Filter/Season.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Message/Week.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Route/Filter/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Route/Message/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Route/Request/Route.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Translator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/front/default/partners/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/front/default/products/css/location.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/front/default/products/css/room.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/front/default/products/js/location.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/front/fr_FR/_common/css/global.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/psd/.htaccess" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/Llv/Services/Activity/Helper/Activity.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/Llv/Services/Cms/Helper/Carrousel.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/Llv/Services/News/Helper/News.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/library/Llv/Services/Product/Helper/Product.php" afterPath="" />
+    <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/files/upload/products/50b0bb9845a9a.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Back/Products/Category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Back/Season.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/Constant/Products/Category.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/controllers/ProductsController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/controllers/SeasonController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/products/edit-category.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/products/edit-product.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/products/list.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/products/partial/illustration-category.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/season/index.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Constant/Application.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Request/EditCategory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Request/EditCategoryContent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Request/Season.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Request/Season.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/back/default/products/css/edit-category.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/back/default/products/css/list.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/back/default/season/css/calendar.css" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/helpers/GoogleMap.php" afterPath="$PROJECT_DIR$/application/views/helpers/Googlemap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.htaccess" afterPath="$PROJECT_DIR$/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/Bootstrap.php" afterPath="$PROJECT_DIR$/application/Bootstrap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/configs/application.ini" afterPath="$PROJECT_DIR$/application/configs/application.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Front/Contact.php" afterPath="$PROJECT_DIR$/application/forms/Front/Contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Abstract.php" afterPath="$PROJECT_DIR$/application/forms/Abstract.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Back/FileUploader.php" afterPath="$PROJECT_DIR$/application/forms/Back/FileUploader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/forms/Back/Language.php" afterPath="$PROJECT_DIR$/application/forms/Back/Language.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/controllers/IndexController.php" afterPath="$PROJECT_DIR$/application/modules/back/controllers/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/controllers/TestController.php" afterPath="$PROJECT_DIR$/application/modules/back/controllers/TestController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/edit.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/edit.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/list.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/list.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/news/list.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/news/list.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/partial/footer.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/partial/footer.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/partial/language_toogler.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/partial/language_toogler.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/partial/menu.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/partial/menu.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/ContactController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/ContactController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/partial/footer.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/partial/footer.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/partial/menu.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/partial/menu.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/helpers/DisplayImage.php" afterPath="$PROJECT_DIR$/application/views/helpers/DisplayImage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/helpers/DisplayMainMenu.php" afterPath="$PROJECT_DIR$/application/views/helpers/DisplayMainMenu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/helpers/GetAction.php" afterPath="$PROJECT_DIR$/application/views/helpers/GetAction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/helpers/Googlemap.php" afterPath="$PROJECT_DIR$/application/views/helpers/Googlemap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/products/location.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/location.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/category.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/category.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/photos.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/photos.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/helpers/DisplaySeasonCalendar.php" afterPath="$PROJECT_DIR$/application/views/helpers/DisplaySeasonCalendar.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR.csv" afterPath="$PROJECT_DIR$/data/locales/fr_FR.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.mo" afterPath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.mo" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.po" afterPath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.po" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Constant/Date.php" afterPath="$PROJECT_DIR$/library/Llv/Constant/Date.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Constant/File/Category.php" afterPath="$PROJECT_DIR$/library/Llv/Constant/File/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Constant/Product/Price/Night.php" afterPath="$PROJECT_DIR$/library/Llv/Constant/Product/Price/Night.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Context/Product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Dto/Product/Category.php" afterPath="$PROJECT_DIR$/library/Llv/Dto/Product/Category.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Category.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product/Filter/Category.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Filter/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product/Filter/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Filter/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Season.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Season.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product/Filter/Season.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Filter/Season.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Category.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Product.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product/Interface.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Interface.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Router.php" afterPath="$PROJECT_DIR$/library/Llv/Router.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Product/Filter/Category.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Filter/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Product/Filter/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Filter/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Zend/Controller/Router/Rewrite.php" afterPath="$PROJECT_DIR$/library/Zend/Controller/Router/Rewrite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/_common/css/form.css" afterPath="$PROJECT_DIR$/public/design/front/default/_common/css/form.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/_plugin/maps/js/googlemaps.js" afterPath="$PROJECT_DIR$/public/design/front/default/_plugin/maps/js/googlemaps.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/contact/css/style.css" afterPath="$PROJECT_DIR$/public/design/front/default/contact/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Product/Filter/Season.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Filter/Season.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Product/Request/EditCategory.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Request/EditCategory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Product/Request/EditCategoryContent.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Request/EditCategoryContent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/back/default/_common/css/form.css" afterPath="$PROJECT_DIR$/public/design/back/default/_common/css/form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/back/default/_common/js/js.niceedit.js" afterPath="$PROJECT_DIR$/public/design/back/default/_common/js/js.niceedit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/default/default/_common/css/form.css" afterPath="$PROJECT_DIR$/public/design/default/default/_common/css/form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/news/css/element.css" afterPath="$PROJECT_DIR$/public/design/front/default/news/css/element.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/products/css/location.css" afterPath="$PROJECT_DIR$/public/design/front/default/products/css/location.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/products/css/room.css" afterPath="$PROJECT_DIR$/public/design/front/default/products/css/room.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/products/js/location.js" afterPath="$PROJECT_DIR$/public/design/front/default/products/js/location.js" />
     </list>
     <ignored path="LLV-0.1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -115,19 +83,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DisplayProductPrice.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/helpers/DisplayProductPrice.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="98" selection-start="4231" selection-end="4262" vertical-scroll-proportion="-13.166667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProductsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProductsController.php">
+        <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/ProductsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="21" selection-start="1792" selection-end="1792" vertical-scroll-proportion="-25.666666">
+            <state line="56" column="46" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-11.291667">
               <folding>
                 <element signature="e#6#224#0" expanded="true" />
               </folding>
@@ -135,74 +94,87 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="prices.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/prices.phtml">
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Context/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="66" selection-start="613" selection-end="613" vertical-scroll-proportion="-10.625">
+            <state line="185" column="40" selection-start="5175" selection-end="5175" vertical-scroll-proportion="-12.916667">
+              <folding>
+                <element signature="e#6#213#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Services/Product.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="388" column="65" selection-start="13519" selection-end="13519" vertical-scroll-proportion="-15.416667">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/partners/index.phtml">
+      <file leaf-file-name="Googlemap.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/helpers/Googlemap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="-9.375">
+            <state line="18" column="64" selection-start="453" selection-end="453" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/partial/footer.phtml">
+      <file leaf-file-name="Product.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="32" selection-start="94" selection-end="94" vertical-scroll-proportion="-1.875">
+            <state line="208" column="46" selection-start="6380" selection-end="6380" vertical-scroll-proportion="-11.666667">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/design/front/default/partners/css/index.css">
+      <file leaf-file-name="Category.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="21" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+            <state line="57" column="31" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.3654391">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/partial/menu.phtml">
+      <file leaf-file-name="category.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/category.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="2" selection-start="138" selection-end="567" vertical-scroll-proportion="-3.75">
+            <state line="6" column="56" selection-start="208" selection-end="208" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.phtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/partial/menu.phtml">
+      <file leaf-file-name="room.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/design/front/default/products/css/room.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="27" selection-start="861" selection-end="861" vertical-scroll-proportion="0.3838527">
+            <state line="3" column="1" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fr_FR.csv" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/locales/fr_FR.csv">
+      <file leaf-file-name="Category.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="28" selection-start="1588" selection-end="1588" vertical-scroll-proportion="-9.576923">
+            <state line="50" column="27" selection-start="1298" selection-end="1298" vertical-scroll-proportion="-20.666666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DisplaySeasonCalendar.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/helpers/DisplaySeasonCalendar.php">
+      <file leaf-file-name="Category.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/forms/Back/Products/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="75" selection-start="5289" selection-end="5289" vertical-scroll-proportion="-22.5">
-              <folding />
+            <state line="130" column="63" selection-start="4726" selection-end="4726" vertical-scroll-proportion="-14.375">
+              <folding>
+                <element signature="e#6#214#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -225,22 +197,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/onglets.phtml" />
-        <option value="$PROJECT_DIR$/application/forms/Front/Contact.php" />
-        <option value="$PROJECT_DIR$/library/Llv/Constant/Product/Price/Night.php" />
-        <option value="$PROJECT_DIR$/public/design/front/default/_common/css/form.css" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/products/location.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/controllers/ProductsController.php" />
-        <option value="$PROJECT_DIR$/application/views/helpers/DisplayProductPrice.php" />
-        <option value="$PROJECT_DIR$/application/views/helpers/DisplaySeasonCalendar.php" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/prices.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/controllers/PartnersController.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/Product/Interface.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/Product/Request/EditCategoryContent.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/Product/Request/EditCategoryContent.php" />
+        <option value="$PROJECT_DIR$/application/models/Constant/Products/Category.php" />
+        <option value="$PROJECT_DIR$/application/modules/back/controllers/ProductsController.php" />
         <option value="$PROJECT_DIR$/data/locales/fr_FR.csv" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/partial/footer.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/partners/index.phtml" />
-        <option value="$PROJECT_DIR$/public/design/front/default/partners/css/index.css" />
-        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/partial/menu.phtml" />
+        <option value="$PROJECT_DIR$/library/Llv/Dto/Product/Category.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Category.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/category.phtml" />
+        <option value="$PROJECT_DIR$/public/design/front/default/contact/css/style.css" />
+        <option value="$PROJECT_DIR$/public/design/front/default/products/css/room.css" />
+        <option value="$PROJECT_DIR$/application/forms/Back/Products/Category.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/Product.php" />
+        <option value="$PROJECT_DIR$/application/views/helpers/Googlemap.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Category.php" />
       </list>
     </option>
   </component>
@@ -358,7 +330,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,75 +344,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partial" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
+              <option name="myItemId" value="design" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -458,27 +366,115 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="design" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,41 +492,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -607,11 +573,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/design/front/default" />
-      <recent name="$PROJECT_DIR$/application/modules/front/views/scripts" />
-      <recent name="$PROJECT_DIR$/application/modules/front/controllers" />
-      <recent name="$PROJECT_DIR$/library/Llv/Services/Product/Message" />
-      <recent name="$PROJECT_DIR$/library/Llv/Entity/Product/Helper" />
+      <recent name="$PROJECT_DIR$/library/Llv/Entity/Product/Request" />
+      <recent name="$PROJECT_DIR$/application/modules/back/views/scripts/products" />
+      <recent name="$PROJECT_DIR$/application/models/Constant/Products" />
+      <recent name="$PROJECT_DIR$/application/forms/Back/Products" />
+      <recent name="$PROJECT_DIR$/application/modules/back/views/scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/design/front/fr_FR/_common/css" />
@@ -807,7 +773,11 @@
       <created>1356268412196</created>
       <updated>1356268412196</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Locations terminées côté front, reste administration">
+      <created>1356740323170</created>
+      <updated>1356740323170</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -873,7 +843,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Début chambres" />
+    <option name="LAST_COMMIT_MESSAGE" value="Locations terminées côté front, reste administration" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -886,7 +856,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Finalisation de l'environnement de base &#10;Ajout des scripts de bdd" />
     <MESSAGE value="Nouveau script de base de données&#10;Enrichissement de l'initialisation&#10;" />
     <MESSAGE value="Debug" />
     <MESSAGE value="Initialisation de getText&#10;Intégration graphique" />
@@ -911,121 +880,128 @@
     <MESSAGE value="Mise en ligne Bêta" />
     <MESSAGE value="Correction formatage Date" />
     <MESSAGE value="Début chambres" />
+    <MESSAGE value="Locations terminées côté front, reste administration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/design/front/default/_common/css/form.css">
+    <entry file="file://$PROJECT_DIR$/application/models/Constant/Products/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+        <state line="14" column="10" selection-start="271" selection-end="287" vertical-scroll-proportion="0.29745042">
+          <folding>
+            <element signature="e#6#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/locales/fr_FR.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="23" selection-start="7166" selection-end="7166" vertical-scroll-proportion="-13.269231">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/index/partial/activity.phtml">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/Product/Request/Edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="28" selection-start="719" selection-end="719" vertical-scroll-proportion="0.509915">
+        <state line="25" column="19" selection-start="504" selection-end="504" vertical-scroll-proportion="0.32967034">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/products/location.phtml">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Dto/Product/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="49" selection-start="355" selection-end="364" vertical-scroll-proportion="-5.625">
+        <state line="23" column="16" selection-start="467" selection-end="467" vertical-scroll-proportion="0.28846154">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/ProductsController.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/products/room.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="21" selection-start="1792" selection-end="1792" vertical-scroll-proportion="-25.666666">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/design/front/default/contact/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/category.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="56" selection-start="208" selection-end="208" vertical-scroll-proportion="-3.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/design/front/default/products/css/room.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="1" selection-start="90" selection-end="90" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/ProductsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="46" selection-start="1267" selection-end="1267" vertical-scroll-proportion="-11.291667">
           <folding>
             <element signature="e#6#224#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/activities/list.phtml">
+    <entry file="file://$PROJECT_DIR$/application/forms/Back/Products/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="23" selection-start="2442" selection-end="2461" vertical-scroll-proportion="0.68666667">
+        <state line="130" column="63" selection-start="4726" selection-end="4726" vertical-scroll-proportion="-14.375">
+          <folding>
+            <element signature="e#6#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/helpers/Googlemap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="64" selection-start="453" selection-end="453" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/news/list.phtml">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Context/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="31" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.8666667">
+        <state line="185" column="40" selection-start="5175" selection-end="5175" vertical-scroll-proportion="-12.916667">
+          <folding>
+            <element signature="e#6#213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="388" column="65" selection-start="13519" selection-end="13519" vertical-scroll-proportion="-15.416667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/helpers/DisplayProductPrice.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="98" selection-start="4231" selection-end="4262" vertical-scroll-proportion="-13.166667">
+        <state line="50" column="27" selection-start="1298" selection-end="1298" vertical-scroll-proportion="-20.666666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/helpers/DisplaySeasonCalendar.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="75" selection-start="5289" selection-end="5289" vertical-scroll-proportion="-22.5">
+        <state line="208" column="46" selection-start="6380" selection-end="6380" vertical-scroll-proportion="-11.666667">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/controllers/PartnersController.php">
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="31" selection-start="41" selection-end="41" vertical-scroll-proportion="0.04249292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/prices.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="66" selection-start="613" selection-end="613" vertical-scroll-proportion="-10.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/locales/fr_FR.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="28" selection-start="1588" selection-end="1588" vertical-scroll-proportion="-9.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/partial/footer.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="32" selection-start="94" selection-end="94" vertical-scroll-proportion="-1.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/partners/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="308" selection-end="308" vertical-scroll-proportion="-9.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/front/default/partners/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="21" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/partial/menu.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="2" selection-start="138" selection-end="567" vertical-scroll-proportion="-3.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/partial/menu.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="861" selection-end="861" vertical-scroll-proportion="0.3838527">
+        <state line="57" column="31" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.3654391">
           <folding />
         </state>
       </provider>

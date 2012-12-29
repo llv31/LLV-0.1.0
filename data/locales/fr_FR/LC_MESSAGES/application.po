@@ -28,6 +28,50 @@ msgstr "Oops !"
 msgid "ERROR_404_CONTENT"
 msgstr "Oops ! La page souhaitée n'existe pas =/"
 
+msgid "META_KEYWORDS"
+msgstr ""
+"accomodation bagnères de luchon, accomodation luchon, b et b luchon, b&b "
+"luchon, bagnères de luchon, bed and breakfast bagnères de luchon, "
+"bedandbreakfast luchon, bourg d'oueil brame du cerf, brame du cerf, brame du "
+"cerf - vallée d'oueil, chalet 21 personnes, chalet avec jacuzzi pyrenees, "
+"chalet dans les pyrenees, chalet de montagne, chambre, chambre d'hote, "
+"chambre d'hote bagneres de luchon, chambre d'hote luchon, chambre d'hote "
+"pyrénées, chambre d'hotes pyrénées, chambres d'hôtes, chambres d'hotes avec "
+"piscine luchon, chambres d'hotes bagnères de luchon, chambres d'hôtes de "
+"charme, chambres d'hôtes luchon, chambres d'hôtes pyrénées, chambres hotes "
+"luchon, chien de traineau, chiens de traineaux, col de peyresourde, col de "
+"pyresourde, disponibilité chambres d'hôtes luchon, espagne, Gite, gite de "
+"france bagnères de luchon, gite de france banniere de luchon, gite luchon, "
+"gite rural, gites de france, gites ruraux, golf bagneres de luchon, google, "
+"grands sites midi pyrénées, guest house, guest house bagnères de luchon, "
+"hébergement chambre d'hote luchon, hébergement luchon, homelidays, hospice "
+"de france luchon, hospicedefrance, hote, hotel de charme luchon, lac d'ôo, "
+"LLV, Location, location appartement luchon, location chalet bagneres de "
+"luchon, location chalet luchon, location chalet peyragudes, location chambre "
+"d'hote luchon, location chambres d'hotes bagnères de luchon, location gite "
+"luchon, location peyresourde, location-vacances-n°1, Locations, Luchon, "
+"luchon location avec piscine, luchon location chambre, Luchon Location "
+"Vacances, luchonnais, mediavacances, mediavacances bagneres de luchon "
+"chalet, octobre, oo, parapente luchon, pavillon sévigné, pavillon sévigné "
+"luchon, peyragudes, piscine luchon, pyrénée, pyrénées, rando bagneres de "
+"luchon, randonnées à bagnères de luchon, randonnées luchon, reservation, "
+"sarrat sport, séjour  luchon , septembre luchon, ski, ski bagnères de "
+"luchon, ski luchon, ski peyragudes, station de ski de peyragudes, station de "
+"ski peyragudes, station de ski pyrénées, superbagnère, superbagnères, "
+"therme, thermes, thermes de luchon, top rural, tour de france 2010 ville "
+"étape, tour de france bagneres de luchon, tour de france luchon, "
+"tripadvisor, tripadvisor bagneres de luchon, trophée du lac d'ôo, vacance "
+"vallee de luchon, vacances au ski, vacances bagneres luchon, vacances "
+"luchon, Vacances Pyrénées, vallee d'oueil, vénasque, villa florida, week "
+"end, week-end luchon"
+
+msgid "META_DESCRIPTION"
+msgstr ""
+"Luchon Location Vacances : Gites et Chambres de Charme en Pays de Luchon"
+
+msgid "META_GOOGLE_VERIF"
+msgstr "MyUxzCNcdspiFGJxWUrpzL0A2rf3TfQdg88ZBvrGL10"
+
 msgid "HEAD_TITLE_HOME"
 msgstr "Accueil"
 
@@ -46,11 +90,20 @@ msgstr "Activités"
 msgid "HEAD_TITLE_ERROR"
 msgstr "ERREUR"
 
+msgid "HEAD_TITLE_CARROUSEL"
+msgstr "Carrousel"
+
+msgid "HEAD_TITLE_CONTACT"
+msgstr "Réservation / Contact"
+
+msgid "HEAD_TITLE_SEASON"
+msgstr "Gestion des saisons"
+
 msgid "GLOBAL_MENU_HOME"
 msgstr "Accueil"
 
 msgid "GLOBAL_MENU_CHAMBRES"
-msgstr "Chambres d'hôtes"
+msgstr "Nos chambres d'hôtes"
 
 msgid "GLOBAL_MENU_GITE"
 msgstr "Chalet de montagne"
@@ -66,6 +119,12 @@ msgstr "Reservations"
 
 msgid "GLOBAL_MENU_PARTNERS"
 msgstr "Partenaires"
+
+msgid "GLOBAL_MENU_LOCATIONS"
+msgstr "Locations"
+
+msgid "GLOBAL_MENU_SEASON"
+msgstr "Saisons"
 
 msgid "GLOBAL_HEADER_TITLE"
 msgstr "Luchon Location Vacances"
@@ -118,6 +177,9 @@ msgstr "Retourner à la liste"
 msgid "GLOBAL_BACK_HOME"
 msgstr "Retourner à l'accueil"
 
+msgid "GLOBAL_BACK_SIMPLE"
+msgstr "Retour"
+
 msgid "GLOBAL_CHAMP_OBLIGATOIRE"
 msgstr "*"
 
@@ -128,7 +190,10 @@ msgid "FOOTER_COPYRIGHT"
 msgstr "Tous droits reservés© 2008"
 
 msgid "FOOTER_CREDITS"
-msgstr "Réalisation : <a href=\"http://www.aroy.fr\">Alexandre ROY</a>"
+msgstr "Réalisation :"
+
+msgid "FOOTER_PARTENAIRES"
+msgstr "Partenaires"
 
 msgid "GLOBAL_MONTH_LABEL01"
 msgstr "Janvier"
@@ -373,6 +438,57 @@ msgstr "Galerie photo"
 msgid "ACTIVITY_LIST_NORESULT"
 msgstr "Il n'y a aucune activité"
 
+msgid "PRODUCTS_CATEGORY_LIST_TITLE"
+msgstr "Catégories"
+
+msgid "PRODUCTS_PRODUCT_LIST_TITLE"
+msgstr "Produits"
+
+msgid "PRODUCTS_LIST_TITRE"
+msgstr "Titre"
+
+msgid "PRODUCTS_LIST_CATEGORIE"
+msgstr "Catégorie"
+
+msgid "PRODUCTS_LIST_CATEGORIE_PRICINGTYPE"
+msgstr "Type de tarification"
+
+msgid "PRODUCTS_LIST_CATEGORIE_PRICINGTYPE1"
+msgstr "A la nuitée"
+
+msgid "PRODUCTS_LIST_CATEGORIE_PRICINGTYPE2"
+msgstr "A la saison"
+
+msgid "PRODUCTS_EDIT_CATEGORIE_TITLE"
+msgstr "Édition de la catégorie"
+
+msgid "PRODUCTS_EDIT_TABS_CONTENT"
+msgstr "Contenus"
+
+msgid "PRODUCTS_EDIT_TABS_PICTURES"
+msgstr "Illustrations"
+
+msgid "PRODUCTS_LIST_CATEGORIE_COORDONNEES"
+msgstr "Coordonnées GPS"
+
+msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR"
+msgstr "Couleur du repère sur GoogleMap"
+
+msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_RED"
+msgstr "Rouge"
+
+msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_BLUE"
+msgstr "Bleu"
+
+msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_GREEN"
+msgstr "Vert"
+
+msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_PURPLE"
+msgstr "Violet"
+
+msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_YELLOW"
+msgstr "Jaune"
+
 msgid "PRODUCTS_ONGLET_CONTENT"
 msgstr "Description"
 
@@ -435,9 +551,6 @@ msgstr "Réservation ou tarif indisponible"
 
 msgid "CONTACT_TITLE"
 msgstr "Réserver / Nous contacter"
-
-msgid "HEAD_TITLE_CONTACT"
-msgstr "Réservation / Contact"
 
 msgid "CONTACT_MAP_TITLE"
 msgstr "Nous localiser"
@@ -588,9 +701,6 @@ msgstr "Annuler"
 msgid "GLOBAL_MENU_CARROUSEL"
 msgstr "Carrousel"
 
-msgid "HEAD_TITLE_CARROUSEL"
-msgstr "Carrousel"
-
 msgid "GLOBAL_MENU_DECONNEXION"
 msgstr "Se déconnecter"
 
@@ -635,3 +745,9 @@ msgstr "Type"
 
 msgid "HOME_CARROUSEL_LIST_ONLINE"
 msgstr "En ligne ?"
+
+msgid "SEASON_CHANGE_YEAR"
+msgstr "Modifier pour l'année :"
+
+msgid "SEASON_TYPE"
+msgstr "Saison"

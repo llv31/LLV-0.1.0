@@ -21,6 +21,8 @@ class Llv_Dto_Product_Category
     /** @var Llv_Dto_Coordinate */
     public $location;
     /** @var string */
+    public $type;
+    /** @var string */
     public $title;
     /** @var string */
     public $content;

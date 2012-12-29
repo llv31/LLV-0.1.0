@@ -30,6 +30,11 @@ class App_Form_Abstract
         array('Label', array('placement'=> 'prepend')),
         array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'default_element'))
     );
+    protected $radioDecorator = array(
+        'ViewHelper',
+        array('Label', array('placement'=> 'prepend')),
+        array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'radio_element'))
+    );
     protected $submitDecorator = array(
         'ViewHelper',
         array(array('row'=> 'HtmlTag'), array('tag'=> 'p', 'class'=> 'submit_element'))
@@ -71,6 +76,9 @@ class App_Form_Abstract
             }
             if ($element instanceof Zend_Form_Element_Submit) {
                 $element->setDecorators($this->submitDecorator);
+            } elseif ($element instanceof Zend_Form_Element_Radio) {
+                $element->setDecorators($this->radioDecorator);
+                $element->setSeparator('');
             } elseif ($element instanceof Zend_Form_Element_Textarea) {
                 $element->setDecorators($this->textareaDecorator);
             } elseif ($element instanceof Zend_Form_Element_Select) {

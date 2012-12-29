@@ -6,6 +6,11 @@ ERROR_DB_CONNECTION;Erreur lors de la connexion à la base de données
 ERROR_404_TITLE;Oops !
 ERROR_404_CONTENT;Oops ! La page souhaitée n'existe pas =/
 
+; Meta
+META_KEYWORDS;accomodation bagnères de luchon, accomodation luchon, b et b luchon, b&b luchon, bagnères de luchon, bed and breakfast bagnères de luchon, bedandbreakfast luchon, bourg d'oueil brame du cerf, brame du cerf, brame du cerf - vallée d'oueil, chalet 21 personnes, chalet avec jacuzzi pyrenees, chalet dans les pyrenees, chalet de montagne, chambre, chambre d'hote, chambre d'hote bagneres de luchon, chambre d'hote luchon, chambre d'hote pyrénées, chambre d'hotes pyrénées, chambres d'hôtes, chambres d'hotes avec piscine luchon, chambres d'hotes bagnères de luchon, chambres d'hôtes de charme, chambres d'hôtes luchon, chambres d'hôtes pyrénées, chambres hotes luchon, chien de traineau, chiens de traineaux, col de peyresourde, col de pyresourde, disponibilité chambres d'hôtes luchon, espagne, Gite, gite de france bagnères de luchon, gite de france banniere de luchon, gite luchon, gite rural, gites de france, gites ruraux, golf bagneres de luchon, google, grands sites midi pyrénées, guest house, guest house bagnères de luchon, hébergement chambre d'hote luchon, hébergement luchon, homelidays, hospice de france luchon, hospicedefrance, hote, hotel de charme luchon, lac d'ôo, LLV, Location, location appartement luchon, location chalet bagneres de luchon, location chalet luchon, location chalet peyragudes, location chambre d'hote luchon, location chambres d'hotes bagnères de luchon, location gite luchon, location peyresourde, location-vacances-n°1, Locations, Luchon, luchon location avec piscine, luchon location chambre, Luchon Location Vacances, luchonnais, mediavacances, mediavacances bagneres de luchon chalet, octobre, oo, parapente luchon, pavillon sévigné, pavillon sévigné luchon, peyragudes, piscine luchon, pyrénée, pyrénées, rando bagneres de luchon, randonnées à bagnères de luchon, randonnées luchon, reservation, sarrat sport, séjour  luchon , septembre luchon, ski, ski bagnères de luchon, ski luchon, ski peyragudes, station de ski de peyragudes, station de ski peyragudes, station de ski pyrénées, superbagnère, superbagnères, therme, thermes, thermes de luchon, top rural, tour de france 2010 ville étape, tour de france bagneres de luchon, tour de france luchon, tripadvisor, tripadvisor bagneres de luchon, trophée du lac d'ôo, vacance vallee de luchon, vacances au ski, vacances bagneres luchon, vacances luchon, Vacances Pyrénées, vallee d'oueil, vénasque, villa florida, week end, week-end luchon
+META_DESCRIPTION;Luchon Location Vacances : Gites et Chambres de Charme en Pays de Luchon
+META_GOOGLE_VERIF;MyUxzCNcdspiFGJxWUrpzL0A2rf3TfQdg88ZBvrGL10
+
 ; Head
 HEAD_TITLE_HOME;Accueil
 HEAD_TITLE_PARTNERS;Partenaires
@@ -13,15 +18,20 @@ HEAD_TITLE_CONNECTION;Connexion
 HEAD_TITLE_NEWS;Actualités
 HEAD_TITLE_ACTIVITY;Activités
 HEAD_TITLE_ERROR;ERREUR
+HEAD_TITLE_CARROUSEL;Carrousel
+HEAD_TITLE_CONTACT;Réservation / Contact
+HEAD_TITLE_SEASON;Gestion des saisons
 
 ; Menu
 GLOBAL_MENU_HOME;Accueil
-GLOBAL_MENU_CHAMBRES;Chambres d'hôtes
+GLOBAL_MENU_CHAMBRES;Nos chambres d'hôtes
 GLOBAL_MENU_GITE;Chalet de montagne
 GLOBAL_MENU_NEWS;Actualités
 GLOBAL_MENU_ACTIVITIES;Activités
 GLOBAL_MENU_CONTACT;Reservations
 GLOBAL_MENU_PARTNERS;Partenaires
+GLOBAL_MENU_LOCATIONS;Locations
+GLOBAL_MENU_SEASON;Saisons
 
 ; Global
 GLOBAL_HEADER_TITLE;Luchon Location Vacances
@@ -41,6 +51,7 @@ GLOBAL_COORDONNEES_MOBILE;+33(0) 618 641 429
 GLOBAL_COORDONNEES_GPS_LABEL;Coordonnées GPS
 GLOBAL_BACK;Retourner à la liste
 GLOBAL_BACK_HOME;Retourner à l'accueil
+GLOBAL_BACK_SIMPLE;Retour
 GLOBAL_CHAMP_OBLIGATOIRE;*
 GLOBAL_MONNAIE;euros
 
@@ -139,6 +150,27 @@ ACTIVITY_ELEMENT_ILLUSTRATION;Galerie photo
 ACTIVITY_LIST_NORESULT;Il n'y a aucune activité
 
 ;Produits
+PRODUCTS_CATEGORY_LIST_TITLE;Catégories
+PRODUCTS_PRODUCT_LIST_TITLE;Produits
+PRODUCTS_LIST_TYPE;Type
+PRODUCTS_LIST_TITRE;Titre
+PRODUCTS_LIST_CATEGORIE;Catégorie
+PRODUCTS_LIST_CATEGORIE_PRICINGTYPE;Type de tarification
+PRODUCTS_LIST_CATEGORIE_PRICINGTYPE1;A la nuitée
+PRODUCTS_LIST_CATEGORIE_PRICINGTYPE2;A la saison
+PRODUCTS_EDIT_CATEGORIE_TITLE;Édition de la catégorie
+PRODUCTS_EDIT_TABS_CONTENT;Contenus
+PRODUCTS_EDIT_TABS_PICTURES;Illustrations
+PRODUCTS_LIST_CATEGORIE_ROUTE;URL de la catégorie
+PRODUCTS_LIST_CATEGORIE_COORDONNEES;Coordonnées GPS
+PRODUCTS_LIST_CATEGORIE_PINCOLOR;Couleur du repère sur GoogleMap
+PRODUCTS_LIST_CATEGORIE_PINCOLOR_RED;Rouge
+PRODUCTS_LIST_CATEGORIE_PINCOLOR_BLUE;Bleu
+PRODUCTS_LIST_CATEGORIE_PINCOLOR_GREEN;Vert
+PRODUCTS_LIST_CATEGORIE_PINCOLOR_PURPLE;Violet
+PRODUCTS_LIST_CATEGORIE_PINCOLOR_YELLOW;Jaune
+
+
 PRODUCTS_ONGLET_CONTENT;Description
 PRODUCTS_ONGLET_PHOTOS;Photos
 PRODUCTS_ONGLET_PRIX;Disponibilités & tarifs
@@ -162,7 +194,6 @@ PRODUCT_PRICE_SEASON_PERIODES_INDISPO;Réservation ou tarif indisponible
 
 ;Contact
 CONTACT_TITLE;Réserver / Nous contacter
-HEAD_TITLE_CONTACT;Réservation / Contact
 CONTACT_MAP_TITLE;Nous localiser
 CONTACT_FORM_FIELDSET_INFORMATIONS;À propos de vous
 CONTACT_FORM_LABEL_NOM;Nom
@@ -194,10 +225,6 @@ CONTACT_CATEGORY_TYPE2;Chalet de montagne / Gîte
 CONTACT_CENTER_COORDINATES_LAT;42.814166
 CONTACT_CENTER_COORDINATES_LONG;0.55444
 
-;Partenaires
-HEAD_TITLE_PARTNERS;Partenaires
-
-
 ;•••••••••••• ADMINISTRATION ••••••••••••;inutile de traduire
 ; Global Admin
 GLOBAL_ADMIN_ADD;Ajouter un élément
@@ -220,7 +247,6 @@ GLOBAL_MODAL_DELETE_CANCEL;Annuler
 
 ; Menu Admin
 GLOBAL_MENU_CARROUSEL;Carrousel
-HEAD_TITLE_CARROUSEL;Carrousel
 GLOBAL_MENU_DECONNEXION;Se déconnecter
 
 ; Homepage Admin
@@ -240,3 +266,7 @@ HOME_CARROUSEL_LIST_ID;#
 HOME_CARROUSEL_LIST_ORIGINALFILENAME;Nom du fichier
 HOME_CARROUSEL_LIST_TYPE;Type
 HOME_CARROUSEL_LIST_ONLINE;En ligne ?
+
+;Saisons
+SEASON_CHANGE_YEAR;Modifier pour l'année :
+SEASON_TYPE;Saison

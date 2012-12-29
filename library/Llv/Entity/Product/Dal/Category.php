@@ -46,8 +46,7 @@ class Llv_Entity_Product_Dal_Category
                 array(
                      'pcl'=> self::$_nameTrad
                 ),
-                'pc.id = pcl.category_id',
-                array('title', 'content', 'language_id')
+                'pc.id = pcl.category_id'
             )
                 ->joinLeft(
                 array('l'=> 'language'),
@@ -86,8 +85,7 @@ class Llv_Entity_Product_Dal_Category
                 array(
                      'pcl'=> self::$_nameTrad
                 ),
-                'pc.id = pcl.category_id',
-                array('title', 'content', 'language_id')
+                'pc.id = pcl.category_id'
             )
                 ->joinLeft(
                 array('l'=> 'language'),
@@ -97,13 +95,73 @@ class Llv_Entity_Product_Dal_Category
             if (isset($filter->idLangue)) {
                 $sql->where('l.id = ?', $filter->idLangue);
             }
-//            Zend_Debug::dump($sql->assemble());
-//            die;
             return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);
         }
         return array();
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_Product_Request_EditCategory $request
+     *
+     * @return int|null
+     */
+    public static function categoryUpdateRow(Llv_Entity_Product_Request_EditCategory $request)
+    {
+        try {
+            $where = "";
+            if (!is_null($request->id)) {
+                $where = "id = " . $request->id;
+            }
+            return Llv_Db::getInstance()->update(
+                self::$_nameTable,
+                array(
+                     //                     'route'       => $request->route,
+                     'location'    => $request->coordonnees,
+                     'pin_color'   => $request->pinColor,
+                     'pricing_type'=> $request->princingType,
+                ),
+                $where
+            );
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+        return null;
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_Product_Request_EditCategoryContent $request
+     *
+     * @return int|null
+     */
+    public static function categoryEditRowContent(Llv_Entity_Product_Request_EditCategoryContent $request)
+    {
+        try {
+            $where = array();
+            if (!is_null($request->idCategory)) {
+                $where[] = "category_id = " . $request->idCategory;
+            }
+            if (!is_null($request->idLangue)) {
+                $where[] = "language_id = " . $request->idLangue;
+            }
+            return Llv_Db::getInstance()->update(
+                self::$_nameTrad,
+                array(
+                     'type'        => $request->type,
+                     'title'       => $request->title,
+                     'content'     => $request->content
+                ),
+                implode(' AND ', $where)
+            );
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+        return null;
     }
 
 }

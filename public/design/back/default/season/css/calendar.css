@@ -1,0 +1,90 @@
+/* •••••••••••••••••••••••••••••••••• */
+
+#wrapper .page p.change_year {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#wrapper .page p.change_year a {
+    font-weight: normal;
+}
+
+#wrapper .page p.change_year span {
+    color: #FF7973;
+    font-weight: bold;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#wrapper .page table.calendrier label {
+    width: auto;
+    font-weight: normal;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+#wrapper .page table.calendrier {
+    width: 100%;
+}
+
+#wrapper .page table.calendrier th,
+#wrapper .page table.calendrier td {
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#wrapper .page table.calendrier td.mois table thead tr.days td {
+    background-color: #308CC6;
+    color: #FFFFFF;
+}
+
+#wrapper .page table.calendrier td.mois table thead tr.mois th {
+    font-weight: bold;
+}
+
+#wrapper .page table.calendrier td.mois table tbody tr.saison td {
+}
+
+#wrapper .page table.calendrier td.mois table tbody tr.saison1 td {
+    background-color: #fba39f;
+}
+
+#wrapper .page table.calendrier td.mois table tbody tr.saison2 td {
+    background-color: #FFB87C;
+}
+
+#wrapper .page table.calendrier td.mois table tbody tr.saison3 td {
+    background-color: #F0E684;
+}
+
+#wrapper .page table.calendrier td.mois table tbody tr.saison4 td {
+    background-color: #90EE90;
+}
+
+#wrapper .page table.calendrier td.mois table tbody tr.saison5 td {
+    background-color: #FF7973;
+}
+
+#wrapper .page table.calendrier td.mois table tbody tr td.week {
+    background-color: #DDF0FD;
+    color: #308CC6;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+span.prix_location {
+    display: block;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #555;
+    position: absolute;
+    padding: 10px;
+}
+
+span.prix_location em {
+    font-style: normal;
+    display: inline-block;
+    width: 60px;
+}

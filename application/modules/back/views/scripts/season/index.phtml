@@ -1,0 +1,30 @@
+<?php
+$this->headTitle(_('HEAD_TITLE_SEASON') . ' | ');
+$this->headLink()->appendStylesheet($this->buildDesignUrl('season/css/calendar.css'));
+
+/** @var $formSeason App_Form_Back_Season */
+$formSeason = $this->formSeason;
+?>
+
+<div class="page">
+    <p class="change_year">
+        <!--        --><?//= _('SEASON_CHANGE_YEAR'); ?>
+        <?php for ($i = ($this->currentYear - 3); $i <= ($this->currentYear + 3); $i++): ?>
+        <?php if ($i > 2012 && $i < 2038): ?>
+            <?php if ($i == $this->currentYear): ?>
+                <span><?=$i;?></span>&nbsp;-&nbsp;
+                <?php else: ?>
+                <a href="/season/index/year/<?=$i;?>"><?=$i;?></a>&nbsp;-&nbsp;
+                <?php endif; ?>
+            <?php endif; ?>
+        <?php endfor;?>
+    </p>
+
+    <form method="<?= $formSeason->getMethod(); ?>"
+          action="<?= $formSeason->getAction(); ?>"
+          enctype="<?= $formSeason->getEnctype(); ?>">
+        <?= $this->displaySeasonCalendar(null, $this->currentYear); ?>
+        <?= $formSeason->getElement('id'); ?>
+        <?= $formSeason->getElement('submit'); ?>
+    </form>
+</div>

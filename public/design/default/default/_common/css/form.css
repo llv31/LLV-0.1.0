@@ -42,6 +42,16 @@ form textarea {
     box-shadow: 0 0 2px #bbb;
 }
 
+form p.textarea_element label {
+    width: 100%;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
+
+form p.radio_element label:first-child {
+    width: 20%;
+}
+
 /* •••••••••••••••••••••••••••••••••• */
 form p.submit_element {
     text-align: right;

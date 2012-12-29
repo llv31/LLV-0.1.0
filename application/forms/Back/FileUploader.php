@@ -13,7 +13,7 @@
 class App_Form_Back_FileUploader
     extends App_Form_Abstract
 {
-    public function __construct()
+    public function __construct($nbUpload = null)
     {
         $this->setMethod(Zend_Form::METHOD_POST);
         $this->setAttrib('enctype', Zend_Form::ENCTYPE_MULTIPART);
@@ -21,7 +21,8 @@ class App_Form_Back_FileUploader
         $this->setAttrib('id', 'file_uploader');
 
         $elements = array();
-        for ($i = 1; $i <= App_Model_Constant_Upload::FORM_INPUT_COUNT; $i++) {
+        $nbUpload = !is_null($nbUpload) ? $nbUpload : App_Model_Constant_Upload::FORM_INPUT_COUNT;
+        for ($i = 1; $i <= $nbUpload; $i++) {
             $file = new Zend_Form_Element_File(
                 array(
                      'name'            => App_Model_Constant_Upload::FORM_PREFIX_FILE . $i,

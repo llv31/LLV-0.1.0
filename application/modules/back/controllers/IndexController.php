@@ -204,13 +204,4 @@ class IndexController
         Llv_Context_User::getInstance()->logoutUser();
         $this->_redirect('/');
     }
-
-    /**
-     * PHP Info
-     */
-    public function infoAction()
-    {
-        print phpinfo();
-        die;
-    }
 }

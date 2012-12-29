@@ -15,9 +15,13 @@ class Llv_Services_Product_Filter_Season
     /** @var int */
     public $id;
     /** @var int */
-    public $seasonTypeId;
+    public $idLangue;
+    /** @var int */
+    public $idSeasonType;
     /** @var int */
     public $weekNumber;
+    /** @var int[] */
+    public $idWeekList;
     /** @var DateTime */
     public $dateDebut;
     /** @var DateTime */

@@ -26,7 +26,8 @@
     box-shadow: 0 0 5px #555;
     border-radius: 5px;
 }
-#wrapper ul.illustrations li img{
+
+#wrapper ul.illustrations li img {
     opacity: 0;
 }
 

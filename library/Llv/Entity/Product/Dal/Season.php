@@ -34,9 +34,12 @@ class Llv_Entity_Product_Dal_Season
 
     /**
      * @static
+     *
+     * @param Llv_Entity_Product_Filter_Season $filter
+     *
      * @return array|null
      */
-    public static function getAll()
+    public static function getAll(Llv_Entity_Product_Filter_Season $filter)
     {
         try {
             $sql = Llv_Db::getInstance()->select()
@@ -50,6 +53,9 @@ class Llv_Entity_Product_Dal_Season
                 'stl.language_id = l.id',
                 array('')
             );
+            if ($filter->idLangue) {
+                $sql->where('stl.language_id = ?', $filter->idLangue);
+            }
             return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);
@@ -70,8 +76,8 @@ class Llv_Entity_Product_Dal_Season
         try {
             $sql = Llv_Db::getInstance()->select()
                 ->from(array('sw'=> self::$_nameWeek));
-            if ($filter->seasonTypeId) {
-                $sql->where('type_id = ?', $filter->seasonTypeId);
+            if ($filter->idSeasonType) {
+                $sql->where('type_id = ?', $filter->idSeasonType);
             }
             if ($filter->weekNumber) {
                 $sql->where('number = ?', $filter->weekNumber);
@@ -94,6 +100,33 @@ class Llv_Entity_Product_Dal_Season
     /**
      * @static
      *
+     * @param Llv_Entity_Product_Request_Season $request
+     *
+     * @return bool
+     */
+    public static function weekUpdateLot(Llv_Entity_Product_Request_Season $request)
+    {
+        try {
+            foreach ($request->idWeekList as $idWeek) {
+                $params = array();
+                $params['type_id'] = $request->id;
+                Llv_Db::getInstance()->update(
+                    self::$_nameWeek,
+                    $params,
+                    'id = ' . $idWeek
+                );
+            }
+            return true;
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+            error_log($e);
+            return false;
+        }
+    }
+
+    /**
+     * @static
+     *
      * @param Llv_Entity_Product_Filter_Season $filter
      *
      * @return mixed|null
@@ -106,18 +139,19 @@ class Llv_Entity_Product_Dal_Season
             if ($filter->id) {
                 $sql->where('id = ?', $filter->id);
             }
-            if ($filter->seasonTypeId) {
-                $sql->where('type_id = ?', $filter->seasonTypeId);
+            if ($filter->idSeasonType) {
+                $sql->where('type_id = ?', $filter->idSeasonType);
             }
             if ($filter->weekNumber) {
                 $sql->where('number = ?', $filter->weekNumber);
             }
             if ($filter->dateDebut) {
-                $sql->where('date_begining >= ?', $filter->dateDebut->format(Llv_Constant_Date::FORMAT_DB));
+                $sql->where('date_begining <= ?', $filter->dateDebut->format(Llv_Constant_Date::FORMAT_DB))
+                    ->order('date_begining DESC');
             }
             if ($filter->dateFin) {
                 if ($filter->dateDebut) {
-//                    $sql->orWhere('date_ending <= ?', $filter->dateFin->format(Llv_Constant_Date::FORMAT_DB));
+                    $sql->orWhere('date_ending <= ?', $filter->dateFin->format(Llv_Constant_Date::FORMAT_DB));
                 } else {
                     $sql->where('date_ending <= ?', $filter->dateFin->format(Llv_Constant_Date::FORMAT_DB));
                 }

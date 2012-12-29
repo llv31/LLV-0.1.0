@@ -81,38 +81,11 @@ class Llv_Context_Product
      *
      * @return null
      */
-    public function addRow(Llv_Services_Product_Request_Edit $request)
-    {
-        $message = $this->_service->editRow($this->getHeaderMessage(), $request);
-        if ($message->success) {
-            return $message->idActivite;
-        }
-        return false;
-    }
-
-    /**
-     * @param Llv_Services_Product_Request_Edit $request
-     *
-     * @return null
-     */
     public function updateRow(Llv_Services_Product_Request_Edit $request)
     {
         $message = $this->_service->editRow($this->getHeaderMessage(), $request);
         return $message->success;
     }
-
-    /**
-     * @param Llv_Services_Product_Filter_Product $filter
-     *
-     * @return mixed
-     */
-    public function deleteRow(Llv_Services_Product_Filter_Product $filter)
-    {
-        $message = $this->_service->deleteRow($this->getHeaderMessage(), $filter);
-        return $message->success;
-    }
-
-    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
      * @param Llv_Services_Product_Request_EditContent $request
@@ -190,6 +163,9 @@ class Llv_Context_Product
      */
     public function categoryGetOne(Llv_Services_Product_Filter_Category $filter)
     {
+        if (!isset($filter->idLangue)) {
+            $filter->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
+        }
         $message = $this->_service->categoryGetOne($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->categorie;
@@ -204,11 +180,36 @@ class Llv_Context_Product
      */
     public function categoryGetAll(Llv_Services_Product_Filter_Category $filter)
     {
+        if (!isset($filter->idLangue)) {
+            $filter->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
+        }
         $message = $this->_service->categoryGetAll($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->categories;
         }
         return null;
+    }
+
+    /**
+     * @param Llv_Services_Product_Request_EditCategory $request
+     *
+     * @return bool
+     */
+    public function categoryUpdateRow(Llv_Services_Product_Request_EditCategory $request)
+    {
+        $message = $this->_service->categoryUpdateRow($this->getHeaderMessage(), $request);
+        return $message->success;
+    }
+
+    /**
+     * @param Llv_Services_Product_Request_EditCategoryContent $request
+     *
+     * @return bool
+     */
+    public function categoryEditRowContent(Llv_Services_Product_Request_EditCategoryContent $request)
+    {
+        $message = $this->_service->categoryEditRowContent($this->getHeaderMessage(), $request);
+        return $message->success;
     }
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
@@ -222,7 +223,7 @@ class Llv_Context_Product
         if (is_null($filter->dateDebut)) {
             $filter->dateDebut = new DateTime();
         }
-        if ($filter->dateFin = true) {
+        if ($filter->dateFin == true) {
             $filter->dateFin = new DateTime(
                 date(
                     Llv_Constant_Date::FORMAT_DB,
@@ -256,6 +257,34 @@ class Llv_Context_Product
             );
         }
         $message = $this->_service->weeksGetAll($this->getHeaderMessage(), $filter);
+        if ($message->success) {
+            return $message->weeks;
+        }
+        return null;
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    public function seasonGetAll(Llv_Services_Product_Filter_Season $filter)
+    {
+        if (!isset($filter->idLangue)) {
+            $filter->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
+        }
+        $message = $this->_service->seasonGetAll($this->getHeaderMessage(), $filter);
+        if ($message->success) {
+            return $message->weeks;
+        }
+        return null;
+    }
+
+    /**
+     * @param Llv_Services_Product_Request_Season $filter
+     *
+     * @return Llv_Dto_Week[]|null
+     */
+    public function weekUpdateLot(Llv_Services_Product_Request_Season $filter)
+    {
+        $message = $this->_service->weekUpdateLot($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->weeks;
         }

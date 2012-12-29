@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('table tr.jq-semaine').hover(function () {
         var $that = $(this);
-        $('body').append('<span class="prix_location">' + $that.data('price') + '</span>');
+        $('body').append('<span class="prix_location">' + $that.data('infobulle') + '</span>');
     },function () {
         $('span.prix_location').remove();
     }).mousemove(function (e) {

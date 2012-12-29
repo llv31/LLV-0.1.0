@@ -75,6 +75,15 @@ class TestController
 
     }
 
+    /**
+     * PHP Info
+     */
+    public function infoAction()
+    {
+        print phpinfo();
+        die;
+    }
+
 
 }
 

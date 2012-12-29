@@ -17,6 +17,8 @@ class Llv_Services_Product_Request_EditCategoryContent
     /** @var int */
     public $idLangue;
     /** @var string */
+    public $type;
+    /** @var string */
     public $title;
     /** @var string */
     public $content;

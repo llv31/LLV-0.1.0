@@ -12,6 +12,9 @@ $this->headTitle(_('GLOBAL_HEADER_TITLE'));
 
 /** Metas tags */
 $this->headMeta()->setCharset(Llv_Config::getInstance()->project->charset);
+$this->headMeta()->appendName('keywords', _('META_KEYWORDS'));
+$this->headMeta()->appendName('description', _('META_DESCRIPTION'));
+$this->headMeta()->appendName('google-site-verification', _('META_GOOGLE_VERIF'));
 
 /** Feuilles de style */
 $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/' . $module . '/' . $locale . '/_common/css/global.css');
@@ -41,7 +44,6 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/d
     <?= $this->headTitle(); ?>
 
     <?= $this->headMeta(); ?>
-    <meta name="google-site-verification" content="MyUxzCNcdspiFGJxWUrpzL0A2rf3TfQdg88ZBvrGL10" />
 
     <?= $this->headLink(); ?>
 

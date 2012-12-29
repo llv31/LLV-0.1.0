@@ -28,16 +28,23 @@ class App_Form_Back_Language
                  'class'   => 'jq-language_toggler'
             )
         );
-        $options = array();
-        foreach (Llv_Context_Referential::getInstance()->getLanguages() as $language) {
-            $options[$language->locale->toString()] = $language->label;
-        }
-        $elements->setMultiOptions(
-            $options
-        );
+        $elements->setMultiOptions($this->fillLanguages());
+
         /** Ajout des éléments au formulaire */
         $this->addElement($elements);
 
         return parent::__construct();
+    }
+
+    /**
+     * @return array
+     */
+    private function fillLanguages()
+    {
+        $options = array();
+        foreach (Llv_Context_Referential::getInstance()->getLanguages() as $language) {
+            $options[$language->locale->toString()] = $language->label;
+        }
+        return $options;
     }
 }

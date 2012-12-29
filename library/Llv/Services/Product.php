@@ -150,28 +150,6 @@ class Llv_Services_Product
         return $message;
     }
 
-    /**
-     * @param Llv_Services_Message_Header           $header
-     * @param Llv_Services_Product_Filter_Product   $filter
-     *
-     * @return Llv_Services_Product_Message_Product
-     */
-    public function deleteRow(
-        Llv_Services_Message_Header $header,
-        Llv_Services_Product_Filter_Product $filter
-    )
-    {
-        $message = new Llv_Services_Product_Message_Product();
-        try {
-            $entityFilter = new Llv_Entity_Product_Filter_Product();
-            $entityFilter->id = $filter->id;
-            $this->getEntity()->deleteRow($entityFilter);
-            $message->success = true;
-        } catch (Exception $e) {
-            $message->errorList[] = $e;
-        }
-        return $message;
-    }
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
@@ -382,6 +360,7 @@ class Llv_Services_Product
         $message = new Llv_Services_Product_Message_Category();
         try {
             $entityFilter = new Llv_Entity_Product_Filter_Category();
+            $entityFilter->id = $filter->id;
             $entityFilter->idLangue = $filter->idLangue;
             $entityFilter->route = $filter->route;
             $message->categorie = $this->getEntity()->categoryGetOne($entityFilter);
@@ -415,6 +394,72 @@ class Llv_Services_Product
         return $message;
     }
 
+    /**
+     * @param Llv_Services_Message_Header               $header
+     * @param Llv_Services_Product_Request_EditCategory $request
+     *
+     * @return Llv_Services_Product_Message_Category
+     */
+    public function categoryUpdateRow(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Request_EditCategory $request
+    )
+    {
+        $message = new Llv_Services_Product_Message_Category();
+        try {
+            $entityRequest = new Llv_Entity_Product_Request_EditCategory();
+            $entityRequest->id = isset($request->id)
+                && !is_null($request->id)
+                && !empty($request->id)
+                ? $request->id
+                : null;
+            $entityRequest->coordonnees = $request->coordonnees;
+            $entityRequest->pinColor = $request->pinColor;
+            $entityRequest->princingType = $request->princingType;
+//            $entityRequest->route = $request->route;
+            $this->getEntity()->categoryUpdateRow($entityRequest);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header                      $header
+     * @param Llv_Services_Product_Request_EditCategoryContent $request
+     *
+     * @return Llv_Services_Product_Message_Category
+     */
+    public function categoryEditRowContent(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Request_EditCategoryContent $request
+    )
+    {
+        $message = new Llv_Services_Product_Message_Category();
+        try {
+            $entityRequest = new Llv_Entity_Product_Request_EditCategoryContent();
+            $entityRequest->idCategory = isset($request->idCategory)
+                && !is_null($request->idCategory)
+                && !empty($request->idCategory)
+                ? $request->idCategory
+                : null;
+            $entityRequest->idLangue = isset($request->idLangue)
+                && !is_null($request->idLangue)
+                && !empty($request->idLangue)
+                ? $request->idLangue
+                : null;
+            $entityRequest->type = $request->type;
+            $entityRequest->title = $request->title;
+            $entityRequest->content = $request->content;
+            $this->getEntity()->categoryEditRowContent($entityRequest);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
@@ -432,7 +477,7 @@ class Llv_Services_Product
         try {
             $entityFilter = new Llv_Entity_Product_Filter_Season();
             $entityFilter->id = $filter->id;
-            $entityFilter->seasonTypeId = $filter->seasonTypeId;
+            $entityFilter->idSeasonType = $filter->idSeasonType;
             $entityFilter->weekNumber = $filter->weekNumber;
             $entityFilter->dateDebut = $filter->dateDebut;
             $entityFilter->dateFin = $filter->dateFin;
@@ -461,6 +506,56 @@ class Llv_Services_Product
             $entityFilter->dateDebut = $filter->dateDebut;
             $entityFilter->dateFin = $filter->dateFin;
             $message->weeks = $this->getEntity()->weeksGetAll($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_Message_Header        $header
+     * @param Llv_Services_Product_Filter_Season $filter
+     *
+     * @return Llv_Services_Product_Message_Week
+     */
+    public function seasonGetAll(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Filter_Season $filter
+    )
+    {
+        $message = new Llv_Services_Product_Message_Week();
+        try {
+            $entityFilter = new Llv_Entity_Product_Filter_Season();
+            $entityFilter->idLangue = $filter->idLangue;
+//            $entityFilter->idSeasonType = $filter->idSeasonType;
+            $message->weeks = $this->getEntity()->seasonGetAll($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header         $header
+     * @param Llv_Services_Product_Request_Season $request
+     *
+     * @return Llv_Services_Product_Message_Week
+     */
+    public function weekUpdateLot(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Request_Season $request
+    )
+    {
+        $message = new Llv_Services_Product_Message_Week();
+        try {
+            $entityRequest = new Llv_Entity_Product_Request_Season();
+            $entityRequest->id = $request->id;
+            $entityRequest->idWeekList = $request->idWeekList;
+            $this->getEntity()->weekUpdateLot($entityRequest);
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

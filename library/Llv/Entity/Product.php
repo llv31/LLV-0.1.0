@@ -210,6 +210,26 @@ class Llv_Entity_Product
         );
     }
 
+    /**
+     * @param Llv_Entity_Product_Request_EditCategory $request
+     *
+     * @return array
+     */
+    public function categoryUpdateRow(Llv_Entity_Product_Request_EditCategory $request)
+    {
+        return Llv_Entity_Product_Dal_Category::categoryUpdateRow($request);
+    }
+
+    /**
+     * @param Llv_Entity_Product_Request_EditCategoryContent $request
+     *
+     * @return mixed
+     */
+    public function categoryEditRowContent(Llv_Entity_Product_Request_EditCategoryContent $request)
+    {
+        return Llv_Entity_Product_Dal_Category::categoryEditRowContent($request);
+    }
+
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
@@ -217,19 +237,46 @@ class Llv_Entity_Product
      *
      * @return array
      */
-    public function weeksGetOne(Llv_Entity_Product_Filter_Season $filter){
+    public function weeksGetOne(Llv_Entity_Product_Filter_Season $filter)
+    {
         return Llv_Entity_Product_Helper_Season::convertWeekFromDalToDto(
             Llv_Entity_Product_Dal_Season::getOneWeek($filter)
         );
     }
+
     /**
      * @param Llv_Entity_Product_Filter_Season $filter
      *
      * @return array
      */
-    public function weeksGetAll(Llv_Entity_Product_Filter_Season $filter){
-        return Llv_Entity_Product_Helper_Season::convertWeeListFromDalToDto(
+    public function weeksGetAll(Llv_Entity_Product_Filter_Season $filter)
+    {
+        return Llv_Entity_Product_Helper_Season::convertWeekListFromDalToDto(
             Llv_Entity_Product_Dal_Season::getAllWeeks($filter)
         );
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Entity_Product_Filter_Season $filter
+     *
+     * @return array
+     */
+    public function seasonGetAll(Llv_Entity_Product_Filter_Season $filter)
+    {
+        return Llv_Entity_Product_Helper_Season::convertListFromDalToDto(
+            Llv_Entity_Product_Dal_Season::getAll($filter)
+        );
+    }
+
+    /**
+     * @param Llv_Entity_Product_Request_Season $request
+     *
+     * @return mixed|void
+     */
+    public function weekUpdateLot(Llv_Entity_Product_Request_Season $request)
+    {
+        return Llv_Entity_Product_Dal_Season::weekUpdateLot($request);
     }
 }

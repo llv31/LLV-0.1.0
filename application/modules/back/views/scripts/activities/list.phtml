@@ -1,7 +1,7 @@
 <?php
 $this->headTitle(_('HEAD_TITLE_ACTIVITY') . ' | ');
 $this->headLink()->appendStylesheet($this->buildDesignUrl('carrousel/css/list.css'));
-$this->headScript()->appendFile($this->baseUrl() . '/design/back/default/_common/js/jquery.table-action.js');
+$this->headScript()->appendFile($this->buildDesignUrl('_common/js/jquery.table-action.js'));
 $liste = $this->list;
 ?>
 
