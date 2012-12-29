@@ -17,8 +17,8 @@ $(document).ready(function () {
     geolocate(map);
     $.each(markerList, function (i, markerJSON) {
         addMarker(map, markerJSON);
-        map.setCenter(new google.maps.LatLng(markerJSON.latitude, markerJSON.longitude));
     });
+    map.setCenter(new google.maps.LatLng(markerList.centerOn.lat, markerList.centerOn.long));
     detectBrowser($JQgooglemap);
 });
 
@@ -38,9 +38,9 @@ function addMarker(map, configJSON) {
         infowindow = new google.maps.InfoWindow();
 
     infowindow.setContent(configJSON.html);
-//    google.maps.event.addListener(marker, 'click', function () {
-//        infowindow.open(map, marker);
-//    });
+    google.maps.event.addListener(marker, 'click', function () {
+        infowindow.open(map, marker);
+    });
         infowindow.open(map, marker);
 }
 

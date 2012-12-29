@@ -16,4 +16,6 @@ class Llv_Constant_File_Category
     const CARROUSEL = 'carrousel';
     const NEWS = 'news';
     const ACTIVITY = 'activity';
+    const PRODUCTS = 'products';
+    const PRODUCTS_CATEGORY = 'products_category';
 }

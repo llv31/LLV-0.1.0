@@ -49,8 +49,17 @@ class Llv_Entity_Product_Dal_Category
                 'pc.id = pcl.category_id',
                 array('title', 'content', 'language_id')
             )
-                ->joinLeft(array('l'=> 'language'), 'l.id = pcl.language_id')
-                ->where('pc.id = ?', $filter->id);
+                ->joinLeft(
+                array('l'=> 'language'),
+                'l.id = pcl.language_id',
+                array());
+
+            if (isset($filter->id)) {
+                $sql->where('pc.id = ?', $filter->id);
+            } elseif (isset($filter->route)) {
+                $sql->where('pc.route = ?', $filter->route);
+            }
+
             if (isset($filter->idLangue)) {
                 $sql->where('l.id = ?', $filter->idLangue);
             }
@@ -78,15 +87,18 @@ class Llv_Entity_Product_Dal_Category
                      'pcl'=> self::$_nameTrad
                 ),
                 'pc.id = pcl.category_id',
-                array('title', 'language_id')
+                array('title', 'content', 'language_id')
             )
-                ->joinLeft(array('l'=> 'language'), 'l.id = pcl.language_id', array());
+                ->joinLeft(
+                array('l'=> 'language'),
+                'l.id = pcl.language_id',
+                array()
+            );
             if (isset($filter->idLangue)) {
                 $sql->where('l.id = ?', $filter->idLangue);
             }
-            if ($filter->online) {
-                $sql->where('pc.online = ?', $filter->online);
-            }
+//            Zend_Debug::dump($sql->assemble());
+//            die;
             return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);

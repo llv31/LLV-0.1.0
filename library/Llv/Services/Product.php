@@ -59,7 +59,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header           $header
-     * @param Llv_Services_Product_Filter_Product $filter
+     * @param Llv_Services_Product_Filter_Product   $filter
      *
      * @return Llv_Services_Product_Message_Product
      */
@@ -75,21 +75,8 @@ class Llv_Services_Product
             $entityFilter->idLangue = $filter->idLangue;
             $entityFilter->url = $filter->url;
             $produit = $this->getEntity()->getOne($entityFilter);
-//            if (!is_null($produit)) {
-//                /** On ajoute la catégorie */
-//                $categoryFilter = new Llv_Services_Product_Filter_Category();
-//                $categoryFilter->id = $produit->category->id;
-//                $categorie = $this->categoryGetOne($header, $categoryFilter);
-//                $produit->category = $categorie->categorie;
-//
-//                $illuFilter = new Llv_Services_Product_Filter_File();
-//                $illuFilter->idProduct = $produit->id;
-//                $illustrations = $this->getProductFiles($header, $illuFilter);
-//                $produit->illustrations = $illustrations->files;
-
-                $message->product = $produit;
-                $message->success = true;
-//            }
+            $message->product = $produit;
+            $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;
         }
@@ -98,7 +85,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header           $header
-     * @param Llv_Services_Product_Filter_Product $filter
+     * @param Llv_Services_Product_Filter_Product   $filter
      *
      * @return Llv_Services_Product_Message_Product
      */
@@ -112,25 +99,9 @@ class Llv_Services_Product
             $entityFilter = new Llv_Entity_Product_Filter_Product();
             $entityFilter->idLangue = $filter->idLangue;
             $entityFilter->idCategory = $filter->idCategory;
+            $entityFilter->exceptThisId = $filter->exceptThisId;
             $produits = $this->getEntity()->getAll($entityFilter);
-            /** On ajoute les catégories */
-            $result = array();
-            /** @var $produit Llv_Dto_Product */
-            foreach ($produits as $produit) {
-                if (!is_null($produit)) {
-                    $categoryFilter = new Llv_Services_Product_Filter_Category();
-                    $categoryFilter->id = $produit->category->id;
-                    $categorie = $this->categoryGetOne($header, $categoryFilter);
-                    $produit->category = $categorie->categorie;
-
-                    $illuFilter = new Llv_Services_Product_Filter_File();
-                    $illuFilter->idProduct = $produit->id;
-                    $illustrations = $this->getProductFiles($header, $illuFilter);
-                    $produit->illustrations = $illustrations->files;
-                    $result[] = $produit;
-                }
-            }
-            $message->products = $result;
+            $message->products = $produits;
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;
@@ -140,7 +111,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header        $header
-     * @param Llv_Services_Product_Request_Edit $request
+     * @param Llv_Services_Product_Request_Edit  $request
      *
      * @return Llv_Services_Product_Message_Product
      */
@@ -181,7 +152,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header           $header
-     * @param Llv_Services_Product_Filter_Product $filter
+     * @param Llv_Services_Product_Filter_Product   $filter
      *
      * @return Llv_Services_Product_Message_Product
      */
@@ -206,7 +177,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header           $header
-     * @param Llv_Services_Product_Filter_Product $request
+     * @param Llv_Services_Product_Filter_Product   $request
      *
      * @return Llv_Services_Product_Message_Product
      */
@@ -232,7 +203,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header               $header
-     * @param Llv_Services_Product_Request_EditContent $request
+     * @param Llv_Services_Product_Request_EditContent  $request
      *
      * @return Llv_Services_Product_Message_Product
      */
@@ -274,7 +245,7 @@ class Llv_Services_Product
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
     /**
      * @param Llv_Services_Message_Header        $header
-     * @param Llv_Services_Product_Request_File $request
+     * @param Llv_Services_Product_Request_File  $request
      *
      * @return Llv_Services_Product_Message_File
      */
@@ -319,7 +290,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header       $header
-     * @param Llv_Services_Product_Filter_File $filter
+     * @param Llv_Services_Product_Filter_File  $filter
      *
      * @return Llv_Services_Product_Message_File
      */
@@ -343,7 +314,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header        $header
-     * @param Llv_Services_Product_Request_File $request
+     * @param Llv_Services_Product_Request_File  $request
      *
      * @return Llv_Services_Product_Message_File
      */
@@ -373,7 +344,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header        $header
-     * @param Llv_Services_Product_Request_File $filter
+     * @param Llv_Services_Product_Request_File  $filter
      *
      * @return Llv_Services_Product_Message_File
      */
@@ -399,7 +370,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header           $header
-     * @param Llv_Services_Product_Filter_Category $filter
+     * @param Llv_Services_Product_Filter_Category  $filter
      *
      * @return Llv_Services_Product_Message_Category
      */
@@ -411,7 +382,8 @@ class Llv_Services_Product
         $message = new Llv_Services_Product_Message_Category();
         try {
             $entityFilter = new Llv_Entity_Product_Filter_Category();
-            $entityFilter->id = $filter->id;
+            $entityFilter->idLangue = $filter->idLangue;
+            $entityFilter->route = $filter->route;
             $message->categorie = $this->getEntity()->categoryGetOne($entityFilter);
             $message->success = true;
         } catch (Exception $e) {
@@ -422,7 +394,7 @@ class Llv_Services_Product
 
     /**
      * @param Llv_Services_Message_Header           $header
-     * @param Llv_Services_Product_Filter_Category $filter
+     * @param Llv_Services_Product_Filter_Category  $filter
      *
      * @return Llv_Services_Product_Message_Category
      */
@@ -434,11 +406,61 @@ class Llv_Services_Product
         $message = new Llv_Services_Product_Message_Category();
         try {
             $entityFilter = new Llv_Entity_Product_Filter_Category();
-            if (isset($filter->online)) {
-                $entityFilter->online = $filter->online;
-            }
             $entityFilter->idLangue = $filter->idLangue;
             $message->categories = $this->getEntity()->categoryGetAll($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_Message_Header        $header
+     * @param Llv_Services_Product_Filter_Season $filter
+     *
+     * @return Llv_Services_Product_Message_Week
+     */
+    public function weeksGetOne(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Filter_Season $filter
+    )
+    {
+        $message = new Llv_Services_Product_Message_Week();
+        try {
+            $entityFilter = new Llv_Entity_Product_Filter_Season();
+            $entityFilter->id = $filter->id;
+            $entityFilter->seasonTypeId = $filter->seasonTypeId;
+            $entityFilter->weekNumber = $filter->weekNumber;
+            $entityFilter->dateDebut = $filter->dateDebut;
+            $entityFilter->dateFin = $filter->dateFin;
+            $message->week = $this->getEntity()->weeksGetOne($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header        $header
+     * @param Llv_Services_Product_Filter_Season $filter
+     *
+     * @return Llv_Services_Product_Message_Week
+     */
+    public function weeksGetAll(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Filter_Season $filter
+    )
+    {
+        $message = new Llv_Services_Product_Message_Week();
+        try {
+            $entityFilter = new Llv_Entity_Product_Filter_Season();
+            $entityFilter->dateDebut = $filter->dateDebut;
+            $entityFilter->dateFin = $filter->dateFin;
+            $message->weeks = $this->getEntity()->weeksGetAll($entityFilter);
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

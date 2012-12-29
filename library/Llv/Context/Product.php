@@ -186,9 +186,9 @@ class Llv_Context_Product
     /**
      * @param Llv_Services_Product_Filter_Category $filter
      *
-     * @return Llv_Dto_Product|null
+     * @return Llv_Dto_Product_Category|null
      */
-    public function categoryGetOneById(Llv_Services_Product_Filter_Category $filter)
+    public function categoryGetOne(Llv_Services_Product_Filter_Category $filter)
     {
         $message = $this->_service->categoryGetOne($this->getHeaderMessage(), $filter);
         if ($message->success) {
@@ -211,5 +211,55 @@ class Llv_Context_Product
         return null;
     }
 
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+    /**
+     * @param Llv_Services_Product_Filter_Season $filter
+     *
+     * @return Llv_Dto_Week[]|null
+     */
+    public function weeksGetOne(Llv_Services_Product_Filter_Season $filter)
+    {
+        if (is_null($filter->dateDebut)) {
+            $filter->dateDebut = new DateTime();
+        }
+        if ($filter->dateFin = true) {
+            $filter->dateFin = new DateTime(
+                date(
+                    Llv_Constant_Date::FORMAT_DB,
+                    strtotime('+1 week', $filter->dateDebut->getTimestamp())
+                )
+            );
+        }
+        $message = $this->_service->weeksGetOne($this->getHeaderMessage(), $filter);
+        if ($message->success) {
+            return $message->week;
+        }
+        return null;
+    }
+
+    /**
+     * @param Llv_Services_Product_Filter_Season $filter
+     *
+     * @return Llv_Dto_Week[]|null
+     */
+    public function weeksGetAll(Llv_Services_Product_Filter_Season $filter)
+    {
+        if (is_null($filter->dateDebut)) {
+            $filter->dateDebut = new DateTime();
+        }
+        if (is_null($filter->dateFin)) {
+            $filter->dateFin = new DateTime(
+                date(
+                    Llv_Constant_Date::FORMAT_DB,
+                    strtotime('+2 years', $filter->dateDebut->getTimestamp())
+                )
+            );
+        }
+        $message = $this->_service->weeksGetAll($this->getHeaderMessage(), $filter);
+        if ($message->success) {
+            return $message->weeks;
+        }
+        return null;
+    }
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 }

@@ -18,12 +18,14 @@ class Llv_Dto_Product_Category
     public $route;
     /** @var string */
     public $adresse;
-    /** @var string */
+    /** @var Llv_Dto_Coordinate */
     public $location;
     /** @var string */
     public $title;
     /** @var string */
     public $content;
+    /** @var string */
+    public $pinColor;
     /** @var int */
     public $pricingType;
 }

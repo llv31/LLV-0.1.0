@@ -89,10 +89,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $router = new Llv_Router();
         $router->setIdLangue(Llv_Context_Application::getInstance()->getLocale()->getIdLangue());
         $router->setModule(Llv_Context_Application::getInstance()->getActiveModule());
+//        $router->loadRoutes();
 
         $routerInstance = Zend_Controller_Front::getInstance();
         $routerInstance->setRouter($router);
-        $routerInstance->getRouter()->addDefaultRoutes();
     }
 
     /**

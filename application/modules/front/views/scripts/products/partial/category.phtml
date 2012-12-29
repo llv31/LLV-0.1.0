@@ -1,0 +1,10 @@
+<?php
+/** @var $category Llv_Dto_Product_Category */
+$category = $this->category;
+$this->headTitle($category->title . ' | ');
+?>
+<div class="category">
+    <h2><?= $category->title ?></h2>
+    <div class="content"><?= $category->content; ?></div>
+    <div class="adresse"><?= $category->adresse; ?></div>
+</div>

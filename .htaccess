@@ -1,6 +1,6 @@
 #PROD
 SetEnv PHP_VER 5
-#Options -Indexes
+Options -Indexes
 Options -Multiviews
 RewriteBase /public
 RewriteRule !\.(js|ico|gif|jpg|png|css)$ index.php

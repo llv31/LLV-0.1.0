@@ -109,6 +109,9 @@ msgstr "Mob."
 msgid "GLOBAL_COORDONNEES_MOBILE"
 msgstr "+33(0) 618 641 429"
 
+msgid "GLOBAL_COORDONNEES_GPS_LABEL"
+msgstr "Coordonnées GPS"
+
 msgid "GLOBAL_BACK"
 msgstr "Retourner à la liste"
 
@@ -117,6 +120,9 @@ msgstr "Retourner à l'accueil"
 
 msgid "GLOBAL_CHAMP_OBLIGATOIRE"
 msgstr "*"
+
+msgid "GLOBAL_MONNAIE"
+msgstr "euros"
 
 msgid "FOOTER_COPYRIGHT"
 msgstr "Tous droits reservés© 2008"
@@ -262,6 +268,9 @@ msgstr "1"
 msgid "GLOBAL_TIME_SEPARATOR_LABEL"
 msgstr "à"
 
+msgid "GLOBAL_WEEK_LABEL_SHORT"
+msgstr "Sem."
+
 msgid "HOME_NEWS_TITRE"
 msgstr "Dernières nouvelles"
 
@@ -364,6 +373,66 @@ msgstr "Galerie photo"
 msgid "ACTIVITY_LIST_NORESULT"
 msgstr "Il n'y a aucune activité"
 
+msgid "PRODUCTS_ONGLET_CONTENT"
+msgstr "Description"
+
+msgid "PRODUCTS_ONGLET_PHOTOS"
+msgstr "Photos"
+
+msgid "PRODUCTS_ONGLET_PRIX"
+msgstr "Disponibilités & tarifs"
+
+msgid "PRODUCTS_ONGLET_RESERVER"
+msgstr "Reservation"
+
+msgid "PRODUCTS_PRIX_DISPO"
+msgstr "Disponibilités"
+
+msgid "PRODUCTS_PRIX_PRIX"
+msgstr "Tarifs"
+
+msgid "PRODUCTS_PRIX_CALENDRIER"
+msgstr "Tarifs et calendrier des saisons"
+
+msgid "PRODUCT_PRICE_SEASON_CONTACT_US"
+msgstr "Contactez nous pour plus d'informations"
+
+msgid "PRODUCT_PRICE_NIGHT_EMPTY"
+msgstr "&times"
+
+msgid "PRODUCT_PRICE_NIGHT_NUIT_SING"
+msgstr "nuit"
+
+msgid "PRODUCT_PRICE_NIGHT_NUIT_PLUR"
+msgstr "nuits"
+
+msgid "PRODUCT_PRICE_NIGHT_PERSONNES_1"
+msgstr "1 personne"
+
+msgid "PRODUCT_PRICE_NIGHT_PERSONNES_2"
+msgstr "2 personnes"
+
+msgid "PRODUCT_PRICE_NIGHT_PERSONNES_3"
+msgstr "3 personnes"
+
+msgid "PRODUCT_PRICE_NIGHT_PERSONNES_4"
+msgstr "4 personnes"
+
+msgid "PRODUCT_PRICE_SEASON_EMPTY"
+msgstr "&times"
+
+msgid "PRODUCT_PRICE_SEASON_PERIODES_WEEK"
+msgstr "Semaine"
+
+msgid "PRODUCT_PRICE_SEASON_PERIODES_WEEKEND"
+msgstr "Week-end"
+
+msgid "PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK"
+msgstr "Mid-week"
+
+msgid "PRODUCT_PRICE_SEASON_PERIODES_INDISPO"
+msgstr "Réservation ou tarif indisponible"
+
 msgid "CONTACT_TITLE"
 msgstr "Réserver / Nous contacter"
 
@@ -450,6 +519,18 @@ msgstr "[Gite-luchon.com] Nouvelle demande de réservation"
 msgid "CONTACT_ENVOI_MAIL_ALT"
 msgstr ""
 "Pour afficher ce message, vous devez utiliser un client compatible HTML"
+
+msgid "CONTACT_CATEGORY_TYPE1"
+msgstr "Chambres d'hôtes"
+
+msgid "CONTACT_CATEGORY_TYPE2"
+msgstr "Chalet de montagne / Gîte"
+
+msgid "CONTACT_CENTER_COORDINATES_LAT"
+msgstr "42.814166"
+
+msgid "CONTACT_CENTER_COORDINATES_LONG"
+msgstr "0.55444"
 
 msgid "GLOBAL_ADMIN_ADD"
 msgstr "Ajouter un élément"

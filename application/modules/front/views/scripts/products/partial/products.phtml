@@ -1,0 +1,36 @@
+<?php
+/** @var $products Llv_Dto_Product */
+$products = $this->products;
+?>
+<?php if (count($products) > 0): ?>
+<div class="products">
+    <ul>
+        <?php foreach ($products as $product): ?>
+        <li style="background-image: url(<?=
+            $this->displayImage(
+                $product->id . '.jpg',
+                Llv_Constant_File_Category::PRODUCTS,
+                903,
+                9999
+            );
+            ?>)">
+            <a href="<?=
+                $this->url(
+                    array(
+                         'controller' => 'products',
+                         'action'     => 'location',
+                         'set'       => $product->url
+                    ),
+                    null,
+                    false
+                );
+                ?>">
+                <div class="cadre">
+                    <h3><?= $product->title ?></h3>
+                </div>
+            </a>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>

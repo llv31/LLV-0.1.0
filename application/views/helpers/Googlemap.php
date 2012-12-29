@@ -15,44 +15,36 @@ class App_View_Helper_Googlemap
 {
     public function googlemap()
     {
-        //@TODO : Dynamiser ça par rapport au données en DB
-        return Zend_Json::encode(
-            array(
-                 array(
-                     "couleur"   => 'yellow',
-                     "latitude"  => 42.812443,
-                     "longitude" => 0.484208,
-                     "html"      => implode(
-                         PHP_EOL,
-                         array(
-                              "<ul class=\"adresse\">",
-                              "<li><strong>Etch Soulet</strong></li>",
-                              "<li>ADRESSE</li>",
-                              "<li>CODE POSTAL - VILLE</li>",
-                              "<li class=\"phone\">" . _('GLOBAL_COORDONNEES_TELEPHONE_LABEL') . "&nbsp;" . _('GLOBAL_COORDONNEES_TELEPHONE') . "</li>",
-                              "<li class=\"mobile\">" . _('GLOBAL_COORDONNEES_MOBILE_LABEL') . "&nbsp;" . _('GLOBAL_COORDONNEES_MOBILE') . "</li>",
-                              "</ul>"
-                         )
-                     )
-                 ),
-                 array(
-                     "couleur"   => 'red',
-                     "latitude"  => 42.782654,
-                     "longitude" => 0.601339,
-                     "html"      => implode(
-                         PHP_EOL,
-                         array(
-                              "<ul class=\"adresse\">",
-                              "<li><strong>Au delà du temps</strong></li>",
-                              "<li>ADRESSE</li>",
-                              "<li>CODE POSTAL - VILLE</li>",
-                              "<li class=\"phone\">" . _('GLOBAL_COORDONNEES_TELEPHONE_LABEL') . "&nbsp;" . _('GLOBAL_COORDONNEES_TELEPHONE') . "</li>",
-                              "<li class=\"mobile\">" . _('GLOBAL_COORDONNEES_MOBILE_LABEL') . "&nbsp;" . _('GLOBAL_COORDONNEES_MOBILE') . "</li>",
-                              "</ul>"
-                         )
-                     )
-                 ),
-            )
-        );
+        $filter = new Llv_Services_Product_Filter_Category();
+        $categories = Llv_Context_Product::getInstance()->categoryGetAll($filter);
+        $result = array();
+        /** @var $categorie Llv_Dto_Product_Category */
+        foreach ($categories as $categorie) {
+            $result[$categorie->id] = array(
+                "couleur"   => $categorie->pinColor,
+                "latitude"  => $categorie->location->latitude,
+                "longitude" => $categorie->location->longitude,
+                "html"      => implode(
+                    PHP_EOL,
+                    array(
+                         "<ul class=\"adresse\">",
+                         "<li><strong>" . $categorie->title . "</strong></li>",
+                         "<li class=\"type\">(" . _('CONTACT_CATEGORY_TYPE' . $categorie->id) . ")</li>",
+                         "<li>" . $categorie->adresse . "</li>",
+                         "<li class=\"phone\"><span>" . _('GLOBAL_COORDONNEES_TELEPHONE_LABEL') . "</span>&nbsp;"
+                             . _('GLOBAL_COORDONNEES_TELEPHONE') . "</li>",
+                         "<li class=\"mobile\"><span>" . _('GLOBAL_COORDONNEES_MOBILE_LABEL') . "</span>&nbsp;"
+                             . _('GLOBAL_COORDONNEES_MOBILE') . "</li>",
+                         "<li class=\"localisation\"><span>" . _('GLOBAL_COORDONNEES_GPS_LABEL') . "</span>&nbsp;
+                         <a href=\"https://maps.google.fr/maps?q=" . $categorie->location->value . "\" target=\"_blank\">"
+                             . $categorie->location->value . "</a></li>",
+                         "</ul>"
+                    )
+                )
+            );
+        }
+        $result['centerOn']['lat'] = _('CONTACT_CENTER_COORDINATES_LAT');
+        $result['centerOn']['long'] = _('CONTACT_CENTER_COORDINATES_LONG');
+        return Zend_Json::encode($result);
     }
 }

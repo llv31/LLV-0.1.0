@@ -28,6 +28,7 @@ class Llv_Entity_Product_Helper_Product
             $dto->category->id = $dal['product_category_id'];
             $dto->idLangue = $dal['language_id'];
             $dto->title = stripcslashes($dal['title']);
+            $dto->introduction = stripcslashes($dal['introduction']);
             $dto->content = stripcslashes($dal['content']);
             $dto->url = $dal['url'];
             $dto->availability = $dal['availability'];
@@ -84,8 +85,12 @@ class Llv_Entity_Product_Helper_Product
     public static function convertSeasonPriceFromDalToDto($dal)
     {
         if (count($dal) > 0) {
+//            Zend_Debug::dump($dal);die;
             $dto = new Llv_Dto_Product_Season_Price();
-            $dto->season->id = $dal['season_type_id'];
+            $dto->season = new Llv_Dto_Season();
+            $dto->season->id = $dal['type_id'];
+            $dto->season->label = $dal['label'];
+            $dto->season->idLangue = $dal['language_id'];
             $dto->week = $dal['week'];
             $dto->midweek = $dal['midweek'];
             $dto->weekend = $dal['weekend'];

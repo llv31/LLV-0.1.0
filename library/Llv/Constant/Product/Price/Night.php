@@ -13,5 +13,5 @@
 class Llv_Constant_Product_Price_Night
 {
     /** Réduction par nuité supplémentaire */
-    const PROMOTION_NIGHT_SUPP = 5;
+    const PROMOTION_NIGHT_SUPP = 4;
 }

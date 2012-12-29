@@ -15,6 +15,8 @@ class Llv_Services_Product_Filter_Product
     /** @var int */
     public $id;
     /** @var int */
+    public $exceptThisId;
+    /** @var int */
     public $idLangue;
     /** @var int */
     public $idCategory;

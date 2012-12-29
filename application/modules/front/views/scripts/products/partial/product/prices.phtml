@@ -1,0 +1,28 @@
+<?php
+/** @var $product Llv_Dto_Product */
+$product = $this->product;
+?>
+
+<div id="jq-prices" class="prices">
+    <div class="availability">
+        <h3><?= _('PRODUCTS_PRIX_DISPO'); ?></h3>
+        <?= $product->availability; ?>
+    </div>
+
+    <?php if (is_array($product->price) && $product->price[0] instanceof Llv_Dto_Product_Season_Price): ?>
+        <div class="amount">
+            <h3><?= _('PRODUCTS_PRIX_CALENDRIER'); ?></h3>
+            <?= $this->displayProductPrice($product->price); ?>
+        </div>
+        <div class="calendar">
+            <?= $this->displaySeasonCalendar($product->price, 2013); ?>
+<!--            --><?//= $this->displaySeasonCalendar($product->price, date('Y')); ?>
+        </div>
+    <?php else: ?>
+
+        <div class="amount">
+            <h3><?= _('PRODUCTS_PRIX_PRIX'); ?></h3>
+            <?= $this->displayProductPrice($product->price); ?>
+        </div>
+    <?php endif; ?>
+</div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Class IsAction.php
+ * PHP Class GetAction.php
  * PHP Version 5
  *
  * @category    : default

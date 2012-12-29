@@ -26,7 +26,20 @@ class App_View_Helper_DisplayMainMenu
         foreach ($items as $key=> $item) {
             $class = null;
             if ($this->view->isController($item['controller'])) {
-                if (isset($item['actions'])) {
+                if (isset($item['args']) && count($item['args']) > 0) {
+                    $isCurrent = true;
+                    $params = $this->view->getParams();
+                    foreach ($item['args'] as $argName=> $argValue) {
+                        if ($isCurrent && array_key_exists($argName, $params)) {
+                            if ($params[$argName] != $argValue) {
+                                $isCurrent = false;
+                            }
+                        }
+                    }
+                    if ($isCurrent) {
+                        $class = "current";
+                    }
+                } elseif (isset($item['actions'])) {
                     if (in_array($this->view->getAction(), $item['actions'])) {
                         $class = "current";
                     }
@@ -39,12 +52,16 @@ class App_View_Helper_DisplayMainMenu
                 echo '<span>' . $item['label'] . '</span>';
                 $this->displayMainMenu($item['items'], 'sub' . $menuClass . ' ' . 'sub' . $menuClass . '_' . $key);
             } else {
+                $args = isset($item['args']) ? $item['args'] : array();
                 echo '<a href="' .
                     htmlspecialchars(
                         $this->view->url(
-                            array(
-                                 'controller' => $item['controller'],
-                                 'action'     => isset($item['action']) ? $item['action'] : 'index'
+                            array_merge(
+                                array(
+                                     'controller' => $item['controller'],
+                                     'action'     => isset($item['action']) ? $item['action'] : 'index'
+                                ),
+                                $args
                             ),
                             null,
                             true

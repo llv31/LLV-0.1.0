@@ -46,7 +46,7 @@ class App_Form_Front_Contact
                  'name'     => 'email',
                  'label'    => _('CONTACT_FORM_LABEL_EMAIL'),
                  'required' => true,
-//                 'validator'=> new Zend_Validate_EmailAddress()
+                 //                 'validator'=> new Zend_Validate_EmailAddress()
             )
         );
         /** Tel.Mob. */
@@ -79,7 +79,7 @@ class App_Form_Front_Contact
             array(
                  'name'    => 'decouverte',
                  'label'   => _('CONTACT_FORM_LABEL_DECOUVERTE'),
-//                 'required'=> true
+                 //                 'required'=> true
             )
         );
         $decouverte->addMultiOptions($options);
@@ -119,14 +119,12 @@ class App_Form_Front_Contact
             )
         );
         /** Locations */
-        $options = array(
-            null => _('CONTACT_FORM_SELECT_DECOUVERTE_OPTION_VIDE'),
-        );
+        $options = $this->fillLocations();
         $decouverte = new Zend_Form_Element_Select(
             array(
                  'name'    => 'locations',
                  'label'   => _('CONTACT_FORM_LABEL_LOCATIONS'),
-//                 'required'=> true
+                 'required'=> true
             )
         );
         $decouverte->addMultiOptions($options);
@@ -179,5 +177,27 @@ class App_Form_Front_Contact
         );
 
         return parent::__construct();
+    }
+
+    /**
+     * @return array
+     */
+    private function fillLocations()
+    {
+        $filter = new Llv_Services_Product_Filter_Product();
+        $produits = Llv_Context_Product::getInstance()->getAll($filter);
+        $result[null] = _('CONTACT_FORM_SELECT_DECOUVERTE_OPTION_VIDE');
+        foreach ($produits as $produit) {
+            $result[$produit->title] = $produit->title;
+        }
+        return $result;
+    }
+
+    /**
+     * @param $locationTitle
+     */
+    public function setLocation($locationTitle)
+    {
+        $this->getElement('locations')->setValue($locationTitle)->setAttrib('disabled', 'disabled');
     }
 }

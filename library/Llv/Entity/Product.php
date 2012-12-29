@@ -23,6 +23,39 @@ class Llv_Entity_Product
         $product = Llv_Entity_Product_Helper_Product::convertFromDalToDto(
             Llv_Entity_Product_Dal_Product::getOne($filter)
         );
+        return $this->fillProduct($product, $filter);
+    }
+
+    /**
+     * @param Llv_Entity_Product_Filter_Product $filter
+     *
+     * @return array
+     */
+    public function getAll(Llv_Entity_Product_Filter_Product $filter)
+    {
+        $products = Llv_Entity_Product_Helper_Product::convertListFromDalToDto(
+            Llv_Entity_Product_Dal_Product::getAll($filter)
+        );
+        $result = array();
+        if (count($products) > 0) {
+            foreach ($products as $product) {
+                $result[] = $this->fillProduct($product, $filter);
+            }
+        }
+        return $result;
+    }
+
+    /**
+     * @param Llv_Dto_Product                   $product
+     * @param Llv_Entity_Product_Filter_Product $filter
+     *
+     * @return Llv_Dto_Product
+     */
+    public function fillProduct(Llv_Dto_Product $product, Llv_Entity_Product_Filter_Product $filter = null)
+    {
+        if (is_null($filter)) {
+            $filter = new Llv_Entity_Product_Filter_Product();
+        }
         if (!is_null($product)) {
             $filter->id = $product->id;
 
@@ -50,22 +83,9 @@ class Llv_Entity_Product
                     $product->price = Llv_Entity_Product_Helper_Product::convertListSeasonPriceFromDalToDto($price);
                     break;
             }
+            return $product;
         }
-        Zend_Debug::dump($product);
-        die;
-        return $product;
-    }
-
-    /**
-     * @param Llv_Entity_Product_Filter_Product $filter
-     *
-     * @return array
-     */
-    public function getAll(Llv_Entity_Product_Filter_Product $filter)
-    {
-        return Llv_Entity_Product_Helper_Product::convertListFromDalToDto(
-            Llv_Entity_Product_Dal_Product::getAll($filter)
-        );
+        return null;
     }
 
     /**
@@ -187,6 +207,29 @@ class Llv_Entity_Product
     {
         return Llv_Entity_Product_Helper_Category::convertListFromDalToDto(
             Llv_Entity_Product_Dal_Category::getAll($filter)
+        );
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Entity_Product_Filter_Season $filter
+     *
+     * @return array
+     */
+    public function weeksGetOne(Llv_Entity_Product_Filter_Season $filter){
+        return Llv_Entity_Product_Helper_Season::convertWeekFromDalToDto(
+            Llv_Entity_Product_Dal_Season::getOneWeek($filter)
+        );
+    }
+    /**
+     * @param Llv_Entity_Product_Filter_Season $filter
+     *
+     * @return array
+     */
+    public function weeksGetAll(Llv_Entity_Product_Filter_Season $filter){
+        return Llv_Entity_Product_Helper_Season::convertWeeListFromDalToDto(
+            Llv_Entity_Product_Dal_Season::getAllWeeks($filter)
         );
     }
 }

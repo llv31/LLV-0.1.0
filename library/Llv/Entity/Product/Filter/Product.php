@@ -14,6 +14,8 @@ class Llv_Entity_Product_Filter_Product
 {
     /** @var int */
     public $id;
+    /** @var int */
+    public $exceptThisId;
     /** @var bool */
     public $url;
     /** @var bool */

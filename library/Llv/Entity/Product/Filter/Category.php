@@ -16,4 +16,6 @@ class Llv_Entity_Product_Filter_Category
     public $id;
     /** @var int */
     public $idLangue;
+    /** @var string */
+    public $route;
 }

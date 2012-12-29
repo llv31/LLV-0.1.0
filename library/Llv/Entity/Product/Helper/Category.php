@@ -26,9 +26,14 @@ class Llv_Entity_Product_Helper_Category
             $dto->id = $dal['id'];
             $dto->title = $dal['title'];
             $dto->content = $dal['content'];
-            $dto->adresse = $dal['address'];
-            $dto->location = $dal['location'];
+            $dto->adresse = nl2br($dal['address']);
+            $dto->location = new Llv_Dto_Coordinate();
+            $location = explode(',', $dal['location']);
+            $dto->location->value = $dal['location'];
+            $dto->location->latitude = $location[0];
+            $dto->location->longitude = $location[1];
             $dto->pricingType = $dal['pricing_type'];
+            $dto->pinColor = $dal['pin_color'];
             $dto->route = $dal['route'];
             return $dto;
         }

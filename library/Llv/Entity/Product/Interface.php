@@ -89,4 +89,13 @@ interface Llv_Entity_Product_Interface
      * @return array
      */
     public function categoryGetAll(Llv_Entity_Product_Filter_Category $filter);
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Entity_Product_Filter_Season $filter
+     *
+     * @return array
+     */
+    public function weeksGetAll(Llv_Entity_Product_Filter_Season $filter);
 }

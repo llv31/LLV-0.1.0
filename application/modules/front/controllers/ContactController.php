@@ -46,7 +46,7 @@ class ContactController
                                  _('CONTACT_FORM_LABEL_PRENOM') . ' : ' . $contactForm->getValue('prenom'),
                                  _('CONTACT_FORM_LABEL_EMAIL') . ' : ' . $contactForm->getValue('email'),
                                  _('CONTACT_FORM_LABEL_TELEPHONE') . ' : ' . $contactForm->getValue('telephone'),
-                                 _('CONTACT_FORM_LABEL_ADRESSE') . ' : ' . $contactForm->getValue('adresse'),
+                                 _('CONTACT_FORM_LABEL_ADRESSE') . ' : ' . nl2br($contactForm->getValue('adresse')),
                                  '<h2>' . _('CONTACT_FORM_FIELDSET_DEMANDE') . '</h2>',
                                  _('CONTACT_FORM_LABEL_ADULTES') . ' : ' . $contactForm->getValue('adultes'),
                                  _('CONTACT_FORM_LABEL_ENFANTS') . ' : ' . $contactForm->getValue('enfants'),
@@ -67,7 +67,7 @@ class ContactController
                 } catch (Exception $e) {
                     $this->view->assign('errorMessage', $e->getMessage()); //Pretty error messages from PHPMailer
                 }
-            }else{
+            } else {
                 $this->view->assign('errorMessage', _('CONTACT_ENVOI_MAIL_MESSAGE_OBLIGATOIRE')); //Pretty error messages from PHPMailer
             }
         }

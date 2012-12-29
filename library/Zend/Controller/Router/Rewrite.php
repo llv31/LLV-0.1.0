@@ -115,7 +115,6 @@ class Zend_Controller_Router_Rewrite extends Zend_Controller_Router_Abstract
         if (method_exists($route, 'setRequest')) {
             $route->setRequest($this->getFrontController()->getRequest());
         }
-
         $this->_routes[$name] = $route;
 
         return $this;

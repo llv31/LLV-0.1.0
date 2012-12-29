@@ -13,7 +13,7 @@ form fieldset#fieldset-informations {
 
 form fieldset#fieldset-informations p.textarea_element label {
     width: 25%;
-    padding-bottom:5px;
+    padding-bottom: 5px;
 }
 
 form fieldset#fieldset-informations p.select_element label {
@@ -21,24 +21,47 @@ form fieldset#fieldset-informations p.select_element label {
 }
 
 /* •••••••••••••••••••••••••••••••••• */
-form fieldset#fieldset-demande p.select_element label ,
+form fieldset#fieldset-demande p.select_element label,
 form fieldset#fieldset-demande p.default_element label {
     width: 37%;
 }
 
 form fieldset#fieldset-demande p.textarea_element label {
     width: 56%;
-    padding-bottom:5px;
+    padding-bottom: 5px;
 }
 
-form fieldset#fieldset-demande p.submit_element{
+form fieldset#fieldset-demande p.submit_element {
     float: right;
 }
 
 /* •••••••••••••••••••••••••••••••••• */
-#googlemap{
+#googlemap {
     width: 100%;
     height: 500px;
+}
+
+#googlemap ul.adresse li strong {
+    font-size: 1.3em;
+    text-transform: uppercase
+}
+
+#googlemap ul.adresse li.type {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+#googlemap ul.adresse li.phone {
+    margin-top: 10px;
+}
+
+#googlemap ul.adresse li a {
+    font-weight: normal;
+    color: blue;
+}
+
+#googlemap ul.adresse li span {
+    font-weight: bold;
 }
 
 /* •••••••••••••••••••••••••••••••••• */

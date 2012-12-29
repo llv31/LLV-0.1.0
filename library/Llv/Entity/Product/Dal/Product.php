@@ -18,7 +18,10 @@ class Llv_Entity_Product_Dal_Product
     protected static $_nameFile = "product_illustration";
     protected static $_namePriceNight = "product_night_price";
     protected static $_namePriceSeason = "product_season_price";
+    protected static $_nameSeasonType = "season_type";
+    protected static $_nameSeasonTypeTrad = "season_type_language";
     protected static $_nameCategory = "product_category";
+
     protected $_rowClass = "Llv_Entity_Dal_Row_Abstract";
     protected static $_instance;
 
@@ -86,20 +89,30 @@ class Llv_Entity_Product_Dal_Product
     {
         try {
             $sql = Llv_Db::getInstance()->select()
-                ->from(array('a'=> self::$_nameTable))
+                ->from(array('p'=> self::$_nameTable))
                 ->joinLeft(
                 array(
-                     'al'=> self::$_nameTrad
+                     'pl'=> self::$_nameTrad
                 ),
-                'a.id = al.product_id',
-                array('title', 'content', 'link', 'language_id')
+                'p.id = pl.product_id',
+                array('title', 'content', 'introduction', 'language_id')
             )
-                ->joinLeft(array('l'=> 'language'), 'l.id = al.language_id', array())
-                ->where('l.id = ?', $filter->idLangue)
-                ->where('a.date_delete is null')
-                ->order('a.position DESC');
-            if ($filter->online) {
-                $sql->where('a.online = ?', $filter->online);
+                ->joinLeft(
+                array('l'=> 'language'),
+                'l.id = pl.language_id',
+                array('label', 'locale', 'short_tag')
+            );
+
+            if (isset($filter->exceptThisId)) {
+                $sql->where('p.id NOT IN (?)', $filter->exceptThisId);
+            }
+
+            if (isset($filter->idCategory)) {
+                $sql->where('p.product_category_id = ?', $filter->idCategory);
+            }
+
+            if (isset($filter->idLangue)) {
+                $sql->where('l.id = ?', $filter->idLangue);
             }
             return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
@@ -138,7 +151,7 @@ class Llv_Entity_Product_Dal_Product
     {
         try {
             $params = array();
-            $params['category_id'] = $request->idCategorie;
+            $params['product_category_id'] = $request->idCategorie;
             $params['position'] = self::getLastOrder() + 1;
             $params['location'] = $request->coordonnees;
             if (isset($request->online)) {
@@ -205,7 +218,7 @@ class Llv_Entity_Product_Dal_Product
                     $params['online'] = $request->show;
                 }
             } else {
-                $params['category_id'] = $request->idCategorie;
+                $params['product_category_id'] = $request->idCategorie;
                 if (!is_null($request->position)) {
                     $params['position'] = $request->position;
                 }
@@ -509,15 +522,30 @@ class Llv_Entity_Product_Dal_Product
                 $table = null;
                 switch ($filter->priceType) {
                     case Llv_Constant_Product_Price_Type::NUIT:
-                        $table = self::$_namePriceNight;
+                        $sql = Llv_Db::getInstance()->select()
+                            ->from(array('p'=> self::$_namePriceNight))
+                            ->where('product_id = ?', $filter->id);
                         break;
                     case Llv_Constant_Product_Price_Type::SAISON:
-                        $table = self::$_namePriceSeason;
+                        $sql = Llv_Db::getInstance()->select()
+                            ->from(array('p'=> self::$_namePriceSeason))
+                            ->joinLeft(
+                            array('st'=> self::$_nameSeasonType),
+                            'p.season_type_id = st.id',
+                            array('')
+                        )
+                            ->joinLeft(
+                            array('stl'=> self::$_nameSeasonTypeTrad),
+                            'st.id = stl.type_id'
+                        )
+                            ->joinLeft(
+                            array('l'=> 'language'),
+                            'stl.language_id = l.id',
+                            array('')
+                        )
+                            ->where('product_id = ?', $filter->id);
                         break;
                 }
-                $sql = Llv_Db::getInstance()->select()
-                    ->from($table)
-                    ->where('product_id = ?', $filter->id);
                 return Llv_Db::getInstance()->fetchAll($sql);
             }
         } catch (Exception $e) {

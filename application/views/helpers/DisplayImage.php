@@ -27,21 +27,9 @@ class App_View_Helper_DisplayImage
     {
         if (!is_null($filename)) {
             if (in_array($fileCategory, Llv_Constant_File_Category::getAssociativeArray())) {
-                $fileParentPath = '';
-                switch ($fileCategory) {
-                    case Llv_Constant_File_Category::CARROUSEL:
-                        $fileParentPath = Llv_Services_Cms_Helper_Carrousel::getCarrouselFilesPath();
-                        $fileUrl = Llv_Services_Cms_Helper_Carrousel::getCarrouselFilesUrl();
-                        break;
-                    case Llv_Constant_File_Category::NEWS:
-                        $fileParentPath = Llv_Services_News_Helper_News::getNewsFilesPath();
-                        $fileUrl = Llv_Services_News_Helper_News::getNewsFilesUrl();
-                        break;
-                    case Llv_Constant_File_Category::ACTIVITY:
-                        $fileParentPath = Llv_Services_Activity_Helper_Activity::getActivityFilesPath();
-                        $fileUrl = Llv_Services_Activity_Helper_Activity::getActivityFilesUrl();
-                        break;
-                }
+                $fileParentPath = Llv_Services_Referential_Helper_Files::getUploadPath() . $fileCategory . '/';
+                $fileUrl = Llv_Services_Referential_Helper_Files::getUploadUrl() . $fileCategory . '/';
+
                 $filename = $fileParentPath . $filename;
 
                 if (file_exists($filename)) {
