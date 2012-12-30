@@ -142,6 +142,28 @@ class Llv_Entity_Product
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
+     * @param Llv_Entity_Product_Request_EditSeason $request
+     *
+     * @return mixed
+     */
+    public function updateRowTarifSeason(Llv_Entity_Product_Request_EditSeason $request)
+    {
+        return Llv_Entity_Product_Dal_Product::updateRowTarifSeason($request);
+    }
+
+    /**
+     * @param Llv_Entity_Product_Request_EditNight $request
+     *
+     * @return int
+     */
+    public function updateRowTarifNight(Llv_Entity_Product_Request_EditNight $request)
+    {
+        return Llv_Entity_Product_Dal_Product::updateRowTarifNight($request);
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
      * @param Llv_Entity_Product_Request_File $request
      *
      * @return bool|int

@@ -19,5 +19,7 @@ class Llv_Services_Activity_Filter_Activity
     /** @var bool */
     public $online;
     /** @var bool */
+    public $onlineIllustration;
+    /** @var bool */
     public $spotlight;
 }

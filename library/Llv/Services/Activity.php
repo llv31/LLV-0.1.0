@@ -85,6 +85,7 @@ class Llv_Services_Activity
 
                 $illuFilter = new Llv_Services_Activity_Filter_File();
                 $illuFilter->idActivity = $activite->id;
+                $illuFilter->online = $filter->onlineIllustration;
                 $illustrations = $this->getActivityFiles($header, $illuFilter);
                 $activite->illustrations = $illustrations->files;
 
@@ -128,6 +129,7 @@ class Llv_Services_Activity
 
                     $illuFilter = new Llv_Services_Activity_Filter_File();
                     $illuFilter->idActivity = $activite->id;
+                    $illuFilter->online = $filter->onlineIllustration;
                     $illustrations = $this->getActivityFiles($header, $illuFilter);
                     $activite->illustrations = $illustrations->files;
                     $result[] = $activite;
@@ -344,6 +346,7 @@ class Llv_Services_Activity
             /** On ajoute les illustrations */
             $entityFilter = new Llv_Entity_Activity_Filter_File();
             $entityFilter->idActivity = $filter->idActivity;
+            $entityFilter->online = $filter->online;
             $message->files = $this->getEntity()->getActivityFiles($entityFilter);
             $message->success = true;
         } catch (Exception $e) {

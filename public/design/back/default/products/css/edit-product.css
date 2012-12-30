@@ -1,21 +1,20 @@
 /* •••••••••••••••••••••••••••••••••• */
-.onglets form p label {
-    font-size: .92em;
-}
-
-.onglets form input[type="text"],
-.onglets form input[type="password"] {
-    width: 718px;
+#wrapper p.back {
+    text-align: right;
 }
 
 /* •••••••••••••••••••••••••••••••••• */
 
 .onglets form p.small_element {
+    float: left;
+    width: 33%;
+    margin-bottom: 40px;
 }
 
 .onglets form p.small_element label {
-    width: 20%;
-
+    width: 100%;
+    display: block;
+    margin-bottom: 4px;
 }
 
 .onglets form p.small_element input {

@@ -18,7 +18,7 @@ class App_Form_Back_Product
         $this->setMethod(Zend_Form::METHOD_POST);
         $this->setAttrib('enctype', Zend_Form::ENCTYPE_MULTIPART);
         $this->setAttrib('class', 'i18ned');
-        $this->_setAction('products/edit-product/');
+        $this->setAction('/products/edit-product/');
 
         /**  */
         $elements[] = new Zend_Form_Element_Hidden(

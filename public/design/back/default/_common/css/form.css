@@ -11,8 +11,9 @@ form input[type=password] {
 }
 
 /* •••••••••••••••••••••••••••••••••• */
+
 form textarea {
-    min-height: 300px;
+    min-height: 100px;
 }
 
 /* •••••••••••••••••••••••••••••••••• */

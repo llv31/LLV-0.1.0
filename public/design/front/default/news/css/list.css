@@ -37,6 +37,10 @@
     margin-top: 20px;
 }
 
+#wrapper .news ul {
+    list-style-type: none;
+}
+
 #wrapper .news ul li {
     /*box-shadow: 0 0 5px #555;*/
     border: 1px solid #888;

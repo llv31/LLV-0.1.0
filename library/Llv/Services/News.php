@@ -85,6 +85,7 @@ class Llv_Services_News
 
                 $illuFilter = new Llv_Services_News_Filter_File();
                 $illuFilter->idNews = $actualite->id;
+                $illuFilter->online = $filter->onlineIllustration;
                 $illustrations = $this->getNewsFiles($header, $illuFilter);
                 $actualite->illustrations = $illustrations->files;
 
@@ -128,6 +129,7 @@ class Llv_Services_News
 
                     $illuFilter = new Llv_Services_News_Filter_File();
                     $illuFilter->idNews = $actualite->id;
+                    $illuFilter->online = $filter->onlineIllustration;
                     $illustrations = $this->getNewsFiles($header, $illuFilter);
                     $actualite->illustrations = $illustrations->files;
                     $result[] = $actualite;
@@ -344,6 +346,7 @@ class Llv_Services_News
             /** On ajoute les illustrations */
             $entityFilter = new Llv_Entity_News_Filter_File();
             $entityFilter->idNews = $filter->idNews;
+            $entityFilter->online = $filter->online;
             $message->files = $this->getEntity()->getNewsFiles($entityFilter);
             $message->success = true;
         } catch (Exception $e) {

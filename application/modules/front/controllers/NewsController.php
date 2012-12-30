@@ -27,6 +27,7 @@ class NewsController
     {
         $filter = new Llv_Services_News_Filter_News();
         $filter->online = true;
+        $filter->onlineIllustration = true;
         $news = Llv_Context_News::getInstance()->getAll($filter);
         if (count($news) > 0) {
             $spotlight = array_shift($news);
@@ -39,6 +40,7 @@ class NewsController
     {
         $filter = new Llv_Services_News_Filter_News();
         $filter->id = $this->_getParam('id');
+        $filter->onlineIllustration = true;
         $news = Llv_Context_News::getInstance()->getOne($filter);
         $this->view->assign('news', $news);
     }

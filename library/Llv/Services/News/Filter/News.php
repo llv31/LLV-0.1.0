@@ -19,5 +19,7 @@ class Llv_Services_News_Filter_News
     /** @var bool */
     public $online;
     /** @var bool */
+    public $onlineIllustration;
+    /** @var bool */
     public $spotlight;
 }

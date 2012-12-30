@@ -41,6 +41,10 @@ form fieldset#fieldset-demande p.submit_element {
     height: 500px;
 }
 
+#googlemap ul.adresse {
+    list-style-type: none;
+}
+
 #googlemap ul.adresse li strong {
     font-size: 1.3em;
     text-transform: uppercase

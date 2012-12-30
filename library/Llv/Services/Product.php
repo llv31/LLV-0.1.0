@@ -213,6 +213,70 @@ class Llv_Services_Product
     }
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_Message_Header             $header
+     * @param Llv_Services_Product_Request_EditSeason $request
+     *
+     * @return Llv_Services_Product_Message_Product
+     */
+    public function updateRowTarifSeason(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Request_EditSeason $request
+    )
+    {
+        $message = new Llv_Services_Product_Message_Product();
+        try {
+            $entityRequest = new Llv_Entity_Product_Request_EditSeason();
+            $entityRequest->idProduct = isset($request->idProduct)
+                && !is_null($request->idProduct)
+                && !empty($request->idProduct)
+                ? $request->idProduct
+                : null;
+            $entityRequest->idSeason = $request->idSeason;
+            $entityRequest->week = $request->week;
+            $entityRequest->weekend = $request->weekend;
+            $entityRequest->midweek = $request->midweek;
+            $this->getEntity()->updateRowTarifSeason($entityRequest);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header            $header
+     * @param Llv_Services_Product_Request_EditNight $request
+     *
+     * @return Llv_Services_Product_Message_Product
+     */
+    public function updateRowTarifNight(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Request_EditNight $request
+    )
+    {
+        $message = new Llv_Services_Product_Message_Product();
+        try {
+            $entityRequest = new Llv_Entity_Product_Request_EditNight();
+            $entityRequest->idProduct = isset($request->idProduct)
+                && !is_null($request->idProduct)
+                && !empty($request->idProduct)
+                ? $request->idProduct
+                : null;
+            $entityRequest->one = $request->one;
+            $entityRequest->two = $request->two;
+            $entityRequest->three = $request->three;
+            $entityRequest->four = $request->four;
+            $this->getEntity()->updateRowTarifNight($entityRequest);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
     /**
      * @param Llv_Services_Message_Header        $header
      * @param Llv_Services_Product_Request_File  $request

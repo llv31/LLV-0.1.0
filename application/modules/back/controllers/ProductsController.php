@@ -119,8 +119,53 @@ class ProductsController
         $formProductEdit = new App_Form_Back_Product($id);
         $formFileUploader = new App_Form_Back_FileUploader();
 
+
+        if ($product->category->pricingType == Llv_Constant_Product_Price_Type::NUIT) {
+            $formTarifNuit = new App_Form_Back_Products_Price_Night($product);
+            $this->view->assign('formTarif', $formTarifNuit);
+            if ($this->getRequest()->isPost()) {
+                if ($formTarifNuit->isValid($_POST)) {
+                    $callback = $this->_getParam('submit');
+                    $id = $formTarifNuit->getValue('id');
+                    $request = new Llv_Services_Product_Request_EditNight();
+                    $request->idProduct = $id;
+                    $request->one = $formTarifNuit->getValue('nuit1');
+                    $request->two = $formTarifNuit->getValue('nuit2');
+                    $request->three = $formTarifNuit->getValue('nuit3');
+                    $request->four = $formTarifNuit->getValue('nuit4');
+                    Llv_Context_Product::getInstance()->updateRowTarifNight($request);
+                    $this->_redirect('/products/edit-product/id/' . $id);
+                }
+            }
+
+        } elseif ($product->category->pricingType == Llv_Constant_Product_Price_Type::SAISON) {
+            $formTarifSaison = new App_Form_Back_Products_Price_Season($product);
+            $this->view->assign('formTarif', $formTarifSaison);
+            if ($this->getRequest()->isPost()) {
+                if ($formTarifSaison->isValid($_POST)) {
+                    $callback = $this->_getParam('submit');
+                    $id = $formTarifSaison->getValue('id');
+                    $filter = new Llv_Services_Product_Filter_Season();
+                    $week = $this->_getParam(App_Model_Constant_Product::FORM_PREFIX_WEEK);
+                    $weekend = $this->_getParam(App_Model_Constant_Product::FORM_PREFIX_WEEKEND);
+                    $midweek = $this->_getParam(App_Model_Constant_Product::FORM_PREFIX_MIDWEEK);
+                    foreach (Llv_Context_Product::getInstance()->seasonGetAll($filter) as $saison) {
+                        $request = new Llv_Services_Product_Request_EditSeason();
+                        $request->idProduct = $id;
+                        $request->idSeason = $saison->id;
+                        $request->week = $week[App_Model_Constant_Product::FORM_PREFIX_WEEK . $saison->id];
+                        $request->weekend = $weekend[App_Model_Constant_Product::FORM_PREFIX_WEEKEND . $saison->id];
+                        $request->midweek = $midweek[App_Model_Constant_Product::FORM_PREFIX_MIDWEEK . $saison->id];
+                        Llv_Context_Product::getInstance()->updateRowTarifSeason($request);
+                    }
+                    $this->_redirect('/products/edit-product/id/' . $id);
+                }
+            }
+        }
+
         if ($this->getRequest()->isPost()) {
             if ($formProductEdit->isValid($_POST)) {
+                $callback = $this->_getParam('submit');
                 $title = $this->_getParam(App_Model_Constant_Product::FORM_PREFIX_TITLE);
                 $intro = $this->_getParam(App_Model_Constant_Product::FORM_PREFIX_INTRO);
                 $content = $this->_getParam(App_Model_Constant_Product::FORM_PREFIX_CONTENT);
@@ -133,7 +178,6 @@ class ProductsController
                     $request->content = $content[App_Model_Constant_Product::FORM_PREFIX_CONTENT . $language->id];
                     Llv_Context_Product::getInstance()->editRowContent($request);
                 }
-                $this->_redirect('products/edit-product/id/' . $id);
             } elseif ($formFileUploader->isValid($_POST)) {
                 foreach ($_FILES as $file) {
                     $request = new Llv_Services_Product_Request_File();
@@ -145,9 +189,15 @@ class ProductsController
                     $request->size = $file['size'];
                     Llv_Context_Product::getInstance()->addRowFile($request);
                 }
-                $this->_redirect('products/edit-product/id/' . $id . '#jq-pictures');
+                $this->_redirect('/products/edit-product/id/' . $id . '#jq-pictures');
+            }
+            if (is_null($callback)) {
+                $this->_redirect('/products/list/');
+            } else {
+                $this->_redirect('/products/edit-product/id/' . $id);
             }
         }
+
 
         $this->view->assign('formProductEdit', $formProductEdit);
         $this->view->assign('formFileUploader', $formFileUploader);
@@ -156,7 +206,8 @@ class ProductsController
     /**
      *
      */
-    public function fileUpdateAction()
+    public
+    function fileUpdateAction()
     {
         $id = $this->_getParam('id');
         if (!is_null($id)) {

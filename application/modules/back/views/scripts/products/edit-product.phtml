@@ -4,10 +4,13 @@ $this->headTitle(_('PRODUCTS_EDIT_PRODUCT_TITLE') . ' | ');
 $formProductEdit = $this->formProductEdit;
 $formFileUploader = $this->formFileUploader;
 $this->headLink()->appendStylesheet($this->buildDesignUrl('_common/css/onglets.css'));
-$this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-category.css'));
+$this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-product.css'));
 ?>
 
 <div class="page page_cms">
+
+    <p class="back"><a href="/products/"><?= _('GLOBAL_BACK_SIMPLE') ?></a></p>
+
     <h2>
         <?= _('PRODUCTS_EDIT_PRODUCT_TITLE') ?>
         -
@@ -36,7 +39,7 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-cat
     </div>
 
     <div id="jq-prices">
-        <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
+        <?php echo $this->formTarif; ?>
     </div>
 
     <?php if (isset($formFileUploader)): ?>

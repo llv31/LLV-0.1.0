@@ -15,4 +15,8 @@ class App_Model_Constant_Product
     const FORM_PREFIX_TITLE = 'title';
     const FORM_PREFIX_INTRO = 'introduction';
     const FORM_PREFIX_CONTENT = 'content';
+
+    const FORM_PREFIX_WEEK = 'week';
+    const FORM_PREFIX_WEEKEND = 'weekend';
+    const FORM_PREFIX_MIDWEEK = 'midweek';
 }

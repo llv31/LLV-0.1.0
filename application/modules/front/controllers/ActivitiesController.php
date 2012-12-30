@@ -27,6 +27,7 @@ class ActivitiesController
     {
         $filter = new Llv_Services_Activity_Filter_Activity();
         $filter->online = true;
+        $filter->onlineIllustration = true;
         $activities = Llv_Context_Activity::getInstance()->getAll($filter);
         if (count($activities) > 0) {
             $spotlight = array_shift($activities);
@@ -40,6 +41,7 @@ class ActivitiesController
     {
         $filter = new Llv_Services_Activity_Filter_Activity();
         $filter->id = $this->_getParam('id');
+        $filter->onlineIllustration = true;
         $activity = Llv_Context_Activity::getInstance()->getOne($filter);
         $this->view->assign('activity', $activity);
     }

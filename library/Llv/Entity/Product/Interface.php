@@ -66,6 +66,21 @@ interface Llv_Entity_Product_Interface
     public function updateRowContent(Llv_Entity_Product_Request_EditContent $request);
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+    /**
+     * @param Llv_Entity_Product_Request_EditSeason $request
+     *
+     * @return mixed
+     */
+    public function updateRowTarifSeason(Llv_Entity_Product_Request_EditSeason $request);
+
+    /**
+     * @param Llv_Entity_Product_Request_EditNight $request
+     *
+     * @return int
+     */
+    public function updateRowTarifNight(Llv_Entity_Product_Request_EditNight $request);
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
      * @param Llv_Entity_Product_Request_File $request

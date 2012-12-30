@@ -18,7 +18,7 @@ class App_Form_Back_News_Edit
     {
         $this->setMethod(Zend_Form::METHOD_POST);
         $this->setAttrib('enctype', Zend_Form::ENCTYPE_MULTIPART);
-        $this->_setAction('news/edit/');
+        $this->_setAction('/news/edit/');
         $this->setAttrib('id', 'news_add');
         $this->setAttrib('class', 'i18ned');
 

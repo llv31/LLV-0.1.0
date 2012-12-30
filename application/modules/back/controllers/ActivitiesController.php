@@ -82,9 +82,9 @@ class ActivitiesController
                     Llv_Context_Activity::getInstance()->editRowContent($request);
                 }
                 if (is_null($callback)) {
-                    $this->_redirect('activities/list');
+                    $this->_redirect('/activities/list');
                 } else {
-                    $this->_redirect('activities/edit/id/' . $idActivity);
+                    $this->_redirect('/activities/edit/id/' . $idActivity);
                 }
             } elseif ($formFileUploader->isValid($_POST)) {
                 foreach ($_FILES as $file) {
@@ -96,7 +96,7 @@ class ActivitiesController
                     $request->error = $file['error'];
                     $request->size = $file['size'];
                     Llv_Context_Activity::getInstance()->addRowFile($request);
-                    $this->_redirect('activities/edit/id/' . $id . '#jq-pictures');
+                    $this->_redirect('/activities/edit/id/' . $id . '#jq-pictures');
                 }
             }
         }
@@ -134,7 +134,7 @@ class ActivitiesController
                     break;
             }
             if ($idActivity != false) {
-                $this->_redirect('activities/');
+                $this->_redirect('/activities/list/');
             }
         }
     }
@@ -169,7 +169,7 @@ class ActivitiesController
                     break;
             }
             if ($idActivity != false) {
-                $this->_redirect('activities/edit/id/' . $idActivity . '#jq-pictures');
+                $this->_redirect('/activities/edit/id/' . $idActivity . '#jq-pictures');
             }
         }
     }

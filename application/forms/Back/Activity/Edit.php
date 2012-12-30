@@ -18,7 +18,7 @@ class App_Form_Back_Activity_Edit
     {
         $this->setMethod(Zend_Form::METHOD_POST);
         $this->setAttrib('enctype', Zend_Form::ENCTYPE_MULTIPART);
-        $this->_setAction('activities/edit/');
+        $this->_setAction('/activities/edit/');
         $this->setAttrib('id', 'activity_add');
         $this->setAttrib('class', 'i18ned');
 

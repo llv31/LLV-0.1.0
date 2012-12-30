@@ -37,6 +37,10 @@
     margin-top: 20px;
 }
 
+#wrapper .activities ul {
+    list-style-type: none;
+}
+
 #wrapper .activities ul li {
     /*box-shadow: 0 0 5px #555;*/
     border: 1px solid #888;

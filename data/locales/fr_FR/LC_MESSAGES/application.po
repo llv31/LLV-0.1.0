@@ -501,11 +501,35 @@ msgstr "Jaune"
 msgid "PRODUCTS_EDIT_PRODUCT_TITLE"
 msgstr "Éditer la location"
 
+msgid "PRODUCTS_LIST_INTRO"
+msgstr "Introduction"
+
 msgid "PRODUCTS_EDIT_TABS_PRICES"
 msgstr "Disponibilités & tarifs"
 
-msgid "PRODUCTS_LIST_INTRO"
-msgstr "Introduction"
+msgid "PRODUCTS_EDIT_PRICE_DISPO"
+msgstr "Code HTML des disponibilités"
+
+msgid "PRODUCTS_EDIT_PRICE_NUIT1"
+msgstr "1 personne/nuit"
+
+msgid "PRODUCTS_EDIT_PRICE_NUIT2"
+msgstr "2 personnes/nuit"
+
+msgid "PRODUCTS_EDIT_PRICE_NUIT3"
+msgstr "3 personnes/nuit"
+
+msgid "PRODUCTS_EDIT_PRICE_NUIT4"
+msgstr "4 personnes/nuit"
+
+msgid "PRODUCTS_EDIT_PRICE_SAISON_SEMAINE"
+msgstr "Semaine"
+
+msgid "PRODUCTS_EDIT_PRICE_SAISON_WEEKEND"
+msgstr "Week-end"
+
+msgid "PRODUCTS_EDIT_PRICE_SAISON_MIDWEEK"
+msgstr "Mid-week"
 
 msgid "PRODUCTS_ONGLET_CONTENT"
 msgstr "Description"

@@ -329,6 +329,61 @@ class Llv_Entity_Product_Dal_Product
     /**
      * @static
      *
+     * @param Llv_Entity_Product_Request_EditSeason $request
+     *
+     * @return int
+     */
+    public static function updateRowTarifSeason(Llv_Entity_Product_Request_EditSeason $request)
+    {
+        try {
+            $params = array();
+            $where = 'product_id = ' . $request->idProduct . ' AND season_type_id = ' . $request->idSeason;
+            $params['week'] = $request->week;
+            $params['weekend'] = strlen($request->weekend)>0 ? $request->weekend : null;
+            $params['midweek'] = strlen($request->midweek)>0 ? $request->midweek : null;
+            return Llv_Db::getInstance()
+                ->update(
+                self::$_namePriceSeason,
+                $params,
+                $where
+            );
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+    }
+
+    /**
+     * @static
+     *
+     * @param Llv_Entity_Product_Request_EditNight $request
+     *
+     * @return int
+     */
+    public static function updateRowTarifNight(Llv_Entity_Product_Request_EditNight $request)
+    {
+        try {
+            $params = array();
+            $where = 'product_id = ' . $request->idProduct;
+            $params['one'] = strlen($request->one)>0 ? $request->one : null;
+            $params['two'] = strlen($request->two)>0 ? $request->two : null;
+            $params['three'] = strlen($request->three)>0 ? $request->three : null;
+            $params['four'] = strlen($request->four)>0 ? $request->four : null;
+            return Llv_Db::getInstance()
+                ->update(
+                self::$_namePriceNight,
+                $params,
+                $where
+            );
+        } catch (Exception $e) {
+            Zend_Debug::dump($e);
+        }
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @static
+     *
      * @param Llv_Entity_Product_Filter_File $filter
      *
      * @return array

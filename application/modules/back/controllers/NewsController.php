@@ -82,9 +82,9 @@ class NewsController
                     Llv_Context_News::getInstance()->editRowContent($request);
                 }
                 if (is_null($callback)) {
-                    $this->_redirect('news/list');
+                    $this->_redirect('/news/list');
                 } else {
-                    $this->_redirect('news/edit/id/' . $idNews);
+                    $this->_redirect('/news/edit/id/' . $idNews);
                 }
             } elseif ($formFileUploader->isValid($_POST)) {
                 foreach ($_FILES as $file) {
@@ -96,7 +96,7 @@ class NewsController
                     $request->error = $file['error'];
                     $request->size = $file['size'];
                     Llv_Context_News::getInstance()->addRowFile($request);
-                    $this->_redirect('news/edit/id/' . $id . '#jq-pictures');
+                    $this->_redirect('/news/edit/id/' . $id . '#jq-pictures');
                 }
 
             }
@@ -135,7 +135,7 @@ class NewsController
                     break;
             }
             if ($idNews != false) {
-                $this->_redirect('news/');
+                $this->_redirect('/news/list/');
             }
         }
     }
@@ -170,7 +170,7 @@ class NewsController
                     break;
             }
             if ($idNews != false) {
-                $this->_redirect('news/edit/id/' . $idNews . '#jq-pictures');
+                $this->_redirect('/news/edit/id/' . $idNews . '#jq-pictures');
             }
         }
     }

@@ -29,10 +29,12 @@ class IndexController
 
         $filter = new Llv_Services_News_Filter_News();
         $filter->spotlight = true;
+        $filter->onlineIllustration = true;
         $news = Llv_Context_News::getInstance()->getOne($filter);
 
         $filter = new Llv_Services_Activity_Filter_Activity();
         $filter->spotlight = true;
+        $filter->onlineIllustration = true;
         $activity = Llv_Context_Activity::getInstance()->getOne($filter);
 
         $this->view->assign('page', $page);

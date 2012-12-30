@@ -101,6 +101,30 @@ class Llv_Context_Product
         return $message->success;
     }
 
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_Product_Request_EditSeason $request
+     *
+     * @return mixed
+     */
+    public function updateRowTarifSeason(Llv_Services_Product_Request_EditSeason $request)
+    {
+        $message = $this->_service->updateRowTarifSeason($this->getHeaderMessage(), $request);
+        return $message->success;
+    }
+
+    /**
+     * @param Llv_Services_Product_Request_EditNight $request
+     *
+     * @return bool
+     */
+    public function updateRowTarifNight(Llv_Services_Product_Request_EditNight $request)
+    {
+        $message = $this->_service->updateRowTarifNight($this->getHeaderMessage(), $request);
+        return $message->success;
+    }
+
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
@@ -279,6 +303,11 @@ class Llv_Context_Product
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
+    /**
+     * @param Llv_Services_Product_Filter_Season $filter
+     *
+     * @return Llv_Dto_Week[]|null
+     */
     public function seasonGetAll(Llv_Services_Product_Filter_Season $filter)
     {
         if (!isset($filter->idLangue)) {

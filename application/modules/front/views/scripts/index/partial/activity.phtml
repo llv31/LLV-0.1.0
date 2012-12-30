@@ -8,14 +8,14 @@ $activity = $this->activity;
     </h3>
 
     <?php if (!is_null($activity)): ?>
-    <a href="<?= $this->baseUrl(); ?>activity/read/id/<?= $activity->id; ?>">
+    <a href="<?= $this->baseUrl(); ?>activities/read/id/<?= $activity->id; ?>">
         <h4>
             <?= $activity->title ?>
         </h4>
     </a>
 
     <p class="illustrate">
-        <a href="<?= $this->baseUrl(); ?>activity/read/id/<?= $activity->id; ?>">
+        <a href="<?= $this->baseUrl(); ?>activities/read/id/<?= $activity->id; ?>">
             <?php if (isset($activity->illustrations[0])): ?>
             <img
                 src="<?=
@@ -27,7 +27,7 @@ $activity = $this->activity;
                     );
                     ?>"/>
             <?php else: ?>
-            <img src="<?= $this->baseUrl()?>files/upload/activity/default.jpg">
+<!--            <img src="--><?//= $this->baseUrl()?><!--files/upload/activity/default.jpg">-->
             <?php endif; ?>
         </a>
     </p>
@@ -44,5 +44,5 @@ $activity = $this->activity;
     <p class='no-result'><?= _('NEWS_LIST_NORESULT'); ?></p>
     <?php endif; ?>
 
-    <p class="more"><a href="<?= $this->baseUrl(); ?>activity"><?= _('HOME_ACTIVITY_MORE') ?></a></p>
+    <p class="more"><a href="<?= $this->baseUrl(); ?>activities"><?= _('HOME_ACTIVITY_MORE') ?></a></p>
 </div>
