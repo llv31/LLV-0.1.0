@@ -29,10 +29,10 @@ class ActivitiesController
         $filter->online = true;
         $filter->onlineIllustration = true;
         $activities = Llv_Context_Activity::getInstance()->getAll($filter);
-        if (count($activities) > 0) {
-            $spotlight = array_shift($activities);
-            $this->view->assign('spotlight', $spotlight);
-        }
+//        if (count($activities) > 0) {
+//            $spotlight = array_shift($activities);
+//            $this->view->assign('spotlight', $spotlight);
+//        }
 
         $this->view->assign('activities', $activities);
     }

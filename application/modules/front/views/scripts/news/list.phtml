@@ -4,8 +4,6 @@ $this->headTitle(_('HEAD_TITLE_NEWS') . ' | ');
 /**  */
 $this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/list.css'));
 $this->headScript()->appendFile($this->buildDesignUrl('news/js/list.js'));
-/** @var $spotlight Llv_Dto_News */
-$spotlight = $this->spotlight;
 $news = $this->news;
 $newsPerRow = 3;
 $i = 0;
@@ -15,54 +13,44 @@ $i = 0;
 
     <h2><?= _('NEWS_LIST_TITLE'); ?></h2>
 
-    <?php if (count($spotlight) == 1 && count($news) > 0): ?>
-    <?php if (count($spotlight) == 1): ?>
-        <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $spotlight->id; ?>">
-            <div class="spotlight">
-                <div class="left">
-                    <?php if (isset($spotlight->illustrations[0])): ?>
-                    <img
-                        src="<?=
-                            $this->displayImage(
-                                $spotlight->illustrations[0]->filename,
-                                Llv_Constant_File_Category::NEWS,
-                                300,
-                                9999
-                            );
-                            ?>"/>
-                    <?php endif; ?>
-                </div>
-                <div class="right">
-                    <h3>
-                        <?= $spotlight->title; ?>
-                    </h3>
-                    <p><?= $this->shortify($spotlight->content, 1000); ?></p>
-                </div>
-            </div>
-        </a>
-        <?php endif; ?>
-
     <?php if (count($news) > 0): ?>
         <div class="news">
             <ul>
+                <?php /** @var $newsItem Llv_Dto_News */ ?>
                 <?php foreach ($news as $newsItem): ?>
                 <?php $i++; ?>
                 <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $newsItem->id; ?>">
-                    <li<?php if ($i % 3 == 0): ?> class="no-space"<?php endif; ?>>
+                    <li>
                         <div class="left">
+                            <?php if (isset($newsItem->illustrations[0])): ?>
+                            <img
+                                src="<?=
+                                    $this->displayImage(
+                                        $newsItem->illustrations[0]->filename,
+                                        Llv_Constant_File_Category::NEWS,
+                                        300,
+                                        9999
+                                    );
+                                    ?>"/>
+                            <?php endif; ?>
+                            <span class="date">
+                                <?= _('NEWS_LIST_DATE_PUBLICATION') ?>
+                                <?= $this->dateFormat($newsItem->dateAdd); ?>
+                                - <?= _('NEWS_LIST_EN_SAVOIR_PLUS') ?>
+                            </span>
+                        </div>
+                        <div class="right">
                             <h3>
                                 <?= $newsItem->title; ?>
                             </h3>
-                        </div>
-                        <div class="right">
-                            <p><?= $this->shortify($newsItem->content, 400); ?></p>
+
+                            <p><?= $this->shortify($newsItem->content, 1000); ?></p>
                         </div>
                     </li>
                 </a>
                 <?php endforeach; ?>
             </ul>
         </div>
-        <?php endif; ?>
     <?php else: ?>
     <p class='no-result'><?= _('NEWS_LIST_NORESULT'); ?></p>
     <?php endif; ?>

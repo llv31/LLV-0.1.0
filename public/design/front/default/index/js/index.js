@@ -13,12 +13,12 @@ $(document).ready(function () {
         animationComplete:function (current) {
             $('.caption').animate({
                 bottom:0
-            }, 200);
+            }, 300);
         },
         slidesLoaded:function () {
             $('.caption').animate({
                 bottom:0
-            }, 200);
+            }, 300);
         }
     })
 });

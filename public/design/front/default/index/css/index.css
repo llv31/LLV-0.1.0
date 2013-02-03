@@ -42,6 +42,7 @@
 #wrapper .news h4 {
     margin-bottom: 7px;
     font-size: 1.2em;
+    border:none;
 }
 
 #wrapper .activity p,

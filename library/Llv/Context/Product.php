@@ -52,9 +52,6 @@ class Llv_Context_Product
         if (!isset($filter->idLangue)) {
             $filter->idLangue = Llv_Context_Application::getInstance()->getCurrentLocale()->getIdLangue();
         }
-        if (!isset($filter->onlineIllustration)) {
-            $filter->onlineIllustration = false;
-        }
         $message = $this->_service->getOne($this->getHeaderMessage(), $filter);
         if ($message->success) {
             return $message->product;

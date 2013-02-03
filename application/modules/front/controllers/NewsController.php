@@ -29,10 +29,10 @@ class NewsController
         $filter->online = true;
         $filter->onlineIllustration = true;
         $news = Llv_Context_News::getInstance()->getAll($filter);
-        if (count($news) > 0) {
-            $spotlight = array_shift($news);
-            $this->view->assign('spotlight', $spotlight);
-        }
+//        if (count($news) > 0) {
+//            $spotlight = array_shift($news);
+//            $this->view->assign('spotlight', $spotlight);
+//        }
         $this->view->assign('news', $news);
     }
 

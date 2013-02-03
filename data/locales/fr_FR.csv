@@ -25,10 +25,10 @@ HEAD_TITLE_SEASON;Gestion des saisons
 ; Menu
 GLOBAL_MENU_HOME;Accueil
 GLOBAL_MENU_CHAMBRES;Nos chambres d'hôtes
-GLOBAL_MENU_GITE;Chalet de montagne
+GLOBAL_MENU_GITE;Notre chalet de montagne
 GLOBAL_MENU_NEWS;Actualités
-GLOBAL_MENU_ACTIVITIES;Activités
-GLOBAL_MENU_CONTACT;Reservations
+GLOBAL_MENU_ACTIVITIES;Activités et loisirs
+GLOBAL_MENU_CONTACT;Pour réserver
 GLOBAL_MENU_PARTNERS;Partenaires
 GLOBAL_MENU_LOCATIONS;Locations
 GLOBAL_MENU_SEASON;Saisons
@@ -132,6 +132,8 @@ NEWS_EDIT_LINK_LABEL;Lien
 NEWS_EDIT_LOCATION_LABEL;Coordonnées GPS
 NEWS_ELEMENT_ILLUSTRATION;Galerie photo
 NEWS_LIST_NORESULT;Il n'y a aucune actualité
+NEWS_LIST_DATE_PUBLICATION;Publié le
+NEWS_LIST_EN_SAVOIR_PLUS;Cliquez pour en savoir plus
 
 ; Activités
 ACTIVITY_LIST_TITLE;Activités

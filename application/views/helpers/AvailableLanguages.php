@@ -13,6 +13,9 @@
 class App_View_Helper_AvailableLanguages
     extends Zend_View_Helper_Abstract
 {
+    /**
+     *
+     */
     public function availableLanguages()
     {
         $currentLanguage = Llv_Context_Application::getInstance()->getCurrentLocale()->toString();
@@ -30,7 +33,26 @@ class App_View_Helper_AvailableLanguages
         echo '</ul>' . PHP_EOL;
     }
 
-    public function getCurrentPage()
+    /**
+     * @return string
+     */
+    private function getCurrentPage()
     {
+        $result = array();
+        $allParams = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+        foreach ($allParams as $param=> $value) {
+            if ($param != 'module') {
+                if (count($allParams) == 3 && ($param == 'action' && $value == 'index')) {
+
+                } else {
+                    if ($param == 'controller' || $param == 'action') {
+                        $result[] = $value;
+                    } else {
+                        $result[] = $param . '/' . $value;
+                    }
+                }
+            }
+        }
+        return implode('/', $result);
     }
 }

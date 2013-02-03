@@ -61,8 +61,8 @@
 */
 
 .pagination {
-	margin:6px auto 0;
-	width:100px;
+    margin: 6px auto 0;
+    overflow: hidden;
 }
 
 .pagination li {

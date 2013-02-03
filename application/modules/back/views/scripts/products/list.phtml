@@ -22,7 +22,9 @@ $products = $this->products;
         <tbody>
             <?php foreach ($categories as $categorie): ?>
         <tr>
-            <td><?= $categorie->title; ?></td>
+            <td>
+                <a href="<?= $this->baseUrl(); ?>products/edit-category/id/<?= $categorie->id; ?>"><?= $categorie->title; ?></a>
+            </td>
             <td class="actions">
                 <a href="<?= $this->baseUrl(); ?>products/edit-category/id/<?= $categorie->id; ?>"
                    class="jq-update update"
@@ -59,7 +61,11 @@ $products = $this->products;
         <tbody>
             <?php foreach ($products as $product): ?>
         <tr>
-            <td><?= $product->title; ?></td>
+            <td>
+                <a href="<?= $this->baseUrl(); ?>products/edit-product/id/<?= $product->id; ?>">
+                    <?= $product->title; ?>
+                </a>
+            </td>
             <td><?= $product->category->title; ?></td>
             <td class="actions">
                 <a href="<?= $this->baseUrl(); ?>products/edit-product/id/<?= $product->id; ?>"

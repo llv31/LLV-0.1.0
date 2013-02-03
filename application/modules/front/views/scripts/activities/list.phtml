@@ -5,7 +5,7 @@ $this->headTitle(_('HEAD_TITLE_ACTIVITY') . ' | ');
 $this->headLink()->appendStylesheet($this->buildDesignUrl('activities/css/list.css'));
 $this->headScript()->appendFile($this->buildDesignUrl('activities/js/list.js'));
 /** @var $spotlight Llv_Dto_News */
-$spotlight = $this->spotlight;
+//$spotlight = $this->spotlight;
 $activities = $this->activities;
 $activitiesPerRow = 3;
 $i = 0;
@@ -14,7 +14,7 @@ $i = 0;
 <div class="page">
     <h2><?= _('ACTIVITY_LIST_TITLE'); ?></h2>
 
-    <?php if (count($spotlight) == 1 && count($activities) > 0): ?>
+    <?php if (count($spotlight) == 0 && count($activities) > 0): ?>
     <?php if (count($spotlight) == 1): ?>
         <a href="<?= $this->baseUrl(); ?>activities/read/id/<?= $spotlight->id; ?>">
             <div class="spotlight">
@@ -48,15 +48,24 @@ $i = 0;
                 <?php foreach ($activities as $activity): ?>
                 <?php $i++; ?>
                 <a href="<?= $this->baseUrl(); ?>activities/read/id/<?= $activity->id; ?>">
-                    <li<?php if ($i % 3 == 0): ?> class="no-space"<?php endif; ?>>
-                        <div class="left">
-                            <h3>
-                                <?= $activity->title; ?>
-                            </h3>
-                        </div>
-                        <div class="right">
-                            <p><?= $this->shortify($activity->content, 400); ?></p>
-                        </div>
+                    <li
+                        <?php if ($i % 3 == 0): ?>class="no-space"<?php endif; ?>
+                            <?php if (isset($activity->illustrations[0])): ?>style="background-image: url(
+                        <?=
+                        $this->displayImage(
+                            $activity->illustrations[0]->filename,
+                            Llv_Constant_File_Category::ACTIVITY,
+                            400,
+                            9999,
+                            true
+                        )
+                        ;?>
+                        <?php endif; ?>)">
+                            <div class="left">
+                                <h3>
+                                    <?= $activity->title; ?>
+                                </h3>
+                            </div>
                     </li>
                 </a>
                 <?php endforeach; ?>

@@ -19,7 +19,7 @@ form fieldset legend {
     width: 96%;
     padding: 10px 2%;
     background-color: #C0C2AB;
-    font-family: 'HelveticaNeueLight';
+    font-family: 'HelveticaNeueLight', 'Arial', 'sans-serif';
 }
 
 /* •••••••••••••••••••••••••••••••••• */
@@ -35,11 +35,16 @@ form input[type=password] {
 form textarea {
     width: 100%;
     min-height: 300px;
-    font-family: 'Helvetica Neue', 'Arial', 'sans-serif';
+    font-family: 'HelveticaNeueLight', 'Arial', 'sans-serif';
     font-size: 1em;
     border: 1px solid #999;
     padding: 4px;
     box-shadow: 0 0 2px #bbb;
+    background-color: #fff;
+}
+
+form .nicEdit-main {
+    background-color: #fff;
 }
 
 form p.textarea_element label {

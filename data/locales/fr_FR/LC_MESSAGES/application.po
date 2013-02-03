@@ -106,16 +106,16 @@ msgid "GLOBAL_MENU_CHAMBRES"
 msgstr "Nos chambres d'hôtes"
 
 msgid "GLOBAL_MENU_GITE"
-msgstr "Chalet de montagne"
+msgstr "Notre chalet de montagne"
 
 msgid "GLOBAL_MENU_NEWS"
 msgstr "Actualités"
 
 msgid "GLOBAL_MENU_ACTIVITIES"
-msgstr "Activités"
+msgstr "Activités et loisirs"
 
 msgid "GLOBAL_MENU_CONTACT"
-msgstr "Reservations"
+msgstr "Pour réserver"
 
 msgid "GLOBAL_MENU_PARTNERS"
 msgstr "Partenaires"
@@ -395,6 +395,12 @@ msgstr "Galerie photo"
 
 msgid "NEWS_LIST_NORESULT"
 msgstr "Il n'y a aucune actualité"
+
+msgid "NEWS_LIST_DATE_PUBLICATION"
+msgstr "Publié le"
+
+msgid "NEWS_LIST_EN_SAVOIR_PLUS"
+msgstr "Cliquez pour en savoir plus"
 
 msgid "ACTIVITY_LIST_TITLE"
 msgstr "Activités"
