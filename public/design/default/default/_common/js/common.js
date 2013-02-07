@@ -1,11 +1,18 @@
 $(document).ready(function () {
-    Shadowbox.init({
-        handleOversize:"drag",
-        modal:false,
-        overlayOpacity:0.75
-    });
+//    Shadowbox.init({
+//        handleOversize:"drag",
+//        modal:false,
+//        overlayOpacity:0.75
+//    });
 
-    $('.jq-tabs').tabs({ spinner: "Retrieving data..." });
+    $("a[rel=colorbox]").colorbox(
+        {
+            rel:'colorbox',
+            opacity:.75
+        }
+    );
+
+    $('.jq-tabs').tabs({ spinner:"Retrieving data..." });
 
     if (i18n != undefined) {
         $('input.jq-datepicker').datepicker({

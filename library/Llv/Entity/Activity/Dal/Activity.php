@@ -107,6 +107,7 @@ class Llv_Entity_Activity_Dal_Activity
             if ($filter->online) {
                 $sql->where('a.online = ?', $filter->online);
             }
+//            return array();
             return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);

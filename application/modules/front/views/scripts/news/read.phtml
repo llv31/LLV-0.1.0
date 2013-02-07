@@ -1,7 +1,5 @@
 <?php
 //$module = Llv_Context_Application::getInstance()->getActiveModule();
-$this->headTitle(_('HEAD_TITLE_NEWS') . ' | ');
-/**  */
 $this->headLink()->appendStylesheet($this->buildDesignUrl('news/css/element.css'));
 $this->headScript()->appendFile($this->buildDesignUrl('news/js/list.js'));
 /** @var $spotlight Llv_Dto_News */
@@ -9,6 +7,8 @@ $spotlight = $this->spotlight;
 $news = $this->news;
 $newsPerRow = 3;
 $i = 0;
+/**  */
+$this->headTitle($news->title . ' | ' . _('HEAD_TITLE_NEWS') . ' | ');
 ?>
 
 
@@ -36,7 +36,7 @@ $i = 0;
                     800,
                     9999
                 );
-                ?>" rel="shadowbox[picture]">
+                ?>" rel="colorbox">
                 <img
                     src="<?=
                         $this->displayImage(

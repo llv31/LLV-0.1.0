@@ -10,7 +10,7 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('_plugin/carrousel/css
         <?php foreach ($carrousel as $ligne): ?>
         <div class="slide">
             <a href="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 800, 600); ?>"
-               rel="shadowbox[picture]">
+               rel="colorbox">
                 <img
                     src="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 580, 9999); ?>"/>
             </a>

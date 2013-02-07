@@ -1,7 +1,7 @@
 <?php
 /** @var $product Llv_Dto_Product */
 $product = $this->product;
-$this->headTitle($product->title . ' | ');
+$this->headTitle($product->title . ' | ' . $product->category->title . ' | ');
 /**  */
 $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/location.css'));
 $this->headScript()->appendFile($this->buildDesignUrl('products/js/location.js'));

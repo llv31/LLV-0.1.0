@@ -105,8 +105,19 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         $front = Zend_Controller_Front::getInstance();
         $front->registerPlugin(new App_Plugin_ApplicationScriptFallback())
-//            ->registerPlugin(new App_Plugin_ModuleActivation())
             ->registerPlugin(new App_Plugin_ModuleLayout());
+
+        $options = array(
+            // 'jquery_path' => 'http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js',
+            'plugins' => array(
+                'Variables',
+                'Memory',
+                'Time',
+                'Registry',
+                'Exception'
+            )
+        );
+//        $front->registerPlugin(new ZFDebug_Controller_Plugin_Debug($options));
     }
 
     /**
@@ -132,9 +143,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 
         Zend_Db_Table::setDefaultAdapter(Llv_Db::getInstance());
 
-        try{
+        try {
             Llv_Db::getInstance()->getConnection();
-        }catch (Exception $e){
+        } catch (Exception $e) {
         }
         return parent::run();
     }
