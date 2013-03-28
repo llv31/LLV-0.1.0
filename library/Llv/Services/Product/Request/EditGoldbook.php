@@ -1,25 +1,25 @@
 <?php
 /**
- * PHP Class Category.php
+ * PHP Class EditGoldbook.php
  * PHP Version 5
  *
  * @category    : default
  * @package     : default
  * @license     : Not for free use
- * @date        : 04/08/12
+ * @date        : 23/08/12
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_Product_Goldbook
+class Llv_Services_Product_Request_EditGoldbook
 {
     /** @var int */
     public $id;
-    /** @var string */
+    /** @var int */
     public $idCategorie;
     /** @var string */
     public $content;
-    /** @var bool */
-    public $validated;
+    /** @var boolean */
+    public $valid;
     /** @var Datetime */
     public $dateBegin;
     /** @var Datetime */

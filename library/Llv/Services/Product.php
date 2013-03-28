@@ -663,4 +663,119 @@ class Llv_Services_Product
         }
         return $message;
     }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_Message_Header          $header
+     * @param Llv_Services_Product_Filter_Goldbook $filter
+     *
+     * @return Llv_Services_Product_Message_Goldbook
+     */
+    public function goldbookGetOne(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Filter_Goldbook $filter
+    )
+    {
+        $message = new Llv_Services_Product_Message_Goldbook();
+        try {
+            $entityFilter = new Llv_Entity_Product_Filter_Goldbook();
+            $entityFilter->id = $filter->id;
+            $entityFilter->idCategorie = $filter->idCategorie;
+            $entityFilter->valid = $filter->valid;
+            $message->goldbookMessage = $this->getEntity()->goldbookGetOne($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header          $header
+     * @param Llv_Services_Product_Filter_Goldbook $filter
+     *
+     * @return Llv_Services_Product_Message_Goldbook
+     */
+    public function goldbookGetAll(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Filter_Goldbook $filter
+    )
+    {
+        $message = new Llv_Services_Product_Message_Goldbook();
+        try {
+            $entityFilter = new Llv_Entity_Product_Filter_Goldbook();
+            $entityFilter->id = $filter->id;
+            $entityFilter->idCategorie = $filter->idCategorie;
+            $entityFilter->valid = $filter->valid;
+            $message->goldbook = $this->getEntity()->goldbookGetAll($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header               $header
+     * @param Llv_Services_Product_Request_EditGoldbook $request
+     *
+     * @return Llv_Services_Product_Message_Goldbook
+     */
+    public function goldbookEditOne(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Request_EditGoldbook $request
+    )
+    {
+        $message = new Llv_Services_Product_Message_Goldbook();
+        try {
+            $entityRequest = new Llv_Entity_Product_Request_EditGoldbook();
+            $entityRequest->idCategorie = $request->idCategorie;
+            $entityRequest->content = $request->content;
+            $entityRequest->valid = $request->valid;
+            $entityRequest->dateBegin = $request->dateBegin;
+            $entityRequest->dateEnd = $request->dateEnd;
+            $entityRequest->dateAdd = $request->dateAdd;
+            $entityRequest->dateUpdate = $request->dateUpdate;
+            $entityRequest->dateDelete = $request->dateDelete;
+            if (isset($request->id)) {
+                $entityRequest->id = $request->id;
+                $message->idGoldbookMessage = $request->id;
+                $this->getEntity()->goldbookUpdateOne($entityRequest);
+            } else {
+                $message->idGoldbookMessage = $this->getEntity()->goldbookCreateOne($entityRequest);
+            }
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /**
+     * @param Llv_Services_Message_Header               $header
+     * @param Llv_Services_Product_Request_EditGoldbook $request
+     *
+     * @return Llv_Services_Product_Message_Goldbook
+     */
+    public function goldbookDeleteOne(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Product_Request_EditGoldbook $request
+    )
+    {
+        $message = new Llv_Services_Product_Message_Goldbook();
+        try {
+            $entityRequest = new Llv_Entity_Product_Request_EditGoldbook();
+            if (isset($request->id)) {
+                $entityRequest->id = $request->id;
+                $this->getEntity()->goldbookDeleteOne($entityRequest);
+                $message->success = true;
+            }
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 }

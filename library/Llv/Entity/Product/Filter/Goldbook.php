@@ -1,33 +1,27 @@
 <?php
 /**
- * PHP Class Category.php
+ * PHP Class Goldbook.php
  * PHP Version 5
  *
  * @category    : default
  * @package     : default
  * @license     : Not for free use
- * @date        : 04/08/12
+ * @date        : 05/08/12
  * @author      : aroy <contact@aroy.fr>
  */
 
-class Llv_Dto_Product_Goldbook
+class Llv_Entity_Product_Filter_Goldbook
 {
     /** @var int */
     public $id;
-    /** @var string */
+    /** @var int */
     public $idCategorie;
-    /** @var string */
-    public $content;
-    /** @var bool */
-    public $validated;
-    /** @var Datetime */
-    public $dateBegin;
-    /** @var Datetime */
-    public $dateEnd;
+    /** @var boolean */
+    public $valid;
     /** @var Datetime */
     public $dateAdd;
     /** @var Datetime */
-    public $dateUpdate;
+    public $dateupdate;
     /** @var Datetime */
     public $dateDelete;
 }

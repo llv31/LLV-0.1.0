@@ -27,6 +27,12 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-cat
             <li>
                 <a href="#jq-pictures"><?php echo _('PRODUCTS_EDIT_TABS_PICTURES'); ?></a>
             </li>
+            <li>
+                <a href="#jq-goldbookAValider"><?php echo _('PRODUCTS_EDIT_TABS_GOLDBOOK_AVALIDER'); ?></a>
+            </li>
+            <li>
+                <a href="#jq-goldbook"><?php echo _('PRODUCTS_EDIT_TABS_GOLDBOOK'); ?></a>
+            </li>
         </ul>
     <?php endif;?>
 
@@ -42,11 +48,38 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-cat
             '/products/partial/illustration-category.phtml',
             array(
                  'formFileUploader' => $formFileUploader,
-                 'categorie'    => $this->categorie
+                 'categorie'        => $this->categorie
             )
         );
         ?>
     </div>
+
+    <div id="jq-goldbookAValider">
+        <?=
+        $this->partial(
+            '/products/partial/goldbook-category.phtml',
+            array(
+                 //                     'formGoldbook' => $formGoldbook,
+                 'categorie'    => $this->categorie,
+                 'goldbookAValider'     => $this->goldbookAValider
+            )
+        );
+        ?>
+    </div>
+
+    <div id="jq-goldbook">
+        <?=
+        $this->partial(
+            '/products/partial/goldbook-category.phtml',
+            array(
+                 //                     'formGoldbook' => $formGoldbook,
+                 'categorie'    => $this->categorie,
+                 'goldbook'     => $this->goldbook
+            )
+        );
+        ?>
+    </div>
+
     </div>
     <?php endif;?>
 </div>

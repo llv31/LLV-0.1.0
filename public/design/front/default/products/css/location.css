@@ -277,3 +277,24 @@ span.prix_location em {
 }
 
 /* •••••••••••••••••••••••••••••••••• */
+
+#wrapper .goldbook {
+    margin-top: 20px;
+}
+
+#wrapper .goldbook ul {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+#wrapper .goldbook ul li {
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    padding: 10px;
+}
+
+#wrapper .goldbook ul li .dates {
+    margin-bottom: 10px;
+}
+
+/* •••••••••••••••••••••••••••••••••• */

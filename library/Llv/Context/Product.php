@@ -330,5 +330,63 @@ class Llv_Context_Product
         }
         return null;
     }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_Product_Filter_Goldbook $filter
+     *
+     * @return Llv_Dto_Product_Goldbook|null
+     */
+    public function goldbookGetOne(Llv_Services_Product_Filter_Goldbook $filter)
+    {
+        $message = $this->_service->goldbookGetOne($this->getHeaderMessage(), $filter);
+        if ($message->success) {
+            return $message->goldbookMessage;
+        }
+        return null;
+    }
+
+    /**
+     * @param Llv_Services_Product_Filter_Goldbook $filter
+     *
+     * @return array|Llv_Dto_Product_Goldbook[]
+     */
+    public function goldbookGetAll(Llv_Services_Product_Filter_Goldbook $filter)
+    {
+        $message = $this->_service->goldbookGetAll($this->getHeaderMessage(), $filter);
+        if ($message->success) {
+            return $message->goldbook;
+        }
+        return array();
+    }
+
+    /**
+     * @param Llv_Services_Product_Request_EditGoldbook $request
+     *
+     * @return int|null
+     */
+    public function goldbookEditOne(Llv_Services_Product_Request_EditGoldbook $request)
+    {
+        $message = $this->_service->goldbookEditOne($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return $message->idGoldbookMessage;
+        }
+        return null;
+    }
+
+    /**
+     * @param Llv_Services_Product_Request_EditGoldbook $request
+     *
+     * @return int|null
+     */
+    public function goldbookDeleteOne(Llv_Services_Product_Request_EditGoldbook $request)
+    {
+        $message = $this->_service->goldbookDeleteOne($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return $message->success;
+        }
+        return null;
+    }
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 }

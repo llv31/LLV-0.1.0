@@ -99,6 +99,9 @@ msgstr "Réservation / Contact"
 msgid "HEAD_TITLE_SEASON"
 msgstr "Gestion des saisons"
 
+msgid "HEAD_TITLE_PRODUCTS"
+msgstr "Produits"
+
 msgid "GLOBAL_MENU_HOME"
 msgstr "Accueil"
 
@@ -480,6 +483,12 @@ msgstr "Contenus"
 msgid "PRODUCTS_EDIT_TABS_PICTURES"
 msgstr "Illustrations"
 
+msgid "PRODUCTS_EDIT_TABS_GOLDBOOK"
+msgstr "Messages du Livre d'or publics"
+
+msgid "PRODUCTS_EDIT_TABS_GOLDBOOK_AVALIDER"
+msgstr "Messages du Livre d'or à valider"
+
 msgid "PRODUCTS_LIST_CATEGORIE_ROUTE"
 msgstr "URL de la catégorie"
 
@@ -555,6 +564,9 @@ msgstr "Disponibilités"
 msgid "PRODUCTS_PRIX_PRIX"
 msgstr "Tarifs"
 
+msgid "PRODUCTS_ONGLET_GOLDBOOK"
+msgstr "Livre d'or"
+
 msgid "PRODUCTS_PRIX_CALENDRIER"
 msgstr "Tarifs et calendrier des saisons"
 
@@ -596,6 +608,36 @@ msgstr "Mid-week"
 
 msgid "PRODUCT_PRICE_SEASON_PERIODES_INDISPO"
 msgstr "Réservation ou tarif indisponible"
+
+msgid "PRODUCTS_GOLDBOOK_NEW_MESSAGE"
+msgstr "Vous avez séjourné ici ? Laissez nous un message !"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES"
+msgstr "Témoignages de nos clients"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES"
+msgstr "Dates du séjour"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES_DU"
+msgstr "Du"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES_AU"
+msgstr "au"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES_MESSAGE"
+msgstr "Témoignage"
+
+msgid "GOLDBOOK_FORM_LABEL_CONTENU"
+msgstr "Votre message"
+
+msgid "GOLDBOOK_FORM_LABEL_DEPART"
+msgstr "Date de départ"
+
+msgid "GOLDBOOK_FORM_LABEL_ARRIVEE"
+msgstr "Date d'arrivée"
+
+msgid "GOLDBOOK_FORM_SUBMIT"
+msgstr "Laisser un message"
 
 msgid "CONTACT_TITLE"
 msgstr "Réserver / Nous contacter"

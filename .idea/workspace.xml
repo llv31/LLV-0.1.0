@@ -2,12 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10457ef7-0d8f-45fa-8e7a-ab9d9a74ba95" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/design/back/default/activities/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Back/Products/Goldbook.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/forms/Front/Products/Goldbook.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/products/partial/goldbook-category.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Goldbook.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Filter/Goldbook.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Goldbook.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product/Request/EditGoldbook.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Filter/Goldbook.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Message/Goldbook.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/Llv/Services/Product/Request/EditGoldbook.php" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/helpers/GoogleMap.php" afterPath="$PROJECT_DIR$/application/views/helpers/Googlemap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/edit.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/edit.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/back/default/news/css/index.css" afterPath="$PROJECT_DIR$/public/design/back/default/news/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/controllers/ProductsController.php" afterPath="$PROJECT_DIR$/application/modules/back/controllers/ProductsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/list.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/activities/list.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/back/views/scripts/products/edit-category.phtml" afterPath="$PROJECT_DIR$/application/modules/back/views/scripts/products/edit-category.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/controllers/ProductsController.php" afterPath="$PROJECT_DIR$/application/modules/front/controllers/ProductsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml" afterPath="$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/products/location.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/location.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/goldbook.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/goldbook.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/onglets.phtml" afterPath="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/onglets.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR.csv" afterPath="$PROJECT_DIR$/data/locales/fr_FR.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.mo" afterPath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.mo" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.po" afterPath="$PROJECT_DIR$/data/locales/fr_FR/LC_MESSAGES/application.po" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Context/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Context/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Dto/Product/Goldbook.php" afterPath="$PROJECT_DIR$/library/Llv/Dto/Product/Goldbook.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Entity/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Entity/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/Llv/Services/Product.php" afterPath="$PROJECT_DIR$/library/Llv/Services/Product.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/design/front/default/products/css/location.css" afterPath="$PROJECT_DIR$/public/design/front/default/products/css/location.css" />
     </list>
     <ignored path="LLV-0.1.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,64 +51,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DisplayImage.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/helpers/DisplayImage.php">
+      <file leaf-file-name="edit-category.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/products/edit-category.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="66" selection-start="1617" selection-end="1617" vertical-scroll-proportion="-14.25">
+            <state line="30" column="61" selection-start="1054" selection-end="1090" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bootstrap.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
+      <file leaf-file-name="fr_FR.csv" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/locales/fr_FR.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="5" selection-start="4056" selection-end="4056" vertical-scroll-proportion="-14.0">
+            <state line="191" column="30" selection-start="8792" selection-end="8792" vertical-scroll-proportion="0.41267943">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="location.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/design/front/default/products/css/location.css">
+      <file leaf-file-name="ProductsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/ProductsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="64" column="45" selection-start="1730" selection-end="1746" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="room.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/design/front/default/products/css/room.css">
+      <file leaf-file-name="goldbook-category.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/products/partial/goldbook-category.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="1" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="121" selection-start="1922" selection-end="2179" vertical-scroll-proportion="-20.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/modules/back/layouts/scripts/layout.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="16" selection-start="1211" selection-end="1211" vertical-scroll-proportion="-15.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.phtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/activities/edit.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="26" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.5782313">
+            <state line="26" column="52" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,22 +105,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/modules/front/controllers/ActivitiesController.php" />
-        <option value="$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/front/controllers/IndexController.php" />
-        <option value="$PROJECT_DIR$/public/design/front/default/_plugin/carrousel/js/jquery.carrousel.js" />
-        <option value="$PROJECT_DIR$/public/design/default/default/_common/css/global.css" />
-        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/index/index.phtml" />
-        <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/library/PhpThumb/GdThumb.inc.php" />
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/application/views/helpers/DisplayImage.php" />
-        <option value="$PROJECT_DIR$/application/Bootstrap.php" />
-        <option value="$PROJECT_DIR$/public/design/front/default/products/css/room.css" />
-        <option value="$PROJECT_DIR$/application/modules/back/layouts/scripts/layout.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml" />
-        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/activities/edit.phtml" />
-        <option value="$PROJECT_DIR$/public/design/back/default/news/css/index.css" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/products/location.phtml" />
+        <option value="$PROJECT_DIR$/application/forms/Front/Products/Goldbook.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/Product/Helper/Goldbook.php" />
+        <option value="$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/goldbook.phtml" />
+        <option value="$PROJECT_DIR$/public/design/front/default/products/css/location.css" />
+        <option value="$PROJECT_DIR$/application/modules/front/controllers/ProductsController.php" />
+        <option value="$PROJECT_DIR$/application/forms/Back/Products/Goldbook.php" />
+        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/activities/list.phtml" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Goldbook.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Entity/Product.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Services/Product.php" />
+        <option value="$PROJECT_DIR$/library/Llv/Context/Product.php" />
+        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/products/partial/goldbook-category.phtml" />
+        <option value="$PROJECT_DIR$/application/modules/back/controllers/ProductsController.php" />
+        <option value="$PROJECT_DIR$/application/modules/back/views/scripts/products/edit-category.phtml" />
+        <option value="$PROJECT_DIR$/data/locales/fr_FR.csv" />
       </list>
     </option>
   </component>
@@ -139,7 +134,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="22" />
     <option name="width" value="1920" />
-    <option name="height" value="1054" />
+    <option name="height" value="997" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -210,16 +205,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -248,7 +233,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -262,11 +247,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
+              <option name="myItemId" value="locales" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -280,41 +265,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
+              <option name="myItemId" value="locales" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fr_FR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LC_MESSAGES" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="back" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -328,11 +353,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -340,7 +365,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="products" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LLV-0.1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="back" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -348,137 +411,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="default" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LLV-0.1.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="news" />
+              <option name="myItemId" value="partial" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -536,6 +469,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="back" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -612,11 +555,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/design/back/default" />
-      <recent name="$PROJECT_DIR$/library/Llv/Services/Product/Request" />
-      <recent name="$PROJECT_DIR$/public/design/back/default/products/css" />
-      <recent name="$PROJECT_DIR$/application/forms/Back/Products/Price" />
       <recent name="$PROJECT_DIR$/application/modules/back/views/scripts/products/partial" />
+      <recent name="$PROJECT_DIR$/application/forms/Front/Product" />
+      <recent name="$PROJECT_DIR$/application/forms/Back/Products" />
+      <recent name="$PROJECT_DIR$/library/Llv/Services/Product/Request" />
+      <recent name="$PROJECT_DIR$/library/Llv/Services/Product/Filter" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/design/default/default/_common/img" />
@@ -867,30 +810,34 @@
       <created>1360265182902</created>
       <updated>1360265182902</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Finitions">
+      <created>1360265337529</created>
+      <updated>1360265337529</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1054" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="22" width="1920" height="997" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32862645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17609392" sideWeight="0.67202574" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18036287" sideWeight="0.67202574" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39978564" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -976,114 +923,90 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/index.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/front/views/scripts/products/partial/product/goldbook.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="48" selection-start="743" selection-end="743" vertical-scroll-proportion="0.45918366">
+        <state line="23" column="20" selection-start="860" selection-end="907" vertical-scroll-proportion="0.39115646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/products/list.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="34" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.57482994" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/design/back/default/_common/css/ui-actions.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="23" selection-start="606" selection-end="606" vertical-scroll-proportion="0.35" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/forms/Front/Products/Goldbook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="66" selection-start="443" selection-end="630" vertical-scroll-proportion="0.234375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/forms/Back/Products/Goldbook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="10" selection-start="694" selection-end="694" vertical-scroll-proportion="0.703125" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/ActivitiesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="5" selection-start="4280" selection-end="5726" vertical-scroll-proportion="0.7482993" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Product/Request/EditGoldbook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="6" selection-start="226" selection-end="226" vertical-scroll-proportion="0.20930232" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Product/Dal/Goldbook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="36" selection-start="5945" selection-end="5954" vertical-scroll-proportion="0.6258503" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Entity/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="346" column="44" selection-start="10293" selection-end="10293" vertical-scroll-proportion="0.829932" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Services/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="770" column="17" selection-start="27407" selection-end="27407" vertical-scroll-proportion="0.74489796" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/Llv/Context/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="384" column="41" selection-start="11270" selection-end="11270" vertical-scroll-proportion="0.88095236" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/activities/list.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="52" selection-start="1885" selection-end="1904" vertical-scroll-proportion="0.6961451" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/products/edit-category.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="61" selection-start="1054" selection-end="1090" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/back/controllers/ProductsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="866" column="38" selection-start="25791" selection-end="25791" vertical-scroll-proportion="0.63151926">
+        <state line="64" column="45" selection-start="1730" selection-end="1746" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/Llv/Services/Referential/Helper/Files.php">
+    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/products/partial/goldbook-category.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="27" selection-start="398" selection-end="398" vertical-scroll-proportion="0.18707483">
+        <state line="26" column="52" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/helpers/DisplayImage.php">
+    <entry file="file://$PROJECT_DIR$/data/locales/fr_FR.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="66" selection-start="1617" selection-end="1617" vertical-scroll-proportion="-14.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="5" selection-start="4056" selection-end="4056" vertical-scroll-proportion="-14.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/front/default/products/css/location.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/front/default/products/css/room.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="1" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/front/layouts/scripts/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="121" selection-start="1922" selection-end="2179" vertical-scroll-proportion="-20.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/products/edit-product.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="27" selection-start="427" selection-end="508" vertical-scroll-proportion="0.15306123">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/news/list.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/back/default/products/css/edit-product.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="83" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/back/default/news/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="124" selection-end="124" vertical-scroll-proportion="0.06622516">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/news/edit.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="34" selection-start="372" selection-end="372" vertical-scroll-proportion="0.17006803">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/layouts/scripts/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="16" selection-start="1211" selection-end="1211" vertical-scroll-proportion="-15.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/design/back/default/activities/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.11589404">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/modules/back/views/scripts/activities/edit.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="26" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.5782313">
+        <state line="191" column="30" selection-start="8792" selection-end="8792" vertical-scroll-proportion="0.41267943">
           <folding />
         </state>
       </provider>

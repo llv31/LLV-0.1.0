@@ -1,6 +1,9 @@
 <?php
 /** @var $product Llv_Dto_Product */
 $product = $this->product;
+$goldbook = $this->goldbook;
+$goldbookForm = $this->goldbookForm;
+$contactForm = $this->contactForm;
 $this->headTitle($product->title . ' | ' . $product->category->title . ' | ');
 /**  */
 $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/location.css'));
@@ -51,9 +54,19 @@ $this->headScript()->appendFile($this->buildDesignUrl('products/js/location.js')
 
         <?=
         $this->partial(
+            'products/partial/product/goldbook.phtml',
+            array(
+                 'goldbook'=> $goldbook,
+                 'goldbookForm'=> $goldbookForm,
+            )
+        );
+        ?>
+
+        <?=
+        $this->partial(
             'products/partial/product/reservation.phtml',
             array(
-                 'contactForm'=> $this->contactForm
+                 'contactForm'=> $contactForm
             )
         );
         ?>

@@ -57,19 +57,6 @@ $liste = $this->list;
                    title="<?= _('GLOBAL_ADMIN_DOWN') ?>">
                     <?= _('GLOBAL_ADMIN_DOWN') ?>
                 </a>
-                <?php if ($ligne->online): ?>
-                <a href="<?= $this->baseUrl(); ?>activities/update/make/offline/id/<?= $ligne->id; ?>"
-                   class="putoffline"
-                   title="<?= _('GLOBAL_ADMIN_OFFLINE') ?>">
-                    <?= _('GLOBAL_ADMIN_OFFLINE') ?>
-                </a>
-                <?php else: ?>
-                <a href="<?= $this->baseUrl(); ?>activities/update/make/online/id/<?= $ligne->id; ?>"
-                   class="putonline"
-                   title="<?= _('GLOBAL_ADMIN_ONLINE') ?>">
-                    <?= _('GLOBAL_ADMIN_ONLINE') ?>
-                </a>
-                <?php endif; ?>
             </td>
         </tr>
             <?php endforeach; ?>

@@ -1,0 +1,49 @@
+<?php
+$goldbook = $this->goldbook;
+//$goldbookForm = $this->formGoldbook;
+?>
+
+<div id="jq-goldbook" class="goldbook">
+    <? if (count($goldbook) > 0): ?>
+    <h2><?= _('PRODUCTS_GOLDBOOK_MESSAGES'); ?></h2>
+    <table class="list">
+        <thead>
+        <tr>
+            <th><?= _('PRODUCTS_GOLDBOOK_MESSAGES_DATES_DU'); ?></th>
+            <th><?= _('PRODUCTS_GOLDBOOK_MESSAGES_DATES_AU'); ?></th>
+            <th><?= _('PRODUCTS_GOLDBOOK_MESSAGES_MESSAGE'); ?></th>
+            <th class="actions"><?= _('GLOBAL_ADMIN_LIST_ACTIONS')?></th>
+        </tr>
+        </thead>
+        <tbody>
+            <? foreach ($goldbook as $message): ?>
+        <tr>
+            <td><?= $this->dateFormat($message->dateBegin);?></td>
+            <td><?= $this->dateFormat($message->dateEnd);?></td>
+            <td><?= $message->content; ?></td>
+            <td class="actions">
+                <a href="<?= $this->baseUrl(); ?>products/update-goldbook/make/delete/id/<?= $message->id; ?>"
+                   class="jq-update delete"
+                   title="<?= _('GLOBAL_ADMIN_DELETE') ?>">
+                    <?= _('GLOBAL_ADMIN_DELETE') ?>
+                </a>
+                <?php if ($message->valid): ?>
+                <a href="<?= $this->baseUrl(); ?>products/update-goldbook/make/invalid/id/<?= $message->id; ?>"
+                   class="putoffline"
+                   title="<?= _('GLOBAL_ADMIN_OFFLINE') ?>">
+                    <?= _('GLOBAL_ADMIN_OFFLINE') ?>
+                </a>
+                <?php else: ?>
+                <a href="<?= $this->baseUrl(); ?>products/update-goldbook/make/valid/id/<?= $message->id; ?>"
+                   class="putonline"
+                   title="<?= _('GLOBAL_ADMIN_ONLINE') ?>">
+                    <?= _('GLOBAL_ADMIN_ONLINE') ?>
+                </a>
+                <?php endif; ?>
+            </td>
+        </tr>
+            <? endforeach; ?>
+        </tbody>
+    </table>
+    <? endif; ?>
+</div>

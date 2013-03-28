@@ -58,8 +58,18 @@ class ProductsController
         $categorie = Llv_Context_Product::getInstance()->categoryGetOne($filter);
         $this->view->assign('categorie', $categorie);
 
+        $goldbookFilter = new  Llv_Services_Product_Filter_Goldbook();
+        $goldbookFilter->idCategorie = $categorie->id;
+        $goldbookFilter->valid = false;
+        $goldbook = Llv_Context_Product::getInstance()->goldbookGetAll($goldbookFilter);
+        $this->view->assign('goldbookAValider', $goldbook);
+        $goldbookFilter->valid = true;
+        $goldbook = Llv_Context_Product::getInstance()->goldbookGetAll($goldbookFilter);
+        $this->view->assign('goldbook', $goldbook);
+
         $formCategoryEdit = new App_Form_Back_Products_Category($id);
         $formFileUploader = new App_Form_Back_FileUploader(1);
+//        $formGoldbook = new App_Form_Back_Products_Goldbook($categorie->id);
 
         if ($this->getRequest()->isPost()) {
             if ($formCategoryEdit->isValid($_POST)) {
@@ -97,11 +107,55 @@ class ProductsController
                     Llv_Context_Product::getInstance()->categoryUpdateFile($request);
                     $this->_redirect('products/edit-category/id/' . $id . '#jq-pictures');
                 }
+//            } elseif ($formGoldbook->isValid($_POST)) {
+//                    $request = new  Llv_Services_Product_Request_EditGoldbook();
+//                    $request->idCategorie = $formGoldbook->getValue('id_category');
+//                    $request->content = $formGoldbook->getValue('content');
+//                    $request->dateBegin = $formGoldbook->getValue('arrivee');
+//                    $request->dateEnd = $formGoldbook->getValue('depart');
+//                    $request->valid = false;
+//                    Llv_Context_Product::getInstance()->goldbookEditOne($request);
+//                    $this->_redirect('products/edit-category/id/' . $id . '#jq-pictures');
             }
         }
 
         $this->view->assign('formCategoryEdit', $formCategoryEdit);
         $this->view->assign('formFileUploader', $formFileUploader);
+    }
+
+    /**
+     *
+     */
+    public function updateGoldbookAction()
+    {
+        $id = $this->_getParam('id');
+        if (!is_null($id)) {
+            $goldbookFilter = new  Llv_Services_Product_Filter_Goldbook();
+            $goldbookFilter->id = $id;
+            $goldbook = Llv_Context_Product::getInstance()->goldbookGetOne($goldbookFilter);
+            if (!is_null($goldbook)) {
+                $idMessage = false;
+                $request = new Llv_Services_Product_Request_EditGoldbook();
+                $request->id = $id;
+
+                switch ($this->_getParam('make')) {
+                case 'delete':
+                    $idMessage = Llv_Context_Product::getInstance()->goldbookDeleteOne($request);
+                    break;
+                    case 'valid':
+                        $request->valid = true;
+                        $idMessage = Llv_Context_Product::getInstance()->goldbookEditOne($request);
+                        break;
+                    case 'invalid':
+                        $request->valid = false;
+                        $idMessage = Llv_Context_Product::getInstance()->goldbookEditOne($request);
+                        break;
+                }
+                if ($idMessage != false) {
+                    $this->_redirect('/products/edit-category/id/' . $goldbook->idCategorie . '#jq-goldbook');
+                }
+            }
+        }
     }
 
     /**
@@ -206,8 +260,7 @@ class ProductsController
     /**
      *
      */
-    public
-    function fileUpdateAction()
+    public function fileUpdateAction()
     {
         $id = $this->_getParam('id');
         if (!is_null($id)) {

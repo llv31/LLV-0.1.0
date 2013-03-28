@@ -302,4 +302,60 @@ class Llv_Entity_Product
     {
         return Llv_Entity_Product_Dal_Season::weekUpdateLot($request);
     }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Entity_Product_Filter_Goldbook $filter
+     *
+     * @return array
+     */
+    public function goldbookGetOne(Llv_Entity_Product_Filter_Goldbook $filter)
+    {
+        return Llv_Entity_Product_Helper_Goldbook::convertFromDalToDto(
+            Llv_Entity_Product_Dal_Goldbook::getOne($filter)
+        );
+    }
+
+    /**
+     * @param Llv_Entity_Product_Filter_Goldbook $filter
+     *
+     * @return array
+     */
+    public function goldbookGetAll(Llv_Entity_Product_Filter_Goldbook $filter)
+    {
+        return Llv_Entity_Product_Helper_Goldbook::convertListFromDalToDto(
+            Llv_Entity_Product_Dal_Goldbook::getAll($filter)
+        );
+    }
+
+    /**
+     * @param Llv_Entity_Product_Request_EditGoldbook $request
+     *
+     * @return int|null
+     */
+    public function goldbookUpdateOne(Llv_Entity_Product_Request_EditGoldbook $request)
+    {
+        return Llv_Entity_Product_Dal_Goldbook::updateOne($request);
+    }
+
+    /**
+     * @param Llv_Entity_Product_Request_EditGoldbook $request
+     *
+     * @return int|null
+     */
+    public function goldbookDeleteOne(Llv_Entity_Product_Request_EditGoldbook $request)
+    {
+        return Llv_Entity_Product_Dal_Goldbook::deleteOne($request);
+    }
+
+    /**
+     * @param Llv_Entity_Product_Request_EditGoldbook $request
+     *
+     * @return int|null
+     */
+    public function goldbookCreateOne(Llv_Entity_Product_Request_EditGoldbook $request)
+    {
+        return Llv_Entity_Product_Dal_Goldbook::createOne($request);
+    }
 }
