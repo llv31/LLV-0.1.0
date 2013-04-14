@@ -1,813 +1,537 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: Alec <aroybase@hotmail.fr>\n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
-
+"Content-Type: text/plain; charset=UTF-8"
 msgid "ERROR_404_TITLE"
 msgstr "Oops !"
-
 msgid "ERROR_404_CONTENT"
 msgstr "Oops ! The wished page does not exist"
-
 msgid "META_DESCRIPTION"
 msgstr "Luchon Location Vacances : Charming Guesthouse & Mountain Chalet"
-
 msgid "GLOBAL_HEADER_TITLE"
 msgstr "Luchon Location Vacances"
-
 msgid "HEAD_TITLE_HOME"
 msgstr "Home"
-
 msgid "HEAD_TITLE_PARTNERS"
 msgstr "Partners"
-
 msgid "HEAD_TITLE_CONNECTION"
 msgstr "Connection"
-
 msgid "HEAD_TITLE_NEWS"
 msgstr "News"
-
 msgid "HEAD_TITLE_ACTIVITY"
 msgstr "Activities"
-
 msgid "HEAD_TITLE_ERROR"
 msgstr "ERROR"
-
 msgid "HEAD_TITLE_CARROUSEL"
 msgstr "Carousel"
-
 msgid "HEAD_TITLE_CONTACT"
 msgstr "Reservations / Contact"
-
 msgid "HEAD_TITLE_SEASON"
 msgstr "Seasons management"
-
 msgid "HEAD_TITLE_PRODUCTS"
 msgstr "Products"
-
 msgid "GLOBAL_MENU_HOME"
 msgstr "Home"
-
 msgid "GLOBAL_MENU_CHAMBRES"
 msgstr "Our guesthouse"
-
 msgid "GLOBAL_MENU_GITE"
 msgstr "Our mountain chalet"
-
 msgid "GLOBAL_MENU_NEWS"
 msgstr "News"
-
 msgid "GLOBAL_MENU_ACTIVITIES"
 msgstr "Activities & spare time"
-
 msgid "GLOBAL_MENU_CONTACT"
 msgstr "To reserve"
-
 msgid "GLOBAL_MENU_PARTNERS"
 msgstr "Partners"
-
 msgid "GLOBAL_MENU_LOCATIONS"
 msgstr "Rentals"
-
 msgid "GLOBAL_MENU_DISPONIBILITES"
 msgstr "Availabilities"
-
 msgid "GLOBAL_MENU_PLAN"
 msgstr "Website map tree"
-
 msgid "GLOBAL_OUI"
 msgstr "Yes"
-
 msgid "GLOBAL_NON"
 msgstr "No"
-
 msgid "GLOBAL_AUCUNE"
 msgstr "None"
-
 msgid "GLOBAL_FORM_ENVOYER"
 msgstr "Send"
-
 msgid "GLOBAL_FORM_CONFIRMER"
 msgstr "Confirm"
-
 msgid "GLOBAL_FORM_VALIDER"
 msgstr "Valid"
-
 msgid "GLOBAL_FORM_SUBMIT"
 msgstr "Save"
-
 msgid "GLOBAL_FORM_SUBMIT_QUIT"
 msgstr "Save & quit"
-
 msgid "GLOBAL_COORDONNEES_ADRESSE"
 msgstr "Address : 28, avenue de Gascogne - 31 110 Saint Mamet"
-
 msgid "GLOBAL_COORDONNEES_TELEPHONE_LABEL"
 msgstr "Phone"
-
 msgid "GLOBAL_COORDONNEES_TELEPHONE"
 msgstr "+33(0) 561 891 354"
-
 msgid "GLOBAL_COORDONNEES_MOBILE_LABEL"
 msgstr "Mob."
-
 msgid "GLOBAL_COORDONNEES_MOBILE"
 msgstr "+33(0) 618 641 430"
-
 msgid "GLOBAL_COORDONNEES_GPS_LABEL"
 msgstr "GPS coordinates"
-
 msgid "GLOBAL_BACK"
 msgstr "Back to list"
-
 msgid "GLOBAL_BACK_HOME"
 msgstr "Back to home page"
-
 msgid "GLOBAL_BACK_SIMPLE"
 msgstr "Back"
-
 msgid "GLOBAL_CHAMP_OBLIGATOIRE"
 msgstr "*"
-
 msgid "GLOBAL_MONNAIE"
 msgstr "euros"
-
 msgid "GLOBAL_MONTH_LABEL01"
 msgstr "January"
-
 msgid "GLOBAL_MONTH_LABEL02"
 msgstr "Ferbruary"
-
 msgid "GLOBAL_MONTH_LABEL03"
 msgstr "March"
-
 msgid "GLOBAL_MONTH_LABEL04"
 msgstr "April"
-
 msgid "GLOBAL_MONTH_LABEL05"
 msgstr "May"
-
 msgid "GLOBAL_MONTH_LABEL06"
 msgstr "June"
-
 msgid "GLOBAL_MONTH_LABEL07"
 msgstr "July"
-
 msgid "GLOBAL_MONTH_LABEL08"
 msgstr "August"
-
 msgid "GLOBAL_MONTH_LABEL09"
 msgstr "September"
-
 msgid "GLOBAL_MONTH_LABEL10"
 msgstr "October"
-
 msgid "GLOBAL_MONTH_LABEL11"
 msgstr "November"
-
 msgid "GLOBAL_MONTH_LABEL12"
 msgstr "December"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT01"
 msgstr "Jan"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT02"
 msgstr "Feb"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT03"
 msgstr "Mar"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT04"
 msgstr "Apr"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT05"
 msgstr "May"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT06"
 msgstr "June"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT07"
 msgstr "July"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT08"
 msgstr "Aug"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT09"
 msgstr "Sept"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT10"
 msgstr "Oct"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT11"
 msgstr "Nov"
-
 msgid "GLOBAL_MONTH_LABEL_SHORT12"
 msgstr "Dec"
-
 msgid "GLOBAL_DAY_LABEL0"
 msgstr "Sunday"
-
 msgid "GLOBAL_DAY_LABEL1"
 msgstr "Monday"
-
 msgid "GLOBAL_DAY_LABEL2"
 msgstr "Tuesday"
-
 msgid "GLOBAL_DAY_LABEL3"
 msgstr "Wednesday"
-
 msgid "GLOBAL_DAY_LABEL4"
 msgstr "Thursday"
-
 msgid "GLOBAL_DAY_LABEL5"
 msgstr "Friday"
-
 msgid "GLOBAL_DAY_LABEL6"
 msgstr "Saturday"
-
 msgid "GLOBAL_DAY_LABEL_SHORT0"
 msgstr "Su"
-
 msgid "GLOBAL_DAY_LABEL_SHORT1"
 msgstr "Mo"
-
 msgid "GLOBAL_DAY_LABEL_SHORT2"
 msgstr "Tu"
-
 msgid "GLOBAL_DAY_LABEL_SHORT3"
 msgstr "We"
-
 msgid "GLOBAL_DAY_LABEL_SHORT4"
 msgstr "Th"
-
 msgid "GLOBAL_DAY_LABEL_SHORT5"
 msgstr "Fr"
-
 msgid "GLOBAL_DAY_LABEL_SHORT6"
 msgstr "Sa"
-
 msgid "GLOBAL_DATEPICKER_CLOSETEXT"
 msgstr "End"
-
 msgid "GLOBAL_DATEPICKER_PREVIOUS"
 msgstr "Previous"
-
 msgid "GLOBAL_DATEPICKER_NEXT"
 msgstr "Next"
-
 msgid "GLOBAL_DATEPICKER_CURRENT"
 msgstr "Today"
-
 msgid "GLOBAL_DATEPICKER_WEEK"
 msgstr "Week"
-
 msgid "GLOBAL_DATEPICKER_FORMAT"
 msgstr "mm/dd/yy"
-
 msgid "GLOBAL_DATEPICKER_FIRSTDAY"
 msgstr "1"
-
 msgid "GLOBAL_TIME_SEPARATOR_LABEL"
 msgstr "to"
-
 msgid "GLOBAL_WEEK_LABEL_SHORT"
 msgstr "Week"
-
 msgid "FOOTER_COPYRIGHT"
 msgstr "All rights reserved© 2008"
-
 msgid "FOOTER_CREDITS"
 msgstr "Made by :"
-
 msgid "FOOTER_PARTENAIRES"
 msgstr "Partners"
-
 msgid "HOME_NEWS_TITRE"
 msgstr "Last news"
-
 msgid "HOME_NEWS_MORE"
 msgstr "Read more news"
-
 msgid "HOME_NEWS_NEXT"
 msgstr "Read the article"
-
 msgid "HOME_ACTIVITY_TITRE"
 msgstr "Random activity"
-
 msgid "HOME_ACTIVITY_MORE"
 msgstr "Read more activities"
-
 msgid "HOME_ACTIVITY_NEXT"
 msgstr "Read the article"
-
 msgid "NEWS_LIST_TITLE"
 msgstr "News"
-
 msgid "NEWS_LIST_TITRE"
 msgstr "Title"
-
 msgid "NEWS_LIST_CATEGORIE"
 msgstr "Category"
-
 msgid "NEWS_LIST_ONLINE"
 msgstr "Online ?"
-
 msgid "NEWS_CATEGORY_LABEL"
 msgstr "Category"
-
 msgid "NEWS_ELEMENT_ILLUSTRATION"
 msgstr "Photo gallery"
-
 msgid "NEWS_LIST_NORESULT"
 msgstr "There is no new yet"
-
 msgid "NEWS_LIST_DATE_PUBLICATION"
 msgstr "Published on"
-
 msgid "NEWS_LIST_EN_SAVOIR_PLUS"
 msgstr "Clic to learn more"
-
 msgid "ACTIVITY_LIST_TITLE"
 msgstr "Activities"
-
 msgid "ACTIVITY_LIST_TITRE"
 msgstr "Title"
-
 msgid "ACTIVITY_LIST_CATEGORIE"
 msgstr "Category"
-
 msgid "ACTIVITY_LIST_ONLINE"
 msgstr "Online ?"
-
 msgid "ACTIVITY_CATEGORY_LABEL"
 msgstr "Category"
-
 msgid "ACTIVITY_ELEMENT_ILLUSTRATION"
 msgstr "Photo gallery"
-
 msgid "ACTIVITY_LIST_NORESULT"
 msgstr "There is no activity yet"
-
 msgid "PRODUCTS_CATEGORY_LIST_TITLE"
 msgstr "Categories"
-
 msgid "PRODUCTS_PRODUCT_LIST_TITLE"
 msgstr "Products"
-
 msgid "PRODUCTS_LIST_TYPE"
 msgstr "Type"
-
 msgid "PRODUCTS_LIST_TITRE"
 msgstr "Title"
-
 msgid "PRODUCTS_LIST_DESCRIPTION"
 msgstr "Description"
-
 msgid "PRODUCTS_LIST_CATEGORIE"
 msgstr "Category"
-
 msgid "PRODUCTS_LIST_CATEGORIE_PRICINGTYPE"
 msgstr "Pricing type"
-
 msgid "PRODUCTS_LIST_CATEGORIE_PRICINGTYPE1"
 msgstr "By night"
-
 msgid "PRODUCTS_LIST_CATEGORIE_PRICINGTYPE2"
 msgstr "By season"
-
 msgid "PRODUCTS_LIST_CATEGORIE_ROUTE"
 msgstr "Category URL"
-
 msgid "PRODUCTS_LIST_CATEGORIE_COORDONNEES"
 msgstr "GPS coordinates"
-
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR"
 msgstr "GoogleMap pin color"
-
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_RED"
 msgstr "Red"
-
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_BLUE"
 msgstr "Blue"
-
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_GREEN"
 msgstr "Green"
-
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_PURPLE"
 msgstr "Purple"
-
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_YELLOW"
 msgstr "Yellow"
-
 msgid "PRODUCTS_LIST_INTRO"
 msgstr "Introduction"
-
 msgid "PRODUCTS_ONGLET_CONTENT"
 msgstr "Description"
-
 msgid "PRODUCTS_ONGLET_PHOTOS"
 msgstr "Pictures"
-
 msgid "PRODUCTS_ONGLET_PRIX"
 msgstr "Availabilities & prices"
-
 msgid "PRODUCTS_ONGLET_RESERVER"
 msgstr "Reservation"
-
 msgid "PRODUCTS_PRIX_DISPO"
 msgstr "Availabilities"
-
 msgid "PRODUCTS_PRIX_PRIX"
 msgstr "Prices"
-
 msgid "PRODUCTS_ONGLET_GOLDBOOK"
 msgstr "Goldbook"
-
 msgid "PRODUCTS_PRIX_CALENDRIER"
 msgstr "Prices & season calendar"
-
 msgid "PRODUCT_PRICE_SEASON_CONTACT_US"
 msgstr "For more informations, please contact us"
-
 msgid "PRODUCT_PRICE_NIGHT_EMPTY"
 msgstr "\"&times"
-
 msgid "PRODUCT_PRICE_NIGHT_NUIT_SING"
 msgstr "night"
-
 msgid "PRODUCT_PRICE_NIGHT_NUIT_PLUR"
 msgstr "nights"
-
 msgid "PRODUCT_PRICE_NIGHT_PERSONNES_1"
 msgstr "1 person"
-
 msgid "PRODUCT_PRICE_NIGHT_PERSONNES_2"
 msgstr "2 people"
-
 msgid "PRODUCT_PRICE_NIGHT_PERSONNES_3"
 msgstr "3 people"
-
 msgid "PRODUCT_PRICE_NIGHT_PERSONNES_4"
 msgstr "4 people"
-
 msgid "PRODUCT_PRICE_SEASON_EMPTY"
 msgstr "\"&times"
-
 msgid "PRODUCT_PRICE_SEASON_PERIODES_WEEK"
 msgstr "Week"
-
 msgid "PRODUCT_PRICE_SEASON_PERIODES_WEEKEND"
 msgstr "Week-end"
-
 msgid "PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK"
 msgstr "Mid-week"
-
 msgid "PRODUCT_PRICE_SEASON_PERIODES_INDISPO"
 msgstr "Unavailable reservation or price"
-
 msgid "PRODUCTS_GOLDBOOK_NEW_MESSAGE"
 msgstr "Have you ever been our guest ? Please, leave a message"
-
 msgid "PRODUCTS_GOLDBOOK_MESSAGES"
 msgstr "Our guest testimonies"
-
 msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES"
 msgstr "Date of staying"
-
 msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES_DU"
 msgstr "From"
-
 msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES_AU"
 msgstr "to"
-
 msgid "PRODUCTS_GOLDBOOK_MESSAGES_MESSAGE"
 msgstr "Testimony"
-
 msgid "GOLDBOOK_FORM_LABEL_CONTENU"
 msgstr "Your message"
-
 msgid "GOLDBOOK_FORM_LABEL_DEPART"
 msgstr "Date of arrival"
-
 msgid "GOLDBOOK_FORM_LABEL_ARRIVEE"
 msgstr "Date of departure"
-
 msgid "GOLDBOOK_FORM_SUBMIT"
 msgstr "Submit testimony"
-
 msgid "DISPONIBILITES_DEMANDE_RESERVATION"
 msgstr "Ask for a reservation"
-
 msgid "DISPONIBILITES_TITRE"
 msgstr "Availabilities"
-
 msgid "CONTACT_TITLE"
 msgstr "Reserve / Contact us"
-
 msgid "CONTACT_MAP_TITLE"
 msgstr "How to locate us"
-
 msgid "CONTACT_FORM_FIELDSET_INFORMATIONS"
 msgstr "About you"
-
 msgid "CONTACT_FORM_LABEL_NOM"
 msgstr "Last name"
-
 msgid "CONTACT_FORM_LABEL_PRENOM"
 msgstr "First name"
-
 msgid "CONTACT_FORM_LABEL_EMAIL"
 msgstr "E-mail"
-
 msgid "CONTACT_FORM_LABEL_TELEPHONE"
 msgstr "Phone / Mobile"
-
 msgid "CONTACT_FORM_LABEL_ADRESSE"
 msgstr "Complete address"
-
 msgid "CONTACT_FORM_FIELDSET_DEMANDE"
 msgstr "About your demand"
-
 msgid "CONTACT_FORM_LABEL_DECOUVERTE"
 msgstr "How did you find us ?"
-
 msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_VIDE"
 msgstr "---"
-
 msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_SE"
 msgstr "Search engine"
-
 msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_ABRITEL"
 msgstr "Abritel"
-
 msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_BOUCHEOREILLE"
 msgstr "Word of mouth"
-
 msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_AUTRES"
 msgstr "Other"
-
 msgid "CONTACT_FORM_LABEL_ADULTES"
 msgstr "Number of adults"
-
 msgid "CONTACT_FORM_LABEL_ENFANTS"
 msgstr "Number of children"
-
 msgid "CONTACT_FORM_LABEL_ARRIVEE"
 msgstr "Wished arrival date"
-
 msgid "CONTACT_FORM_LABEL_DEPART"
 msgstr "Wished departure date"
-
 msgid "CONTACT_FORM_LABEL_LOCATIONS"
 msgstr "Wished rental"
-
 msgid "CONTACT_FORM_LABEL_PRECISIONS"
 msgstr "Do you wish to add precisions (ages of children needed) ?"
-
 msgid "CONTACT_ENVOI_MAIL_MESSAGE_SUCCES"
 msgstr "You’re message have been sent. We will answer you as soon as we can."
-
 msgid "CONTACT_ENVOI_MAIL_MESSAGE_OBLIGATOIRE"
 msgstr "Every field marked by an * must be inputed"
-
 msgid "CONTACT_FORM_SUBMIT"
 msgstr "Make a reservation demand"
-
 msgid "CONTACT_ENVOI_MAIL_MAIL"
 msgstr "contact@gite-luchon.com"
-
 msgid "CONTACT_OPTION_CHALET"
 msgstr "All the chalet"
-
 msgid "CONTACT_ENVOI_MAIL_SUJET"
 msgstr "[Gite-luchon.com][ANGLAIS] Nouvelle demande de réservation"
-
 msgid "CONTACT_ENVOI_MAIL_ALT"
-msgstr ""
-"Pour afficher ce message, vous devez utiliser un client compatible HTML"
-
+msgstr "Pour afficher ce message, vous devez utiliser un client compatible HTML"
 msgid "ERROR_EXCEPTION_SITE_UNKNOWN"
 msgstr "The website you’re trying to reach does not exists."
-
 msgid "ERROR_EXCEPTION_INVALIDARGUMENT"
 msgstr "TECHNICAL ERROR : Entity is incorrect"
-
 msgid "ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME"
 msgstr "The asking property does not exist"
-
 msgid "ERROR_DB_CONNECTION"
 msgstr "Error when trying to connect database"
-
 msgid "META_GOOGLE_VERIF"
 msgstr "MyUxzCNcdspiFGJxWUrpzL0A2rf3TfQdg88ZBvrGL10"
-
 msgid "NEWS_EDIT_TABS_CONTENT"
 msgstr "Content"
-
 msgid "NEWS_EDIT_TABS_PICTURES"
 msgstr "Pictures"
-
 msgid "NEWS_EDIT_TITLE"
 msgstr "Edit news"
-
 msgid "NEWS_EDIT_TITLE_LABEL"
 msgstr "Title"
-
 msgid "NEWS_EDIT_CONTENT_LABEL"
 msgstr "Content"
-
 msgid "NEWS_EDIT_LINK_LABEL"
 msgstr "Link"
-
 msgid "NEWS_EDIT_LOCATION_LABEL"
 msgstr "GPS coordinates"
-
 msgid "ACTIVITY_EDIT_TABS_CONTENT"
 msgstr "Contents"
-
 msgid "ACTIVITY_EDIT_TABS_PICTURES"
 msgstr "Pictures"
-
 msgid "ACTIVITY_EDIT_TITLE"
 msgstr "Edit activity"
-
 msgid "ACTIVITY_EDIT_TITLE_LABEL"
 msgstr "Title"
-
 msgid "ACTIVITY_EDIT_CONTENT_LABEL"
 msgstr "Content"
-
 msgid "ACTIVITY_EDIT_LINK_LABEL"
 msgstr "Link"
-
 msgid "ACTIVITY_EDIT_LOCATION_LABEL"
 msgstr "GPS coordinates"
-
 msgid "PRODUCTS_EDIT_CATEGORIE_TITLE"
 msgstr "Edit category"
-
 msgid "PRODUCTS_EDIT_TABS_CONTENT"
 msgstr "Contents"
-
 msgid "PRODUCTS_EDIT_TABS_PICTURES"
 msgstr "Pictures"
-
 msgid "PRODUCTS_EDIT_TABS_GOLDBOOK"
 msgstr "Goldbook public messages"
-
 msgid "PRODUCTS_EDIT_TABS_GOLDBOOK_AVALIDER"
 msgstr "Goldbook waiting messages"
-
 msgid "PRODUCTS_EDIT_PRODUCT_TITLE"
 msgstr "Edit rental"
-
 msgid "PRODUCTS_EDIT_TABS_PRICES"
 msgstr "Availabilities & prices"
-
 msgid "PRODUCTS_EDIT_PRICE_DISPO"
 msgstr "HTML code for availabilities"
-
 msgid "PRODUCTS_EDIT_PRICE_NUIT1"
 msgstr "1 person/night"
-
 msgid "PRODUCTS_EDIT_PRICE_NUIT2"
 msgstr "2 people/night"
-
 msgid "PRODUCTS_EDIT_PRICE_NUIT3"
 msgstr "3 people/night"
-
 msgid "PRODUCTS_EDIT_PRICE_NUIT4"
 msgstr "4 people/night"
-
 msgid "PRODUCTS_EDIT_PRICE_SAISON_SEMAINE"
 msgstr "Week"
-
 msgid "PRODUCTS_EDIT_PRICE_SAISON_WEEKEND"
 msgstr "Week-end"
-
 msgid "PRODUCTS_EDIT_PRICE_SAISON_MIDWEEK"
 msgstr "Mid-week"
-
 msgid "CONTACT_CENTER_COORDINATES_LAT"
 msgstr "42.814166"
-
 msgid "CONTACT_CENTER_COORDINATES_LONG"
 msgstr "0.55444"
-
 msgid "GLOBAL_ADMIN_ADD"
 msgstr "Add an element"
-
 msgid "GLOBAL_ADMIN_UPDATE"
 msgstr "Update an element"
-
 msgid "GLOBAL_ADMIN_DELETE"
 msgstr "Delete an element"
-
 msgid "GLOBAL_ADMIN_DELETE_CONFIRM"
 msgstr "DDo you really want to delete this element ?"
-
 msgid "GLOBAL_ADMIN_UP"
 msgstr "Pull up the element"
-
 msgid "GLOBAL_ADMIN_DOWN"
 msgstr "Pull down the element"
-
 msgid "GLOBAL_ADMIN_ONLINE"
 msgstr "Put online"
-
 msgid "GLOBAL_ADMIN_OFFLINE"
 msgstr "Put offline"
-
 msgid "GLOBAL_ADMIN_LIST_APERCU"
 msgstr "Preview"
-
 msgid "GLOBAL_ADMIN_LIST_DATE_AJOUT"
 msgstr "Added on"
-
 msgid "GLOBAL_ADMIN_LIST_DATE_MODIFICATION"
 msgstr "Upadted on"
-
 msgid "GLOBAL_ADMIN_LIST_DATE_SUPPRESSION"
 msgstr "Deleted on"
-
 msgid "GLOBAL_ADMIN_LIST_ACTIONS"
 msgstr "Actions"
-
 msgid "GLOBAL_LANGUAGETOGGLER_LABEL"
 msgstr "Switch edition language"
-
 msgid "GLOBAL_MODAL_DELETE_TEXT"
 msgstr "You’re going to delete this element. Are you really sure ?"
-
 msgid "GLOBAL_MODAL_DELETE_CONFIRM"
 msgstr "Confirm"
-
 msgid "GLOBAL_MODAL_DELETE_CANCEL"
 msgstr "Cancel"
-
 msgid "GLOBAL_MENU_CARROUSEL"
 msgstr "Carrousel"
-
 msgid "GLOBAL_MENU_DECONNEXION"
 msgstr "Disconnect"
-
 msgid "GLOBAL_MENU_TRADUCTIONS"
 msgstr "Translations"
-
 msgid "GLOBAL_MENU_SEASON"
 msgstr "Seasons"
-
 msgid "HOME_LOGIN_TITLE"
 msgstr "Administration connection"
-
 msgid "HOME_LOGIN_FORM_LOGIN_LABEL"
 msgstr "Login"
-
 msgid "HOME_LOGIN_FORM_PASSWORD_LABEL"
 msgstr "Password"
-
 msgid "HOME_LOGIN_FORM_SUBMIT_LABEL"
 msgstr "Connection"
-
 msgid "HOME_PAGECMS_HOME_TITLE"
 msgstr "Home page edition"
-
 msgid "HOME_PAGECMS_PARTNERS_TITLE"
 msgstr "Partners page edition"
-
 msgid "HOME_PAGECMS_EDIT_TITLE_LABEL"
 msgstr "Title"
-
 msgid "HOME_PAGECMS_EDIT_CONTENT_LABEL"
 msgstr "Content"
-
 msgid "HOME_CARROUSEL_TITLE"
 msgstr "Carrousel pictures edition"
-
 msgid "HOME_CARROUSEL_FILE_LABEL"
 msgstr "New file"
-
 msgid "HOME_CARROUSEL_LIST_ID"
 msgstr "#"
-
 msgid "HOME_CARROUSEL_LIST_ORIGINALFILENAME"
 msgstr "Filename"
-
 msgid "HOME_CARROUSEL_LIST_TYPE"
 msgstr "Type"
-
 msgid "HOME_CARROUSEL_LIST_ONLINE"
 msgstr "Online ?"
-
 msgid "SEASON_CHANGE_YEAR"
 msgstr "Update for year :"
-
 msgid "SEASON_TYPE"
 msgstr "Seasons"
