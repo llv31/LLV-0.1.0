@@ -1,0 +1,29 @@
+<?php
+/**  */
+$this->headLink()->appendStylesheet($this->buildDesignUrl('availabilities/css/index.css'));
+
+$this->headTitle(_('DISPONIBILITES_TITRE') . ' | ');
+?>
+<div class="page">
+    <h1><?= _('DISPONIBILITES_TITRE') ?></h1>
+
+    <?=
+    $this->partial(
+        'availabilities/partial/rooms.phtml',
+        array(
+             'products'=> $this->products,
+             'id_category' => 1
+        )
+    );
+    ?>
+
+    <?=
+    $this->partial(
+        'availabilities/partial/rooms.phtml',
+        array(
+             'products'=> $this->products,
+             'id_category' => 2
+        )
+    );
+    ?>
+</div>

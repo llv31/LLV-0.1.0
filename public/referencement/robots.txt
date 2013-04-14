@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: /application/
+Disallow: /data/
+Disallow: /doc/
+Disallow: /library/
+Disallow: /scripts/
+Disallow: /tests/

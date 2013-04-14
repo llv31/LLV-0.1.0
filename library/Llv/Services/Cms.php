@@ -262,4 +262,48 @@ class Llv_Services_Cms
         }
         return $message;
     }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_Message_Header        $header
+     * @param Llv_Services_Cms_Filter_Traduction $filter
+     *
+     * @return Llv_Services_Cms_Message_Traduction
+     */
+    public function traductionGetAll(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Cms_Filter_Traduction $filter
+    )
+    {
+        $message = new Llv_Services_Cms_Message_Traduction();
+        try {
+            $entityFilter = new Llv_Entity_Cms_Filter_Traduction();
+            $entityFilter->locale = $filter->locale;
+            $message->traductions = $this->getEntity()->traductionGetAll($entityFilter);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    public function traductionUpdateAll(
+        Llv_Services_Message_Header $header,
+        Llv_Services_Cms_Request_Traduction $request
+    )
+    {
+        $message = new Llv_Services_Cms_Message_Traduction();
+        try {
+            $entityRequest = new Llv_Entity_Cms_Request_Traduction();
+            $entityRequest->traductions = $request->traductions;
+            $message->traductions = $this->getEntity()->traductionUpdateAll($entityRequest);
+            $message->success = true;
+        } catch (Exception $e) {
+            $message->errorList[] = $e;
+        }
+        return $message;
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 }

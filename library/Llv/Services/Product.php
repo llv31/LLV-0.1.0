@@ -155,32 +155,6 @@ class Llv_Services_Product
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
-     * @param Llv_Services_Message_Header           $header
-     * @param Llv_Services_Product_Filter_Product   $request
-     *
-     * @return Llv_Services_Product_Message_Product
-     */
-    public function getRowContent(
-        Llv_Services_Message_Header $header,
-        Llv_Services_Product_Filter_Product $request
-    )
-    {
-        $message = new Llv_Services_Product_Message_Product();
-        try {
-            $entityRequest = new Llv_Entity_Product_Filter_Product();
-            $entityRequest->id = $request->id;
-            $entityRequest->idLangue = $request->idLangue;
-            if (!is_null($entityRequest->id) && !is_null($entityRequest->idLangue)) {
-                $this->getEntity()->getRowContent($entityRequest);
-            }
-            $message->success = true;
-        } catch (Exception $e) {
-            $message->errorList[] = $e;
-        }
-        return $message;
-    }
-
-    /**
      * @param Llv_Services_Message_Header               $header
      * @param Llv_Services_Product_Request_EditContent  $request
      *

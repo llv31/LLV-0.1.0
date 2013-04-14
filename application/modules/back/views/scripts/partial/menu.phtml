@@ -46,6 +46,13 @@ $items['seasons'] = array(
     'label'      => _('GLOBAL_MENU_SEASON'),
     'actions'    => array('index', 'edit', 'list')
 );
+/** Liste des traductions du site */
+$items['traductions'] = array(
+    'controller' => 'index',
+    'action'     => 'traduction',
+    'label'      => _('GLOBAL_MENU_TRADUCTIONS'),
+    'actions'    => array('traduction')
+);
 echo $this->displayMainMenu($items);
 ?>
 

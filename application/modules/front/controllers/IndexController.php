@@ -15,6 +15,8 @@ class IndexController
 {
     public function init()
     {
+        $this->view->assign('urlToLike', "https://www.facebook.com/pages/Luchon-Location-Vacances/113336662034784");
+        $this->geolocation();
     }
 
     public function indexAction()
@@ -41,5 +43,21 @@ class IndexController
         $this->view->assign('carrousel', $carrousel);
         $this->view->assign('news', $news);
         $this->view->assign('activity', $activity);
+    }
+
+    public function geolocation()
+    {
+        foreach ($_SERVER as $key=> $srvLine) {
+            if (strstr($key, 'GEOIP_')) {
+                $res[] = $srvLine;
+            }
+        }
+        $filename = APPLICATION_PATH . '/../data/logs/visits.log';
+        $document = file_get_contents($filename);
+        $res = implode(', ', $res);
+        if (!in_array($res, explode(PHP_EOL, $document))) {
+            $document .= $res . PHP_EOL;
+            file_put_contents($filename, $document);
+        }
     }
 }

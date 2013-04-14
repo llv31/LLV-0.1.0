@@ -31,7 +31,7 @@ class App_View_Helper_GiveJsI18nText
             $i = $i < 10 ? '0' . $i : $i;
             $i18n['datepicker']['monthNames'][] = _('GLOBAL_MONTH_LABEL' . $i);
         }
-        for ($i = 0; $i <= 7; $i++) {
+        for ($i = 0; $i <= 6; $i++) {
             $i18n['datepicker']['dayNamesMin'][] = _('GLOBAL_DAY_LABEL_SHORT' . $i);
         }
         $i18n['datepicker']['weekHeader'] = _('GLOBAL_DATEPICKER_WEEK');

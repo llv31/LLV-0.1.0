@@ -91,4 +91,18 @@ class Llv_Entity_Cms
     {
         return Llv_Entity_Cms_Dal_Carrousel::deleteRow($request);
     }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    public function traductionGetAll(Llv_Entity_Cms_Filter_Traduction $filter)
+    {
+        return Llv_Entity_Cms_Helper_Traduction::convertListFromDalToDto(
+            Llv_Entity_Cms_Dal_Traduction::getInstance()->getAll($filter)
+        );
+    }
+
+    public function traductionUpdateAll(Llv_Entity_Cms_Request_Traduction $request)
+    {
+        return Llv_Entity_Cms_Dal_Traduction::getInstance()->updateAll($request);
+    }
 }

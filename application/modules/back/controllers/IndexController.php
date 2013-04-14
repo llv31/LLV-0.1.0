@@ -173,6 +173,32 @@ class IndexController
 
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
+    public function traductionAction()
+    {
+        $form = new App_Form_Back_Cms_Traduction();
+        if ($this->getRequest()->isPost()) {
+            if ($form->isValid($_POST)) {
+                $traductions = array();
+                foreach ($this->_getParam(App_Model_Constant_Cms_Traduction::FORM_PREFIX_KEY) as $keyname=> $value) {
+                    $parsedTrad = $form->makeName(null, $keyname);
+                    $traduction = new Llv_Dto_Cms_Traduction();
+                    $traduction->value = $value;
+                    $traduction->keyName = $parsedTrad["keyname"];
+                    $traduction->locale = $parsedTrad["locale"];
+                    $traduction->private = $parsedTrad["private"];
+                    $traductions[$traduction->locale->toString()][] = $traduction;
+                }
+                $request = new Llv_Services_Cms_Request_Traduction();
+                $request->traductions = $traductions;
+                Llv_Context_Cms::getInstance()->traductionUpdateAll($request);
+                $this->_redirect($form->getAction());
+            }
+        }
+        $this->view->assign('form', $form);
+    }
+
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
     /**
      * Connecte un utilisateur
      */

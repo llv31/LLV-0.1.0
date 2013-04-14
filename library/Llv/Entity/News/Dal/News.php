@@ -101,6 +101,7 @@ class Llv_Entity_News_Dal_News
                 ->where('n.date_delete is null')
                 ->order('n.position DESC');
             if ($filter->online) {
+                $sql->where('CHAR_LENGTH(nl.title)>?', 0);
                 $sql->where('n.online = ?', $filter->online);
             }
             return Llv_Db::getInstance()->fetchAll($sql);

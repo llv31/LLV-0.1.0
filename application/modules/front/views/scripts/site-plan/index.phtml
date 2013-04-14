@@ -1,0 +1,74 @@
+<?php
+$this->headTitle(_('GLOBAL_MENU_PLAN') . ' | ');
+/**  */
+$this->headLink()->appendStylesheet($this->buildDesignUrl('site-plan/css/index.css'));
+
+$guesthouse = $this->guesthouse;
+$chalet = $this->chalet;
+?>
+<div class="page">
+    <h1><?= _('GLOBAL_MENU_PLAN'); ?></h1>
+    <ol>
+        <li><a href="<?= $this->url(array('controller'=> 'index'));?>"><?= _('GLOBAL_MENU_HOME'); ?></a></li>
+
+        <li>
+            <a href="<?= $this->url(
+                array(
+                     'controller'=> 'products',
+                     'action'    => 'room',
+                     'type'      => 'guesthouse'
+                )
+            ); ?>"><?= _('GLOBAL_MENU_CHAMBRES'); ?></a>
+            <ol>
+                <?php foreach ($guesthouse as $room): ?>
+                <li>
+                    <a href="<?= $this->url(
+                        array(
+                             'controller'=> 'products',
+                             'action'    => 'room',
+                             'type'      => 'guesthouse',
+                             'set'      => $room->url
+                        )
+                    ); ?>"><?= $room->title; ?></a>
+                </li>
+                <?php endforeach;?>
+            </ol>
+        </li>
+
+        <li>
+            <a href="<?= $this->url(
+                array(
+                     'controller'=> 'products',
+                     'action'    => 'room',
+                     'type'      => 'chalet'
+                )
+            ); ?>"><?= _('GLOBAL_MENU_GITE'); ?></a>
+            <ol>
+                <?php foreach ($chalet as $room): ?>
+                <li>
+                    <a href="<?= $this->url(
+                        array(
+                             'controller'=> 'products',
+                             'action'    => 'room',
+                             'type'      => 'chalet',
+                             'set'      => $room->url
+                        )
+                    ); ?>"><?= $room->title; ?></a>
+                </li>
+                <?php endforeach;?>
+            </ol>
+        </li>
+
+        <li><a
+            href="<?= $this->url(array('controller'=> 'availabilities'));?>"><?= _('GLOBAL_MENU_DISPONIBILITES'); ?></a>
+        </li>
+
+        <li><a href="<?= $this->url(array('controller'=> 'news'));?>"><?= _('GLOBAL_MENU_NEWS'); ?></a></li>
+
+        <li><a href="<?= $this->url(array('controller'=> 'activities'));?>"><?= _('GLOBAL_MENU_ACTIVITIES'); ?></a></li>
+
+        <li><a href="<?= $this->url(array('controller'=> 'contact'));?>"><?= _('GLOBAL_MENU_CONTACT'); ?></a></li>
+
+        <li><a href="<?= $this->url(array('controller'=> 'partners'));?>"><?= _('FOOTER_PARTENAIRES'); ?></a></li>
+    </ol>
+</div>

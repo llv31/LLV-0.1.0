@@ -134,4 +134,34 @@ class Llv_Context_Cms
         return $message->success;
     }
 
+    /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+    /**
+     * @param Llv_Services_Cms_Filter_Traduction $filter
+     *
+     * @return array|Llv_Dto_Cms_Traduction[]
+     */
+    public function traductionGetAll(Llv_Services_Cms_Filter_Traduction $filter)
+    {
+        $message = $this->_service->traductionGetAll($this->getHeaderMessage(), $filter);
+        if ($message->success) {
+            return $message->traductions;
+        }
+        return array();
+    }
+
+    /**
+     * @param Llv_Services_Cms_Request_Traduction $request
+     *
+     * @return bool
+     */
+    public function traductionUpdateAll(Llv_Services_Cms_Request_Traduction $request)
+    {
+        $message = $this->_service->traductionUpdateAll($this->getHeaderMessage(), $request);
+        if ($message->success) {
+            return $message->success;
+        }
+        return false;
+    }
+
 }

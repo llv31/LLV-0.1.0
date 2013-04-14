@@ -11,7 +11,7 @@ $this->headTitle($activity->title.' | ' . _('HEAD_TITLE_ACTIVITY') . ' | ');
 <div class="activity page">
     <p class="back"><a href="<?= $this->baseUrl(); ?>activities"><?= _('GLOBAL_BACK') ?></a></p>
 
-    <h2><?= $activity->title ?></h2>
+    <h1><?= $activity->title ?></h1>
 
     <div class="contenu"><?= $activity->content ?></div>
     <?php if (count($activity->illustrations) > 0): ?>

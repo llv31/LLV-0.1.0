@@ -67,6 +67,7 @@ class Llv_Entity_Activity_Dal_Activity
             }
 
             if (isset($filter->online)) {
+                $sql->where('CHAR_LENGTH(al.title)>?', 0);
                 $sql->where('a.online = ?', $filter->online);
             }
 
@@ -105,6 +106,7 @@ class Llv_Entity_Activity_Dal_Activity
                 ->where('a.date_delete is null')
                 ->order('a.position DESC');
             if ($filter->online) {
+                $sql->where('CHAR_LENGTH(al.title)>?', 0);
                 $sql->where('a.online = ?', $filter->online);
             }
 //            return array();

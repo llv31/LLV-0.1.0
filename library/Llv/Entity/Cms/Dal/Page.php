@@ -14,7 +14,6 @@ class Llv_Entity_Cms_Dal_Page
     extends Zend_Db_Table_Abstract
 {
     protected static $_namePage = "cms_page";
-    protected static $_nameCarrousel = "cms_caroussel_element";
     protected static $_nameTrad = "cms_page_language";
     protected $_rowClass = "Llv_Entity_Dal_Row_Abstract";
     protected static $_instance;

@@ -12,7 +12,8 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('_plugin/carrousel/css
             <a href="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 800, 600); ?>"
                rel="colorbox">
                 <img
-                    src="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 580, 9999); ?>"/>
+                    src="<?= $this->displayImage($ligne->filename, Llv_Constant_File_Category::CARROUSEL, 580, 9999); ?>"
+                    alt="Gîtes et chambres d'hôte à Luchon"/>
             </a>
         </div>
         <?php endforeach; ?>

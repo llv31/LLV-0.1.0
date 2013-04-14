@@ -1,76 +1,30 @@
 msgid ""
 msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
 "Last-Translator: Alec <aroybase@hotmail.fr>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-
-msgid "ERROR_EXCEPTION_SITE_UNKNOWN"
-msgstr "Le site que vous essayez d'atteindre n'existe pas."
-
-msgid "ERROR_EXCEPTION_INVALIDARGUMENT"
-msgstr "ERREUR TECHNIQUE : L'entity n'est pas correcte"
-
-msgid "ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME"
-msgstr "La propriété demandée n'existe pas"
-
-msgid "ERROR_DB_CONNECTION"
-msgstr "Erreur lors de la connexion à la base de données"
 
 msgid "ERROR_404_TITLE"
 msgstr "Oops !"
 
 msgid "ERROR_404_CONTENT"
-msgstr "Oops ! La page souhaitée n'existe pas =/"
+msgstr "Oops ! La page souhaitÃ©e n'existe pas =/"
 
 msgid "META_KEYWORDS"
 msgstr ""
-"accomodation bagnères de luchon, accomodation luchon, b et b luchon, b&b "
-"luchon, bagnères de luchon, bed and breakfast bagnères de luchon, "
-"bedandbreakfast luchon, bourg d'oueil brame du cerf, brame du cerf, brame du "
-"cerf - vallée d'oueil, chalet 21 personnes, chalet avec jacuzzi pyrenees, "
-"chalet dans les pyrenees, chalet de montagne, chambre, chambre d'hote, "
-"chambre d'hote bagneres de luchon, chambre d'hote luchon, chambre d'hote "
-"pyrénées, chambre d'hotes pyrénées, chambres d'hôtes, chambres d'hotes avec "
-"piscine luchon, chambres d'hotes bagnères de luchon, chambres d'hôtes de "
-"charme, chambres d'hôtes luchon, chambres d'hôtes pyrénées, chambres hotes "
-"luchon, chien de traineau, chiens de traineaux, col de peyresourde, col de "
-"pyresourde, disponibilité chambres d'hôtes luchon, espagne, Gite, gite de "
-"france bagnères de luchon, gite de france banniere de luchon, gite luchon, "
-"gite rural, gites de france, gites ruraux, golf bagneres de luchon, google, "
-"grands sites midi pyrénées, guest house, guest house bagnères de luchon, "
-"hébergement chambre d'hote luchon, hébergement luchon, homelidays, hospice "
-"de france luchon, hospicedefrance, hote, hotel de charme luchon, lac d'ôo, "
-"LLV, Location, location appartement luchon, location chalet bagneres de "
-"luchon, location chalet luchon, location chalet peyragudes, location chambre "
-"d'hote luchon, location chambres d'hotes bagnères de luchon, location gite "
-"luchon, location peyresourde, location-vacances-n°1, Locations, Luchon, "
-"luchon location avec piscine, luchon location chambre, Luchon Location "
-"Vacances, luchonnais, mediavacances, mediavacances bagneres de luchon "
-"chalet, octobre, oo, parapente luchon, pavillon sévigné, pavillon sévigné "
-"luchon, peyragudes, piscine luchon, pyrénée, pyrénées, rando bagneres de "
-"luchon, randonnées à bagnères de luchon, randonnées luchon, reservation, "
-"sarrat sport, séjour  luchon , septembre luchon, ski, ski bagnères de "
-"luchon, ski luchon, ski peyragudes, station de ski de peyragudes, station de "
-"ski peyragudes, station de ski pyrénées, superbagnère, superbagnères, "
-"therme, thermes, thermes de luchon, top rural, tour de france 2010 ville "
-"étape, tour de france bagneres de luchon, tour de france luchon, "
-"tripadvisor, tripadvisor bagneres de luchon, trophée du lac d'ôo, vacance "
-"vallee de luchon, vacances au ski, vacances bagneres luchon, vacances "
-"luchon, Vacances Pyrénées, vallee d'oueil, vénasque, villa florida, week "
-"end, week-end luchon"
+"accomodation bagnÃ¨res de luchon, accomodation luchon, b et b luchon, b&b "
+"luchon, bagnÃ¨res de luchon, bed and breakfast bagnÃ¨res de luchon, "
+"bedandbreakfast luchon"
 
 msgid "META_DESCRIPTION"
 msgstr ""
 "Luchon Location Vacances : Gites et Chambres de Charme en Pays de Luchon"
-
-msgid "META_GOOGLE_VERIF"
-msgstr "MyUxzCNcdspiFGJxWUrpzL0A2rf3TfQdg88ZBvrGL10"
 
 msgid "HEAD_TITLE_HOME"
 msgstr "Accueil"
@@ -82,10 +36,10 @@ msgid "HEAD_TITLE_CONNECTION"
 msgstr "Connexion"
 
 msgid "HEAD_TITLE_NEWS"
-msgstr "Actualités"
+msgstr "ActualitÃ©s"
 
 msgid "HEAD_TITLE_ACTIVITY"
-msgstr "Activités"
+msgstr "ActivitÃ©s"
 
 msgid "HEAD_TITLE_ERROR"
 msgstr "ERREUR"
@@ -94,7 +48,7 @@ msgid "HEAD_TITLE_CARROUSEL"
 msgstr "Carrousel"
 
 msgid "HEAD_TITLE_CONTACT"
-msgstr "Réservation / Contact"
+msgstr "RÃ©servation / Contact"
 
 msgid "HEAD_TITLE_SEASON"
 msgstr "Gestion des saisons"
@@ -102,23 +56,26 @@ msgstr "Gestion des saisons"
 msgid "HEAD_TITLE_PRODUCTS"
 msgstr "Produits"
 
+msgid "HEAD_TITLE_TRADUCTION"
+msgstr "Traductions"
+
 msgid "GLOBAL_MENU_HOME"
 msgstr "Accueil"
 
 msgid "GLOBAL_MENU_CHAMBRES"
-msgstr "Nos chambres d'hôtes"
+msgstr "Nos chambres d'hÃ´tes"
 
 msgid "GLOBAL_MENU_GITE"
 msgstr "Notre chalet de montagne"
 
 msgid "GLOBAL_MENU_NEWS"
-msgstr "Actualités"
+msgstr "ActualitÃ©s"
 
 msgid "GLOBAL_MENU_ACTIVITIES"
-msgstr "Activités et loisirs"
+msgstr "ActivitÃ©s et loisirs"
 
 msgid "GLOBAL_MENU_CONTACT"
-msgstr "Pour réserver"
+msgstr "Pour rÃ©server"
 
 msgid "GLOBAL_MENU_PARTNERS"
 msgstr "Partenaires"
@@ -126,8 +83,11 @@ msgstr "Partenaires"
 msgid "GLOBAL_MENU_LOCATIONS"
 msgstr "Locations"
 
-msgid "GLOBAL_MENU_SEASON"
-msgstr "Saisons"
+msgid "GLOBAL_MENU_DISPONIBILITES"
+msgstr "DisponibilitÃ©s"
+
+msgid "GLOBAL_MENU_PLAN"
+msgstr "Plan du site"
 
 msgid "GLOBAL_HEADER_TITLE"
 msgstr "Luchon Location Vacances"
@@ -160,7 +120,7 @@ msgid "GLOBAL_COORDONNEES_ADRESSE"
 msgstr "Adresse : 28, avenue de Gascogne - 31 110 Saint Mamet"
 
 msgid "GLOBAL_COORDONNEES_TELEPHONE_LABEL"
-msgstr "Tél."
+msgstr "TÃ©l."
 
 msgid "GLOBAL_COORDONNEES_TELEPHONE"
 msgstr "+33(0) 561 891 353"
@@ -172,13 +132,13 @@ msgid "GLOBAL_COORDONNEES_MOBILE"
 msgstr "+33(0) 618 641 429"
 
 msgid "GLOBAL_COORDONNEES_GPS_LABEL"
-msgstr "Coordonnées GPS"
+msgstr "CoordonnÃ©es GPS"
 
 msgid "GLOBAL_BACK"
-msgstr "Retourner à la liste"
+msgstr "Retourner Ã  la liste"
 
 msgid "GLOBAL_BACK_HOME"
-msgstr "Retourner à l'accueil"
+msgstr "Retourner Ã  l'accueil"
 
 msgid "GLOBAL_BACK_SIMPLE"
 msgstr "Retour"
@@ -190,10 +150,10 @@ msgid "GLOBAL_MONNAIE"
 msgstr "euros"
 
 msgid "FOOTER_COPYRIGHT"
-msgstr "Tous droits reservés© 2008"
+msgstr "Tous droits reservÃ©sÂ© 2008"
 
 msgid "FOOTER_CREDITS"
-msgstr "Réalisation :"
+msgstr "RÃ©alisation :"
 
 msgid "FOOTER_PARTENAIRES"
 msgstr "Partenaires"
@@ -202,7 +162,7 @@ msgid "GLOBAL_MONTH_LABEL01"
 msgstr "Janvier"
 
 msgid "GLOBAL_MONTH_LABEL02"
-msgstr "Février"
+msgstr "FÃ©vrier"
 
 msgid "GLOBAL_MONTH_LABEL03"
 msgstr "Mars"
@@ -220,7 +180,7 @@ msgid "GLOBAL_MONTH_LABEL07"
 msgstr "Juillet"
 
 msgid "GLOBAL_MONTH_LABEL08"
-msgstr "Août"
+msgstr "AoÃ»t"
 
 msgid "GLOBAL_MONTH_LABEL09"
 msgstr "Septembre"
@@ -232,13 +192,13 @@ msgid "GLOBAL_MONTH_LABEL11"
 msgstr "Novembre"
 
 msgid "GLOBAL_MONTH_LABEL12"
-msgstr "Décembre"
+msgstr "DÃ©cembre"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT01"
 msgstr "Jan"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT02"
-msgstr "Fév"
+msgstr "FÃ©v"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT03"
 msgstr "Mars"
@@ -256,7 +216,7 @@ msgid "GLOBAL_MONTH_LABEL_SHORT07"
 msgstr "Juil"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT08"
-msgstr "Août"
+msgstr "AoÃ»t"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT09"
 msgstr "Sept"
@@ -268,7 +228,7 @@ msgid "GLOBAL_MONTH_LABEL_SHORT11"
 msgstr "Nov"
 
 msgid "GLOBAL_MONTH_LABEL_SHORT12"
-msgstr "Déc"
+msgstr "DÃ©c"
 
 msgid "GLOBAL_DAY_LABEL0"
 msgstr "Dimanche"
@@ -316,7 +276,7 @@ msgid "GLOBAL_DATEPICKER_CLOSETEXT"
 msgstr "Terminer"
 
 msgid "GLOBAL_DATEPICKER_PREVIOUS"
-msgstr "Précédent"
+msgstr "PrÃ©cÃ©dent"
 
 msgid "GLOBAL_DATEPICKER_NEXT"
 msgstr "Suivant"
@@ -334,121 +294,82 @@ msgid "GLOBAL_DATEPICKER_FIRSTDAY"
 msgstr "1"
 
 msgid "GLOBAL_TIME_SEPARATOR_LABEL"
-msgstr "à"
+msgstr "Ã "
 
 msgid "GLOBAL_WEEK_LABEL_SHORT"
 msgstr "Sem."
 
 msgid "HOME_NEWS_TITRE"
-msgstr "Dernières nouvelles"
+msgstr "DerniÃ¨res nouvelles"
 
 msgid "HOME_NEWS_MORE"
-msgstr "Voir les autres actualités"
+msgstr "Voir les autres actualitÃ©s"
 
 msgid "HOME_NEWS_NEXT"
 msgstr "Lire la suite de l'article"
 
 msgid "HOME_ACTIVITY_TITRE"
-msgstr "Activité au hasard"
+msgstr "ActivitÃ© au hasard"
 
 msgid "HOME_ACTIVITY_MORE"
-msgstr "Voir les autres activités"
+msgstr "Voir les autres activitÃ©s"
 
 msgid "HOME_ACTIVITY_NEXT"
 msgstr "Lire la suite de l'article"
 
 msgid "NEWS_LIST_TITLE"
-msgstr "Actualités"
+msgstr "ActualitÃ©s"
 
 msgid "NEWS_LIST_TITRE"
 msgstr "Titre"
 
-msgid "NEWS_EDIT_TABS_CONTENT"
-msgstr "Contenus"
-
-msgid "NEWS_EDIT_TABS_PICTURES"
-msgstr "Illustrations"
-
 msgid "NEWS_LIST_CATEGORIE"
-msgstr "Catégorie"
+msgstr "CatÃ©gorie"
 
 msgid "NEWS_LIST_ONLINE"
 msgstr "En ligne ?"
 
-msgid "NEWS_EDIT_TITLE"
-msgstr "Édition de news"
-
 msgid "NEWS_CATEGORY_LABEL"
-msgstr "Catégorie"
-
-msgid "NEWS_EDIT_TITLE_LABEL"
-msgstr "Titre"
-
-msgid "NEWS_EDIT_CONTENT_LABEL"
-msgstr "Contenu"
-
-msgid "NEWS_EDIT_LINK_LABEL"
-msgstr "Lien"
+msgstr "CatÃ©gorie"
 
 msgid "NEWS_EDIT_LOCATION_LABEL"
-msgstr "Coordonnées GPS"
+msgstr "CoordonnÃ©es GPS"
 
 msgid "NEWS_ELEMENT_ILLUSTRATION"
 msgstr "Galerie photo"
 
 msgid "NEWS_LIST_NORESULT"
-msgstr "Il n'y a aucune actualité"
+msgstr "Il n'y a aucune actualitÃ©"
 
 msgid "NEWS_LIST_DATE_PUBLICATION"
-msgstr "Publié le"
+msgstr "PubliÃ© le"
 
 msgid "NEWS_LIST_EN_SAVOIR_PLUS"
 msgstr "Cliquez pour en savoir plus"
 
 msgid "ACTIVITY_LIST_TITLE"
-msgstr "Activités"
+msgstr "ActivitÃ©s"
 
 msgid "ACTIVITY_LIST_TITRE"
 msgstr "Titre"
 
-msgid "ACTIVITY_EDIT_TABS_CONTENT"
-msgstr "Contenus"
-
-msgid "ACTIVITY_EDIT_TABS_PICTURES"
-msgstr "Illustrations"
-
 msgid "ACTIVITY_LIST_CATEGORIE"
-msgstr "Catégorie"
+msgstr "CatÃ©gorie"
 
 msgid "ACTIVITY_LIST_ONLINE"
 msgstr "En ligne ?"
 
-msgid "ACTIVITY_EDIT_TITLE"
-msgstr "Édition de l'activité"
-
 msgid "ACTIVITY_CATEGORY_LABEL"
-msgstr "Catégorie"
-
-msgid "ACTIVITY_EDIT_TITLE_LABEL"
-msgstr "Titre"
-
-msgid "ACTIVITY_EDIT_CONTENT_LABEL"
-msgstr "Contenu"
-
-msgid "ACTIVITY_EDIT_LINK_LABEL"
-msgstr "Lien"
-
-msgid "ACTIVITY_EDIT_LOCATION_LABEL"
-msgstr "Coordonnées GPS"
+msgstr "CatÃ©gorie"
 
 msgid "ACTIVITY_ELEMENT_ILLUSTRATION"
 msgstr "Galerie photo"
 
 msgid "ACTIVITY_LIST_NORESULT"
-msgstr "Il n'y a aucune activité"
+msgstr "Il n'y a aucune activitÃ©"
 
 msgid "PRODUCTS_CATEGORY_LIST_TITLE"
-msgstr "Catégories"
+msgstr "CatÃ©gories"
 
 msgid "PRODUCTS_PRODUCT_LIST_TITLE"
 msgstr "Produits"
@@ -463,40 +384,25 @@ msgid "PRODUCTS_LIST_DESCRIPTION"
 msgstr "Description"
 
 msgid "PRODUCTS_LIST_CATEGORIE"
-msgstr "Catégorie"
+msgstr "CatÃ©gorie"
 
 msgid "PRODUCTS_LIST_CATEGORIE_PRICINGTYPE"
 msgstr "Type de tarification"
 
 msgid "PRODUCTS_LIST_CATEGORIE_PRICINGTYPE1"
-msgstr "A la nuitée"
+msgstr "A la nuitÃ©e"
 
 msgid "PRODUCTS_LIST_CATEGORIE_PRICINGTYPE2"
 msgstr "A la saison"
 
-msgid "PRODUCTS_EDIT_CATEGORIE_TITLE"
-msgstr "Édition de la catégorie"
-
-msgid "PRODUCTS_EDIT_TABS_CONTENT"
-msgstr "Contenus"
-
-msgid "PRODUCTS_EDIT_TABS_PICTURES"
-msgstr "Illustrations"
-
-msgid "PRODUCTS_EDIT_TABS_GOLDBOOK"
-msgstr "Messages du Livre d'or publics"
-
-msgid "PRODUCTS_EDIT_TABS_GOLDBOOK_AVALIDER"
-msgstr "Messages du Livre d'or à valider"
-
 msgid "PRODUCTS_LIST_CATEGORIE_ROUTE"
-msgstr "URL de la catégorie"
+msgstr "URL de la catÃ©gorie"
 
 msgid "PRODUCTS_LIST_CATEGORIE_COORDONNEES"
-msgstr "Coordonnées GPS"
+msgstr "CoordonnÃ©es GPS"
 
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR"
-msgstr "Couleur du repère sur GoogleMap"
+msgstr "Couleur du repÃ¨re sur GoogleMap"
 
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_RED"
 msgstr "Rouge"
@@ -513,17 +419,391 @@ msgstr "Violet"
 msgid "PRODUCTS_LIST_CATEGORIE_PINCOLOR_YELLOW"
 msgstr "Jaune"
 
-msgid "PRODUCTS_EDIT_PRODUCT_TITLE"
-msgstr "Éditer la location"
-
 msgid "PRODUCTS_LIST_INTRO"
 msgstr "Introduction"
 
+msgid "PRODUCTS_ONGLET_CONTENT"
+msgstr "Description"
+
+msgid "PRODUCTS_ONGLET_PHOTOS"
+msgstr "Photos"
+
+msgid "PRODUCTS_ONGLET_PRIX"
+msgstr "DisponibilitÃ©s & tarifs"
+
+msgid "PRODUCTS_ONGLET_RESERVER"
+msgstr "Reservation"
+
+msgid "PRODUCTS_PRIX_DISPO"
+msgstr "DisponibilitÃ©s"
+
+msgid "PRODUCTS_PRIX_PRIX"
+msgstr "Tarifs"
+
+msgid "PRODUCTS_ONGLET_GOLDBOOK"
+msgstr "Livre d'or"
+
+msgid "PRODUCTS_PRIX_CALENDRIER"
+msgstr "Tarifs et calendrier des saisons"
+
+msgid "PRODUCT_PRICE_SEASON_CONTACT_US"
+msgstr "Contactez nous pour plus d'informations"
+
+msgid "PRODUCT_PRICE_NIGHT_NUIT_SING"
+msgstr "nuit"
+
+msgid "PRODUCT_PRICE_NIGHT_NUIT_PLUR"
+msgstr "nuits"
+
+msgid "PRODUCT_PRICE_NIGHT_PERSONNES_1"
+msgstr "1 personne"
+
+msgid "PRODUCT_PRICE_NIGHT_PERSONNES_2"
+msgstr "2 personnes"
+
+msgid "PRODUCT_PRICE_NIGHT_PERSONNES_3"
+msgstr "3 personnes"
+
+msgid "PRODUCT_PRICE_NIGHT_PERSONNES_4"
+msgstr "4 personnes"
+
+msgid "PRODUCT_PRICE_SEASON_EMPTY"
+msgstr "\"&times"
+
+msgid "PRODUCT_PRICE_SEASON_PERIODES_WEEK"
+msgstr "Semaine"
+
+msgid "PRODUCT_PRICE_SEASON_PERIODES_WEEKEND"
+msgstr "Week-end"
+
+msgid "PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK"
+msgstr "Mid-week"
+
+msgid "PRODUCT_PRICE_SEASON_PERIODES_INDISPO"
+msgstr "RÃ©servation ou tarif indisponible"
+
+msgid "PRODUCTS_GOLDBOOK_NEW_MESSAGE"
+msgstr "Vous avez sÃ©journÃ© ici ? Laissez nous un message !"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES"
+msgstr "TÃ©moignages de nos clients"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES"
+msgstr "Dates du sÃ©jour"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES_DU"
+msgstr "Du"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES_AU"
+msgstr "au"
+
+msgid "PRODUCTS_GOLDBOOK_MESSAGES_MESSAGE"
+msgstr "TÃ©moignage"
+
+msgid "GOLDBOOK_FORM_LABEL_CONTENU"
+msgstr "Votre message"
+
+msgid "GOLDBOOK_FORM_LABEL_DEPART"
+msgstr "Date de dÃ©part"
+
+msgid "GOLDBOOK_FORM_LABEL_ARRIVEE"
+msgstr "Date d'arrivÃ©e"
+
+msgid "GOLDBOOK_FORM_SUBMIT"
+msgstr "Laisser un message"
+
+msgid "DISPONIBILITES_DEMANDE_RESERVATION"
+msgstr "Effectuer une demande de rÃ©servation"
+
+msgid "DISPONIBILITES_TITRE"
+msgstr "DisponibilitÃ©s"
+
+msgid "CONTACT_TITLE"
+msgstr "RÃ©server / Nous contacter"
+
+msgid "CONTACT_MAP_TITLE"
+msgstr "Nous localiser"
+
+msgid "CONTACT_FORM_FIELDSET_INFORMATIONS"
+msgstr "Ã€ propos de vous"
+
+msgid "CONTACT_FORM_LABEL_NOM"
+msgstr "Nom"
+
+msgid "CONTACT_FORM_LABEL_PRENOM"
+msgstr "PrÃ©nom"
+
+msgid "CONTACT_FORM_LABEL_EMAIL"
+msgstr "E-mail"
+
+msgid "CONTACT_FORM_LABEL_TELEPHONE"
+msgstr "TÃ©l./Mob."
+
+msgid "CONTACT_FORM_LABEL_ADRESSE"
+msgstr "Adresse complÃ¨te"
+
+msgid "CONTACT_FORM_FIELDSET_DEMANDE"
+msgstr "Ã€ propos de votre demande"
+
+msgid "CONTACT_FORM_LABEL_DECOUVERTE"
+msgstr "Comment nous avez vous dÃ©couvert ?"
+
+msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_VIDE"
+msgstr " ---"
+
+msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_SE"
+msgstr "Moteur de recherche"
+
+msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_ABRITEL"
+msgstr "Abritel"
+
+msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_BOUCHEOREILLE"
+msgstr "Bouche Ã  oreille"
+
+msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_AUTRES"
+msgstr "Autrement"
+
+msgid "CONTACT_FORM_LABEL_ADULTES"
+msgstr "Nombre d'adultes"
+
+msgid "CONTACT_FORM_LABEL_ENFANTS"
+msgstr "Nombre d'enfants"
+
+msgid "CONTACT_FORM_LABEL_ARRIVEE"
+msgstr "Date arrivÃ©e souhaitÃ©e"
+
+msgid "CONTACT_FORM_LABEL_DEPART"
+msgstr "Date dÃ©part souhaitÃ©e"
+
+msgid "CONTACT_FORM_LABEL_LOCATIONS"
+msgstr "Location(s) souhaitÃ©e(s)"
+
+msgid "CONTACT_FORM_LABEL_PRECISIONS"
+msgstr "Souhaitez vous apporter des prÃ©cisions (Ã¢ge des enfants obligatoire) ?"
+
+msgid "CONTACT_ENVOI_MAIL_MESSAGE_SUCCES"
+msgstr ""
+"Votre message nous a bien Ã©tÃ© envoyÃ©. Nous y rÃ©pondrons dans les meilleurs "
+"dÃ©lais."
+
+msgid "CONTACT_ENVOI_MAIL_MESSAGE_OBLIGATOIRE"
+msgstr "Tous les champs marquÃ©s d'un * sont obligatoires."
+
+msgid "CONTACT_FORM_SUBMIT"
+msgstr "Faire une demande de rÃ©servation"
+
+msgid "CONTACT_ENVOI_MAIL_MAIL"
+msgstr "contact@gite-luchon.com"
+
+msgid "CONTACT_ENVOI_MAIL_SUJET"
+msgstr "[Gite-luchon.com] Nouvelle demande de rÃ©servation"
+
+msgid "CONTACT_ENVOI_MAIL_ALT"
+msgstr ""
+"Pour afficher ce message, vous devez utiliser un client compatible HTML"
+
+msgid "CONTACT_OPTION_CHALET"
+msgstr "Tout le chalet"
+
+msgid "ACTIVITY_EDIT_TABS_CONTENT"
+msgstr "Contenus"
+
+msgid "ACTIVITY_EDIT_TABS_PICTURES"
+msgstr "Illustrations"
+
+msgid "ACTIVITY_EDIT_TITLE"
+msgstr "Ã‰dition de l'activitÃ©"
+
+msgid "ACTIVITY_EDIT_TITLE_LABEL"
+msgstr "Titre"
+
+msgid "ACTIVITY_EDIT_CONTENT_LABEL"
+msgstr "Contenu"
+
+msgid "ACTIVITY_EDIT_LINK_LABEL"
+msgstr "Lien"
+
+msgid "ACTIVITY_EDIT_LOCATION_LABEL"
+msgstr "CoordonnÃ©es GPS"
+
+msgid "NEWS_EDIT_TABS_CONTENT"
+msgstr "Contenus"
+
+msgid "NEWS_EDIT_TABS_PICTURES"
+msgstr "Illustrations"
+
+msgid "NEWS_EDIT_TITLE"
+msgstr "Ã‰dition de news"
+
+msgid "NEWS_EDIT_TITLE_LABEL"
+msgstr "Titre"
+
+msgid "NEWS_EDIT_CONTENT_LABEL"
+msgstr "Contenu"
+
+msgid "NEWS_EDIT_LINK_LABEL"
+msgstr "Lien"
+
+msgid "ERROR_EXCEPTION_SITE_UNKNOWN"
+msgstr "Le site que vous essayez d'atteindre n'existe pas."
+
+msgid "ERROR_EXCEPTION_INVALIDARGUMENT"
+msgstr "ERREUR TECHNIQUE : L'entity n'est pas correcte"
+
+msgid "ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME"
+msgstr "La propriÃ©tÃ© demandÃ©e n'existe pas"
+
+msgid "ERROR_DB_CONNECTION"
+msgstr "Erreur lors de la connexion Ã  la base de donnÃ©es"
+
+msgid "META_GOOGLE_VERIF"
+msgstr "MyUxzCNcdspiFGJxWUrpzL0A2rf3TfQdg88ZBvrGL10"
+
+msgid "PRODUCTS_EDIT_CATEGORIE_TITLE"
+msgstr "Ã‰dition de la catÃ©gorie"
+
+msgid "PRODUCTS_EDIT_TABS_CONTENT"
+msgstr "Contenus"
+
+msgid "PRODUCTS_EDIT_TABS_PICTURES"
+msgstr "Illustrations"
+
+msgid "PRODUCTS_EDIT_TABS_GOLDBOOK"
+msgstr "Messages du Livre d'or publics"
+
+msgid "PRODUCTS_EDIT_TABS_GOLDBOOK_AVALIDER"
+msgstr "Messages du Livre d'or Ã  valider"
+
+msgid "CONTACT_CENTER_COORDINATES_LAT"
+msgstr "42.814166"
+
+msgid "CONTACT_CENTER_COORDINATES_LONG"
+msgstr "0.55444"
+
+msgid "GLOBAL_ADMIN_ADD"
+msgstr "Ajouter un Ã©lÃ©ment"
+
+msgid "GLOBAL_ADMIN_UPDATE"
+msgstr "Modifier un Ã©lÃ©ment"
+
+msgid "GLOBAL_ADMIN_DELETE"
+msgstr "Supprimer un Ã©lÃ©ment"
+
+msgid "GLOBAL_ADMIN_DELETE_CONFIRM"
+msgstr "ÃŠtes-vous sÃ»r de vouloir supprimer cet Ã©lÃ©ment ?"
+
+msgid "GLOBAL_ADMIN_UP"
+msgstr "Remonter l'Ã©lÃ©ment"
+
+msgid "GLOBAL_ADMIN_DOWN"
+msgstr "Descendre l'Ã©lÃ©ment"
+
+msgid "GLOBAL_ADMIN_ONLINE"
+msgstr "Mettre en ligne"
+
+msgid "GLOBAL_ADMIN_OFFLINE"
+msgstr "Mettre hors ligne"
+
+msgid "GLOBAL_ADMIN_LIST_APERCU"
+msgstr "AperÃ§u"
+
+msgid "GLOBAL_ADMIN_LIST_DATE_AJOUT"
+msgstr "AjoutÃ© le"
+
+msgid "GLOBAL_ADMIN_LIST_DATE_MODIFICATION"
+msgstr "ModifiÃ© le"
+
+msgid "GLOBAL_ADMIN_LIST_DATE_SUPPRESSION"
+msgstr "SupprimÃ© le"
+
+msgid "GLOBAL_ADMIN_LIST_ACTIONS"
+msgstr "Actions"
+
+msgid "GLOBAL_LANGUAGETOGGLER_LABEL"
+msgstr "Changer la langue d'Ã©dition"
+
+msgid "GLOBAL_MODAL_DELETE_TEXT"
+msgstr ""
+"Vous Ãªtes sur le point de supprimer un Ã©lÃ©ment. Confirmez vous cette "
+"suppression ?"
+
+msgid "GLOBAL_MODAL_DELETE_CONFIRM"
+msgstr "Confirmer"
+
+msgid "GLOBAL_MODAL_DELETE_CANCEL"
+msgstr "Annuler"
+
+msgid "GLOBAL_MENU_CARROUSEL"
+msgstr "Carrousel"
+
+msgid "GLOBAL_MENU_DECONNEXION"
+msgstr "Se dÃ©connecter"
+
+msgid "GLOBAL_MENU_TRADUCTIONS"
+msgstr "Traductions"
+
+msgid "GLOBAL_MENU_SEASON"
+msgstr "Saisons"
+
+msgid "HOME_LOGIN_TITLE"
+msgstr "Connexion Ã  l'interface d'administration"
+
+msgid "HOME_LOGIN_FORM_LOGIN_LABEL"
+msgstr "Identifiant"
+
+msgid "HOME_LOGIN_FORM_PASSWORD_LABEL"
+msgstr "Mot de passe"
+
+msgid "HOME_LOGIN_FORM_SUBMIT_LABEL"
+msgstr "Se connecter"
+
+msgid "HOME_PAGECMS_HOME_TITLE"
+msgstr "Ã‰dition de la page d'accueil"
+
+msgid "HOME_PAGECMS_PARTNERS_TITLE"
+msgstr "Ã‰dition de la page partenaires"
+
+msgid "HOME_PAGECMS_EDIT_TITLE_LABEL"
+msgstr "Titre"
+
+msgid "HOME_PAGECMS_EDIT_CONTENT_LABEL"
+msgstr "Contenu"
+
+msgid "HOME_CARROUSEL_TITLE"
+msgstr "Ã‰dition des images du carrousel"
+
+msgid "HOME_CARROUSEL_FILE_LABEL"
+msgstr "Nouveau fichier"
+
+msgid "HOME_CARROUSEL_LIST_ID"
+msgstr "#"
+
+msgid "HOME_CARROUSEL_LIST_ORIGINALFILENAME"
+msgstr "Nom du fichier"
+
+msgid "HOME_CARROUSEL_LIST_TYPE"
+msgstr "Type"
+
+msgid "HOME_CARROUSEL_LIST_ONLINE"
+msgstr "En ligne ?"
+
+msgid "SEASON_CHANGE_YEAR"
+msgstr "Modifier pour l'annÃ©e :"
+
+msgid "SEASON_TYPE"
+msgstr "Saison"
+
+msgid "TRADUCTION_TITLE"
+msgstr "Administration des traductions"
+
+msgid "PRODUCTS_EDIT_PRODUCT_TITLE"
+msgstr "Ã‰diter la location"
+
 msgid "PRODUCTS_EDIT_TABS_PRICES"
-msgstr "Disponibilités & tarifs"
+msgstr "DisponibilitÃ©s & tarifs"
 
 msgid "PRODUCTS_EDIT_PRICE_DISPO"
-msgstr "Code HTML des disponibilités"
+msgstr "Code HTML des disponibilitÃ©s"
 
 msgid "PRODUCTS_EDIT_PRICE_NUIT1"
 msgstr "1 personne/nuit"
@@ -546,298 +826,5 @@ msgstr "Week-end"
 msgid "PRODUCTS_EDIT_PRICE_SAISON_MIDWEEK"
 msgstr "Mid-week"
 
-msgid "PRODUCTS_ONGLET_CONTENT"
-msgstr "Description"
-
-msgid "PRODUCTS_ONGLET_PHOTOS"
-msgstr "Photos"
-
-msgid "PRODUCTS_ONGLET_PRIX"
-msgstr "Disponibilités & tarifs"
-
-msgid "PRODUCTS_ONGLET_RESERVER"
-msgstr "Reservation"
-
-msgid "PRODUCTS_PRIX_DISPO"
-msgstr "Disponibilités"
-
-msgid "PRODUCTS_PRIX_PRIX"
-msgstr "Tarifs"
-
-msgid "PRODUCTS_ONGLET_GOLDBOOK"
-msgstr "Livre d'or"
-
-msgid "PRODUCTS_PRIX_CALENDRIER"
-msgstr "Tarifs et calendrier des saisons"
-
-msgid "PRODUCT_PRICE_SEASON_CONTACT_US"
-msgstr "Contactez nous pour plus d'informations"
-
 msgid "PRODUCT_PRICE_NIGHT_EMPTY"
-msgstr "&times"
-
-msgid "PRODUCT_PRICE_NIGHT_NUIT_SING"
-msgstr "nuit"
-
-msgid "PRODUCT_PRICE_NIGHT_NUIT_PLUR"
-msgstr "nuits"
-
-msgid "PRODUCT_PRICE_NIGHT_PERSONNES_1"
-msgstr "1 personne"
-
-msgid "PRODUCT_PRICE_NIGHT_PERSONNES_2"
-msgstr "2 personnes"
-
-msgid "PRODUCT_PRICE_NIGHT_PERSONNES_3"
-msgstr "3 personnes"
-
-msgid "PRODUCT_PRICE_NIGHT_PERSONNES_4"
-msgstr "4 personnes"
-
-msgid "PRODUCT_PRICE_SEASON_EMPTY"
-msgstr "&times"
-
-msgid "PRODUCT_PRICE_SEASON_PERIODES_WEEK"
-msgstr "Semaine"
-
-msgid "PRODUCT_PRICE_SEASON_PERIODES_WEEKEND"
-msgstr "Week-end"
-
-msgid "PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK"
-msgstr "Mid-week"
-
-msgid "PRODUCT_PRICE_SEASON_PERIODES_INDISPO"
-msgstr "Réservation ou tarif indisponible"
-
-msgid "PRODUCTS_GOLDBOOK_NEW_MESSAGE"
-msgstr "Vous avez séjourné ici ? Laissez nous un message !"
-
-msgid "PRODUCTS_GOLDBOOK_MESSAGES"
-msgstr "Témoignages de nos clients"
-
-msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES"
-msgstr "Dates du séjour"
-
-msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES_DU"
-msgstr "Du"
-
-msgid "PRODUCTS_GOLDBOOK_MESSAGES_DATES_AU"
-msgstr "au"
-
-msgid "PRODUCTS_GOLDBOOK_MESSAGES_MESSAGE"
-msgstr "Témoignage"
-
-msgid "GOLDBOOK_FORM_LABEL_CONTENU"
-msgstr "Votre message"
-
-msgid "GOLDBOOK_FORM_LABEL_DEPART"
-msgstr "Date de départ"
-
-msgid "GOLDBOOK_FORM_LABEL_ARRIVEE"
-msgstr "Date d'arrivée"
-
-msgid "GOLDBOOK_FORM_SUBMIT"
-msgstr "Laisser un message"
-
-msgid "CONTACT_TITLE"
-msgstr "Réserver / Nous contacter"
-
-msgid "CONTACT_MAP_TITLE"
-msgstr "Nous localiser"
-
-msgid "CONTACT_FORM_FIELDSET_INFORMATIONS"
-msgstr "À propos de vous"
-
-msgid "CONTACT_FORM_LABEL_NOM"
-msgstr "Nom"
-
-msgid "CONTACT_FORM_LABEL_PRENOM"
-msgstr "Prénom"
-
-msgid "CONTACT_FORM_LABEL_EMAIL"
-msgstr "E-mail"
-
-msgid "CONTACT_FORM_LABEL_TELEPHONE"
-msgstr "Tél./Mob."
-
-msgid "CONTACT_FORM_LABEL_ADRESSE"
-msgstr "Adresse complète"
-
-msgid "CONTACT_FORM_FIELDSET_DEMANDE"
-msgstr "À propos de votre demande"
-
-msgid "CONTACT_FORM_LABEL_DECOUVERTE"
-msgstr "Comment nous avez vous découvert ?"
-
-msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_VIDE"
-msgstr " ---"
-
-msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_SE"
-msgstr "Moteur de recherche"
-
-msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_ABRITEL"
-msgstr "Abritel"
-
-msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_BOUCHEOREILLE"
-msgstr "Bouche à oreille"
-
-msgid "CONTACT_FORM_SELECT_DECOUVERTE_OPTION_AUTRES"
-msgstr "Autrement"
-
-msgid "CONTACT_FORM_LABEL_ADULTES"
-msgstr "Nombre d'adultes"
-
-msgid "CONTACT_FORM_LABEL_ENFANTS"
-msgstr "Nombre d'enfants"
-
-msgid "CONTACT_FORM_LABEL_ARRIVEE"
-msgstr "Date arrivée souhaitée"
-
-msgid "CONTACT_FORM_LABEL_DEPART"
-msgstr "Date départ souhaitée"
-
-msgid "CONTACT_FORM_LABEL_LOCATIONS"
-msgstr "Location(s) souhaitée(s)"
-
-msgid "CONTACT_FORM_LABEL_PRECISIONS"
-msgstr "Souhaitez vous apporter des précisions ?"
-
-msgid "CONTACT_ENVOI_MAIL_MESSAGE_SUCCES"
-msgstr ""
-"Votre message nous a bien été envoyé. Nous y répondrons dans les meilleurs "
-"délais."
-
-msgid "CONTACT_ENVOI_MAIL_MESSAGE_OBLIGATOIRE"
-msgstr "Tous les champs marqués d'un * sont obligatoires."
-
-msgid "CONTACT_FORM_SUBMIT"
-msgstr "Faire une demande de réservation"
-
-msgid "CONTACT_ENVOI_MAIL_MAIL"
-msgstr "contact@gite-luchon.com"
-
-msgid "CONTACT_ENVOI_MAIL_SUJET"
-msgstr "[Gite-luchon.com] Nouvelle demande de réservation"
-
-msgid "CONTACT_ENVOI_MAIL_ALT"
-msgstr ""
-"Pour afficher ce message, vous devez utiliser un client compatible HTML"
-
-msgid "CONTACT_CATEGORY_TYPE1"
-msgstr "Chambres d'hôtes"
-
-msgid "CONTACT_CATEGORY_TYPE2"
-msgstr "Chalet de montagne / Gîte"
-
-msgid "CONTACT_CENTER_COORDINATES_LAT"
-msgstr "42.814166"
-
-msgid "CONTACT_CENTER_COORDINATES_LONG"
-msgstr "0.55444"
-
-msgid "GLOBAL_ADMIN_ADD"
-msgstr "Ajouter un élément"
-
-msgid "GLOBAL_ADMIN_UPDATE"
-msgstr "Modifier un élément"
-
-msgid "GLOBAL_ADMIN_DELETE"
-msgstr "Supprimer un élément"
-
-msgid "GLOBAL_ADMIN_DELETE_CONFIRM"
-msgstr "Êtes-vous sûr de vouloir supprimer cet élément ?"
-
-msgid "GLOBAL_ADMIN_UP"
-msgstr "Remonter l'élément"
-
-msgid "GLOBAL_ADMIN_DOWN"
-msgstr "Descendre l'élément"
-
-msgid "GLOBAL_ADMIN_ONLINE"
-msgstr "Mettre en ligne"
-
-msgid "GLOBAL_ADMIN_OFFLINE"
-msgstr "Mettre hors ligne"
-
-msgid "GLOBAL_ADMIN_LIST_APERCU"
-msgstr "Aperçu"
-
-msgid "GLOBAL_ADMIN_LIST_DATE_AJOUT"
-msgstr "Ajouté le"
-
-msgid "GLOBAL_ADMIN_LIST_DATE_MODIFICATION"
-msgstr "Modifié le"
-
-msgid "GLOBAL_ADMIN_LIST_DATE_SUPPRESSION"
-msgstr "Supprimé le"
-
-msgid "GLOBAL_ADMIN_LIST_ACTIONS"
-msgstr "Actions"
-
-msgid "GLOBAL_LANGUAGETOGGLER_LABEL"
-msgstr "Changer la langue d'édition"
-
-msgid "GLOBAL_MODAL_DELETE_TEXT"
-msgstr ""
-"Vous êtes sur le point de supprimer un élément. Confirmez vous cette "
-"suppression ?"
-
-msgid "GLOBAL_MODAL_DELETE_CONFIRM"
-msgstr "Confirmer"
-
-msgid "GLOBAL_MODAL_DELETE_CANCEL"
-msgstr "Annuler"
-
-msgid "GLOBAL_MENU_CARROUSEL"
-msgstr "Carrousel"
-
-msgid "GLOBAL_MENU_DECONNEXION"
-msgstr "Se déconnecter"
-
-msgid "HOME_LOGIN_TITLE"
-msgstr "Connexion à l'interface d'administration"
-
-msgid "HOME_LOGIN_FORM_LOGIN_LABEL"
-msgstr "Identifiant"
-
-msgid "HOME_LOGIN_FORM_PASSWORD_LABEL"
-msgstr "Mot de passe"
-
-msgid "HOME_LOGIN_FORM_SUBMIT_LABEL"
-msgstr "Se connecter"
-
-msgid "HOME_PAGECMS_HOME_TITLE"
-msgstr "Édition de la page d'accueil"
-
-msgid "HOME_PAGECMS_PARTNERS_TITLE"
-msgstr "Édition de la page partenaires"
-
-msgid "HOME_PAGECMS_EDIT_TITLE_LABEL"
-msgstr "Titre"
-
-msgid "HOME_PAGECMS_EDIT_CONTENT_LABEL"
-msgstr "Contenu"
-
-msgid "HOME_CARROUSEL_TITLE"
-msgstr "Édition des images du carrousel"
-
-msgid "HOME_CARROUSEL_FILE_LABEL"
-msgstr "Nouveau fichier"
-
-msgid "HOME_CARROUSEL_LIST_ID"
-msgstr "#"
-
-msgid "HOME_CARROUSEL_LIST_ORIGINALFILENAME"
-msgstr "Nom du fichier"
-
-msgid "HOME_CARROUSEL_LIST_TYPE"
-msgstr "Type"
-
-msgid "HOME_CARROUSEL_LIST_ONLINE"
-msgstr "En ligne ?"
-
-msgid "SEASON_CHANGE_YEAR"
-msgstr "Modifier pour l'année :"
-
-msgid "SEASON_TYPE"
-msgstr "Saison"
+msgstr "\"&times"

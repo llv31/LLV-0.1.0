@@ -21,7 +21,7 @@ class Llv_Entity_Activity_Helper_Activity
      */
     public static function convertFromDalToDto($dal)
     {
-        if (count($dal) > 0 && strlen($dal['title']) > 0) {
+        if (is_array($dal) && count($dal) > 0) {
             $dto = new Llv_Dto_Activity();
             $dto->id = $dal['id'];
             $dto->category = new Llv_Dto_Activity_Category();
@@ -30,8 +30,7 @@ class Llv_Entity_Activity_Helper_Activity
             $dto->title = stripcslashes($dal['title']);
             $dto->content = stripcslashes($dal['content']);
             $dto->link = $dal['link'];
-            $dto->location = $dal['location'];
-            $dto->online = $dal['online'];
+            $dto->online = strlen($dto->title) > 0 ? $dal['online'] : false;
             $dto->dateAdd = new DateTime($dal['date_add']);
             $dto->dateUpdate = isset($dal['date_update']) ? new DateTime($dal['date_update']) : null;
             $dto->dateDelete = isset($dal['date_delete']) ? new DateTime($dal['date_delete']) : null;

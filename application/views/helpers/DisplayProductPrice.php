@@ -105,6 +105,9 @@ class App_View_Helper_DisplayProductPrice
      */
     private function calculatePrice($price, $nights)
     {
-        return ($price * $nights) - (Llv_Constant_Product_Price_Night::PROMOTION_NIGHT_SUPP * ($nights - 1));
+        if($nights>1){
+            return ($price * $nights) - (Llv_Constant_Product_Price_Night::PROMOTION_NIGHT_SUPP * ($nights));
+        }
+        return $price;
     }
 }

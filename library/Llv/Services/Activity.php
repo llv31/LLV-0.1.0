@@ -215,32 +215,6 @@ class Llv_Services_Activity
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
-     * @param Llv_Services_Message_Header           $header
-     * @param Llv_Services_Activity_Filter_Activity $request
-     *
-     * @return Llv_Services_Activity_Message_Activity
-     */
-    public function getRowContent(
-        Llv_Services_Message_Header $header,
-        Llv_Services_Activity_Filter_Activity $request
-    )
-    {
-        $message = new Llv_Services_Activity_Message_Activity();
-        try {
-            $entityRequest = new Llv_Entity_Activity_Filter_Activity();
-            $entityRequest->id = $request->id;
-            $entityRequest->idLangue = $request->idLangue;
-            if (!is_null($entityRequest->id) && !is_null($entityRequest->idLangue)) {
-                $this->getEntity()->getRowContent($entityRequest);
-            }
-            $message->success = true;
-        } catch (Exception $e) {
-            $message->errorList[] = $e;
-        }
-        return $message;
-    }
-
-    /**
      * @param Llv_Services_Message_Header               $header
      * @param Llv_Services_Activity_Request_EditContent $request
      *

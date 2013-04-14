@@ -3,3 +3,21 @@
 @import "form.css";
 
 /* •••••••••••••••••••••••••••••••••• */
+
+#container #social {
+    float: left;
+    padding: 10px;
+    height: 20px;
+
+}
+
+#container #social .fb-like{
+    overflow: hidden;
+    height: 20px;
+}
+
+#container #wrapper {
+    margin-top: 0;
+}
+
+/* •••••••••••••••••••••••••••••••••• */

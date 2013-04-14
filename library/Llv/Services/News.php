@@ -215,32 +215,6 @@ class Llv_Services_News
     /** ••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
     /**
-     * @param Llv_Services_Message_Header   $header
-     * @param Llv_Services_News_Filter_News $request
-     *
-     * @return Llv_Services_News_Message_News
-     */
-    public function getRowContent(
-        Llv_Services_Message_Header $header,
-        Llv_Services_News_Filter_News $request
-    )
-    {
-        $message = new Llv_Services_News_Message_News();
-        try {
-            $entityRequest = new Llv_Entity_News_Filter_News();
-            $entityRequest->id = $request->id;
-            $entityRequest->idLangue = $request->idLangue;
-            if (!is_null($entityRequest->id) && !is_null($entityRequest->idLangue)) {
-                $this->getEntity()->getRowContent($entityRequest);
-            }
-            $message->success = true;
-        } catch (Exception $e) {
-            $message->errorList[] = $e;
-        }
-        return $message;
-    }
-
-    /**
      * @param Llv_Services_Message_Header           $header
      * @param Llv_Services_News_Request_EditContent $request
      *
@@ -268,7 +242,6 @@ class Llv_Services_News
             $filter->id = $request->idNews;
             $filter->idLangue = $request->idLangue;
             $result = $this->getOne($header, $filter);
-
             if (!$result->success) {
                 $this->getEntity()->addRowContent($entityRequest);
             } else {

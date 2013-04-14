@@ -133,8 +133,7 @@ class App_Form_Front_Contact
         $elements[] = new Zend_Form_Element_Textarea(
             array(
                  'name'    => 'precisions',
-                 'label'   => _('CONTACT_FORM_LABEL_PRECISIONS'),
-                 'required'=> true
+                 'label'   => _('CONTACT_FORM_LABEL_PRECISIONS')
             )
         );
 
@@ -190,6 +189,7 @@ class App_Form_Front_Contact
         foreach ($produits as $produit) {
             $result[$produit->title] = $produit->title;
         }
+        $result[_('CONTACT_OPTION_CHALET')] = _('CONTACT_OPTION_CHALET');
         return $result;
     }
 

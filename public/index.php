@@ -20,23 +20,6 @@ set_include_path(
     )
 );
 
-
-//set_include_path(
-//    implode(
-//        PATH_SEPARATOR,
-//        array(
-//             realpath(APPLICATION_PATH . '/../library/Zend/'),
-//             realpath(APPLICATION_PATH . '/../library/Llv/'),
-//             realpath(APPLICATION_PATH . '/../library/Enum/'),
-//             realpath(APPLICATION_PATH . '/../library/PHPMailer/'),
-//             realpath(APPLICATION_PATH . '/../library/PHPMailer/'),
-//             '.',
-//              get_include_path(),
-//        )
-//    )
-//);
-
-
 ini_set('log', APPLICATION_ENV . '/../data/logs/error.log');
 ini_set('date.timezone', 'Europe/Paris');
 
@@ -49,12 +32,22 @@ $application = new Zend_Application(
     APPLICATION_PATH . '/configs/application.ini'
 );
 
+//Zend_Debug::dump($_SERVER);
 require_once 'Zend/Loader/Autoloader.php';
 Zend_Loader_Autoloader::getInstance()
     ->registerNamespace('Llv_')
     ->registerNamespace('Enum_')
     ->registerNamespace('PHPMailer_')
     ->registerNamespace('ZFDebug_');
+
+
+foreach ($_SERVER as $key=> $srvLine) {
+    if (strstr($key, 'GEOIP_')) {
+        $res[] = $srvLine;
+    }
+}
+error_log(implode(', ', $res), null, APPLICATION_PATH.'/../data/logs/visits.log');
+
 
 $application->bootstrap()
     ->run();

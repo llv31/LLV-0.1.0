@@ -1,0 +1,40 @@
+<?php
+/** @var $products Llv_Dto_Product[] */
+/** @var $product Llv_Dto_Product */
+$products = $this->products;
+?>
+
+
+<div class="jq-tabs onglets">
+    <ul>
+        <?php foreach ($products as $product): ?>
+        <?php if ($product->category->id == $this->id_category): ?>
+            <li>
+                <a href="#jq-room<?= $product->id?>"><?= $product->title ?></a>
+            </li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+    <?php foreach ($products as $product): ?>
+    <?php if ($product->category->id == $this->id_category): ?>
+        <div id="jq-room<?= $product->id?>" class="availability">
+            <?= $product->availability?>
+            <p>
+                <a href="<?=
+                    $this->url(
+                        array(
+                             'controller' => 'products',
+                             'action'     => 'location',
+                             'set'        => $product->url
+                        ),
+                        null,
+                        false
+                    );
+                    ?>#jq-reservation">
+                    <?= _('DISPONIBILITES_DEMANDE_RESERVATION') ?>
+                </a>
+            </p>
+        </div>
+        <?php endif; ?>
+    <?php endforeach; ?>
+</div>

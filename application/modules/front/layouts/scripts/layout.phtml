@@ -12,8 +12,9 @@ $this->headTitle(_('GLOBAL_HEADER_TITLE'));
 
 /** Metas tags */
 $this->headMeta()->setCharset(Llv_Config::getInstance()->project->charset);
-$this->headMeta()->appendName('keywords', _('META_KEYWORDS'));
+//$this->headMeta()->appendName('keywords', _('META_KEYWORDS'));
 $this->headMeta()->appendName('description', _('META_DESCRIPTION'));
+$this->headMeta()->appendName('author', 'Alexandre ROY');
 $this->headMeta()->appendName('google-site-verification', _('META_GOOGLE_VERIF'));
 
 /** Feuilles de style */
@@ -38,7 +39,8 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/d
 
 ?>
 
-<?= $this->doctype(); ?>
+<?= $this->doctype()
+; ?>
 
 <html>
 
@@ -58,10 +60,13 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/d
         _gaq.push(['_setAccount', 'UA-38406329-1']);
         _gaq.push(['_trackPageview']);
 
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
         })();
 
     </script>
@@ -91,7 +96,20 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/d
         ?>
     </div>
 
-    <div id="wrapper"><?= $this->layout()->content; ?></div>
+    <div id="social">
+        <?php
+        echo $this->partial(
+            'partial/social.phtml',
+            array(
+                 'urlToLike'=> $this->urlToLike
+            )
+        );
+        ?>
+    </div>
+
+    <div id="wrapper">
+        <?= $this->layout()->content; ?>
+    </div>
 
     <?php else : ?>
 
@@ -112,7 +130,15 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/d
     </div>
 </div>
 
-
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=278827252146234";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 
 </html>

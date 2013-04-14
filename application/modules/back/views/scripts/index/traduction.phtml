@@ -1,0 +1,18 @@
+<?php
+$this->headTitle(_('HEAD_TITLE_TRADUCTION') . ' | ');
+$formPageCms = $this->formPageCms;
+$this->headLink()->appendStylesheet($this->buildDesignUrl('index/css/traduction.css'));
+?>
+
+<div class="page page_cms">
+    <h2>
+        <?= _('TRADUCTION_TITLE') ?>
+    </h2>
+
+
+    <div id="jq-content">
+        <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
+        <?php echo $this->form; ?>
+    </div>
+
+</div>
