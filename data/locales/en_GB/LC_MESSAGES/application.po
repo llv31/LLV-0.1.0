@@ -19,6 +19,9 @@ msgstr "Oops ! The wished page does not exist"
 msgid "META_DESCRIPTION"
 msgstr "Luchon Location Vacances : Charming Guesthouse & Mountain Chalet"
 
+msgid "GLOBAL_HEADER_TITLE"
+msgstr "Luchon Location Vacances"
+
 msgid "HEAD_TITLE_HOME"
 msgstr "Home"
 
@@ -79,9 +82,6 @@ msgstr "Availabilities"
 msgid "GLOBAL_MENU_PLAN"
 msgstr "Website map tree"
 
-msgid "GLOBAL_HEADER_TITLE"
-msgstr "Luchon Location Vacances"
-
 msgid "GLOBAL_OUI"
 msgstr "Yes"
 
@@ -138,15 +138,6 @@ msgstr "*"
 
 msgid "GLOBAL_MONNAIE"
 msgstr "euros"
-
-msgid "FOOTER_COPYRIGHT"
-msgstr "All rights reserved© 2008"
-
-msgid "FOOTER_CREDITS"
-msgstr "Made by :"
-
-msgid "FOOTER_PARTENAIRES"
-msgstr "Partners"
 
 msgid "GLOBAL_MONTH_LABEL01"
 msgstr "January"
@@ -288,6 +279,15 @@ msgstr "to"
 
 msgid "GLOBAL_WEEK_LABEL_SHORT"
 msgstr "Week"
+
+msgid "FOOTER_COPYRIGHT"
+msgstr "All rights reserved© 2008"
+
+msgid "FOOTER_CREDITS"
+msgstr "Made by :"
+
+msgid "FOOTER_PARTENAIRES"
+msgstr "Partners"
 
 msgid "HOME_NEWS_TITRE"
 msgstr "Last news"

@@ -149,7 +149,7 @@ PRODUCT_PRICE_NIGHT_PERSONNES_1;1 personne
 PRODUCT_PRICE_NIGHT_PERSONNES_2;2 personnes
 PRODUCT_PRICE_NIGHT_PERSONNES_3;3 personnes
 PRODUCT_PRICE_NIGHT_PERSONNES_4;4 personnes
-PRODUCT_PRICE_SEASON_EMPTY;"&times;"
+PRODUCT_PRICE_SEASON_EMPTY;"&times;1
 PRODUCT_PRICE_SEASON_PERIODES_WEEK;Semaine
 PRODUCT_PRICE_SEASON_PERIODES_WEEKEND;Week-end
 PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK;Mid-week
@@ -194,79 +194,77 @@ CONTACT_ENVOI_MAIL_MAIL;contact@gite-luchon.com
 CONTACT_ENVOI_MAIL_SUJET;[Gite-luchon.com] Nouvelle demande de réservation
 CONTACT_ENVOI_MAIL_ALT;Pour afficher ce message, vous devez utiliser un client compatible HTML
 CONTACT_OPTION_CHALET;Tout le chalet
-
-
-ACTIVITY_EDIT_TABS_CONTENT;Contenus;private
-ACTIVITY_EDIT_TABS_PICTURES;Illustrations;private
-ACTIVITY_EDIT_TITLE;Édition de l'activité;private
-ACTIVITY_EDIT_TITLE_LABEL;Titre;private
-ACTIVITY_EDIT_CONTENT_LABEL;Contenu;private
-ACTIVITY_EDIT_LINK_LABEL;Lien;private
-ACTIVITY_EDIT_LOCATION_LABEL;Coordonnées GPS;private
-NEWS_EDIT_TABS_CONTENT;Contenus;private
-NEWS_EDIT_TABS_PICTURES;Illustrations;private
-NEWS_EDIT_TITLE;Édition de news;private
-NEWS_EDIT_TITLE_LABEL;Titre;private
-NEWS_EDIT_CONTENT_LABEL;Contenu;private
-NEWS_EDIT_LINK_LABEL;Lien;private
-ERROR_EXCEPTION_SITE_UNKNOWN;Le site que vous essayez d'atteindre n'existe pas.;private
-ERROR_EXCEPTION_INVALIDARGUMENT;ERREUR TECHNIQUE : L'entity n'est pas correcte;private
-ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME;La propriété demandée n'existe pas;private
-ERROR_DB_CONNECTION;Erreur lors de la connexion à la base de données;private
-META_GOOGLE_VERIF;MyUxzCNcdspiFGJxWUrpzL0A2rf3TfQdg88ZBvrGL10;private
-PRODUCTS_EDIT_CATEGORIE_TITLE;Édition de la catégorie;private
-PRODUCTS_EDIT_TABS_CONTENT;Contenus;private
-PRODUCTS_EDIT_TABS_PICTURES;Illustrations;private
-PRODUCTS_EDIT_TABS_GOLDBOOK;Messages du Livre d'or publics;private
-PRODUCTS_EDIT_TABS_GOLDBOOK_AVALIDER;Messages du Livre d'or à valider;private
-CONTACT_CENTER_COORDINATES_LAT;42.814166;private
-CONTACT_CENTER_COORDINATES_LONG;0.55444;private
-GLOBAL_ADMIN_ADD;Ajouter un élément;private
-GLOBAL_ADMIN_UPDATE;Modifier un élément;private
-GLOBAL_ADMIN_DELETE;Supprimer un élément;private
-GLOBAL_ADMIN_DELETE_CONFIRM;Êtes-vous sûr de vouloir supprimer cet élément ?;private
-GLOBAL_ADMIN_UP;Remonter l'élément;private
-GLOBAL_ADMIN_DOWN;Descendre l'élément;private
-GLOBAL_ADMIN_ONLINE;Mettre en ligne;private
-GLOBAL_ADMIN_OFFLINE;Mettre hors ligne;private
-GLOBAL_ADMIN_LIST_APERCU;Aperçu;private
-GLOBAL_ADMIN_LIST_DATE_AJOUT;Ajouté le;private
-GLOBAL_ADMIN_LIST_DATE_MODIFICATION;Modifié le;private
-GLOBAL_ADMIN_LIST_DATE_SUPPRESSION;Supprimé le;private
-GLOBAL_ADMIN_LIST_ACTIONS;Actions;private
-GLOBAL_LANGUAGETOGGLER_LABEL;Changer la langue d'édition;private
-GLOBAL_MODAL_DELETE_TEXT;Vous êtes sur le point de supprimer un élément. Confirmez vous cette suppression ?;private
-GLOBAL_MODAL_DELETE_CONFIRM;Confirmer;private
-GLOBAL_MODAL_DELETE_CANCEL;Annuler;private
-GLOBAL_MENU_CARROUSEL;Carrousel;private
-GLOBAL_MENU_DECONNEXION;Se déconnecter;private
-GLOBAL_MENU_TRADUCTIONS;Traductions;private
-GLOBAL_MENU_SEASON;Saisons;private
-HOME_LOGIN_TITLE;Connexion à l'interface d'administration;private
-HOME_LOGIN_FORM_LOGIN_LABEL;Identifiant;private
-HOME_LOGIN_FORM_PASSWORD_LABEL;Mot de passe;private
-HOME_LOGIN_FORM_SUBMIT_LABEL;Se connecter;private
-HOME_PAGECMS_HOME_TITLE;Édition de la page d'accueil;private
-HOME_PAGECMS_PARTNERS_TITLE;Édition de la page partenaires;private
-HOME_PAGECMS_EDIT_TITLE_LABEL;Titre;private
-HOME_PAGECMS_EDIT_CONTENT_LABEL;Contenu;private
-HOME_CARROUSEL_TITLE;Édition des images du carrousel;private
-HOME_CARROUSEL_FILE_LABEL;Nouveau fichier;private
-HOME_CARROUSEL_LIST_ID;#;private
-HOME_CARROUSEL_LIST_ORIGINALFILENAME;Nom du fichier;private
-HOME_CARROUSEL_LIST_TYPE;Type;private
-HOME_CARROUSEL_LIST_ONLINE;En ligne ?;private
-SEASON_CHANGE_YEAR;Modifier pour l'année :;private
-SEASON_TYPE;Saison;private
-TRADUCTION_TITLE;Administration des traductions;private
-PRODUCTS_EDIT_PRODUCT_TITLE;Éditer la location;private
-PRODUCTS_EDIT_TABS_PRICES;Disponibilités & tarifs;private
-PRODUCTS_EDIT_PRICE_DISPO;Code HTML des disponibilités;private
-PRODUCTS_EDIT_PRICE_NUIT1;1 personne/nuit;private
-PRODUCTS_EDIT_PRICE_NUIT2;2 personnes/nuit;private
-PRODUCTS_EDIT_PRICE_NUIT3;3 personnes/nuit;private
-PRODUCTS_EDIT_PRICE_NUIT4;4 personnes/nuit;private
-PRODUCTS_EDIT_PRICE_SAISON_SEMAINE;Semaine;private
-PRODUCTS_EDIT_PRICE_SAISON_WEEKEND;Week-end;private
-PRODUCTS_EDIT_PRICE_SAISON_MIDWEEK;Mid-week;private
-PRODUCT_PRICE_NIGHT_EMPTY;"&times;";private
+ACTIVITY_EDIT_TABS_CONTENT;Contenus;1
+ACTIVITY_EDIT_TABS_PICTURES;Illustrations;1
+ACTIVITY_EDIT_TITLE;Édition de l'activité;1
+ACTIVITY_EDIT_TITLE_LABEL;Titre;1
+ACTIVITY_EDIT_CONTENT_LABEL;Contenu;1
+ACTIVITY_EDIT_LINK_LABEL;Lien;1
+ACTIVITY_EDIT_LOCATION_LABEL;Coordonnées GPS;1
+NEWS_EDIT_TABS_CONTENT;Contenus;1
+NEWS_EDIT_TABS_PICTURES;Illustrations;1
+NEWS_EDIT_TITLE;Édition de news;1
+NEWS_EDIT_TITLE_LABEL;Titre;1
+NEWS_EDIT_CONTENT_LABEL;Contenu;1
+NEWS_EDIT_LINK_LABEL;Lien;1
+ERROR_EXCEPTION_SITE_UNKNOWN;Le site que vous essayez d'atteindre n'existe pas.;1
+ERROR_EXCEPTION_INVALIDARGUMENT;ERREUR TECHNIQUE : L'entity n'est pas correcte;1
+ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME;La propriété demandée n'existe pas;1
+ERROR_DB_CONNECTION;Erreur lors de la connexion à la base de données;1
+META_GOOGLE_VERIF;MyUxzCNcdspiFGJxWUrpzL0A2rf3TfQdg88ZBvrGL10;1
+PRODUCTS_EDIT_CATEGORIE_TITLE;Édition de la catégorie;1
+PRODUCTS_EDIT_TABS_CONTENT;Contenus;1
+PRODUCTS_EDIT_TABS_PICTURES;Illustrations;1
+PRODUCTS_EDIT_TABS_GOLDBOOK;Messages du Livre d'or publics;1
+PRODUCTS_EDIT_TABS_GOLDBOOK_AVALIDER;Messages du Livre d'or à valider;1
+CONTACT_CENTER_COORDINATES_LAT;42.814166;1
+CONTACT_CENTER_COORDINATES_LONG;0.55444;1
+GLOBAL_ADMIN_ADD;Ajouter un élément;1
+GLOBAL_ADMIN_UPDATE;Modifier un élément;1
+GLOBAL_ADMIN_DELETE;Supprimer un élément;1
+GLOBAL_ADMIN_DELETE_CONFIRM;Êtes-vous sûr de vouloir supprimer cet élément ?;1
+GLOBAL_ADMIN_UP;Remonter l'élément;1
+GLOBAL_ADMIN_DOWN;Descendre l'élément;1
+GLOBAL_ADMIN_ONLINE;Mettre en ligne;1
+GLOBAL_ADMIN_OFFLINE;Mettre hors ligne;1
+GLOBAL_ADMIN_LIST_APERCU;Aperçu;1
+GLOBAL_ADMIN_LIST_DATE_AJOUT;Ajouté le;1
+GLOBAL_ADMIN_LIST_DATE_MODIFICATION;Modifié le;1
+GLOBAL_ADMIN_LIST_DATE_SUPPRESSION;Supprimé le;1
+GLOBAL_ADMIN_LIST_ACTIONS;Actions;1
+GLOBAL_LANGUAGETOGGLER_LABEL;Changer la langue d'édition;1
+GLOBAL_MODAL_DELETE_TEXT;Vous êtes sur le point de supprimer un élément. Confirmez vous cette suppression ?;1
+GLOBAL_MODAL_DELETE_CONFIRM;Confirmer;1
+GLOBAL_MODAL_DELETE_CANCEL;Annuler;1
+GLOBAL_MENU_CARROUSEL;Carrousel;1
+GLOBAL_MENU_DECONNEXION;Se déconnecter;1
+GLOBAL_MENU_TRADUCTIONS;Traductions;1
+GLOBAL_MENU_SEASON;Saisons;1
+HOME_LOGIN_TITLE;Connexion à l'interface d'administration;1
+HOME_LOGIN_FORM_LOGIN_LABEL;Identifiant;1
+HOME_LOGIN_FORM_PASSWORD_LABEL;Mot de passe;1
+HOME_LOGIN_FORM_SUBMIT_LABEL;Se connecter;1
+HOME_PAGECMS_HOME_TITLE;Édition de la page d'accueil;1
+HOME_PAGECMS_PARTNERS_TITLE;Édition de la page partenaires;1
+HOME_PAGECMS_EDIT_TITLE_LABEL;Titre;1
+HOME_PAGECMS_EDIT_CONTENT_LABEL;Contenu;1
+HOME_CARROUSEL_TITLE;Édition des images du carrousel;1
+HOME_CARROUSEL_FILE_LABEL;Nouveau fichier;1
+HOME_CARROUSEL_LIST_ID;#;1
+HOME_CARROUSEL_LIST_ORIGINALFILENAME;Nom du fichier;1
+HOME_CARROUSEL_LIST_TYPE;Type;1
+HOME_CARROUSEL_LIST_ONLINE;En ligne ?;1
+SEASON_CHANGE_YEAR;Modifier pour l'année :;1
+SEASON_TYPE;Saison;1
+TRADUCTION_TITLE;Administration des traductions;1
+PRODUCTS_EDIT_PRODUCT_TITLE;Éditer la location;1
+PRODUCTS_EDIT_TABS_PRICES;Disponibilités & tarifs;1
+PRODUCTS_EDIT_PRICE_DISPO;Code HTML des disponibilités;1
+PRODUCTS_EDIT_PRICE_NUIT1;1 personne/nuit;1
+PRODUCTS_EDIT_PRICE_NUIT2;2 personnes/nuit;1
+PRODUCTS_EDIT_PRICE_NUIT3;3 personnes/nuit;1
+PRODUCTS_EDIT_PRICE_NUIT4;4 personnes/nuit;1
+PRODUCTS_EDIT_PRICE_SAISON_SEMAINE;Semaine;1
+PRODUCTS_EDIT_PRICE_SAISON_WEEKEND;Week-end;1
+PRODUCTS_EDIT_PRICE_SAISON_MIDWEEK;Mid-week;1
+PRODUCT_PRICE_NIGHT_EMPTY;"&times;1

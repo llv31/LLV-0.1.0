@@ -164,7 +164,7 @@ ul {
     background-repeat: no-repeat;
     height: 11px;
     width: 16px;
-    opacity: .3;
+    opacity: .75;
 }
 
 #container #menu ul.languages li.current a {

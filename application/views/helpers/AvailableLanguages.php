@@ -23,7 +23,7 @@ class App_View_Helper_AvailableLanguages
         $flags[] = '<ul class="languages">' . PHP_EOL;
         $count = 0;
         foreach (Llv_Config::getInstance()->sites->toArray() as $site) {
-            if ($site['front']) {
+            if ($site['front'] && $site['locale'] != $currentLanguage) {
                 $count += 1;
                 $flags[] = '<li class="' . htmlspecialchars($site['locale']) . ' ' .
                     ($site['locale'] == $currentLanguage ? 'current' : '') . '">' . PHP_EOL;
