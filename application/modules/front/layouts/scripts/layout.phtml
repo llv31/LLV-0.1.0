@@ -12,10 +12,10 @@ $this->headTitle(_('GLOBAL_HEADER_TITLE'));
 
 /** Metas tags */
 $this->headMeta()->setCharset(Llv_Config::getInstance()->project->charset);
+$this->headMeta()->appendHttpEquiv('content-language', Llv_Context_Application::getInstance()->getCurrentLocale()->toString());
 //$this->headMeta()->appendName('keywords', _('META_KEYWORDS'));
 $this->headMeta()->appendName('description', _('META_DESCRIPTION'));
 $this->headMeta()->appendName('author', 'Alexandre ROY');
-$this->headMeta()->appendName('google-site-verification', _('META_GOOGLE_VERIF'));
 
 /** Feuilles de style */
 $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/' . $module . '/' . $locale . '/_common/css/global.css');
@@ -39,7 +39,8 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/d
 
 ?>
 
-<?= $this->doctype()
+<?=
+$this->doctype()
 ; ?>
 
 <html>

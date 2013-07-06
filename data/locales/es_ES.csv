@@ -1,16 +1,9 @@
-NE PAS TOUCHER;ESPAGNOL
-ERROR_EXCEPTION_SITE_UNKNOWN;El sitio que usted trata de alcanzar no existe.
-ERROR_EXCEPTION_INVALIDARGUMENT;ERROR TÉCNICA: el entity no es correcto
-ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME;La propiedad solicitada no existe
-ERROR_DB_CONNECTION;Error en el momento de la conexión a la base de datos
 ERROR_404_TITLE;¡ Oops!
 ERROR_404_CONTENT;¡ Oops! La página deseada no existe =/
-META_KEYWORDS;Cuartos de huespedes con piscina luchon, encierras en un cuarto de huespedes bagnères de luchon, encierras en un cuarto de huéspedes de encanto, cuartos(cámaras) de huéspedes luchon, encierras en un cuarto(pones a la temperatura ambiente) de huéspedes pyrénées, encierras en un cuarto(pones a la temperatura ambiente) hotes luchon, perro de traineau, perros de traineaux, cuello de peyresourde, cuello de pyresourde, disponibilidad cuartos(cámaras) de huéspedes luchon, españa
 META_DESCRIPTION;Luchon Alquiler Vacaciones: Chalè y Cuartos de Encanto en País de Luchon
 META_GOOGLE_VERIF;MyUxzCNcdspiFGJxWUrpzL0A2rf3TfQdg88ZBvrGL10
 HEAD_TITLE_HOME;Acogida
 HEAD_TITLE_PARTNERS;Socios
-HEAD_TITLE_CONNECTION;Conexión
 HEAD_TITLE_NEWS;Actualidades
 HEAD_TITLE_ACTIVITY;Actividades
 HEAD_TITLE_ERROR;ERROR
@@ -18,6 +11,7 @@ HEAD_TITLE_CARROUSEL;Carrusel
 HEAD_TITLE_CONTACT;Reserva / Contacto
 HEAD_TITLE_SEASON;Gestión de las temporadas
 HEAD_TITLE_PRODUCTS;Productos
+HEAD_TITLE_DISPONIBILITES;Disponibilidades
 GLOBAL_MENU_HOME;Acogida
 GLOBAL_MENU_CHAMBRES;Nuestros cuartos de huéspedes
 GLOBAL_MENU_GITE;Nuestro chalé de montaña
@@ -267,3 +261,9 @@ HOME_CARROUSEL_LIST_TYPE;Tipo
 HOME_CARROUSEL_LIST_ONLINE;¿ En línea?
 SEASON_CHANGE_YEAR;Modificar por el año:
 SEASON_TYPE;Temporada
+META_KEYWORDS;Cuartos de huespedes con piscina luchon, encierras en un cuarto de huespedes bagnères de luchon, encierras en un cuarto de huéspedes de encanto, cuartos(cámaras) de huéspedes luchon, encierras en un cuarto(pones a la temperatura ambiente) de huéspedes pyrénées, encierras en un cuarto(pones a la temperatura ambiente) hotes luchon, perro de traineau, perros de traineaux, cuello de peyresourde, cuello de pyresourde, disponibilidad cuartos(cámaras) de huéspedes luchon, españa;1
+HEAD_TITLE_CONNECTION;Conexión;1
+ERROR_EXCEPTION_SITE_UNKNOWN;El sitio que usted trata de alcanzar no existe.;1
+ERROR_EXCEPTION_INVALIDARGUMENT;ERROR TÉCNICA: el entity no es correcto;1
+ERROR_EXCEPTION_INVALIDARGUMENT_DAL_ROW_PROPERTYNAME;La propiedad solicitada no existe;1
+ERROR_DB_CONNECTION;Error en el momento de la conexión a la base de datos;1

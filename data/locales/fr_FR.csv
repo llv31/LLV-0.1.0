@@ -1,11 +1,9 @@
 ERROR_404_TITLE;Oops !
 ERROR_404_CONTENT;Oops ! La page souhaitée n'existe pas =/
-META_KEYWORDS;accomodation bagnères de luchon, accomodation luchon, b et b luchon, b&b luchon, bagnères de luchon, bed and breakfast bagnères de luchon, bedandbreakfast luchon
 META_DESCRIPTION;Luchon Location Vacances : Gites et Chambres de Charme en Pays de Luchon
 GLOBAL_HEADER_TITLE;Luchon Location Vacances
 HEAD_TITLE_HOME;Accueil
 HEAD_TITLE_PARTNERS;Partenaires
-HEAD_TITLE_CONNECTION;Connexion
 HEAD_TITLE_NEWS;Actualités
 HEAD_TITLE_ACTIVITY;Activités
 HEAD_TITLE_ERROR;ERREUR
@@ -14,6 +12,7 @@ HEAD_TITLE_CONTACT;Réservation / Contact
 HEAD_TITLE_SEASON;Gestion des saisons
 HEAD_TITLE_PRODUCTS;Produits
 HEAD_TITLE_TRADUCTION;Traductions
+HEAD_TITLE_DISPONIBILITES;Disponibilités
 GLOBAL_MENU_HOME;Accueil
 GLOBAL_MENU_CHAMBRES;Nos chambres d'hôtes
 GLOBAL_MENU_GITE;Notre chalet de montagne
@@ -268,3 +267,5 @@ PRODUCTS_EDIT_PRICE_SAISON_SEMAINE;Semaine;1
 PRODUCTS_EDIT_PRICE_SAISON_WEEKEND;Week-end;1
 PRODUCTS_EDIT_PRICE_SAISON_MIDWEEK;Mid-week;1
 PRODUCT_PRICE_NIGHT_EMPTY;"&times;1
+META_KEYWORDS;accomodation bagnères de luchon, accomodation luchon, b et b luchon, b&b luchon, bagnères de luchon, bed and breakfast bagnères de luchon, bedandbreakfast luchon;1
+HEAD_TITLE_CONNECTION;Connexion;1

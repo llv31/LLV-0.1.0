@@ -1,6 +1,5 @@
 <?php
 //$module = Llv_Context_Application::getInstance()->getActiveModule();
-$this->headTitle(_('HEAD_TITLE_ACTIVITY') . ' | ');
 /**  */
 $this->headLink()->appendStylesheet($this->buildDesignUrl('activities/css/list.css'));
 $this->headScript()->appendFile($this->buildDesignUrl('activities/js/list.js'));
@@ -9,6 +8,7 @@ $this->headScript()->appendFile($this->buildDesignUrl('activities/js/list.js'));
 $activities = $this->activities;
 $activitiesPerRow = 3;
 $i = 0;
+$this->headTitle($this->activities[0]->title . ' | ' ._('HEAD_TITLE_ACTIVITY') . ' | ');
 ?>
 
 <div class="page">

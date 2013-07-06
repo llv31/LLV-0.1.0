@@ -20,7 +20,7 @@ set_include_path(
     )
 );
 
-ini_set('log', APPLICATION_ENV . '/../data/logs/error.log');
+ini_set('log', APPLICATION_ENV . '/../data/logs/scripts-error.log');
 ini_set('date.timezone', 'Europe/Paris');
 
 /** Zend_Application */
@@ -35,6 +35,7 @@ $application = new Zend_Application(
 require_once 'Zend/Loader/Autoloader.php';
 Zend_Loader_Autoloader::getInstance()
     ->registerNamespace('Llv_')
+    ->registerNamespace('SitemapGenerator_')
     ->registerNamespace('Enum_');
 
 

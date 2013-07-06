@@ -22,9 +22,18 @@ $converter->addAdapter(
 );
 
 /** On créé les fichiers PO en fonction des fichiers sources */
-$poFiles = $converter->writePos(
+$converter->writePos(
     APPLICATION_PATH . '/../data/locales'
 );
 
-/** On créé les fichiers MO */
-echo "PO File successfuly generated" . PHP_EOL;
+/** On créé les fichiers PO */
+echo "PO Files successfuly generated" . PHP_EOL;
+
+/** On créé les fichiers MO en fonction des PO */
+//$converter->writeMos(
+//    APPLICATION_PATH . '/../data/locales'
+//);
+//
+///** On créé les fichiers PO */
+//echo "MO Files successfuly generated" . PHP_EOL;
+
