@@ -27,6 +27,15 @@ class App_Form_Front_Contact
         /** Nom */
         $elements[] = new Zend_Form_Element_Text(
             array(
+                 'name'    => 'agezegaga',
+                 'label'   => _('agezegaga')
+            )
+        );
+
+        /** INFOS PERSOS */
+        /** Nom */
+        $elements[] = new Zend_Form_Element_Text(
+            array(
                  'name'    => 'nom',
                  'label'   => _('CONTACT_FORM_LABEL_NOM'),
                  'required'=> true
@@ -147,6 +156,13 @@ class App_Form_Front_Contact
         /** Ajout des éléments au formulaire */
         $this->addElements($elements);
 
+        $this->addDisplayGroup(
+            array(
+                 'agezegaga'
+            ),
+            'antibot',
+            array('legend'=> _('antibot'))
+        );
         $this->addDisplayGroup(
             array(
                  'decouverte',

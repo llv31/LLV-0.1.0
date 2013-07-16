@@ -9,6 +9,10 @@ form fieldset#fieldset-informations {
     margin-right: 4%;
 }
 
+form fieldset#fieldset-antibot {
+    display: none;
+}
+
 /* •••••••••••••••••••••••••••••••••• */
 
 form fieldset#fieldset-informations p.textarea_element label {
