@@ -14,6 +14,7 @@ form textarea {
 
 form input[type=submit] {
     border: 1px solid transparent;
+    background-color: #4D90FE;
     background-image: -moz-linear-gradient(center top, #4D90FE, #4787ED);
     background-image: -webkit-gradient(linear,left top,left bottom,from(#4D90FE),to(#4787ED));
     background-image: -webkit-linear-gradient(center top,#4D90FE,#4787ED);
@@ -27,6 +28,7 @@ form input[type=submit] {
 }
 
 form input[type=submit]:hover {
+    background-color: #4D90FE;
     background-image: -moz-linear-gradient(center top , #4D90FE, #357AE8);
     background-image: -webkit-gradient(linear,left top,left bottom,from(#4D90FE),to(#357AE8));
     background-image: -webkit-linear-gradient(center top,#4D90FE,#357AE8);
