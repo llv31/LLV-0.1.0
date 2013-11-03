@@ -440,7 +440,7 @@ msgid "PRODUCT_PRICE_SEASON_CONTACT_US"
 msgstr "For more informations, please contact us"
 
 msgid "PRODUCT_PRICE_NIGHT_EMPTY"
-msgstr "\"&times"
+msgstr "x"
 
 msgid "PRODUCT_PRICE_NIGHT_NUIT_SING"
 msgstr "night"
@@ -461,7 +461,7 @@ msgid "PRODUCT_PRICE_NIGHT_PERSONNES_4"
 msgstr "4 people"
 
 msgid "PRODUCT_PRICE_SEASON_EMPTY"
-msgstr "\"&times"
+msgstr "x"
 
 msgid "PRODUCT_PRICE_SEASON_PERIODES_WEEK"
 msgstr "Week"

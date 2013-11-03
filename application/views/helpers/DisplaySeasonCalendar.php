@@ -19,14 +19,17 @@ class App_View_Helper_DisplaySeasonCalendar
     /**
      *
      */
-    public function displaySeasonCalendar($productPrice = null, $anneeCourante = null)
+    public function displaySeasonCalendar($productPrice = null, $annee = null)
     {
         $siteCourant = Llv_Context_Application::getInstance()->getCurrentSite();
-        $anneeCourante = !is_null($anneeCourante) ? $anneeCourante : date('Y');
+        $anneeCourante = date('Y');
+        $moisCourant = date('m');
+        $jourCourant = date('d');
         $semainesAjoutees = array();
 
+        $annee = !is_null($annee) ? $annee : $anneeCourante;
         if (self::$_nombreMois % self::$_moisParLigne == 0) {
-            $moisCourant = 1;
+            $mois = $moisCourant;
             $html[] = "<table class=\"calendrier\">";
             $html[] = "<tbody>";
             /** Affichage des lignes */
@@ -35,17 +38,17 @@ class App_View_Helper_DisplaySeasonCalendar
                 /** Affichage des colonnes */
                 for ($colonneMois = 1; $colonneMois <= self::$_moisParLigne; $colonneMois++) {
                     /** On vient de récupérer le mois courant et le nombre de jours qu'il contient */
-                    $timestampPremierJour = strtotime($anneeCourante . '-' . $moisCourant . '-01');
+                    $timestampPremierJour = strtotime($annee . '-' . $mois . '-01');
                     $nombreJourDansMois = date("t", $timestampPremierJour);
-                    if ($moisCourant < 10) {
-                        $moisCourant = "0" . $moisCourant;
+                    if ($mois < 10) {
+                        $mois = "0" . $mois;
                     }
                     $html[] = "<td class=\"mois\">";
                     $html[] = "<table>";
                     $html[] = "<thead>";
                     $html[] = "<tr class=\"mois\">";
-                    $html[] = "<th colspan=\"8\">" . _('GLOBAL_MONTH_LABEL' . $moisCourant) .
-                        "&nbsp;" . $anneeCourante . "</th>";
+                    $html[] = "<th colspan=\"8\">" . _('GLOBAL_MONTH_LABEL' . $mois) .
+                        "&nbsp;" . $annee . "</th>";
                     $html[] = "</tr>";
                     $html[] = "<tr class=\"days\">";
                     $html[] = "<td>" . _('GLOBAL_WEEK_LABEL_SHORT') . "</td>";
@@ -63,7 +66,7 @@ class App_View_Helper_DisplaySeasonCalendar
                     $colonne = self::$_nombreColonneDansMois;
                     for ($jour = 1; $jour <= $nombreJourDansMois; $jour++) {
                         /** @var $colonne Sert à determiner la colonne du jour de la semaine */
-                        $timestampJour = strtotime($anneeCourante . '-' . $moisCourant . '-' . $jour);
+                        $timestampJour = strtotime($annee . '-' . $mois . '-' . $jour);
                         if ($colonne % self::$_nombreColonneDansMois == 0) {
                             /** @var $week Llv_Dto_Week */
                             $week = $this->getWeekFromDate($timestampJour);
@@ -119,7 +122,6 @@ class App_View_Helper_DisplaySeasonCalendar
                             }
                             $colonne = 1;
                         }
-
                         if ($jour == 1) {
                             $numeroJourDansSemaine = date('w', $timestampJour);
                             $numeroJourCompteurDansSemaine = 6;
@@ -139,7 +141,18 @@ class App_View_Helper_DisplaySeasonCalendar
                                 }
                             } while ($jourMalPlace);
                         }
-                        $html[] = "<td><label for=\"week" . $week->id . "\">" . date('d', $timestampJour) . "</label></td>";
+
+                        $numeroJour = date('d', $timestampJour);
+                        if (
+                            $numeroJour == $jourCourant &&
+                            $mois == $moisCourant &&
+                            $annee == $anneeCourante
+                        ) {
+                            $classe = "aujourdhui";
+                        } else {
+                            $classe = "";
+                        }
+                        $html[] = "<td class=\"" . $classe . "\"><label for=\"week" . $week->id . "\">" . $numeroJour . "</label></td>";
                         $colonne++;
 
                         if ($colonne % self::$_nombreColonneDansMois == 0) {
@@ -150,7 +163,11 @@ class App_View_Helper_DisplaySeasonCalendar
                     $html[] = "</tbody>";
                     $html[] = "</table>";
                     $html[] = "</td>";
-                    $moisCourant++;
+                    $mois++;
+                    if ($mois > 12) {
+                        $mois = 1;
+                        $annee++;
+                    }
                 }
                 $html[] = "</tr>";
             }

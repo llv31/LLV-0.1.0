@@ -159,6 +159,10 @@
     background-color: #FF7973;
 }
 
+#wrapper .prices .amount table tbody tr td.legende.saison5 {
+    background-color: #FF7973;
+}
+
 /* •••••••••••••••••••••••••••••••••• */
 
 #wrapper .prices .calendar {
@@ -212,6 +216,14 @@
 #wrapper .prices .calendar table.calendrier td.mois table tbody tr td.week {
     background-color: #DDF0FD;
     color: #308CC6;
+}
+
+#wrapper .prices .calendar table.calendrier td.mois table tbody tr td.aujourdhui {
+    background-color: #000000;
+    border: 1px solid #AAAAAA;
+    color: #FFFFFF;
+    font-weight: bold;
+    opacity: 0.4;
 }
 
 /* •••••••••••••••••••••••••••••••••• */

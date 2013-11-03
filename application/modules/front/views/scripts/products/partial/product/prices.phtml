@@ -15,8 +15,7 @@ $product = $this->product;
             <?= $this->displayProductPrice($product->price); ?>
         </div>
         <div class="calendar">
-            <?= $this->displaySeasonCalendar($product->price, 2013); ?>
-<!--            --><?//= $this->displaySeasonCalendar($product->price, date('Y')); ?>
+            <?= $this->displaySeasonCalendar($product->price); ?>
         </div>
     <?php else: ?>
 
