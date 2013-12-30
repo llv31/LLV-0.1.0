@@ -24,4 +24,6 @@ class Llv_Services_Product_Request_Edit
     public $availability;
     /** @var bool */
     public $moveUp;
+    /** @var bool */
+    public $show;
 }

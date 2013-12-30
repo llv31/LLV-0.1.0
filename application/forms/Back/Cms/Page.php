@@ -37,7 +37,7 @@ class App_Form_Back_Cms_Page
                      'name'            => App_Model_Constant_Cms_Page::FORM_PREFIX_CONTENT . $language->id,
                      'label'           => _('HOME_PAGECMS_EDIT_CONTENT_LABEL') . ' ' . $language->label,
                      'class'           => 'jq-lang',
-                     'data-language'   => $language->locale->toString()
+                     'data-language'   => $language->locale->toString(),
                 )
             );
 

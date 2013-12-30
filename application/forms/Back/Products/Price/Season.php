@@ -45,7 +45,7 @@ class App_Form_Back_Products_Price_Season
                      'name'            => App_Model_Constant_Product::FORM_PREFIX_WEEK . $saison->id,
                      'label'           => $saison->label . ' : ' . _('PRODUCTS_EDIT_PRICE_SAISON_SEMAINE'),
                      'class'           => 'small',
-                     'required'        => true
+//                     'required'        => true
                 )
             );
             $weekend = new Zend_Form_Element_Text(

@@ -21,7 +21,7 @@ class Llv_Entity_Product_Helper_Product
      */
     public static function convertFromDalToDto($dal)
     {
-        if (count($dal) > 0 && strlen($dal['title']) > 0) {
+        if (count($dal) > 0) {
             $dto = new Llv_Dto_Product();
             $dto->id = $dal['id'];
             $dto->category = new Llv_Dto_Product_Category();

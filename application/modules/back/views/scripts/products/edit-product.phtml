@@ -18,7 +18,7 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-pro
     </h2>
 
 
-    <?php if (isset($formFileUploader)): ?>
+    <?php if (isset($formFileUploader) && isset($this->product)): ?>
     <div class="jq-tabs onglets">
         <ul>
             <li>
@@ -37,23 +37,24 @@ $this->headLink()->appendStylesheet($this->buildDesignUrl('products/css/edit-pro
         <?php echo $this->partial('/partial/language_toogler.phtml'); ?>
         <?php echo $formProductEdit; ?>
     </div>
-
+    <?php if (isset($this->product)): ?>
     <div id="jq-prices">
         <?php echo $this->formTarif; ?>
     </div>
 
     <?php if (isset($formFileUploader)): ?>
-    <div id="jq-pictures">
-        <?=
-        $this->partial(
-            '/products/partial/illustration-product.phtml',
-            array(
-                 'formFileUploader' => $formFileUploader,
-                 'product'    => $this->product
-            )
-        );
-        ?>
+        <div id="jq-pictures">
+            <?=
+            $this->partial(
+                '/products/partial/illustration-product.phtml',
+                array(
+                     'formFileUploader' => $formFileUploader,
+                     'product'          => $this->product
+                )
+            );
+            ?>
+        </div>
     </div>
-    </div>
+    <?php endif; ?>
     <?php endif;?>
 </div>

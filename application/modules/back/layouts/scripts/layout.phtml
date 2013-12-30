@@ -33,7 +33,9 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/d
 $this->headScript()->appendFile($this->baseUrl() . 'public/design/default/default/_plugin/colorbox/jquery.colorbox.js');
 $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/default/_plugin/colorbox/colorbox.css');
 /** Textarea UI */
-$this->headScript()->appendFile($this->baseUrl() . 'public/design/' . $module . '/default/_common/js/js.niceedit.js');
+$this->headScript()->appendFile($this->baseUrl() . 'public/design/' . $module . '/default/_common/js/common.js');
+$this->headScript()->appendFile($this->baseUrl() . 'public/design/' . $module . '/default/_common/js/ckeditor/ckeditor.js');
+$this->headScript()->appendFile($this->baseUrl() . 'public/design/' . $module . '/default/_common/js/ckeditor/adapters/jquery.js');
 
 ?>
 <?php echo $this->doctype(); ?>
@@ -49,7 +51,6 @@ $this->headScript()->appendFile($this->baseUrl() . 'public/design/' . $module . 
     <?php echo $this->headLink(); ?>
 
     <?php echo $this->headScript(); ?>
-    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 
 </head>
 

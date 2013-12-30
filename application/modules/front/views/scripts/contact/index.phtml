@@ -10,6 +10,11 @@ $errorMessage = $this->errorMessage;
 ?>
 <div class="page">
     <h1><?= _('CONTACT_TITLE'); ?></h1>
+    <ul class="coordonnees">
+        <li><?= _('GLOBAL_COORDONNEES_ADRESSE') ?></li>
+        <li><?= _('GLOBAL_COORDONNEES_TELEPHONE_LABEL') ?> : <?= _('GLOBAL_COORDONNEES_TELEPHONE') ?></li>
+        <li><?= _('GLOBAL_COORDONNEES_MOBILE_LABEL') ?> : <?= _('GLOBAL_COORDONNEES_MOBILE') ?></li>
+    </ul>
     <?php if (strlen($successMessage) > 0): ?>
     <ul class='infomessage success'>
         <li><?= $successMessage; ?></li>
@@ -28,7 +33,6 @@ $errorMessage = $this->errorMessage;
     $this->partial(
         'contact/partial/map.phtml',
         array()
-    )
-    ;
+    );
     ?>
 </div>

@@ -84,7 +84,7 @@ class Llv_Context_Product
     public function updateRow(Llv_Services_Product_Request_Edit $request)
     {
         $message = $this->_service->editRow($this->getHeaderMessage(), $request);
-        return $message->success;
+        return $message;
     }
 
     /**

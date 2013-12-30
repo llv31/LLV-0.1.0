@@ -55,7 +55,15 @@ $products = $this->products;
         <tr>
             <th><?= _('PRODUCTS_LIST_TITRE')?></th>
             <th><?= _('PRODUCTS_LIST_CATEGORIE')?></th>
-            <th class="actions"><?= _('GLOBAL_ADMIN_LIST_ACTIONS')?></th>
+            <th class="actions">
+                <?= _('GLOBAL_ADMIN_LIST_ACTIONS')?>
+
+                <a href="<?= $this->baseUrl(); ?>products/edit-product/"
+                   class="jq-add add"
+                   title="<?= _('GLOBAL_ADMIN_ADD') ?>">
+                    <?= _('GLOBAL_ADMIN_ADD') ?>
+                </a>
+            </th>
         </tr>
         </thead>
         <tbody>

@@ -71,6 +71,7 @@ class Llv_Entity_Product_Dal_Product
             if (isset($filter->idLangue)) {
                 $sql->where('l.id = ?', $filter->idLangue);
             }
+
             return Llv_Db::getInstance()->fetchRow($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);
@@ -153,9 +154,9 @@ class Llv_Entity_Product_Dal_Product
             $params = array();
             $params['product_category_id'] = $request->idCategorie;
             $params['position'] = self::getLastOrder() + 1;
-            $params['location'] = $request->coordonnees;
+//            $params['location'] = $request->coordonnees;
             if (isset($request->online)) {
-                $params['online'] = !is_null($request->online) ? $request->online : true;
+                $params['online'] = !is_null($request->online) ? $request->online : false;
             }
             if ($request->dateAdd instanceof DateTime) {
                 $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
@@ -218,23 +219,27 @@ class Llv_Entity_Product_Dal_Product
                     $params['online'] = $request->show;
                 }
             } else {
-                $params['product_category_id'] = $request->idCategorie;
+                if (!is_null($request->idCategorie)) {
+                    $params['product_category_id'] = $request->idCategorie;
+                }
+                if (!is_null($request->availability)) {
+                    $params['availability'] = $request->availability;
+                }
                 if (!is_null($request->position)) {
                     $params['position'] = $request->position;
                 }
-                $params['location'] = $request->coordonnees;
                 if (isset($request->online)) {
                     $params['online'] = !is_null($request->online) ? $request->online : true;
                 }
-                if ($request->dateAdd instanceof DateTime) {
-                    $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
-                }
-                if ($request->dateUpdate instanceof DateTime) {
-                    $params['date_update'] = $request->dateUpdate->format(Llv_Constant_Date::FORMAT_DB);
-                }
-                if ($request->dateDelete instanceof DateTime) {
-                    $params['date_delete'] = $request->dateDelete->format(Llv_Constant_Date::FORMAT_DB);
-                }
+//                if ($request->dateAdd instanceof DateTime) {
+//                    $params['date_add'] = $request->dateAdd->format(Llv_Constant_Date::FORMAT_DB);
+//                }
+//                if ($request->dateUpdate instanceof DateTime) {
+//                    $params['date_update'] = $request->dateUpdate->format(Llv_Constant_Date::FORMAT_DB);
+//                }
+//                if ($request->dateDelete instanceof DateTime) {
+//                    $params['date_delete'] = $request->dateDelete->format(Llv_Constant_Date::FORMAT_DB);
+//                }
             }
             return Llv_Db::getInstance()
                 ->update(
@@ -289,7 +294,6 @@ class Llv_Entity_Product_Dal_Product
             $params['language_id'] = $request->idLangue;
             $params['title'] = $request->title;
             $params['content'] = $request->content;
-            $params['link'] = $request->lien;
             return Llv_Db::getInstance()
                 ->insert(
                 self::$_nameTrad,
@@ -338,9 +342,9 @@ class Llv_Entity_Product_Dal_Product
         try {
             $params = array();
             $where = 'product_id = ' . $request->idProduct . ' AND season_type_id = ' . $request->idSeason;
-            $params['week'] = $request->week;
-            $params['weekend'] = strlen($request->weekend)>0 ? $request->weekend : null;
-            $params['midweek'] = strlen($request->midweek)>0 ? $request->midweek : null;
+            $params['week'] = strlen($request->week) > 0 ? $request->week : null;
+            $params['weekend'] = strlen($request->weekend) > 0 ? $request->weekend : null;
+            $params['midweek'] = strlen($request->midweek) > 0 ? $request->midweek : null;
             return Llv_Db::getInstance()
                 ->update(
                 self::$_namePriceSeason,
@@ -364,10 +368,10 @@ class Llv_Entity_Product_Dal_Product
         try {
             $params = array();
             $where = 'product_id = ' . $request->idProduct;
-            $params['one'] = strlen($request->one)>0 ? $request->one : null;
-            $params['two'] = strlen($request->two)>0 ? $request->two : null;
-            $params['three'] = strlen($request->three)>0 ? $request->three : null;
-            $params['four'] = strlen($request->four)>0 ? $request->four : null;
+            $params['one'] = strlen($request->one) > 0 ? $request->one : null;
+            $params['two'] = strlen($request->two) > 0 ? $request->two : null;
+            $params['three'] = strlen($request->three) > 0 ? $request->three : null;
+            $params['four'] = strlen($request->four) > 0 ? $request->four : null;
             return Llv_Db::getInstance()
                 ->update(
                 self::$_namePriceNight,

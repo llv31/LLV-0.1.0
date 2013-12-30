@@ -32,4 +32,8 @@ class Llv_Entity_Product_Request_Edit
     public $moveUp;
     /** @var bool */
     public $show;
+    /** @var string */
+    public $url;
+    /** @var string */
+    public $availability;
 }

@@ -93,7 +93,7 @@
 /* ••••••••••••••••• */
 /** Tableau de prix **/
 #wrapper .prices .amount {
-    margin: 0 auto;
+    margin: 25px auto 0;
 }
 
 #wrapper .prices .amount table {

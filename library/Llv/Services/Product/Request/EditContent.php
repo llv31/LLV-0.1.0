@@ -22,4 +22,6 @@ class Llv_Services_Product_Request_EditContent
     public $introduction;
     /** @var string */
     public $content;
+    /** @var bool */
+    public $new = false;
 }

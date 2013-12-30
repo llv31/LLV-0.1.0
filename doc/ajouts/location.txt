@@ -1,0 +1,7 @@
+- Créer la loc dans le back
+- Ajouter à la table product_season_price :
+    INSERT INTO giteluch.product_season_price(product_id,season_type_id) VALUES (ID_LOC, '1');
+    INSERT INTO giteluch.product_season_price(product_id,season_type_id) VALUES (ID_LOC, '2');
+    INSERT INTO giteluch.product_season_price(product_id,season_type_id) VALUES (ID_LOC, '3');
+    INSERT INTO giteluch.product_season_price(product_id,season_type_id) VALUES (ID_LOC, '4');
+    INSERT INTO giteluch.product_season_price(product_id,season_type_id) VALUES (ID_LOC, '5');

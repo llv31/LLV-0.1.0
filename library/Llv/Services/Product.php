@@ -177,8 +177,11 @@ class Llv_Services_Product
             $entityRequest->title = $request->title;
             $entityRequest->introduction = stripslashes($request->introduction);
             $entityRequest->content = stripslashes($request->content);
-
-            $this->getEntity()->updateRowContent($entityRequest);
+            if ($request->new) {
+                $this->getEntity()->addRowContent($entityRequest);
+            } else {
+                $this->getEntity()->updateRowContent($entityRequest);
+            }
             $message->success = true;
         } catch (Exception $e) {
             $message->errorList[] = $e;

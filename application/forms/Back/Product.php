@@ -19,7 +19,6 @@ class App_Form_Back_Product
         $this->setAttrib('enctype', Zend_Form::ENCTYPE_MULTIPART);
         $this->setAttrib('class', 'i18ned');
         $this->setAction('/products/edit-product/');
-
         /**  */
         $elements[] = new Zend_Form_Element_Hidden(
             array(
@@ -27,6 +26,19 @@ class App_Form_Back_Product
                  'value'=> null
             )
         );
+
+        if (is_null($id)) {
+            /**  */
+            $element = new Zend_Form_Element_Select(
+                array(
+                     'name'    => 'idCategorie',
+                     'label'   => _('PRODUCTS_LIST_CATEGORIE'),
+                     'required'=> true
+                )
+            );
+            $element->setMultiOptions($this->fillCategories());
+            $elements[] = $element;
+        }
 
         /** @var $language Llv_Dto_Language */
         foreach (Llv_Context_Referential::getInstance()->getLanguages() as $language) {
@@ -36,7 +48,7 @@ class App_Form_Back_Product
                      'label'           => _('PRODUCTS_LIST_TITRE') . ' ' . $language->label,
                      'class'           => 'jq-lang',
                      'data-language'   => $language->locale->toString(),
-                     'required'        => true
+                     'required'=> true
                 )
             );
             $intro = new Zend_Form_Element_Textarea(
@@ -45,7 +57,7 @@ class App_Form_Back_Product
                      'label'           => _('PRODUCTS_LIST_INTRO') . ' ' . $language->label,
                      'class'           => 'jq-lang',
                      'data-language'   => $language->locale->toString(),
-                     'required'        => true
+//                     'required'=> true
                 )
             );
             $textarea = new Zend_Form_Element_Textarea(
@@ -54,7 +66,7 @@ class App_Form_Back_Product
                      'label'           => _('PRODUCTS_LIST_DESCRIPTION') . ' ' . $language->label,
                      'class'           => 'jq-lang',
                      'data-language'   => $language->locale->toString(),
-                     'required'        => true
+//                     'required'=> true
                 )
             );
 
@@ -84,20 +96,35 @@ class App_Form_Back_Product
     }
 
     /**
+     * @return array
+     */
+    public function fillCategories()
+    {
+        $options = array();
+        $filter = new Llv_Services_Product_Filter_Category();
+        foreach (Llv_Context_Product::getInstance()->categoryGetAll($filter) as $categorie) {
+            $options[$categorie->id] = $categorie->title;
+        }
+        return $options;
+    }
+
+    /**
      * @param $id
      */
     public function fillForm($id)
     {
-        $this->getElement('id')->setValue($id);
-        foreach (Llv_Context_Referential::getInstance()->getLanguages() as $language) {
+        if (!is_null($id)) {
+            $this->getElement('id')->setValue($id);
             $filter = new Llv_Services_Product_Filter_Product();
             $filter->id = $id;
-            $filter->idLangue = $language->id;
-            $product = Llv_Context_Product::getInstance()->getOne($filter);
-            if (!is_null($product)) {
-                $this->getElement(App_Model_Constant_Product::FORM_PREFIX_INTRO . $language->id)->setValue($product->introduction);
-                $this->getElement(App_Model_Constant_Product::FORM_PREFIX_TITLE . $language->id)->setValue($product->title);
-                $this->getElement(App_Model_Constant_Product::FORM_PREFIX_CONTENT . $language->id)->setValue($product->content);
+            foreach (Llv_Context_Referential::getInstance()->getLanguages() as $language) {
+                $filter->idLangue = $language->id;
+                $product = Llv_Context_Product::getInstance()->getOne($filter);
+                if (!is_null($product)) {
+                    $this->getElement(App_Model_Constant_Product::FORM_PREFIX_INTRO . $language->id)->setValue($product->introduction);
+                    $this->getElement(App_Model_Constant_Product::FORM_PREFIX_TITLE . $language->id)->setValue($product->title);
+                    $this->getElement(App_Model_Constant_Product::FORM_PREFIX_CONTENT . $language->id)->setValue($product->content);
+                }
             }
         }
     }

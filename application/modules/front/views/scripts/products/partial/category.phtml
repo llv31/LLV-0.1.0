@@ -4,7 +4,18 @@ $category = $this->category;
 $this->headTitle($category->title . ' | ');
 ?>
 <div class="category">
-    <h1><?= $category->title ?> <em>(<?= $category->type ?>)</em></h1>
+    <?php if (strlen($category->title) > 0 || strlen($category->type) > 0): ?>
+    <h1>
+        <?php if (strlen($category->title) > 0): ?>
+        <?= $category->title ?>
+        <?php endif; ?>
+        <?php if (strlen($category->type) > 0): ?>
+        <em>
+            <?= $category->type ?>
+        </em>
+        <?php endif; ?>
+    </h1>
+    <?php endif; ?>
 
     <div class="illustration">
         <a href="<?=
@@ -22,9 +33,11 @@ $this->headTitle($category->title . ' | ');
                 Llv_Constant_File_Category::PRODUCTS_CATEGORY,
                 450
             );
-            ?>"/>
+            ?>" alt="<?= $category->title ?>"/>
         </a>
     </div>
     <div class="content"><?= $category->content; ?></div>
     <div class="adresse"><?= $category->adresse; ?></div>
 </div>
+
+

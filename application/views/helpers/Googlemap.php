@@ -20,26 +20,30 @@ class App_View_Helper_Googlemap
         $result = array();
         /** @var $categorie Llv_Dto_Product_Category */
         foreach ($categories as $categorie) {
+            $html = array();
+            $html[] = "<ul class=\"adresse\">";
+            if (strlen($categorie->title) > 0) {
+                $html[] = "<li><strong>" . $categorie->title . "</strong></li>";
+            }
+            if (strlen($categorie->type) > 0) {
+                $html[] = "<li class=\"type\">(" . $categorie->type . ")</li>";
+            }
+            $html[] = "<li>" . $categorie->adresse . "</li>";
+            $html[] = "<li class=\"phone\"><span>" . _('GLOBAL_COORDONNEES_TELEPHONE_LABEL') . "</span>&nbsp;"
+                . _('GLOBAL_COORDONNEES_TELEPHONE') . "</li>";
+            $html[] = "<li class=\"mobile\"><span>" . _('GLOBAL_COORDONNEES_MOBILE_LABEL') . "</span>&nbsp;"
+                . _('GLOBAL_COORDONNEES_MOBILE') . "</li>";
+            $html[] = "<li class=\"localisation\"><span>" . _('GLOBAL_COORDONNEES_GPS_LABEL') . "</span>&nbsp;
+                         <a href=\"https://maps.google.fr/maps?q=" . $categorie->location->value . "\" target=\"_blank\">"
+                . $categorie->location->value . "</a></li>";
+            $html[] = "</ul>";
             $result[$categorie->id] = array(
                 "couleur"   => $categorie->pinColor,
                 "latitude"  => $categorie->location->latitude,
                 "longitude" => $categorie->location->longitude,
                 "html"      => implode(
                     PHP_EOL,
-                    array(
-                         "<ul class=\"adresse\">",
-                         "<li><strong>" . $categorie->title . "</strong></li>",
-                         "<li class=\"type\">(" . $categorie->type . ")</li>",
-                         "<li>" . $categorie->adresse . "</li>",
-                         "<li class=\"phone\"><span>" . _('GLOBAL_COORDONNEES_TELEPHONE_LABEL') . "</span>&nbsp;"
-                             . _('GLOBAL_COORDONNEES_TELEPHONE') . "</li>",
-                         "<li class=\"mobile\"><span>" . _('GLOBAL_COORDONNEES_MOBILE_LABEL') . "</span>&nbsp;"
-                             . _('GLOBAL_COORDONNEES_MOBILE') . "</li>",
-                         "<li class=\"localisation\"><span>" . _('GLOBAL_COORDONNEES_GPS_LABEL') . "</span>&nbsp;
-                         <a href=\"https://maps.google.fr/maps?q=" . $categorie->location->value . "\" target=\"_blank\">"
-                             . $categorie->location->value . "</a></li>",
-                         "</ul>"
-                    )
+                    $html
                 )
             );
         }

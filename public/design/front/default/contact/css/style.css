@@ -40,6 +40,13 @@ form fieldset#fieldset-demande p.submit_element {
 }
 
 /* •••••••••••••••••••••••••••••••••• */
+ul.coordonnees {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    list-style-type: none;
+}
+
+/* •••••••••••••••••••••••••••••••••• */
 #googlemap {
     width: 100%;
     height: 500px;

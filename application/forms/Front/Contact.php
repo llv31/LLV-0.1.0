@@ -38,7 +38,7 @@ class App_Form_Front_Contact
             array(
                  'name'    => 'nom',
                  'label'   => _('CONTACT_FORM_LABEL_NOM'),
-                 'required'=> true
+//                 'required'=> true
             )
         );
         /** Prénom */
@@ -46,7 +46,7 @@ class App_Form_Front_Contact
             array(
                  'name'    => 'prenom',
                  'label'   => _('CONTACT_FORM_LABEL_PRENOM'),
-                 'required'=> true
+//                 'required'=> true
             )
         );
         /** Email */
@@ -63,7 +63,7 @@ class App_Form_Front_Contact
             array(
                  'name'    => 'telephone',
                  'label'   => _('CONTACT_FORM_LABEL_TELEPHONE'),
-                 'required'=> true
+//                 'required'=> true
             )
         );
         /** Adresse */
@@ -71,7 +71,7 @@ class App_Form_Front_Contact
             array(
                  'name'    => 'adresse',
                  'label'   => _('CONTACT_FORM_LABEL_ADRESSE'),
-                 'required'=> true
+//                 'required'=> true
             )
         );
 
@@ -98,7 +98,7 @@ class App_Form_Front_Contact
             array(
                  'name'    => 'adultes',
                  'label'   => _('CONTACT_FORM_LABEL_ADULTES'),
-                 'required'=> true
+//                 'required'=> true
             )
         );
         /** Nb enfants */
@@ -106,7 +106,7 @@ class App_Form_Front_Contact
             array(
                  'name'    => 'enfants',
                  'label'   => _('CONTACT_FORM_LABEL_ENFANTS'),
-                 'required'=> true
+//                 'required'=> true
             )
         );
         /** Arrivée */
