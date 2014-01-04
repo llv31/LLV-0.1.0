@@ -425,6 +425,9 @@ class Llv_Entity_Product_Dal_Product
             if (isset($filter->online)) {
                 $sql->where('online = ?', $filter->online);
             }
+            if (isset($filter->amount)) {
+                $sql->limit($filter->amount);
+            }
             return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);

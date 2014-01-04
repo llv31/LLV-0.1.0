@@ -27,5 +27,7 @@ class Llv_Entity_Product_Filter_Product
     /** @var bool */
     public $onlineIllustration;
     /** @var int */
+    public $illustrationAmount;
+    /** @var int */
     public $priceType;
 }

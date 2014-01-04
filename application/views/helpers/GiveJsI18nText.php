@@ -46,6 +46,16 @@ class App_View_Helper_GiveJsI18nText
             $i18n['modal']['delete']['confirm'] = _('GLOBAL_MODAL_DELETE_CONFIRM');
             $i18n['modal']['delete']['cancel'] = _('GLOBAL_MODAL_DELETE_CANCEL');
         }
+        $i18n['contactform']['name'] = _('CONTACT_FORM_REQ_NAME');
+        $i18n['contactform']['firstname'] = _('CONTACT_FORM_REQ_FIRSTNAME');
+        $i18n['contactform']['mail'] = _('CONTACT_FORM_REQ_MAIL');
+        $i18n['contactform']['phone'] = _('CONTACT_FORM_REQ_PHONE');
+        $i18n['contactform']['address'] = _('CONTACT_FORM_REQ_ADDRESS');
+        $i18n['contactform']['location'] = _('CONTACT_FORM_REQ_LOCATION');
+        $i18n['contactform']['adults'] = _('CONTACT_FORM_REQ_ADULTS');
+        $i18n['contactform']['children'] = _('CONTACT_FORM_REQ_CHILDREN');
+        $i18n['contactform']['arrival'] = _('CONTACT_FORM_REQ_ARRIVAL');
+        $i18n['contactform']['departure'] = _('CONTACT_FORM_REQ_DEPARTURE');
 
         return Zend_Json::encode($i18n);
     }

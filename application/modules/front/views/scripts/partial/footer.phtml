@@ -1,20 +1,56 @@
-<p>
-    <?= _('FOOTER_COPYRIGHT'); ?> - <?= date('Y')?>
-    |
-    <?= _('FOOTER_CREDITS'); ?> <a href="http://www.aroy.fr">Alexandre ROY</a>
-    |
-    <a href="<?= $this->url(array('controller'=> 'partners'), null, true);?>"><?= _('FOOTER_PARTENAIRES'); ?></a>
-    |
-    <a href="<?= $this->url(array('controller'=> 'site-plan'), null, true);?>"><?= _('GLOBAL_MENU_PLAN'); ?></a>
-</p>
-
-<p>
-    <?= _('GLOBAL_COORDONNEES_ADRESSE'); ?>
-    |
-    <?= _('GLOBAL_COORDONNEES_TELEPHONE_LABEL'); ?>
-    <?= _('GLOBAL_COORDONNEES_TELEPHONE'); ?>
-    |
-    <?= _('GLOBAL_COORDONNEES_MOBILE_LABEL'); ?>
-    <?= _('GLOBAL_COORDONNEES_MOBILE'); ?>
-</p>
-
+<div class="l-footer">
+    <div class="l-footer-h">
+        <div class="l-subfooter at_top">
+            <div class="l-subfooter-h">
+                <div class="g-cols">
+                    <div class="two-thirds">
+                        <div class="widget">
+                            <div class="w-contacts">
+                                <div class="w-contacts-h">
+                                    <div class="w-contacts-list">
+                                        <div class="w-contacts-item">
+                                            <i class="fa fa-map-marker"></i>
+                                            <span
+                                                class="w-contacts-item-value"><?= _('GLOBAL_COORDONNEES_ADRESSE'); ?></span>
+                                        </div>
+                                        <div class="w-contacts-item">
+                                            <i class="fa fa-phone"></i>
+                                            <span
+                                                class="w-contacts-item-value"><?= _('GLOBAL_COORDONNEES_TELEPHONE'); ?></span>
+                                        </div>
+                                        <div class="w-contacts-item">
+                                            <i class="fa fa-mobile"></i>
+                                            <span
+                                                class="w-contacts-item-value"><?= _('GLOBAL_COORDONNEES_MOBILE'); ?></span>
+                                        </div>
+                                        <div class="w-contacts-item">
+                                            <i class="fa fa-envelope-o"></i>
+                                            <span class="w-contacts-item-value"><a href="mailto:i<?= _('CONTACT_ENVOI_MAIL_MAIL'); ?>"><?= _('CONTACT_ENVOI_MAIL_MAIL'); ?></a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-third">
+                        <div class="widget">
+                            <div class="w-bloglist date_atbottom">
+                                <div class="w-bloglist-list">
+                                    <div class="w-bloglist-entry">
+                                        <?= _('FOOTER_COPYRIGHT'); ?> - <?= date('Y')?>
+                                    </div>
+                                    <div class="w-bloglist-entry">
+                                        Réalisation
+                                        <a class="w-bloglist-entry-link" href="http://www.aroy.fr">
+                                            Alexandre ROY
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

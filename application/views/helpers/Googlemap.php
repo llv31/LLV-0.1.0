@@ -23,11 +23,11 @@ class App_View_Helper_Googlemap
             $html = array();
             $html[] = "<ul class=\"adresse\">";
             if (strlen($categorie->title) > 0) {
-                $html[] = "<li><strong>" . $categorie->title . "</strong></li>";
+                $html[] = "<li><h5>" . $categorie->title . "</h5></li>";
             }
-            if (strlen($categorie->type) > 0) {
-                $html[] = "<li class=\"type\">(" . $categorie->type . ")</li>";
-            }
+//            if (strlen($categorie->type) > 0) {
+//                $html[] = "<li class=\"type\">(" . $categorie->type . ")</li>";
+//            }
             $html[] = "<li>" . $categorie->adresse . "</li>";
             $html[] = "<li class=\"phone\"><span>" . _('GLOBAL_COORDONNEES_TELEPHONE_LABEL') . "</span>&nbsp;"
                 . _('GLOBAL_COORDONNEES_TELEPHONE') . "</li>";

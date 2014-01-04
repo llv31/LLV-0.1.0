@@ -196,6 +196,9 @@ class Llv_Services_Cms
             if (isset($filter->online)) {
                 $entityFilter->online = $filter->online;
             }
+            if (isset($filter->amount)) {
+                $entityFilter->amount = $filter->amount;
+            }
             if (isset($filter->includeDeleted)) {
                 $entityFilter->includeDeleted = $filter->includeDeleted;
             }

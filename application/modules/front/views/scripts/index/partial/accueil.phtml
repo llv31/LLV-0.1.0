@@ -1,0 +1,47 @@
+<section id="home" class="l-section">
+    <div id="parallax_subsection_0" class="l-subsection color_dark with_parallax"
+         style="background-image:url(<?=$this->displayImage(
+             $this->parallax->filename,
+             Llv_Constant_File_Category::CARROUSEL,
+             2000,
+             9999
+         );?>);">
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
+                <h1 class="home-heading">
+                    <span class="home-heading-line bold">Luchon Location Vacances</span>
+                    <span class="home-heading-line"><?= $this->data->title; ?></span>
+                </h1>
+                <a class="g-btn type_primary size_big" href="#index"><span>Nous découvrir</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="index" class="l-section">
+    <div class="l-subsection">
+        <div class="l-subsection-h">
+            <?= $this->data->content; ?>
+        </div>
+    </div>
+
+    <div id="parallax_subsection_1" class="l-subsection color_dark with_parallax"
+         style="background-image:url(<?=$this->displayImage(
+             $this->parallax2->filename,
+             Llv_Constant_File_Category::CARROUSEL,
+             2000,
+             9999
+         );?>);">
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
+
+                <h2>
+                    <?= _("HOME_PRODUCTS_TITRE"); ?>
+                </h2>
+
+            </div>
+        </div>
+    </div>
+
+</section>

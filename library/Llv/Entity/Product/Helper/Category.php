@@ -24,20 +24,34 @@ class Llv_Entity_Product_Helper_Category
         if (count($dal) > 0) {
             $dto = new Llv_Dto_Product_Category();
             $dto->id = $dal['id'];
-            $dto->type = $dal['type'];
-            $dto->title = $dal['title'];
-            $dto->content = $dal['content'];
-            $dto->adresse = nl2br($dal['address']);
-            $dto->location = new Llv_Dto_Coordinate();
-            $location = explode(',', $dal['location']);
-            $dto->location->value = $dal['location'];
-            $dto->location->latitude = $location[0];
-            $dto->location->longitude = $location[1];
-            $dto->pricingType = $dal['pricing_type'];
-            $dto->pinColor = $dal['pin_color'];
-            $dto->route = $dal['route'];
-            $dto->illustration = new Llv_Dto_File();
-            $dto->illustration->filename = $dto->id . '.jpg';
+            if (isset($dal['type'])) {
+                $dto->type = $dal['type'];
+            }
+            if (isset($dal['title'])) {
+                $dto->title = $dal['title'];
+            }
+            if (isset($dal['content'])) {
+                $dto->content = $dal['content'];
+            }
+            if (isset($dal['address'])) {
+                $dto->adresse = nl2br($dal['address']);
+            }
+            if (isset($dal['location'])) {
+                $dto->location = new Llv_Dto_Coordinate();
+                $location = explode(',', $dal['location']);
+                $dto->location->value = $dal['location'];
+                $dto->location->latitude = $location[0];
+                $dto->location->longitude = $location[1];
+            }
+            if (isset($dal['pricing_type'])) {
+                $dto->pricingType = $dal['pricing_type'];
+            }
+            if (isset($dal['pin_color'])) {
+                $dto->pinColor = $dal['pin_color'];
+            }
+            if (isset($dal['route'])) {
+                $dto->route = $dal['route'];
+            }
             return $dto;
         }
         return null;

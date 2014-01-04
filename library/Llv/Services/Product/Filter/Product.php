@@ -26,4 +26,6 @@ class Llv_Services_Product_Filter_Product
     public $position;
     /** @var bool */
     public $onlineIllustration;
+    /** @var int */
+    public $illustrationAmount;
 }

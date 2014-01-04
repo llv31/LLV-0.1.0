@@ -1,0 +1,342 @@
+<?php
+$this->headScript()->prependFile($this->buildDesignUrl('_plugin/maps/js/googlemaps.js'));
+$this->headScript()->prependFile(
+    'http://maps.googleapis.com/maps/api/js?key=' . Llv_Config::getInstance()->google->map->key . '&sensor=false'
+);
+?>
+
+<section id="contact" class="l-section">
+
+    <div class="l-subsection color_dark" style="background-image:url(<?=$this->displayImage(
+        $this->parallax->filename,
+        Llv_Constant_File_Category::CARROUSEL,
+        2000,
+        9999
+    );?>);">
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
+
+                <h2><strong><?= _('HOME_CONTACT'); ?></strong></h2>
+
+                <div class="w-contacts">
+                    <div class="w-contacts-h">
+                        <div class="w-contacts-list">
+                            <div class="w-contacts-item">
+                                <i class="fa fa-map-marker"></i>
+                                <span class="w-contacts-item-value"><?= _('GLOBAL_COORDONNEES_ADRESSE'); ?></span>
+                            </div>
+                            <br/>
+
+                            <div class="w-contacts-item">
+                                <i class="fa fa-phone"></i>
+                                <span class="w-contacts-item-value"><?= _('GLOBAL_COORDONNEES_TELEPHONE'); ?></span>
+                            </div>
+                            <div class="w-contacts-item">
+                                <i class="fa fa-mobile"></i>
+                                <span class="w-contacts-item-value"><?= _('GLOBAL_COORDONNEES_MOBILE'); ?></span>
+                            </div>
+                            <div class="w-contacts-item">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="w-contacts-item-value"><a
+                                    href="mailto:<?= _('CONTACT_ENVOI_MAIL_MAIL'); ?>"><?= _('CONTACT_ENVOI_MAIL_MAIL'); ?></a></span>
+                            </div>
+                            <br/>
+
+                            <div class="w-contacts-item">
+                                <a class="g-btn type_primary size_small contact-button" href="#contact-form">
+                                    <span>
+                                        <i class="fa fa-edit"></i>
+                                        <?= _("CONTACT_TITLE"); ?>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="l-subsection googlemap-container">
+        <div class="l-subsection-h">
+            <div id="googlemap-overlay"></div>
+            <div id="googlemap"></div>
+            <script type="text/javascript">
+                var markerList = <?= $this->googlemap();?>;
+            </script>
+        </div>
+    </div>
+</section>
+
+<section id="contact-form" class="l-section">
+<div class="l-subsection">
+<div class="l-subsection-h">
+<div class="l-subsection-hh g-html i-cf">
+
+<h4 class="highlight"><strong><?= _("CONTACT_TITLE") ?></strong></h4>
+
+<p class="size_big"><?= _("CONTACT_SUBTITLE") ?></p>
+
+<div class="w-tabs">
+<div class="w-tabs-h">
+<div class="w-tabs-list">
+    <div class="w-tabs-item with_icon active">
+        <span class="w-tabs-item-icon fa fa-edit"></span>
+        <span class="w-tabs-item-title"><?= _("CONTACT_FORM1_TITRE"); ?></span>
+    </div>
+
+    <div class="w-tabs-item with_icon">
+        <span class="w-tabs-item-icon fa fa-question"></span>
+        <span class="w-tabs-item-title"><?= _("CONTACT_FORM2_TITRE"); ?></span>
+    </div>
+</div>
+
+<div class="w-tabs-section active">
+    <div class="w-tabs-section-title">
+        <span class="w-tabs-section-title-icon"></span>
+        <span class="w-tabs-section-title-text"><?= _("CONTACT_FORM1_TITRE"); ?></span>
+        <span class="w-tabs-section-title-control"><i class="fa fa-angle-down"></i></span>
+    </div>
+    <div class="w-tabs-section-content">
+        <div class="w-tabs-section-content-h">
+            <div class="w-form contacts_form">
+                <div class="w-form-h contacts_form_form">
+                    <form class="g-form reservation" action="<?= $this->url(
+                        array(
+                             'controller' => 'index',
+                             'action'     => 'reservation'
+                        )
+                    ); ?>" method="post" name="reservation">
+                        <p><?= _("CONTACT_ENVOI_MAIL_MESSAGE_OBLIGATOIRE"); ?></p>
+
+                        <div class="g-cols">
+                            <div class="one-half">
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-search "></i>
+                                        <select name="decouverte">
+                                            <option value="">
+                                                <?= _("CONTACT_FORM_LABEL_DECOUVERTE"); ?>
+                                            </option>
+                                            <option value="<?= _("CONTACT_FORM_SELECT_DECOUVERTE_OPTION_SE"); ?>">
+                                                <?= _("CONTACT_FORM_SELECT_DECOUVERTE_OPTION_SE"); ?>
+                                            </option>
+                                            <option value="<?= _("CONTACT_FORM_SELECT_DECOUVERTE_OPTION_ABRITEL"); ?>">
+                                                <?= _("CONTACT_FORM_SELECT_DECOUVERTE_OPTION_ABRITEL"); ?>
+                                            </option>
+                                            <option
+                                                value="<?= _("CONTACT_FORM_SELECT_DECOUVERTE_OPTION_BOUCHEOREILLE"); ?>">
+                                                <?= _("CONTACT_FORM_SELECT_DECOUVERTE_OPTION_BOUCHEOREILLE"); ?>
+                                            </option>
+                                            <option value="<?= _("CONTACT_FORM_SELECT_DECOUVERTE_OPTION_AUTRES"); ?>">
+                                                <?= _("CONTACT_FORM_SELECT_DECOUVERTE_OPTION_AUTRES"); ?>
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-user"></i>
+                                        <input type="text" name="nom"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_NOM"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-user"></i>
+                                        <input type="text" name="prenom"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_PRENOM"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-envelope"></i>
+                                        <input type="email" name="email"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_EMAIL"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-phone"></i>
+                                        <input type="text" name="telephone"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_TELEPHONE"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-home"></i>
+                                        <textarea name="adresse" cols="30" rows="10"
+                                                  placeholder="<?= _("CONTACT_FORM_LABEL_ADRESSE"); ?>"></textarea>
+                                    </div>
+                                    <div class="g-form-row-state"></div>
+                                </div>
+                            </div>
+                            <div class="one-half">
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-hand-o-right "></i>
+                                        <select name="location">
+                                            <option><?= _("CONTACT_FORM_LABEL_LOCATIONS"); ?></option>
+                                            <?php foreach ($this->getLocations() as $location): ?>
+                                            <option value="<?= $location->title; ?>"
+                                                    id="r<?= $location->id; ?>"><?= $location->title; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-users"></i>
+                                        <input type="text" name="adultes"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_ADULTES"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-users"></i>
+                                        <input type="text" name="enfants"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_ENFANTS"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-calendar"></i>
+                                        <input type="text" name="arrivee" class="arrivee"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_ARRIVEE"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-calendar"></i>
+                                        <input type="text" name="depart" class="depart"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_DEPART"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-pencil"></i>
+                                        <textarea name="precisions" cols="30"
+                                                  rows="10"
+                                                  placeholder="<?= _("CONTACT_FORM_LABEL_PRECISIONS"); ?>"></textarea>
+                                    </div>
+                                    <div class="g-form-row-state"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g-form-row">
+                            <div class="g-form-row-label"></div>
+                            <div class="g-form-row-field">
+                                <button class="g-btn type_primary" name="reservation">
+                                    <span>
+                                        <i class="fa fa-envelope-o"></i>
+                                        <?= _("CONTACT_FORM1_SEND"); ?>
+                                    </span>
+                                </button>
+                                <input type="text" class="antibot" name="agezegaga" placeholder="ne pas remplir"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-tabs-section">
+    <div class="w-tabs-section-title">
+        <span class="w-tabs-section-title-icon"></span>
+        <span class="w-tabs-section-title-text"><?= _("CONTACT_FORM2_TITRE"); ?></span>
+        <span class="w-tabs-section-title-control"><i class="fa fa-angle-down"></i></span>
+    </div>
+    <div class="w-tabs-section-content">
+        <div class="w-tabs-section-content-h">
+            <div class="w-form contacts_form">
+                <div class="w-form-h contacts_form_form">
+                    <form class="g-form question" action="<?= $this->url(
+                        array(
+                             'controller' => 'index',
+                             'action'     => 'contact'
+                        )
+                    ); ?>" method="post" name="question">
+                        <p><?= _("CONTACT_ENVOI_MAIL_MESSAGE_OBLIGATOIRE"); ?></p>
+
+                        <div class="g-cols">
+                            <div class="one-half">
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-user"></i>
+                                        <input type="text" name="nom"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_NOM"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-user"></i>
+                                        <input type="text" name="prenom"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_PRENOM"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-envelope"></i>
+                                        <input type="email" name="email"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_EMAIL"); ?>">
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-phone"></i>
+                                        <input type="text" name="telephone"
+                                               placeholder="<?= _("CONTACT_FORM_LABEL_TELEPHONE"); ?>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="one-half">
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-hand-o-right "></i>
+                                        <select name="location">
+                                            <option><?= _("CONTACT_FORM_LABEL_LOCATIONS2"); ?></option>
+                                            <?php foreach ($this->getLocations() as $location): ?>
+                                            <option value="<?= $location->title; ?>"
+                                                    id="r<?= $location->id; ?>"><?= $location->title; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="g-form-row">
+                                    <div class="g-form-row-field">
+                                        <i class="fa fa-pencil"></i>
+                                        <textarea name="message" cols="30"
+                                                  rows="13"
+                                                  placeholder="<?= _("CONTACT_FORM2_MESSAGE"); ?>"></textarea>
+                                    </div>
+                                    <div class="g-form-row-state"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="g-form-row">
+                            <div class="g-form-row-label"></div>
+                            <div class="g-form-row-field">
+                                <button class="g-btn type_primary" name="question">
+                                    <span>
+                                        <i class="fa fa-envelope-o"></i>
+                                        <?= _("CONTACT_FORM2_SEND"); ?>
+                                    </span>
+                                </button>
+                                <input type="text" class="antibot" name="agezegaga" placeholder="ne pas remplir"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</section>

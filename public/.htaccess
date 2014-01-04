@@ -1,0 +1,16 @@
+#PROD
+SetEnv PHP_VER 5_3_6
+#AddType x-mapp-php5 .php
+#SetEnv ZEND_OPTIMIZER 1
+#SetEnv REGISTER_GLOBALS 0
+#SetEnv MAGIC_QUOTES 0
+
+#Options -Indexes
+#Options -Multiviews
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L] [L]
+RewriteRule ^.*$ /index.php [NC,L,QSA]

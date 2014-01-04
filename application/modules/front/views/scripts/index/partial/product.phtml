@@ -1,0 +1,175 @@
+<?php
+/** @var $data Llv_Dto_Product */
+$data = $this->data;
+?>
+<div class="w-portfolio-item">
+    <div class="w-portfolio-item-h">
+        <a class="w-portfolio-item-anchor" href="javascript:void(0);">
+            <div class="w-portfolio-item-image"
+                 style="background-image:url(<?=$this->displayImage(
+                     $data->illustrations[0]->filename,
+                     Llv_Constant_File_Category::PRODUCTS,
+                     634,
+                     9999
+                 );?>);">
+            </div>
+            <div class="w-portfolio-item-meta">
+                <h2 class="w-portfolio-item-title">
+                    <?= $data->title ?>
+                </h2>
+            </div>
+            <div class="w-portfolio-item-hover">
+                <i class="fa fa-plus-circle"></i>
+            </div>
+        </a>
+
+        <div class="w-portfolio-item-details" style="display: none;">
+            <div class="w-tabs">
+                <div class="w-tabs-h">
+                    <div class="w-portfolio-item-details-h">
+                        <div class="w-portfolio-item-details-content">
+
+                            <div class="w-tabs-list">
+                                <div class="w-tabs-item with_icon active">
+                                    <span class="w-tabs-item-icon fa fa-file-text-o"></span>
+                                    <span class="w-tabs-item-title"><?= _("PRODUCTS_DETAILS"); ?></span>
+                                </div>
+
+                                <div class="w-tabs-item with_icon">
+                                    <span class="w-tabs-item-icon fa fa-calendar"></span>
+                                    <span class="w-tabs-item-title"><?= _("PRODUCTS_PRIX_DISPO"); ?></span>
+                                </div>
+
+                                <div class="w-tabs-item with_icon">
+                                    <span class="w-tabs-item-icon fa fa-money"></span>
+                                    <span class="w-tabs-item-title"><?= _("PRODUCTS_PRIX_PRIX"); ?></span>
+                                </div>
+                            </div>
+                            <div class="w-tabs-section active">
+                                <div class="w-tabs-section-title">
+                                    <span class="w-tabs-section-title-icon"></span>
+                                    <span class="w-tabs-section-title-text"><?= _("PRODUCTS_DETAILS"); ?></span>
+                                    <span class="w-tabs-section-title-control"><i class="fa fa-angle-down"></i></span>
+                                </div>
+                                <div class="w-tabs-section-content">
+                                    <div class="w-tabs-section-content-h">
+                                        <div class="w-portfolio-item-details-content-text">
+                                            <h3><?= $data->title ?></h3>
+
+                                            <?= $data->introduction ?>
+
+                                            <div class="w-gallery size_s">
+                                                <div class="w-gallery-h">
+                                                    <div class="w-gallery-tnails">
+                                                        <div class="w-gallery-tnails-h" id="room<?= $data->id; ?>">
+                                                            <script>
+                                                                $("#room<?= $data->id; ?>").magnificPopup(
+                                                                    {
+                                                                        type:"image",
+                                                                        delegate:"a",
+                                                                        gallery:{
+                                                                            enabled:1,
+                                                                            navigateByImgClick:1,
+                                                                            preload:[0, 1]
+                                                                        },
+                                                                        removalDelay:300,
+                                                                        fixedBgPos:1,
+                                                                        fixedContentPos:0,
+                                                                        mainClass:"mfp-fade",
+                                                                        disableOn:400
+                                                                    }
+                                                                );
+                                                            </script>
+                                                            <?php foreach ($data->illustrations as $illustration): ?>
+                                                            <a
+                                                                class="w-gallery-tnail"
+                                                                href="<?=$this->displayImage(
+                                                                    $illustration->filename,
+                                                                    Llv_Constant_File_Category::PRODUCTS,
+                                                                    1000,
+                                                                    9999
+                                                                );?>">
+                                                                <span class="w-gallery-tnail-h">
+                                                                    <img
+                                                                        class="w-gallery-tnail-img"
+                                                                        src="<?=$this->displayImage(
+                                                                            $illustration->filename,
+                                                                            Llv_Constant_File_Category::PRODUCTS,
+                                                                            400,
+                                                                            9999
+                                                                        );?>"
+                                                                        alt="<?= $data->title ?> - <?= $illustration->filename ?>"/>
+                                                                    <span class="w-gallery-tnail-hover">
+                                                                        <i class="fa fa-search"></i>
+                                                                    </span>
+                                                                </span>
+                                                            </a>
+                                                            <?php endforeach; ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="w-portfolio-item-details-content-text aroy-portfolio-details">
+                                        <?= $data->content ?>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="w-tabs-section ">
+                                <div class="w-tabs-section-title">
+                                    <span class="w-tabs-section-title-icon"></span>
+                                    <span class="w-tabs-section-title-text"><?= _("PRODUCTS_PRIX_DISPO"); ?></span>
+                                    <span class="w-tabs-section-title-control"><i class="fa fa-angle-down"></i></span>
+                                </div>
+                                <div class="w-tabs-section-content">
+                                    <div class="w-tabs-section-content-h">
+                                        <div class="availability">
+                                            <?= $data->availability ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="w-tabs-section ">
+                                <div class="w-tabs-section-title">
+                                    <span class="w-tabs-section-title-icon"></span>
+                                    <span class="w-tabs-section-title-text"><?= _("PRODUCTS_PRIX_PRIX"); ?></span>
+                                    <span class="w-tabs-section-title-control"><i class="fa fa-angle-down"></i></span>
+                                </div>
+                                <div class="w-tabs-section-content">
+                                    <div class="w-tabs-section-content-h">
+                                        <?php if (is_array($data->price) && $data->price[0] instanceof Llv_Dto_Product_Season_Price): ?>
+                                        <div class="amount">
+                                            <?= $this->displayProductPrice($data->price); ?>
+                                        </div>
+                                        <div class="calendar">
+                                            <?= $this->displaySeasonCalendar($data->price); ?>
+                                        </div>
+                                        <?php else: ?>
+
+                                        <div class="amount">
+                                            <?= $this->displayProductPrice($data->price); ?>
+                                        </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="g-btn type_primary size_small contact-button" id="r<?= $data->id; ?>" href="#contact-form">
+                            <span>
+                                <i class="fa fa-edit"></i>
+                                <?= _("CONTACT_FORM_SUBMIT"); ?>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

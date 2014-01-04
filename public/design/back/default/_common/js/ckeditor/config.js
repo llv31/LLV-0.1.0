@@ -20,6 +20,6 @@ CKEDITOR.editorConfig = function( config ) {
 //        { name: 'colors' },
         { name: 'tools' }
     ];
-    config.removeButtons = 'Flash,HorizontalRule,Smiley,SpecialChar,PageBreak,IFrame,Anchor,Styles,Font,FontSize';
+    config.removeButtons = 'Flash,HorizontalRule,Smiley,SpecialChar,PageBreak,IFrame,Anchor,Font,FontSize';
     config.enterMode = CKEDITOR.ENTER_BR;
 };

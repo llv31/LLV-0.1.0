@@ -18,6 +18,8 @@ class Llv_Context_Application extends Llv_Context_Abstract
     private $_locale;
     /** @var int */
     private $_idSite;
+    /** @var string */
+    private $facebookPage;
 
     /**
      * Retourne une instance de la classe
@@ -121,5 +123,21 @@ class Llv_Context_Application extends Llv_Context_Abstract
             $this->_locale = $this->getDefaultLocale();
         }
         return $this->_locale;
+    }
+
+    /**
+     * @param null $page
+     */
+    public function setFacebookPage($page = null)
+    {
+        $this->facebookPage = $page;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFacebookPage()
+    {
+        return $this->facebookPage;
     }
 }

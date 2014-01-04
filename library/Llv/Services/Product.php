@@ -101,6 +101,7 @@ class Llv_Services_Product
             $entityFilter->idLangue = $filter->idLangue;
             $entityFilter->idCategory = $filter->idCategory;
             $entityFilter->exceptThisId = $filter->exceptThisId;
+            $entityFilter->illustrationAmount = $filter->illustrationAmount;
             $produits = $this->getEntity()->getAll($entityFilter);
             $message->products = $produits;
             $message->success = true;

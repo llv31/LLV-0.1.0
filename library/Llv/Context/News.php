@@ -62,7 +62,7 @@ class Llv_Context_News
 /**
      * @param Llv_Services_News_Filter_News $filter
      *
-     * @return null
+     * @return Llv_Dto_News[]|null
      */
 public function getAll(Llv_Services_News_Filter_News $filter)
 {

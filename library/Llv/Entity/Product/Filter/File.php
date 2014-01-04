@@ -18,4 +18,6 @@ class Llv_Entity_Product_Filter_File
     public $idProduct;
     /** @var bool */
     public $online;
+    /** @var int */
+    public $amount;
 }

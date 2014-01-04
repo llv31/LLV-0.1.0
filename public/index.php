@@ -40,14 +40,5 @@ Zend_Loader_Autoloader::getInstance()
     ->registerNamespace('PHPMailer_')
     ->registerNamespace('ZFDebug_');
 
-
-foreach ($_SERVER as $key=> $srvLine) {
-    if (strstr($key, 'GEOIP_')) {
-        $res[] = $srvLine;
-    }
-}
-error_log(implode(', ', $res), null, APPLICATION_PATH.'/../data/logs/visits.log');
-
-
 $application->bootstrap()
     ->run();

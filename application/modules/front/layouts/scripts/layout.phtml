@@ -1,64 +1,100 @@
 <?php
 $module = Llv_Context_Application::getInstance()->getActiveModule();
 $locale = Llv_Context_Application::getInstance()->getLocale()->toString();
-/** @var $this Zend_View */
 
-/** @var $doctype Doctype */
-$doctype = new Zend_View_Helper_Doctype();
-$doctype->setDoctype('HTML5');
-
-/** Titre du site */
 $this->headTitle(_('GLOBAL_HEADER_TITLE'));
 
-/** Metas tags */
-$this->headMeta()->setCharset(Llv_Config::getInstance()->project->charset);
+$this->headMeta()->appendHttpEquiv('content-type', 'text/html; charset=' . Llv_Config::getInstance()->project->charset);
 $this->headMeta()->appendHttpEquiv('content-language', Llv_Context_Application::getInstance()->getCurrentLocale()->toString());
-//$this->headMeta()->appendName('keywords', _('META_KEYWORDS'));
 $this->headMeta()->appendName('description', _('META_DESCRIPTION'));
 $this->headMeta()->appendName('author', 'Alexandre ROY');
 
-/** Feuilles de style */
-$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/' . $module . '/' . $locale . '/_common/css/global.css');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/' . $module . '/default/_common/css/global.css');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/' . $locale . '/_common/css/global.css');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/default/_common/css/global.css');
+$this->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=Dosis:400,700');
+$this->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=PT+Sans:400,700');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/core/styles.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/gui/alert/g-alert.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/gui/breadcrumbs/g-breadcrumbs.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/gui/cols/g-cols.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/gui/form/g-form.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/gui/html/g-html.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/gui/pagination/g-pagination.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/actionbox/w-actionbox.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/blog/w-blog.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/bloglist/w-bloglist.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/blogpost/w-blogpost.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/clients/w-clients.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/comments/w-comments.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/contacts/w-contacts.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/faq/w-faq.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/files/w-files.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/filters/w-filters.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/gallery/w-gallery.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/lang/w-lang.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/listing/w-listing.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/links/w-links.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/logo/w-logo.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/map/w-map.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/nav/w-nav.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/portfolio/w-portfolio.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/pricing/w-pricing.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/search/w-search.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/shortblog/w-shortblog.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/socials/w-socials.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/tabs/w-tabs.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/tags/w-tags.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/team/w-team.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/timeline/w-timeline.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/twitter/w-twitter.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/motioncss/widgets/video/w-video.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/bootstrap3/css/bootstrap.css');
+//$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/bootstrap3/css/bootstrap-theme.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/corsa/css/font-awesome.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/corsa/css/magnific-popup.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/corsa/css/jquery.jgrowl.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/corsa/css/style.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/corsa/css/responsive.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/default/default/_plugin/jquery-ui/css/style.css');
+$this->headLink()->appendStylesheet($this->baseUrl() . 'design/front/default/_common/css/global.css');
 
-/** JS Commun */
-$this->headScript()->appendFile($this->baseUrl() . 'public/design/default/default/_common/js/common.js');
-/** jQuery */
-$this->headScript()->prependFile($this->baseUrl() . 'public/design/default/default/_plugin/jquery.js');
-/** jQuery UI */
-$this->headScript()->appendFile($this->baseUrl() . 'public/design/default/default/_plugin/jquery-ui/js/jquery.ui.js');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/default/_plugin/jquery-ui/css/style.css');
-/** ShadowBox */
-$this->headScript()->appendFile($this->baseUrl() . 'public/design/default/default/_plugin/shadowbox/shadowbox.js');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/default/_plugin/shadowbox/shadowbox.css');
-/** Colorbox */
-$this->headScript()->appendFile($this->baseUrl() . 'public/design/default/default/_plugin/colorbox/jquery.colorbox.js');
-$this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/default/_plugin/colorbox/colorbox.css');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/jquery-1.8.3.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/jquery-ui/js/jquery.ui.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/jquery-ui/js/jquery.ui.datepicker-fr.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/modernizr.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/jquery.easing.min.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/jquery.carousello.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/jquery.isotope.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/jquery.magnific-popup.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/jquery.jgrowl.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/jquery.parallax.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/jquery.queryloader2.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/waypoints.min.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/responsive.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/plugins.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/corsa/js/us.widgets.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_plugin/bootstrap3/js/bootstrap.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/front/default/_plugin/maps/js/googlemaps.js');
+$this->headScript()->appendFile('http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js');
+$this->headScript()->appendFile($this->baseUrl() . 'design/default/default/_common/js/common.js');
 
+$doctype = new Zend_View_Helper_Doctype();
+$doctype->setDoctype('HTML5');
+echo $this->doctype();
 ?>
 
-<?= $this->doctype(); ?>
-
 <html>
-
 <head>
-
+    <link rel="icon" type="image/png" href="<?= $this->baseUrl(); ?>design/default/default/_common/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon"
+          href="<?= $this->baseUrl(); ?>design/default/default/_common/img/favicon.ico">
     <?= $this->headTitle(); ?>
-
     <?= $this->headMeta(); ?>
-
     <?= $this->headLink(); ?>
-
     <?= $this->headScript(); ?>
-
     <script type="text/javascript">
         var i18n = <?= $this->giveJsI18nText();?>;
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-38406329-1']);
         _gaq.push(['_trackPageview']);
-
         (function () {
             var ga = document.createElement('script');
             ga.type = 'text/javascript';
@@ -67,77 +103,45 @@ $this->headLink()->prependStylesheet($this->baseUrl() . 'public/design/default/d
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(ga, s);
         })();
-
     </script>
-
 </head>
 
-<body>
-
-<div id="container">
-    <div id="header">
-        <?php
-        echo $this->partial(
-            'partial/header.phtml',
-            array()
-        );
-        ?>
-    </div>
-
-    <?php if (Llv_Db::getInstance()->isConnected()) : ?>
-
-    <div id="menu">
-        <?php
-        echo $this->partial(
-            'partial/menu.phtml',
-            array()
-        );
-        ?>
-    </div>
-
-    <div id="social">
-        <?php
-        echo $this->partial(
-            'partial/social.phtml',
-            array(
-                 'urlToLike'=> $this->urlToLike
-            )
-        );
-        ?>
-    </div>
-
-    <div id="wrapper">
+<body class="l-body headertype_sticky headerpos_top hometype_fullscreen">
+<?= $this->availableLanguages(); ?>
+<?php if (Llv_Db::getInstance()->isConnected()) : ?>
+<header>
+    <?php
+    echo $this->partial(
+        'partial/header.phtml',
+        array(
+             'social_facebook'=> $this->social_facebook
+        )
+    );
+    ?>
+</header>
+<!--    <main>-->
+<div class="l-main">
+    <div class="l-main-h">
         <?= $this->layout()->content; ?>
     </div>
-
+</div>
+</main>
+<footer>
+    <?php
+    echo $this->partial(
+        'partial/footer.phtml',
+        array()
+    );
+    ?>
+</footer>
     <?php else : ?>
-
-    <div id="wrapper">
-        <?php $this->headTitle(_('HEAD_TITLE_ERROR') . ' | '); ?>
-        <?= _('ERROR_DB_CONNECTION'); ?>
-    </div>
-
+<main>
+    <?php $this->headTitle(_('HEAD_TITLE_ERROR') . ' | '); ?>
+    <?= _('ERROR_DB_CONNECTION'); ?>
+</main>
     <?php endif;?>
 
-    <div id="footer">
-        <?php
-        echo $this->partial(
-            'partial/footer.phtml',
-            array()
-        );
-        ?>
-    </div>
-</div>
 
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=278827252146234";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<a class="w-toplink" href="#"><i class="fa fa-chevron-up"></i></a>
 </body>
-
 </html>

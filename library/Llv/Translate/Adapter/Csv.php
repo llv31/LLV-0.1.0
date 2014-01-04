@@ -13,7 +13,7 @@
 class Llv_Translate_Adapter_Csv
     extends Llv_Translate_Adapter_Abstract
 {
-    const SEPARATOR = ';';
+    const SEPARATOR = '|';
     /** @var string */
     private $_csvPath;
 

@@ -12,29 +12,27 @@
 class App_View_Helper_DisplaySeasonCalendar
     extends Zend_View_Helper_Abstract
 {
-    protected static $_moisParLigne = 3;
+    protected static $_moisParLigne = 12;
     protected static $_nombreMois = 12;
     protected static $_nombreColonneDansMois = 8;
 
     /**
      *
      */
-    public function displaySeasonCalendar($productPrice = null, $annee = null)
+    public function displaySeasonCalendar($productPrice, $annee = null)
     {
         $siteCourant = Llv_Context_Application::getInstance()->getCurrentSite();
         $anneeCourante = date('Y');
-        $moisCourant = date('m');
+        $moisCourant = date('n');
         $jourCourant = date('d');
         $semainesAjoutees = array();
 
         $annee = !is_null($annee) ? $annee : $anneeCourante;
         if (self::$_nombreMois % self::$_moisParLigne == 0) {
             $mois = $moisCourant;
-            $html[] = "<table class=\"calendrier\">";
-            $html[] = "<tbody>";
+            $html[] = "<div class=\"calendar\">";
             /** Affichage des lignes */
             for ($ligneMois = 1; $ligneMois <= (self::$_nombreMois / self::$_moisParLigne); $ligneMois++) {
-                $html[] = "<tr>";
                 /** Affichage des colonnes */
                 for ($colonneMois = 1; $colonneMois <= self::$_moisParLigne; $colonneMois++) {
                     /** On vient de récupérer le mois courant et le nombre de jours qu'il contient */
@@ -43,8 +41,7 @@ class App_View_Helper_DisplaySeasonCalendar
                     if ($mois < 10) {
                         $mois = "0" . $mois;
                     }
-                    $html[] = "<td class=\"mois\">";
-                    $html[] = "<table>";
+                    $html[] = "<table class=\"table\">";
                     $html[] = "<thead>";
                     $html[] = "<tr class=\"mois\">";
                     $html[] = "<th colspan=\"8\">" . _('GLOBAL_MONTH_LABEL' . $mois) .
@@ -75,8 +72,9 @@ class App_View_Helper_DisplaySeasonCalendar
                             if (!is_null($productPrice)) {
                                 /** @var $price Llv_Dto_Product_Season_Price */
                                 $price = $this->getPriceForSeason($productPrice, $week->season->id);
-
+//                                if ($price instanceof Llv_Dto_Product_Season_Price) {
                                 /** Le prix apparîtra en infobulle au survol */
+                                $infobulleTitle = _('PRODUCT_PRICE_TITLE');
                                 if (!is_null($price->week)) {
                                     $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEK') . "</em> : "
                                         . "<strong>"
@@ -104,11 +102,30 @@ class App_View_Helper_DisplaySeasonCalendar
                                     $infobulle[] = "<em>" . _('PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK') . "</em> : "
                                         . _('PRODUCT_PRICE_SEASON_PERIODES_INDISPO');
                                 }
+//                                }
                             }
 
-
-                            $html[] = "<tr class=\"jq-semaine semaine saison" . $week->season->id . "\"
-                            data-infobulle=\"" . nl2br(implode(PHP_EOL, $infobulle)) . "\">";
+                            $classe = null;
+                            switch ($week->season->id) {
+                                case 1 :
+                                    $classe = "danger";
+                                    break;
+                                case 2 :
+                                    $classe = "warning";
+                                    break;
+                                case 3 :
+                                    $classe = "info";
+                                    break;
+                                case 4 :
+                                    $classe = "success";
+                                    break;
+                            }
+                            $html[] = "<tr
+                            class=\"semaine saison infobulle " . $classe . "\"
+                            data-content=\"" . nl2br(implode(PHP_EOL, $infobulle)) . "\"
+                            data-original-title=\"" . $infobulleTitle . "\"
+                            data-toggle=\"popover\"
+                            >";
                             /** Numero de semaine */
                             if ($siteCourant == Llv_Constant_Application::FRONT) {
                                 $html[] = "<td class=\"jq-week week\">" . $this->getDayWeekNumber($timestampJour) . "</td>";
@@ -152,7 +169,8 @@ class App_View_Helper_DisplaySeasonCalendar
                         } else {
                             $classe = "";
                         }
-                        $html[] = "<td class=\"" . $classe . "\"><label for=\"week" . $week->id . "\">" . $numeroJour . "</label></td>";
+                        $html[] = "<td class=\"" . $classe . "\">" . $numeroJour . "</td>";
+//                        $html[] = "<td class=\"" . $classe . "\"><label for=\"week" . $week->id . "\">" . $numeroJour . "</label></td>";
                         $colonne++;
 
                         if ($colonne % self::$_nombreColonneDansMois == 0) {
@@ -162,17 +180,14 @@ class App_View_Helper_DisplaySeasonCalendar
                     $html[] = "</tr>";
                     $html[] = "</tbody>";
                     $html[] = "</table>";
-                    $html[] = "</td>";
                     $mois++;
                     if ($mois > 12) {
                         $mois = 1;
                         $annee++;
                     }
                 }
-                $html[] = "</tr>";
+                $html[] = "</div>";
             }
-            $html[] = "</tbody>";
-            $html[] = "</table>";
             echo implode(PHP_EOL, $html);
         }
     }

@@ -14,6 +14,8 @@ class Llv_Entity_Cms_Filter_Carrousel
 {
     /** @var int */
     public $id;
+    /** @var int Nombre d'image souhaitées */
+    public $amount;
     /** @var string */
     public $mimeType;
     /** @var bool */

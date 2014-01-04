@@ -36,6 +36,10 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
                     ->setLocale(new Llv_Locale($site['locale']));
                 Llv_Context_Application::getInstance()
                     ->setCurrentSite($site['idSite']);
+                if (isset($site['facebook'])) {
+                    Llv_Context_Application::getInstance()
+                        ->setFacebookPage($site['facebook']);
+                }
             }
         }
         $currentModule = Llv_Context_Application::getInstance()->getActiveModule();

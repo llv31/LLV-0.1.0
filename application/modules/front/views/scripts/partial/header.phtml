@@ -1,5 +1,73 @@
-<h2>
-    <a href="<?= $this->baseUrl(); ?>">
-        <?= _('GLOBAL_HEADER_TITLE'); ?>
-    </a>
-</h2>
+<div class="l-header">
+    <div class="l-header-h">
+        <div class="l-subheader">
+            <div class="l-subheader-h i-cf">
+                <div class="w-logo">
+                    <div class="w-logo-h">
+                        <a class="w-logo-link" href="<?= $this->baseUrl(); ?>">
+                            <img class="w-logo-img" src="<?= $this->baseUrl(); ?>design/default/default/_common/img/logo.png" alt="<?= _('GLOBAL_HEADER_TITLE'); ?>">
+							<span class="w-logo-title">
+								<span class="w-logo-title-h"><?= _('GLOBAL_HEADER_TITLE'); ?></span>
+							</span>
+                        </a>
+                    </div>
+                </div>
+
+                <?php if (!is_null($this->social_facebook)): ?>
+                <div class="w-socials size_normal">
+                    <div class="w-socials-h">
+                        <div class="w-socials-list">
+
+                            <div class="w-socials-item facebook">
+                                <a class="w-socials-item-link" target="_blank" href="<?= $this->social_facebook; ?>">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                                <div class="w-socials-item-popup">
+                                    <div class="w-socials-item-popup-h">
+                                        <span class="w-socials-item-popup-text"><?= $this->social_facebook; ?></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <?php endif; ?>
+                <?php
+                $items = array();
+                /** Home page */
+                $items['index'] = array(
+                    'anchor' => 'index',
+                    'label'      => _('GLOBAL_MENU_HOME')
+                );
+                /** Liste des logements du gite */
+                $items['chalet'] = array(
+                    'anchor' => 'chalet',
+                    'label'      => _('GLOBAL_MENU_GITE')
+                );
+                /** Liste des chambres d'hôtes */
+                $items['guesthouse'] = array(
+                    'anchor' => 'guesthouse',
+                    'label'      => _('GLOBAL_MENU_CHAMBRES')
+                );
+                /** Liste des actualités */
+                $items['news'] = array(
+                    'anchor' => 'news',
+                    'label'      => _('GLOBAL_MENU_NEWS')
+                );
+                /** Liste des activités */
+                $items['activities'] = array(
+                    'anchor' => 'activities',
+                    'label'      => _('GLOBAL_MENU_ACTIVITIES')
+                );
+                /** Page de contact */
+                $items['contact'] = array(
+                    'anchor' => 'contact',
+                    'label'      => _('GLOBAL_MENU_CONTACT')
+                );
+                echo $this->displayMainMenu($items);
+                ?>
+            </div>
+        </div>
+    </div>
+</div>

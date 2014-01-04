@@ -16,34 +16,14 @@ class App_View_Helper_DateFormat
     /**
      * @param DateTime $date
      * @param bool     $withTime
+     * @param bool     $short
      *
      * @return null|string
      */
-    public function dateFormat(DateTime $date, $withTime = false)
+    public function dateFormat(DateTime $date, $withTime = false, $short = false)
     {
         if (!is_null($date)) {
-            $locale = Llv_Context_Application::getInstance()->getCurrentLocale();
-            $format = $date->format(Llv_Constant_Date::FORMAT_DB);
-            $dateTime = explode(' ', $format);
-            $date = explode('-', $dateTime[0]);
-
-
-            $result = array();
-            switch ($locale) {
-                default:
-                    $result[] = $date[2];
-                    $result[] = _('GLOBAL_MONTH_LABEL' . $date[1]);
-                    $result[] = $date[0];
-                    break;
-                case Llv_Constant_Locale::ANGLAIS_GB_LOCALE:
-                    $result[] = $date[0];
-                    $result[] = _('GLOBAL_MONTH_LABEL') . $date[1];
-                    $result[] = $date[2];
-                    break;
-            }
-            if ($withTime) {
-                $result[] = _('GLOBAL_TIME_SEPARATOR_LABEL').'&nbsp;' . $dateTime[1];
-            }
+            $result = $this->dateExplode($date, $withTime, $short);
             return implode(' ', $result);
         }
         return null;

@@ -13,4 +13,6 @@
 class Llv_Constant_Product
 {
     const DIRECTORY_PATH = 'product';
+    const CATEGORY_GUESTHOUSE = 1;
+    const CATEGORY_CHALET = 2;
 }

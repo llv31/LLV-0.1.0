@@ -9,7 +9,10 @@ $(document).ready(function () {
         $JQgooglemap = $('#googlemap'), // jQuery selection
         options = {
             zoom:12,
-            mapTypeId:google.maps.MapTypeId.HYBRID
+            maxZoom:12,
+            minZoom:12,
+            disableDefaultUI: true,
+            mapTypeId:google.maps.MapTypeId.ROADMAP
         },
         map = new google.maps.Map($googlemap, options);
 
@@ -29,7 +32,8 @@ $(document).ready(function () {
  * @param content
  */
 function addMarker(map, configJSON) {
-    var icon = 'http://www.google.com/intl/en_us/mapfiles/ms/micons/' + configJSON.couleur + '-dot.png',
+    var color = configJSON.couleur != undefined ? configJSON.couleur : 'blue',
+        icon = 'http://www.google.com/intl/en_us/mapfiles/ms/micons/' + color + '-dot.png',
         marker = new google.maps.Marker({
             map:map,
             position:new google.maps.LatLng(configJSON.latitude, configJSON.longitude),

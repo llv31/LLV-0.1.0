@@ -1,42 +1,72 @@
-<?php
-$news = $this->news;
-?>
+<section id="news" class="l-section">
 
-<div class="news">
-    <h3>
-        <?= _('HOME_NEWS_TITRE') ?>
-    </h3>
+    <div id="parallax_subsection_2" class="l-subsection color_dark with_parallax"
+         style="background-image:url(<?=$this->displayImage(
+             $this->parallax->filename,
+             Llv_Constant_File_Category::CARROUSEL,
+             2000,
+             9999
+         );?>);">
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
 
-    <?php if (!is_null($news)): ?>
-    <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $news->id; ?>">
-        <h4>
-            <?= $news->title ?>
-        </h4>
-    </a>
+                <h2>
+                    <?= _("HOME_NEWS_TITRE"); ?>
+                </h2>
 
-    <p class="illustrate">
-        <a href="<?= $this->baseUrl(); ?>news/read/id/<?= $news->id; ?>">
-            <?php if (isset($news->illustrations[0])): ?>
-            <img
-                src="<?=
-                    $this->displayImage(
-                        $news->illustrations[0]->filename,
-                        Llv_Constant_File_Category::NEWS,
-                        448,
-                        9999
-                    );
-                    ?>"/>
-            <?php else: ?>
-            <img src="<?= $this->baseUrl()?>files/upload/news/default.jpg">
-            <?php endif; ?>
-        </a>
-    </p>
-    <p class="next"><a href="<?= $this->baseUrl(); ?>news/read/id/<?= $news->id; ?>"><?= _('HOME_NEWS_NEXT') ?></a></p>
+            </div>
+        </div>
+    </div>
 
-    <div class="content"><?= $this->shortify($news->content, 600); ?></div>
-    <?php else: ?>
-    <p class='no-result'><?= _('NEWS_LIST_NORESULT'); ?></p>
-    <?php endif; ?>
+    <div class="l-subsection">
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
 
-    <p class="more"><a href="<?= $this->baseUrl(); ?>news"><?= _('HOME_NEWS_MORE') ?></a></p>
-</div>
+                <div class="w-blog imgpos_atleft more_hidden">
+                    <div class="w-blog-h">
+                        <div class="w-blog-list">
+                            <?php foreach ($this->data as $news): ?>
+                            <?php $date = $this->dateExplode($news->dateUpdate, false, true); ?>
+                            <div class="w-blog-entry">
+                                <div class="w-blog-entry-h">
+                                    <div class="w-blog-entry-preview">
+                                        <img src="<?=$this->displayImage(
+                                            $news->illustrations[0]->filename,
+                                            Llv_Constant_File_Category::NEWS,
+                                            9999,
+                                            9999
+                                        );?>" alt="">
+                                    </div>
+
+                                    <h2 class="w-blog-entry-title">
+                                        <span class="w-blog-entry-title-h"><?= $news->title ?></span>
+                                    </h2>
+
+                                    <div class="w-blog-entry-body">
+                                        <div class="w-blog-entry-meta">
+                                            <div class="w-blog-entry-meta-date">
+                                                <span class="w-blog-entry-meta-date-month"><?= $date['month'] ?></span>
+                                                <span class="w-blog-entry-meta-date-day"><?= $date['day'] ?></span>
+                                                <span class="w-blog-entry-meta-date-year"><?= $date['year'] ?></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="w-blog-entry-short">
+                                            <?= $news->content ?>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="g-hr type_invisible"></div>
+
+            </div>
+        </div>
+    </div>
+
+</section>

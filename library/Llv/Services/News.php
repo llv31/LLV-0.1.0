@@ -115,6 +115,9 @@ class Llv_Services_News
             if (isset($filter->online)) {
                 $entityFilter->online = $filter->online;
             }
+            if (isset($filter->amount)) {
+                $entityFilter->amount = $filter->amount;
+            }
             $entityFilter->idLangue = $filter->idLangue;
             $actualites = $this->getEntity()->getAll($entityFilter);
             /** On ajoute les catégories */

@@ -14,66 +14,33 @@ class App_View_Helper_DisplayMainMenu
     extends Zend_View_Helper_Abstract
 {
     /**
-     * @param array  $items
-     * @param string $menuClass
+     * @param array $items
      */
-    public function displayMainMenu(array $items, $menuClass = 'main_menu')
+    public function displayMainMenu(array $items)
     {
         if (is_array($items) == false || count($items) == 0) {
             return;
         }
-        echo '<ul' . (strlen($menuClass) > 0 ? ' class="' . htmlspecialchars($menuClass) . '"' : '') . '>' . PHP_EOL;
-        foreach ($items as $key=> $item) {
-            $class = null;
-            if ($this->view->isController($item['controller'])) {
-                if (isset($item['args']) && count($item['args']) > 0) {
-                    $isCurrent = true;
-                    $params = $this->view->getParams();
-                    foreach ($item['args'] as $argName=> $argValue) {
-                        if ($isCurrent && array_key_exists($argName, $params)) {
-                            if ($params[$argName] != $argValue) {
-                                $isCurrent = false;
-                            }
-                        }
-                    }
-                    if ($isCurrent) {
-                        $class = "current";
-                    }
-                } elseif (isset($item['actions'])) {
-                    if (in_array($this->view->getAction(), $item['actions'])) {
-                        $class = "current";
-                    }
-                } else {
-                    $class = "current";
-                }
-            }
-            echo '<li class="' . $class . '">' . PHP_EOL;
-            if (isset($item['items'])) {
-                echo '<span>' . $item['label'] . '</span>';
-                $this->displayMainMenu($item['items'], 'sub' . $menuClass . ' ' . 'sub' . $menuClass . '_' . $key);
-            } else {
-                $args = isset($item['args']) ? $item['args'] : array();
-                echo '<a href="' .
-                    htmlspecialchars(
-                        $this->view->url(
-                            array_merge(
-                                array(
-                                     'controller' => $item['controller'],
-                                     'action'     => isset($item['action']) ? $item['action'] : 'index'
-                                ),
-                                $args
-                            ),
-                            null,
-                            true
-                        )
-                    )
-                    . '">';
-                echo htmlspecialchars($item['label']);
-                echo '</a>' . PHP_EOL;
-            }
-            echo '</li>' . PHP_EOL;
+        echo '<nav class="w-nav">' . PHP_EOL;
+        echo '<div class="w-nav-h">' . PHP_EOL;
+        echo '<div class="w-nav-control">' . PHP_EOL;
+        echo '<i class="fa fa-bars"></i>' . PHP_EOL;
+        echo '</div>' . PHP_EOL;
+        echo '<div class="w-nav-list layout_hor width_auto level_1">' . PHP_EOL;
+        echo '<div class="w-nav-list-h">' . PHP_EOL;
+        foreach ($items as $item) {
+            echo '<div class="w-nav-item level_1">' . PHP_EOL;
+            echo '<div class="w-nav-item-h">' . PHP_EOL;
+            echo '<a href="#' . $item['anchor'] . '" class="w-nav-anchor level_1">' . PHP_EOL;
+            echo '<span class="w-nav-title">' . $item['label'] . '</span>' . PHP_EOL;
+            echo '<span class="w-nav-hint"></span></a>' . PHP_EOL;
+            echo '</div>' . PHP_EOL;
+            echo '</div>' . PHP_EOL;
         }
-        echo '</ul>' . PHP_EOL;
+        echo '</div>' . PHP_EOL;
+        echo '</div>' . PHP_EOL;
+        echo '</div>' . PHP_EOL;
+        echo '</nav>' . PHP_EOL;
 
     }
 }

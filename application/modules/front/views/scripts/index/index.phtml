@@ -1,44 +1,67 @@
 <?php
 $this->headTitle(_('HEAD_TITLE_HOME') . ' | ');
-/**  */
-$this->headLink()->appendStylesheet($this->buildDesignUrl('index/css/index.css'));
-$this->headScript()->appendFile($this->buildDesignUrl('index/js/index.js'));
 
-$page = $this->page;
-?>
-
-<?php
+/** ACCUEIL */
 echo $this->partial(
-    'index/partial/carrousel.phtml',
+    'index/partial/accueil.phtml',
     array(
-         'carrousel' => $this->carrousel
+         'data'      => $this->message_accueil,
+         'parallax'  => $this->carrousel[0],
+         'parallax2' => $this->carrousel[1]
     )
 );
-?>
 
-<?php
+/** CHALET */
+echo $this->partial(
+    'index/partial/products.phtml',
+    array(
+         'data'   => $this->chalet,
+         'htmlid' => 'chalet'
+    )
+);
+
+/** CHAMBRES D'HÔTES */
+echo $this->partial(
+    'index/partial/products.phtml',
+    array(
+         'data'   => $this->guesthouse,
+         'htmlid' => 'guesthouse'
+    )
+);
+
+/** ACTUALITES */
 echo $this->partial(
     'index/partial/news.phtml',
     array(
-         'news' => $this->news
+         'data'     => $this->news,
+         'parallax' => $this->carrousel[2]
     )
 );
-?>
 
-<div class="presentation">
-    <h1>
-        <?= $page->title; ?>
-    </h1>
-
-    <?= $page->content; ?>
-
-</div>
-
-<?php
+/** ACTIVITES */
 echo $this->partial(
-    'index/partial/activity.phtml',
+    'index/partial/activities.phtml',
+    array('parallax' => $this->carrousel[3])
+);
+
+/** CONTACT */
+echo $this->partial(
+    'index/partial/contact.phtml',
     array(
-         'activity' => $this->activity
+         'data'     => $this->contactForm,
+         'parallax' => $this->carrousel[3]
     )
 );
-?>
+
+/** MODAL */
+if (!is_null($this->successMessage) || !is_null($this->errorMessage)) {
+    $message = !is_null($this->successMessage) ? $this->successMessage : $this->errorMessage;
+    $titre = !is_null($this->successMessage) ? _('GLOBAL_MODAL_TITRE_SUCCESS') : _('GLOBAL_MODAL_TITRE_ERROR');
+    echo $this->partial(
+        'index/partial/modal.phtml',
+        array(
+             'titre'    => $titre,
+             'message'  => $message
+        )
+    );
+}

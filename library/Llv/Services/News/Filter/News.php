@@ -14,6 +14,8 @@ class Llv_Services_News_Filter_News
 {
     /** @var int */
     public $id;
+    /** @var int Nombre d'image souhaitées */
+    public $amount;
     /** @var int */
     public $idLangue;
     /** @var bool */

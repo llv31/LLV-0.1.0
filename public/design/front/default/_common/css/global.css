@@ -1,23 +1,291 @@
-/* •••••••••••••••••••••••••••••••••• */
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
-@import "form.css";
+/* ALEXANDRE ROY 2014 */
 
-/* •••••••••••••••••••••••••••••••••• */
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
 
-#container #social {
+html {
+    cursor: default;
+}
+
+#activities *,
+#activities *:before,
+#activities *:after {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+#message.modal {
+    position: absolute;
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+#flags {
+    text-align: right;
+    top: 60px;
+    left: 0;
+    position: fixed;
+    background-color: #fff;
+    padding: 5px 10px;
+    z-index: 15;
+    list-style-type: none;
+    border-bottom: 2px solid #dddddd;
+    width: 100%;
+}
+
+#flags li.flag {
+    height: 24px;
+    display: inline-block;
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+.w-blog.imgpos_atleft .w-blog-entry-preview {
+    min-height: 90px;
+}
+
+.w-gallery-tnail-img {
+    height: 100%;
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+.availability > table {
+    border-collapse: separate;
+    width: 100%;
+}
+
+.availability > table > tbody > tr > td {
+    padding-bottom: 30px;
+}
+
+.availability table tbody tr td {
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: none;
+    padding: 0;
+}
+
+.availability {
+    /*width: 600px;*/
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+footer .l-subfooter.at_top {
+    border: none;
+}
+
+footer .l-footer a {
+    color: #000;
+    opacity: .6;
+    font-weight: bold;
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+.table > thead > tr > th {
+    border-bottom: 2px solid #dddddd;
+}
+
+.table > thead > tr > .info,
+.table > tbody > tr > .info,
+.table > tfoot > tr > .info,
+.table > thead > .info > td,
+.table > tbody > .info > td,
+.table > tfoot > .info > td,
+.table > thead > .info > th,
+.table > tbody > .info > th,
+.table > tfoot > .info > th {
+    background-color: #F4F8FA;
+}
+
+.calendar .table {
     float: left;
-    padding: 10px;
-    height: 20px;
-
+    width: 23%;
+    margin-left: 2%;
+    height: 150px;
 }
 
-#container #social .fb-like{
-    overflow: hidden;
-    height: 20px;
+.calendar .table:nth-child(4n+1) {
+    margin-left: 0;
 }
 
-#container #wrapper {
+.calendar .table > thead > tr > th,
+.calendar .table > tbody > tr > th,
+.calendar .table > tfoot > tr > th,
+.calendar .table > thead > tr > td,
+.calendar .table > tbody > tr > td,
+.calendar .table > tfoot > tr > td {
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 9px;
+    border: 0;
+}
+
+.calendar table.table > thead > tr.mois > th {
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.calendar table.table {
+    background-color: #eee;
+}
+
+.calendar table.table td.aujourdhui {
+    font-weight: bold;
+    background-color: #aaa;
+    color: #fff;
+}
+
+.amount > table.table tr > td {
+    font-size: .85em;
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+.w-blog.imgpos_atleft .w-blog-entry-title {
+    padding-top: 0;
+    margin-top: 10px;
+}
+
+.g-html p {
+    margin-bottom: 10px;
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+div.aroy-portfolio-pictures {
+    width: 100%
+}
+
+.aroy-portfolio-pictures ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.aroy-portfolio-pictures ul li {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.aroy-portfolio-details ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.w-gallery.size_s .w-gallery-tnail {
+    height: 139px;
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+.l-subsection.googlemap-container {
+    padding: 0;
+}
+
+#googlemap-overlay,
+#googlemap {
+    width: 100%;
+    height: 500px;
+}
+
+#googlemap-overlay {
+    position: absolute;
+    z-index: 20;
+}
+
+#googlemap {
+    text-align: left;
+    font-size: .85em;
+}
+
+#googlemap ul.adresse {
+    list-style-type: none;
+}
+
+#googlemap ul.adresse li {
     margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2em;
 }
 
-/* •••••••••••••••••••••••••••••••••• */
+#googlemap ul.adresse li h5 {
+    font-size: 1.2em;
+}
+
+#googlemap ul.adresse li strong {
+    font-size: 1.3em;
+    text-transform: uppercase
+}
+
+#googlemap ul.adresse li span {
+    font-weight: bold;
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+.w-form {
+    max-width: 100%;
+    width: 100%;
+}
+
+input.antibot {
+    display: none;
+}
+
+.w-form .g-form-row-field {
+}
+
+.g-form-row-field textarea.error,
+.g-form-row-field input.error {
+    border: 2px solid #FD7567;
+    box-shadow: none;
+}
+
+.g-form-row-field span.error {
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    color: #FD7567;
+    top: -35px;
+    right: 10px;
+    font-weight: normal;
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+
+@media (max-width:1280px) {
+    .calendar .table:nth-child(4n+1),
+    .calendar .table {
+        width: 31%;
+        margin-left: 2%;
+    }
+
+    .calendar .table:nth-child(3n+1) {
+        margin-left: 0;
+    }
+}
+
+@media (max-width:1023px) {
+    .calendar .table:nth-child(4n+1),
+    .calendar .table:nth-child(3n+1),
+    .calendar .table {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+
+    #flags {
+        top: 50px;
+        padding: 3px;
+    }
+}
+
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */
+/* •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• */

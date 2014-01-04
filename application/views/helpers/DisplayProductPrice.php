@@ -17,10 +17,10 @@ class App_View_Helper_DisplayProductPrice
      */
     public function displayProductPrice($productPrice)
     {
-        $html[] = "<table>";
-        $html[] = "<thead>";
-        $html[] = "<tr>";
         if ($productPrice instanceof Llv_Dto_Product_Night_Price) {
+            $html[] = "<table class=\"table table-striped\">";
+            $html[] = "<thead>";
+            $html[] = "<tr>";
             $html[] = "<th>" . _('PRODUCT_PRICE_NIGHT_EMPTY') . "</th>";
             if (isset($productPrice->one) && !is_null($productPrice->one)) {
                 $html[] = "<th>" . _('PRODUCT_PRICE_NIGHT_PERSONNES_1') . "</th>";
@@ -72,7 +72,10 @@ class App_View_Helper_DisplayProductPrice
                 $html[] = "</tr>";
             }
         } elseif (is_array($productPrice) && $productPrice[0] instanceof Llv_Dto_Product_Season_Price) {
-            $html[] = "<th colspan=\"2\">" . _('PRODUCT_PRICE_SEASON_EMPTY') . "</th>";
+            $html[] = "<table class=\"table\">";
+            $html[] = "<thead>";
+            $html[] = "<tr>";
+            $html[] = "<th>" . _('PRODUCT_PRICE_SEASON_EMPTY') . "</th>";
             $html[] = "<th>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEK') . "</th>";
             $html[] = "<th>" . _('PRODUCT_PRICE_SEASON_PERIODES_WEEKEND') . "</th>";
             $html[] = "<th>" . _('PRODUCT_PRICE_SEASON_PERIODES_MIDWEEK') . "</th>";
@@ -80,9 +83,23 @@ class App_View_Helper_DisplayProductPrice
             $html[] = "</thead>";
             $html[] = "<tbody>";
             foreach ($productPrice as $price) {
-                $html[] = "<tr>";
+                $classe = null;
+                switch ($price->season->id) {
+                    case 1 :
+                        $classe = "danger";
+                        break;
+                    case 2 :
+                        $classe = "warning";
+                        break;
+                    case 3 :
+                        $classe = "info";
+                        break;
+                    case 4 :
+                        $classe = "success";
+                        break;
+                }
+                $html[] = "<tr class=\"" . $classe . "\">";
                 $html[] = "<td>" . $price->season->label . "</td>";
-                $html[] = "<td class=\"legende saison" . $price->season->id . "\"></td>";
                 $html[] = "<td>" . (!is_null($price->week) ? $price->week . "&nbsp;" . _('GLOBAL_MONNAIE') :
                     _('PRODUCT_PRICE_SEASON_EMPTY')) . "</td>";
                 $html[] = "<td>" . (!is_null($price->weekend) ? $price->weekend . "&nbsp;" . _('GLOBAL_MONNAIE') :
@@ -105,7 +122,7 @@ class App_View_Helper_DisplayProductPrice
      */
     private function calculatePrice($price, $nights)
     {
-        if($nights>1){
+        if ($nights > 1) {
             return ($price * $nights) - (Llv_Constant_Product_Price_Night::PROMOTION_NIGHT_SUPP * ($nights));
         }
         return $price;

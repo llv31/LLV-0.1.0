@@ -1,0 +1,78 @@
+<section id="<?= $this->htmlid; ?>" class="l-section">
+
+    <div class="l-subsection full_height">
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
+                <div class="g-hr type_invisible"></div>
+                <h2>
+                    <?= _('PRODUCTS_DISCOVER_' . strtoupper($this->htmlid)); ?><br/>
+                    <?= _('PRODUCTS_DISCOVER_CLICK'); ?>
+                </h2>
+
+                <div class="w-icon size_small with_circle color_border">
+                <span class="w-icon-link">
+                    <i class="fa fa-chevron-down"></i>
+                </span>
+                </div>
+                <div class="g-hr type_invisible"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="l-subsection full_width full_height">
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
+                <div class="w-portfolio">
+                    <div class="w-portfolio-h">
+                        <div class="w-portfolio-list">
+                            <div class="w-portfolio-list-h">
+
+                                <?php
+                                foreach ($this->data as $room) {
+                                    echo $this->partial(
+                                        'index/partial/product.phtml',
+                                        array('data' => $room)
+                                    );
+                                }
+                                ?>
+<!--                                <div class="w-portfolio-item-details-close"></div>-->
+<!--                                <div class="w-portfolio-item-details-arrow to_prev">-->
+<!--                                    <i class="fa fa-angle-left"></i>-->
+<!--                                </div>-->
+<!--                                <div class="w-portfolio-item-details-arrow to_next">-->
+<!--                                    <i class="fa fa-angle-right"></i>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="l-subsection color_alternate">
+        <div class="l-subsection-h">
+            <div class="l-subsection-hh g-html i-cf">
+                <h4><?= _('PRODUCTS_NUMBERS_' . strtoupper($this->htmlid)); ?></h4>
+
+                <div class="g-hr type_invisible"></div>
+                <div class="g-cols">
+                    <?php for ($i = 1; $i < 5; $i++): ?>
+                    <div class="one-fourth">
+                        <div class="w-counter">
+                            <div class="w-counter-h">
+                                <h6 class="w-counter-title"><?= _('PRODUCTS_NUMBERS_' . $i . '_1_' . strtoupper($this->htmlid)); ?></h6>
+
+                                <div
+                                    class="w-counter-number"><?= _('PRODUCTS_NUMBERS_' . $i . '_CHIFFRE_' . strtoupper($this->htmlid)); ?></div>
+                                <h6 class="w-counter-title"><?= _('PRODUCTS_NUMBERS_' . $i . '_2_' . strtoupper($this->htmlid)); ?></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endfor; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

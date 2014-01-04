@@ -104,6 +104,9 @@ class Llv_Entity_News_Dal_News
                 $sql->where('CHAR_LENGTH(nl.title)>?', 0);
                 $sql->where('n.online = ?', $filter->online);
             }
+            if ($filter->amount) {
+                $sql->limit($filter->amount);
+            }
             return Llv_Db::getInstance()->fetchAll($sql);
         } catch (Exception $e) {
             Zend_Debug::dump($e);

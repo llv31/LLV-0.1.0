@@ -13,7 +13,8 @@
 class App_View_Helper_BuildDesignUrl
     extends Zend_View_Helper_Abstract
 {
-    const DESIGN_DIR_PATH = 'public/design';
+    const DESIGN_DIR_PATH = 'design';
+//    const DESIGN_DIR_PATH = 'public/design';
     const DESIGN_DEFAULT_DIR_PATH = 'default';
     const DESIGN_DEFAULT_LANGUAGE_PATH = 'default';
 

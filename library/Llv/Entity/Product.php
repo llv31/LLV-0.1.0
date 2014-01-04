@@ -62,6 +62,7 @@ class Llv_Entity_Product
             $filesFilter = new Llv_Entity_Product_Filter_File();
             $filesFilter->idProduct = $product->id;
             $filesFilter->online = $filter->onlineIllustration;
+            $filesFilter->amount = $filter->illustrationAmount;
             $product->illustrations = Llv_Entity_Product_Helper_File::convertListFromDalToDto(
                 Llv_Entity_Product_Dal_Product::getProductFiles($filesFilter)
             );

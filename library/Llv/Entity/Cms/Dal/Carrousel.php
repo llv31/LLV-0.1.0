@@ -102,6 +102,9 @@ class Llv_Entity_Cms_Dal_Carrousel
                 $sql->where('date_delete IS NULL');
             }
         }
+        if (isset($filter->amount)) {
+            $sql->limit($filter->amount);
+        }
         return Llv_Db::getInstance()->fetchAll($sql);
     }
 
